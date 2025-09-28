@@ -1,4 +1,8 @@
-export default function PageProduct() {
+import { ComponentType } from 'react';
+
+import { ProductProvider } from '@/providers/product';
+
+const PageProduct: ComponentType = () => {
   return (
     <>
       <h1>
@@ -7,6 +11,16 @@ export default function PageProduct() {
     </>
   )
 }
+
+const Wrapper: ComponentType = () => {
+  return (
+    <ProductProvider>
+      <PageProduct />
+    </ProductProvider>
+  )
+}
+
+export default Wrapper;
 
 export const getServerSideProps = async () => {
   return { props: {} };
