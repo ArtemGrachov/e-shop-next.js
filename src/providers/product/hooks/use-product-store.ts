@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { useStore } from 'zustand';
 
-import { ProductStore } from '@/stores/product/types';
+import type { ProductStore } from '../store/types';
 import { ProductContext } from '..';
 
 export const useProductStore = <T,>(
