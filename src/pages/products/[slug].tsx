@@ -1,16 +1,22 @@
 import { ComponentType } from 'react';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { useTranslations } from 'next-intl';
 
 import { ProductProvider } from '@/providers/product';
 import { fetchProduct } from '@/providers/product/api/fetch-product';
 import { createHttpClient } from '@/providers/http-client/utils/create-http-client';
 
 const PageProduct: ComponentType = () => {
+  const t = useTranslations();
+
   return (
     <>
       <h1>
         Product page
       </h1>
+      <h2>
+        Test translation {t('test')}
+      </h2>
     </>
   )
 }
