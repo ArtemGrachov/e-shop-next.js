@@ -23,9 +23,7 @@ const ProductDescription: ComponentType<IProps> = ({ product, productVariant }) 
   }, [product, productVariant, locale]);
 
   return (
-    <div>
-      {outputDescription}
-    </div>
+    <div dangerouslySetInnerHTML={{ __html: outputDescription ?? '' }} />
   )
 }
 
