@@ -12,8 +12,18 @@ interface IProps {
 const ProductDescription: ComponentType<IProps> = ({ product, productVariant }) => {
   const locale = useLocale();
 
-  const outputDescription = useMemo(() => {
-    const descriptions = productVariant?.description ?? product?.description;
+  const productDescription = useMemo(() => {
+    const descriptions = product?.description;
+
+    if (!descriptions) {
+      return null;
+    }
+
+    return descriptions[locale] ?? Object.values(descriptions)[0];
+  }, [product, productVariant, locale]);
+
+  const variantDescription = useMemo(() => {
+    const descriptions = productVariant?.description;
 
     if (!descriptions) {
       return null;
@@ -23,7 +33,10 @@ const ProductDescription: ComponentType<IProps> = ({ product, productVariant }) 
   }, [product, productVariant, locale]);
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: outputDescription ?? '' }} />
+    <div>
+      {productDescription && <div dangerouslySetInnerHTML={{ __html: productDescription }} />}
+      {variantDescription && <div dangerouslySetInnerHTML={{ __html: variantDescription }} />}
+    </div>
   )
 }
 
