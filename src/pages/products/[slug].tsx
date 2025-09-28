@@ -5,18 +5,20 @@ import { useTranslations } from 'next-intl';
 import { ProductProvider } from '@/providers/product';
 import { fetchProduct } from '@/providers/product/api/fetch-product';
 import { createHttpClient } from '@/providers/http-client/utils/create-http-client';
+import { useProductStore } from '@/providers/product/hooks/use-product-store';
+
+import ProductDescription from '@/components/products/ProductDescription';
 
 const PageProduct: ComponentType = () => {
   const t = useTranslations();
+  const product = useProductStore(s => s.product);
 
   return (
     <>
       <h1>
         Product page
       </h1>
-      <h2>
-        Test translation {t('test')}
-      </h2>
+      {product && <ProductDescription product={product} />}
     </>
   )
 }
