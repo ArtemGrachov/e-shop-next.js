@@ -1,0 +1,2059 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": {
+        "en": "Electronics",
+        "de": "Elektronik"
+      },
+      "description": {
+        "en": "Smartphones, tablets, TVs, and other electronic devices.",
+        "de": "Smartphones, Tablets, Fernseher und andere elektronische Geräte."
+      },
+      "media": [
+        {
+          "id": 8001,
+          "src": "/media/categories/electronics.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8001
+    },
+    {
+      "id": 2,
+      "name": {
+        "en": "Computers & Laptops",
+        "de": "Computer & Laptops"
+      },
+      "description": {
+        "en": "Laptops, desktops, and accessories for work and play.",
+        "de": "Laptops, Desktops und Zubehör für Arbeit und Freizeit."
+      },
+      "media": [
+        {
+          "id": 8002,
+          "src": "/media/categories/computers.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8002
+    },
+    {
+      "id": 3,
+      "name": {
+        "en": "Smart Home",
+        "de": "Smart Home"
+      },
+      "description": {
+        "en": "Connected devices for a smarter lifestyle.",
+        "de": "Vernetzte Geräte für ein smarteres Zuhause."
+      },
+      "media": [
+        {
+          "id": 8003,
+          "src": "/media/categories/smarthome.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8003
+    },
+    {
+      "id": 4,
+      "name": {
+        "en": "Fashion",
+        "de": "Mode"
+      },
+      "description": {
+        "en": "Clothing, shoes, and accessories for men and women.",
+        "de": "Kleidung, Schuhe und Accessoires für Damen und Herren."
+      },
+      "media": [
+        {
+          "id": 8004,
+          "src": "/media/categories/fashion.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8004
+    },
+    {
+      "id": 5,
+      "name": {
+        "en": "Sports & Outdoors",
+        "de": "Sport & Outdoor"
+      },
+      "description": {
+        "en": "Equipment and apparel for indoor and outdoor activities.",
+        "de": "Ausrüstung und Bekleidung für Indoor- und Outdoor-Aktivitäten."
+      },
+      "media": [
+        {
+          "id": 8005,
+          "src": "/media/categories/sports.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8005
+    },
+    {
+      "id": 6,
+      "name": {
+        "en": "Home & Kitchen",
+        "de": "Haushalt & Küche"
+      },
+      "description": {
+        "en": "Appliances, cookware, and home essentials.",
+        "de": "Geräte, Kochgeschirr und Haushaltsartikel."
+      },
+      "media": [
+        {
+          "id": 8006,
+          "src": "/media/categories/home.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8006
+    },
+    {
+      "id": 7,
+      "name": {
+        "en": "Beauty & Health",
+        "de": "Schönheit & Gesundheit"
+      },
+      "description": {
+        "en": "Cosmetics, skincare, and wellness products.",
+        "de": "Kosmetik, Hautpflege und Wellness-Produkte."
+      },
+      "media": [
+        {
+          "id": 8007,
+          "src": "/media/categories/beauty.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8007
+    },
+    {
+      "id": 8,
+      "name": {
+        "en": "Toys & Games",
+        "de": "Spielzeug & Spiele"
+      },
+      "description": {
+        "en": "Toys for kids and games for all ages.",
+        "de": "Spielzeug für Kinder und Spiele für alle Altersgruppen."
+      },
+      "media": [
+        {
+          "id": 8008,
+          "src": "/media/categories/toys.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8008
+    },
+    {
+      "id": 9,
+      "name": {
+        "en": "Books & Media",
+        "de": "Bücher & Medien"
+      },
+      "description": {
+        "en": "Books, audiobooks, and digital media.",
+        "de": "Bücher, Hörbücher und digitale Medien."
+      },
+      "media": [
+        {
+          "id": 8009,
+          "src": "/media/categories/books.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8009
+    },
+    {
+      "id": 10,
+      "name": {
+        "en": "Automotive",
+        "de": "Auto & Motorrad"
+      },
+      "description": {
+        "en": "Car accessories, tools, and maintenance products.",
+        "de": "Autozubehör, Werkzeuge und Pflegeprodukte."
+      },
+      "media": [
+        {
+          "id": 8010,
+          "src": "/media/categories/automotive.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8010
+    },
+    {
+      "id": 11,
+      "name": {
+        "en": "Pet Supplies",
+        "de": "Haustierbedarf"
+      },
+      "description": {
+        "en": "Food, toys, and care items for pets.",
+        "de": "Futter, Spielzeug und Pflegeartikel für Haustiere."
+      },
+      "media": [
+        {
+          "id": 8011,
+          "src": "/media/categories/pets.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8011
+    },
+    {
+      "id": 12,
+      "name": {
+        "en": "Garden & DIY",
+        "de": "Garten & Heimwerken"
+      },
+      "description": {
+        "en": "Gardening tools and DIY supplies.",
+        "de": "Gartenwerkzeuge und Heimwerkerbedarf."
+      },
+      "media": [
+        {
+          "id": 8012,
+          "src": "/media/categories/garden.jpg",
+          "type": "image"
+        }
+      ],
+      "primaryMedia": 8012
+    }
+  ],
+  "delivery-methods": [
+    {
+      "id": 1,
+      "name": {
+        "en": "Standard Shipping",
+        "de": "Standardversand"
+      },
+      "description": {
+        "en": "Delivery within 5-7 business days.",
+        "de": "Lieferung innerhalb von 5-7 Werktagen."
+      },
+      "icon": {
+        "id": 1,
+        "src": "/icons/standard_shipping.png",
+        "type": "image"
+      },
+      "deliveryPrice": {
+        "value": 5.99,
+        "currency": "USD",
+        "discount": 0,
+        "discountType": "absolute"
+      }
+    },
+    {
+      "id": 2,
+      "name": {
+        "en": "Express Shipping",
+        "de": "Expressversand"
+      },
+      "description": {
+        "en": "Delivery within 1-2 business days.",
+        "de": "Lieferung innerhalb von 1-2 Werktagen."
+      },
+      "icon": {
+        "id": 2,
+        "src": "/icons/express_shipping.png",
+        "type": "image"
+      },
+      "deliveryPrice": {
+        "value": 14.99,
+        "currency": "USD",
+        "discount": 0,
+        "discountType": "absolute"
+      }
+    },
+    {
+      "id": 3,
+      "name": {
+        "en": "Overnight Shipping",
+        "de": "Übernachtversand"
+      },
+      "description": {
+        "en": "Next-day delivery by morning.",
+        "de": "Lieferung am nächsten Morgen."
+      },
+      "icon": {
+        "id": 3,
+        "src": "/icons/overnight_shipping.png",
+        "type": "image"
+      },
+      "deliveryPrice": {
+        "value": 24.99,
+        "currency": "USD",
+        "discount": 0,
+        "discountType": "absolute"
+      }
+    },
+    {
+      "id": 4,
+      "name": {
+        "en": "Pickup Point",
+        "de": "Abholstation"
+      },
+      "description": {
+        "en": "Pick up your order at a nearby location.",
+        "de": "Abholung Ihrer Bestellung an einem nahegelegenen Standort."
+      },
+      "icon": {
+        "id": 4,
+        "src": "/icons/pickup_point.png",
+        "type": "image"
+      },
+      "deliveryPrice": {
+        "value": 0,
+        "currency": "USD",
+        "discount": 0,
+        "discountType": "absolute"
+      }
+    },
+    {
+      "id": 5,
+      "name": {
+        "en": "International Shipping",
+        "de": "Internationaler Versand"
+      },
+      "description": {
+        "en": "Delivery outside the country within 7-14 business days.",
+        "de": "Lieferung außerhalb des Landes innerhalb von 7-14 Werktagen."
+      },
+      "icon": {
+        "id": 5,
+        "src": "/icons/international_shipping.png",
+        "type": "image"
+      },
+      "deliveryPrice": {
+        "value": 29.99,
+        "currency": "USD",
+        "discount": 0,
+        "discountType": "absolute"
+      }
+    }
+  ],
+  "payment-methods": [
+    {
+      "id": 1,
+      "name": {
+        "en": "Credit Card",
+        "de": "Kreditkarte"
+      },
+      "description": {
+        "en": "Pay securely using Visa, MasterCard, or American Express.",
+        "de": "Sichere Zahlung mit Visa, MasterCard oder American Express."
+      },
+      "icon": {
+        "id": 7001,
+        "src": "/icons/payment/creditcard.png",
+        "type": "image"
+      }
+    },
+    {
+      "id": 2,
+      "name": {
+        "en": "PayPal",
+        "de": "PayPal"
+      },
+      "description": {
+        "en": "Fast checkout with your PayPal account or linked cards.",
+        "de": "Schneller Checkout mit Ihrem PayPal-Konto oder verknüpften Karten."
+      },
+      "icon": {
+        "id": 7002,
+        "src": "/icons/payment/paypal.png",
+        "type": "image"
+      }
+    },
+    {
+      "id": 3,
+      "name": {
+        "en": "Bank Transfer",
+        "de": "Banküberweisung"
+      },
+      "description": {
+        "en": "Transfer the payment directly from your bank account.",
+        "de": "Überweisen Sie den Betrag direkt von Ihrem Bankkonto."
+      },
+      "icon": {
+        "id": 7003,
+        "src": "/icons/payment/bank.png",
+        "type": "image"
+      }
+    },
+    {
+      "id": 4,
+      "name": {
+        "en": "Cash on Delivery",
+        "de": "Nachnahme"
+      },
+      "description": {
+        "en": "Pay with cash when your order is delivered.",
+        "de": "Bezahlen Sie in bar bei Lieferung Ihrer Bestellung."
+      },
+      "icon": {
+        "id": 7004,
+        "src": "/icons/payment/cash.png",
+        "type": "image"
+      }
+    },
+    {
+      "id": 5,
+      "name": {
+        "en": "Apple Pay",
+        "de": "Apple Pay"
+      },
+      "description": {
+        "en": "Quick payment using Apple Pay on supported devices.",
+        "de": "Schnelle Zahlung mit Apple Pay auf unterstützten Geräten."
+      },
+      "icon": {
+        "id": 7005,
+        "src": "/icons/payment/applepay.png",
+        "type": "image"
+      }
+    },
+    {
+      "id": 6,
+      "name": {
+        "en": "Google Pay",
+        "de": "Google Pay"
+      },
+      "description": {
+        "en": "Secure checkout using Google Pay on Android devices.",
+        "de": "Sicherer Checkout mit Google Pay auf Android-Geräten."
+      },
+      "icon": {
+        "id": 7006,
+        "src": "/icons/payment/googlepay.png",
+        "type": "image"
+      }
+    }
+  ],
+  "product-attribute-values": [
+    {
+      "id": 1,
+      "name": {
+        "en": "Silver",
+        "de": "Silber"
+      },
+      "description": {
+        "en": "Silver color",
+        "de": "Silberfarbe"
+      },
+      "attributeId": 1
+    },
+    {
+      "id": 2,
+      "name": {
+        "en": "Black",
+        "de": "Schwarz"
+      },
+      "description": {
+        "en": "Black color",
+        "de": "Schwarze Farbe"
+      },
+      "attributeId": 1
+    },
+    {
+      "id": 3,
+      "name": {
+        "en": "Gold",
+        "de": "Gold"
+      },
+      "description": {
+        "en": "Gold color",
+        "de": "Goldfarbe"
+      },
+      "attributeId": 1
+    },
+    {
+      "id": 4,
+      "name": {
+        "en": "128 GB",
+        "de": "128 GB"
+      },
+      "description": {
+        "en": "128 gigabytes of storage",
+        "de": "128 Gigabyte Speicher"
+      },
+      "attributeId": 2
+    },
+    {
+      "id": 5,
+      "name": {
+        "en": "256 GB",
+        "de": "256 GB"
+      },
+      "description": {
+        "en": "256 gigabytes of storage",
+        "de": "256 Gigabyte Speicher"
+      },
+      "attributeId": 2
+    },
+    {
+      "id": 6,
+      "name": {
+        "en": "512 GB",
+        "de": "512 GB"
+      },
+      "description": {
+        "en": "512 gigabytes of storage",
+        "de": "512 Gigabyte Speicher"
+      },
+      "attributeId": 2
+    },
+    {
+      "id": 7,
+      "name": {
+        "en": "1 TB",
+        "de": "1 TB"
+      },
+      "description": {
+        "en": "1 terabyte of storage",
+        "de": "1 Terabyte Speicher"
+      },
+      "attributeId": 2
+    },
+    {
+      "id": 8,
+      "name": {
+        "en": "0.5 kg",
+        "de": "0,5 kg"
+      },
+      "description": {
+        "en": "Weight half kilogram",
+        "de": "Gewicht ein halbes Kilo"
+      },
+      "attributeId": 3
+    },
+    {
+      "id": 9,
+      "name": {
+        "en": "Plastic",
+        "de": "Kunststoff"
+      },
+      "description": {
+        "en": "Plastic material",
+        "de": "Material Kunststoff"
+      },
+      "attributeId": 4
+    },
+    {
+      "id": 10,
+      "name": {
+        "en": "Aluminium",
+        "de": "Aluminium"
+      },
+      "description": {
+        "en": "Aluminium material",
+        "de": "Material Aluminium"
+      },
+      "attributeId": 4
+    },
+    {
+      "id": 11,
+      "name": {
+        "en": "Leather",
+        "de": "Leder"
+      },
+      "description": {
+        "en": "Leather material",
+        "de": "Material Leder"
+      },
+      "attributeId": 4
+    },
+    {
+      "id": 12,
+      "name": {
+        "en": "1.2 kg",
+        "de": "1,2 kg"
+      },
+      "description": {
+        "en": "Laptop weight 1.2 kg",
+        "de": "Laptopgewicht 1,2 kg"
+      },
+      "attributeId": 3
+    },
+    {
+      "id": 13,
+      "name": {
+        "en": "1.8 kg",
+        "de": "1,8 kg"
+      },
+      "description": {
+        "en": "Laptop weight 1.8 kg",
+        "de": "Laptopgewicht 1,8 kg"
+      },
+      "attributeId": 3
+    },
+    {
+      "id": 14,
+      "name": {
+        "en": "2.1 kg",
+        "de": "2,1 kg"
+      },
+      "description": {
+        "en": "Laptop weight 2.1 kg",
+        "de": "Laptopgewicht 2,1 kg"
+      },
+      "attributeId": 3
+    },
+    {
+      "id": 15,
+      "name": {
+        "en": "8 US",
+        "de": "8 US"
+      },
+      "description": {
+        "en": "Shoe size US 8",
+        "de": "Schuhgröße US 8"
+      },
+      "attributeId": 5
+    },
+    {
+      "id": 16,
+      "name": {
+        "en": "9 US",
+        "de": "9 US"
+      },
+      "description": {
+        "en": "Shoe size US 9",
+        "de": "Schuhgröße US 9"
+      },
+      "attributeId": 5
+    },
+    {
+      "id": 17,
+      "name": {
+        "en": "10 US",
+        "de": "10 US"
+      },
+      "description": {
+        "en": "Shoe size US 10",
+        "de": "Schuhgröße US 10"
+      },
+      "attributeId": 5
+    },
+    {
+      "id": 18,
+      "name": {
+        "en": "Red",
+        "de": "Rot"
+      },
+      "description": {
+        "en": "Red color",
+        "de": "Rote Farbe"
+      },
+      "attributeId": 1
+    },
+    {
+      "id": 19,
+      "name": {
+        "en": "Blue",
+        "de": "Blau"
+      },
+      "description": {
+        "en": "Blue color",
+        "de": "Blaue Farbe"
+      },
+      "attributeId": 1
+    },
+    {
+      "id": 20,
+      "name": {
+        "en": "White",
+        "de": "Weiß"
+      },
+      "description": {
+        "en": "White color",
+        "de": "Weiße Farbe"
+      },
+      "attributeId": 1
+    },
+    {
+      "id": 21,
+      "name": {
+        "en": "Metal",
+        "de": "Metall"
+      },
+      "description": {
+        "en": "Metal material",
+        "de": "Material Metall"
+      },
+      "attributeId": 4
+    },
+    {
+      "id": 22,
+      "name": {
+        "en": "3.5 kg",
+        "de": "3,5 kg"
+      },
+      "description": {
+        "en": "Weight 3.5 kg",
+        "de": "Gewicht 3,5 kg"
+      },
+      "attributeId": 3
+    },
+    {
+      "id": 23,
+      "name": {
+        "en": "44mm",
+        "de": "44mm"
+      },
+      "description": {
+        "en": "Watch diameter 44mm",
+        "de": "Uhrendurchmesser 44mm"
+      },
+      "attributeId": 23
+    },
+    {
+      "id": 24,
+      "name": {
+        "en": "825 GB",
+        "de": "825 GB"
+      },
+      "description": {
+        "en": "Console storage 825GB",
+        "de": "Konsolenspeicher 825GB"
+      },
+      "attributeId": 24
+    },
+    {
+      "id": 25,
+      "name": {
+        "en": "Disc Edition",
+        "de": "Disc Edition"
+      },
+      "description": {
+        "en": "Physical disc edition",
+        "de": "Physische Disc Edition"
+      },
+      "attributeId": 25
+    },
+    {
+      "id": 26,
+      "name": {
+        "en": "20 MP",
+        "de": "20 MP"
+      },
+      "description": {
+        "en": "20 megapixel sensor",
+        "de": "20 Megapixel Sensor"
+      },
+      "attributeId": 26
+    },
+    {
+      "id": 27,
+      "name": {
+        "en": "42mm",
+        "de": "42mm"
+      },
+      "description": {
+        "en": "Watch diameter 42mm",
+        "de": "Uhrendurchmesser 42mm"
+      },
+      "attributeId": 27
+    },
+    {
+      "id": 28,
+      "name": {
+        "en": "10 US",
+        "de": "10 US"
+      },
+      "description": {
+        "en": "Soccer shoe size US 10",
+        "de": "Fußballschuhgröße US 10"
+      },
+      "attributeId": 28
+    },
+    {
+      "id": 29,
+      "name": {
+        "en": "Tablet Storage",
+        "de": "Tablet-Speicher"
+      },
+      "description": {
+        "en": "Storage capacity of tablet",
+        "de": "Speicherkapazität des Tablets"
+      },
+      "unitType": "number"
+    },
+    {
+      "id": 29,
+      "name": {
+        "en": "512 GB",
+        "de": "512 GB"
+      },
+      "description": {
+        "en": "Tablet storage 512 GB",
+        "de": "Tablet-Speicher 512 GB"
+      },
+      "attributeId": 29
+    }
+  ],
+  "product-attributes": [
+    {
+      "id": 1,
+      "name": {
+        "en": "Color",
+        "de": "Farbe"
+      },
+      "description": {
+        "en": "Product color",
+        "de": "Produktfarbe"
+      },
+      "unitType": "string"
+    },
+    {
+      "id": 2,
+      "name": {
+        "en": "Storage",
+        "de": "Speicher"
+      },
+      "description": {
+        "en": "Device storage size",
+        "de": "Gerätespeichergröße"
+      },
+      "unitType": "number"
+    },
+    {
+      "id": 3,
+      "name": {
+        "en": "Weight",
+        "de": "Gewicht"
+      },
+      "description": {
+        "en": "Product weight",
+        "de": "Produktgewicht"
+      },
+      "unitType": "kg"
+    },
+    {
+      "id": 4,
+      "name": {
+        "en": "Material",
+        "de": "Material"
+      },
+      "description": {
+        "en": "Main material of product",
+        "de": "Hauptmaterial des Produkts"
+      },
+      "unitType": "string"
+    },
+    {
+      "id": 5,
+      "name": {
+        "en": "Size",
+        "de": "Größe"
+      },
+      "description": {
+        "en": "Clothing or shoe size",
+        "de": "Kleidungs- oder Schuhgröße"
+      },
+      "unitType": "string"
+    },
+    {
+      "id": 23,
+      "name": {
+        "en": "Watch Size",
+        "de": "Uhrengröße"
+      },
+      "description": {
+        "en": "Diameter of watch face",
+        "de": "Durchmesser des Zifferblatts"
+      },
+      "unitType": "number"
+    },
+    {
+      "id": 24,
+      "name": {
+        "en": "Storage",
+        "de": "Speicher"
+      },
+      "description": {
+        "en": "Console storage size",
+        "de": "Konsolenspeichergröße"
+      },
+      "unitType": "number"
+    },
+    {
+      "id": 25,
+      "name": {
+        "en": "PS5 Edition",
+        "de": "PS5 Edition"
+      },
+      "description": {
+        "en": "Disc or Digital edition",
+        "de": "Disc oder Digital Edition"
+      },
+      "unitType": "string"
+    },
+    {
+      "id": 26,
+      "name": {
+        "en": "Camera Sensor",
+        "de": "Kamerasensor"
+      },
+      "description": {
+        "en": "Sensor type of camera",
+        "de": "Sensortyp der Kamera"
+      },
+      "unitType": "string"
+    },
+    {
+      "id": 27,
+      "name": {
+        "en": "Watch Size 42mm",
+        "de": "Uhrengröße 42mm"
+      },
+      "description": {
+        "en": "Watch diameter 42mm",
+        "de": "Uhrdurchmesser 42mm"
+      },
+      "unitType": "number"
+    },
+    {
+      "id": 28,
+      "name": {
+        "en": "Soccer Shoe Size",
+        "de": "Fußballschuhgröße"
+      },
+      "description": {
+        "en": "Size of soccer cleats",
+        "de": "Größe der Fußballschuhe"
+      },
+      "unitType": "number"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": {
+        "en": "iPhone 14 Pro",
+        "de": "iPhone 14 Pro"
+      },
+      "slug": "iphone-14-pro",
+      "description": {
+        "en": "Flagship Apple smartphone with advanced camera.",
+        "de": "Apple-Flaggschiff mit fortschrittlicher Kamera."
+      },
+      "media": [
+        {
+          "id": 1,
+          "src": "/images/iphone14pro.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        1,
+        2,
+        3,
+        8
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        2
+      ],
+      "variants": [
+        {
+          "id": 101,
+          "name": {
+            "en": "iPhone 14 Pro 128GB",
+            "de": "iPhone 14 Pro 128GB"
+          },
+          "description": {
+            "en": "Base storage model",
+            "de": "Basisspeichermodell"
+          },
+          "slug": {
+            "en": "iphone-14-pro-128",
+            "de": "iphone-14-pro-128"
+          },
+          "prices": [
+            {
+              "value": 1099,
+              "currency": "USD",
+              "discount": 0,
+              "discountType": "absolute"
+            }
+          ],
+          "media": [
+            {
+              "id": 2,
+              "src": "/images/iphone14pro_128.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": {
+        "en": "Samsung Galaxy S23",
+        "de": "Samsung Galaxy S23"
+      },
+      "slug": "samsung-galaxy-s23",
+      "description": {
+        "en": "Latest Samsung flagship with dynamic AMOLED.",
+        "de": "Neuestes Samsung-Flaggschiff mit dynamischem AMOLED."
+      },
+      "media": [
+        {
+          "id": 3,
+          "src": "/images/galaxyS23.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        2
+      ],
+      "variants": [
+        {
+          "id": 201,
+          "name": {
+            "en": "Samsung Galaxy S23 256GB",
+            "de": "Samsung Galaxy S23 256GB"
+          },
+          "description": {
+            "en": "Extra storage model",
+            "de": "Modell mit extra Speicher"
+          },
+          "slug": {
+            "en": "galaxy-s23-256",
+            "de": "galaxy-s23-256"
+          },
+          "prices": [
+            {
+              "value": 999,
+              "currency": "USD",
+              "discount": 10,
+              "discountType": "percentage"
+            }
+          ],
+          "media": [
+            {
+              "id": 4,
+              "src": "/images/galaxyS23_256.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": {
+        "en": "Sony WH-1000XM5",
+        "de": "Sony WH-1000XM5"
+      },
+      "slug": "sony-wh-1000xm5",
+      "description": {
+        "en": "Noise-canceling wireless headphones.",
+        "de": "Geräuschunterdrückende kabellose Kopfhörer."
+      },
+      "media": [
+        {
+          "id": 5,
+          "src": "/images/sony_wh1000xm5.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        9,
+        10,
+        11
+      ],
+      "mainCategoryId": 2,
+      "categoryIds": [
+        2,
+        3
+      ],
+      "variants": []
+    },
+    {
+      "id": 4,
+      "name": {
+        "en": "MacBook Pro 16",
+        "de": "MacBook Pro 16"
+      },
+      "slug": "macbook-pro-16",
+      "description": {
+        "en": "Apple laptop with M2 Max chip.",
+        "de": "Apple-Laptop mit M2 Max Chip."
+      },
+      "media": [
+        {
+          "id": 6,
+          "src": "/images/macbookpro16.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        12,
+        13,
+        14
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        4
+      ],
+      "variants": []
+    },
+    {
+      "id": 5,
+      "name": {
+        "en": "Dell XPS 13",
+        "de": "Dell XPS 13"
+      },
+      "slug": "dell-xps-13",
+      "description": {
+        "en": "Premium ultrabook with InfinityEdge display.",
+        "de": "Premium-Ultrabook mit InfinityEdge-Display."
+      },
+      "media": [
+        {
+          "id": 7,
+          "src": "/images/dellxps13.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        12,
+        15,
+        16
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        4
+      ],
+      "variants": []
+    },
+    {
+      "id": 6,
+      "name": {
+        "en": "Nike Air Max 270",
+        "de": "Nike Air Max 270"
+      },
+      "slug": "nike-air-max-270",
+      "description": {
+        "en": "Comfortable lifestyle sneakers.",
+        "de": "Bequeme Lifestyle-Sneaker."
+      },
+      "media": [
+        {
+          "id": 8,
+          "src": "/images/airmax270.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        17,
+        18,
+        19
+      ],
+      "mainCategoryId": 5,
+      "categoryIds": [
+        5,
+        6
+      ],
+      "variants": []
+    },
+    {
+      "id": 7,
+      "name": {
+        "en": "Adidas Ultraboost 22",
+        "de": "Adidas Ultraboost 22"
+      },
+      "slug": "adidas-ultraboost-22",
+      "description": {
+        "en": "High-performance running shoes.",
+        "de": "Hochleistungs-Laufschuhe."
+      },
+      "media": [
+        {
+          "id": 9,
+          "src": "/images/ultraboost22.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        17,
+        20,
+        19
+      ],
+      "mainCategoryId": 5,
+      "categoryIds": [
+        5,
+        6
+      ],
+      "variants": []
+    },
+    {
+      "id": 8,
+      "name": {
+        "en": "KitchenAid Mixer",
+        "de": "KitchenAid Mixer"
+      },
+      "slug": "kitchenaid-mixer",
+      "description": {
+        "en": "Classic stand mixer for every kitchen.",
+        "de": "Klassische Küchenmaschine für jede Küche."
+      },
+      "media": [
+        {
+          "id": 10,
+          "src": "/images/kitchenaid.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        21,
+        22
+      ],
+      "mainCategoryId": 7,
+      "categoryIds": [
+        7,
+        8
+      ],
+      "variants": []
+    },
+    {
+      "id": 9,
+      "name": {
+        "en": "Apple Watch Series 9",
+        "de": "Apple Watch Series 9"
+      },
+      "slug": "apple-watch-series-9",
+      "description": {
+        "en": "Smartwatch with health tracking and notifications.",
+        "de": "Smartwatch mit Gesundheitsüberwachung und Benachrichtigungen."
+      },
+      "media": [
+        {
+          "id": 11,
+          "src": "/images/applewatch9.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        1,
+        8,
+        12
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        3
+      ],
+      "variants": [
+        {
+          "id": 301,
+          "name": {
+            "en": "Apple Watch Series 9 - 44mm",
+            "de": "Apple Watch Series 9 - 44mm"
+          },
+          "description": {
+            "en": "44mm model with GPS",
+            "de": "44mm Modell mit GPS"
+          },
+          "slug": {
+            "en": "apple-watch-9-44",
+            "de": "apple-watch-9-44"
+          },
+          "prices": [
+            {
+              "value": 499,
+              "currency": "USD",
+              "discount": 20,
+              "discountType": "absolute"
+            }
+          ],
+          "media": [
+            {
+              "id": 12,
+              "src": "/images/applewatch9_44.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": {
+        "en": "GoPro Hero 12",
+        "de": "GoPro Hero 12"
+      },
+      "slug": "gopro-hero-12",
+      "description": {
+        "en": "Action camera with 5K video recording.",
+        "de": "Action-Kamera mit 5K Videoaufnahme."
+      },
+      "media": [
+        {
+          "id": 13,
+          "src": "/images/gopro12.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        9,
+        8
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        3
+      ],
+      "variants": []
+    },
+    {
+      "id": 11,
+      "name": {
+        "en": "Sony PlayStation 5",
+        "de": "Sony PlayStation 5"
+      },
+      "slug": "sony-ps5",
+      "description": {
+        "en": "Next-gen gaming console with ultra-fast SSD.",
+        "de": "Next-Gen Spielkonsole mit ultraschneller SSD."
+      },
+      "media": [
+        {
+          "id": 14,
+          "src": "/images/ps5.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        8,
+        24
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        2,
+        5
+      ],
+      "variants": [
+        {
+          "id": 302,
+          "name": {
+            "en": "PS5 Standard",
+            "de": "PS5 Standard"
+          },
+          "description": {
+            "en": "Disc edition with 825GB SSD",
+            "de": "Disc Edition mit 825GB SSD"
+          },
+          "slug": {
+            "en": "ps5-standard",
+            "de": "ps5-standard"
+          },
+          "prices": [
+            {
+              "value": 499,
+              "currency": "USD",
+              "discount": 0,
+              "discountType": "absolute"
+            }
+          ],
+          "media": [
+            {
+              "id": 15,
+              "src": "/images/ps5_standard.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": {
+        "en": "Canon EOS R6",
+        "de": "Canon EOS R6"
+      },
+      "slug": "canon-eos-r6",
+      "description": {
+        "en": "Full-frame mirrorless camera with 20MP sensor.",
+        "de": "Vollformat-Spiegellose Kamera mit 20MP Sensor."
+      },
+      "media": [
+        {
+          "id": 16,
+          "src": "/images/canon_eos_r6.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        9,
+        26
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        3
+      ],
+      "variants": []
+    },
+    {
+      "id": 13,
+      "name": {
+        "en": "Fitbit Charge 6",
+        "de": "Fitbit Charge 6"
+      },
+      "slug": "fitbit-charge-6",
+      "description": {
+        "en": "Activity tracker with heart rate monitoring.",
+        "de": "Aktivitätstracker mit Herzfrequenzüberwachung."
+      },
+      "media": [
+        {
+          "id": 17,
+          "src": "/images/fitbit_charge6.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        1,
+        8
+      ],
+      "mainCategoryId": 3,
+      "categoryIds": [
+        1,
+        3,
+        5
+      ],
+      "variants": []
+    },
+    {
+      "id": 14,
+      "name": {
+        "en": "Bose QuietComfort 45",
+        "de": "Bose QuietComfort 45"
+      },
+      "slug": "bose-qc45",
+      "description": {
+        "en": "Wireless noise-canceling headphones.",
+        "de": "Kabellose geräuschunterdrückende Kopfhörer."
+      },
+      "media": [
+        {
+          "id": 18,
+          "src": "/images/bose_qc45.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        9,
+        10
+      ],
+      "mainCategoryId": 2,
+      "categoryIds": [
+        2,
+        3
+      ],
+      "variants": []
+    },
+    {
+      "id": 15,
+      "name": {
+        "en": "Instant Pot Duo 7-in-1",
+        "de": "Instant Pot Duo 7-in-1"
+      },
+      "slug": "instant-pot-duo",
+      "description": {
+        "en": "Multi-cooker with pressure, slow cooking, and more.",
+        "de": "Multikocher mit Druck-, Slow-Cooking und mehr."
+      },
+      "media": [
+        {
+          "id": 19,
+          "src": "/images/instantpot.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        21,
+        22
+      ],
+      "mainCategoryId": 6,
+      "categoryIds": [
+        6,
+        7
+      ],
+      "variants": []
+    },
+    {
+      "id": 16,
+      "name": {
+        "en": "Lenovo ThinkPad X1 Carbon",
+        "de": "Lenovo ThinkPad X1 Carbon"
+      },
+      "slug": "lenovo-thinkpad-x1-carbon",
+      "description": {
+        "en": "Business ultrabook with lightweight carbon body.",
+        "de": "Business-Ultrabook mit leichtem Carbon-Gehäuse."
+      },
+      "media": [
+        {
+          "id": 20,
+          "src": "/images/thinkpad_x1.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        12,
+        14
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        4
+      ],
+      "variants": []
+    },
+    {
+      "id": 17,
+      "name": {
+        "en": "HP Spectre x360",
+        "de": "HP Spectre x360"
+      },
+      "slug": "hp-spectre-x360",
+      "description": {
+        "en": "Convertible laptop with touch screen.",
+        "de": "Convertible-Laptop mit Touchscreen."
+      },
+      "media": [
+        {
+          "id": 21,
+          "src": "/images/hp_spectre.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        13,
+        15
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        4
+      ],
+      "variants": []
+    },
+    {
+      "id": 18,
+      "name": {
+        "en": "Samsung Galaxy Watch 6",
+        "de": "Samsung Galaxy Watch 6"
+      },
+      "slug": "samsung-galaxy-watch-6",
+      "description": {
+        "en": "Smartwatch with fitness tracking and AMOLED display.",
+        "de": "Smartwatch mit Fitness-Tracking und AMOLED-Display."
+      },
+      "media": [
+        {
+          "id": 22,
+          "src": "/images/galaxywatch6.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        18,
+        23
+      ],
+      "mainCategoryId": 3,
+      "categoryIds": [
+        1,
+        3
+      ],
+      "variants": [
+        {
+          "id": 303,
+          "name": {
+            "en": "Galaxy Watch 6 - 42mm",
+            "de": "Galaxy Watch 6 - 42mm"
+          },
+          "description": {
+            "en": "42mm size with GPS and heart monitoring.",
+            "de": "42mm Größe mit GPS und Herzüberwachung."
+          },
+          "slug": {
+            "en": "galaxy-watch-6-42",
+            "de": "galaxy-watch-6-42"
+          },
+          "prices": [
+            {
+              "value": 399,
+              "currency": "USD",
+              "discount": 15,
+              "discountType": "percentage"
+            }
+          ],
+          "media": [
+            {
+              "id": 23,
+              "src": "/images/galaxywatch6_42.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": {
+        "en": "Garmin Fenix 7",
+        "de": "Garmin Fenix 7"
+      },
+      "slug": "garmin-fenix-7",
+      "description": {
+        "en": "Rugged smartwatch for outdoor sports.",
+        "de": "Robuste Smartwatch für Outdoor-Sportarten."
+      },
+      "media": [
+        {
+          "id": 24,
+          "src": "/images/garmin_fenix7.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        18,
+        23
+      ],
+      "mainCategoryId": 3,
+      "categoryIds": [
+        3,
+        5
+      ],
+      "variants": []
+    },
+    {
+      "id": 20,
+      "name": {
+        "en": "JBL Flip 6",
+        "de": "JBL Flip 6"
+      },
+      "slug": "jbl-flip-6",
+      "description": {
+        "en": "Portable Bluetooth speaker with waterproof design.",
+        "de": "Tragbarer Bluetooth-Lautsprecher mit wasserdichtem Design."
+      },
+      "media": [
+        {
+          "id": 25,
+          "src": "/images/jbl_flip6.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        9,
+        8
+      ],
+      "mainCategoryId": 2,
+      "categoryIds": [
+        2,
+        3
+      ],
+      "variants": []
+    },
+    {
+      "id": 21,
+      "name": {
+        "en": "Adidas Predator 22",
+        "de": "Adidas Predator 22"
+      },
+      "slug": "adidas-predator-22",
+      "description": {
+        "en": "Soccer cleats with primeknit upper.",
+        "de": "Fußballschuhe mit Primeknit-Obermaterial."
+      },
+      "media": [
+        {
+          "id": 26,
+          "src": "/images/adidas_predator22.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        17,
+        28,
+        19
+      ],
+      "mainCategoryId": 5,
+      "categoryIds": [
+        5,
+        6
+      ],
+      "variants": []
+    },
+    {
+      "id": 22,
+      "name": {
+        "en": "Instant Pot Duo Nova",
+        "de": "Instant Pot Duo Nova"
+      },
+      "slug": "instant-pot-duo-nova",
+      "description": {
+        "en": "Updated multi-cooker with 7-in-1 functions.",
+        "de": "Aktualisierter Multikocher mit 7-in-1 Funktionen."
+      },
+      "media": [
+        {
+          "id": 27,
+          "src": "/images/instantpot_nova.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        21,
+        22
+      ],
+      "mainCategoryId": 6,
+      "categoryIds": [
+        6,
+        7
+      ],
+      "variants": []
+    },
+    {
+      "id": 23,
+      "name": {
+        "en": "Microsoft Surface Laptop 5",
+        "de": "Microsoft Surface Laptop 5"
+      },
+      "slug": "surface-laptop-5",
+      "description": {
+        "en": "Portable laptop with touchscreen and Windows 11.",
+        "de": "Tragbares Laptop mit Touchscreen und Windows 11."
+      },
+      "media": [
+        {
+          "id": 28,
+          "src": "/images/surface_laptop5.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        12,
+        15
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        4
+      ],
+      "variants": []
+    },
+    {
+      "id": 24,
+      "name": {
+        "en": "Oculus Quest 3",
+        "de": "Oculus Quest 3"
+      },
+      "slug": "oculus-quest-3",
+      "description": {
+        "en": "Standalone VR headset with high-resolution display.",
+        "de": "Autonomes VR-Headset mit hochauflösendem Display."
+      },
+      "media": [
+        {
+          "id": 29,
+          "src": "/images/oculus_quest3.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        8,
+        9
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        3,
+        5
+      ],
+      "variants": []
+    },
+    {
+      "id": 25,
+      "name": {
+        "en": "Apple iPad Pro 12.9",
+        "de": "Apple iPad Pro 12.9"
+      },
+      "slug": "ipad-pro-12-9",
+      "description": {
+        "en": "High-end tablet with M2 chip and Liquid Retina XDR display.",
+        "de": "High-End-Tablet mit M2 Chip und Liquid Retina XDR Display."
+      },
+      "media": [
+        {
+          "id": 30,
+          "src": "/images/ipad_pro12.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        2,
+        8,
+        12
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        2,
+        4
+      ],
+      "variants": []
+    },
+    {
+      "id": 26,
+      "name": {
+        "en": "Samsung Galaxy Tab S9",
+        "de": "Samsung Galaxy Tab S9"
+      },
+      "slug": "galaxy-tab-s9",
+      "description": {
+        "en": "Android tablet with AMOLED display and stylus support.",
+        "de": "Android-Tablet mit AMOLED-Display und Stiftunterstützung."
+      },
+      "media": [
+        {
+          "id": 31,
+          "src": "/images/galaxy_tab_s9.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        2,
+        8
+      ],
+      "mainCategoryId": 1,
+      "categoryIds": [
+        1,
+        2,
+        4
+      ],
+      "variants": []
+    },
+    {
+      "id": 27,
+      "name": {
+        "en": "Sony WF-1000XM5",
+        "de": "Sony WF-1000XM5"
+      },
+      "slug": "sony-wf-1000xm5",
+      "description": {
+        "en": "Wireless noise-canceling earbuds.",
+        "de": "Kabellose geräuschunterdrückende Ohrhörer."
+      },
+      "media": [
+        {
+          "id": 32,
+          "src": "/images/sony_wf1000xm5.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        9,
+        10
+      ],
+      "mainCategoryId": 2,
+      "categoryIds": [
+        2,
+        3
+      ],
+      "variants": []
+    },
+    {
+      "id": 28,
+      "name": {
+        "en": "Fitbit Versa 4",
+        "de": "Fitbit Versa 4"
+      },
+      "slug": "fitbit-versa-4",
+      "description": {
+        "en": "Smartwatch with activity tracking and sleep monitoring.",
+        "de": "Smartwatch mit Aktivitäts- und Schlaftracking."
+      },
+      "media": [
+        {
+          "id": 33,
+          "src": "/images/fitbit_versa4.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        1,
+        8,
+        23
+      ],
+      "mainCategoryId": 3,
+      "categoryIds": [
+        3,
+        5
+      ],
+      "variants": []
+    },
+    {
+      "id": 29,
+      "name": {
+        "en": "KitchenAid Artisan Mini",
+        "de": "KitchenAid Artisan Mini"
+      },
+      "slug": "kitchenaid-artisan-mini",
+      "description": {
+        "en": "Compact stand mixer for small kitchens.",
+        "de": "Kompakte Küchenmaschine für kleine Küchen."
+      },
+      "media": [
+        {
+          "id": 34,
+          "src": "/images/kitchenaid_mini.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        21,
+        22
+      ],
+      "mainCategoryId": 7,
+      "categoryIds": [
+        7,
+        8
+      ],
+      "variants": []
+    },
+    {
+      "id": 30,
+      "name": {
+        "en": "Nike ZoomX Vaporfly",
+        "de": "Nike ZoomX Vaporfly"
+      },
+      "slug": "nike-zoomx-vaporfly",
+      "description": {
+        "en": "High-performance running shoes for competitions.",
+        "de": "Hochleistungs-Laufschuhe für Wettkämpfe."
+      },
+      "media": [
+        {
+          "id": 35,
+          "src": "/images/nike_zoomx.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        17,
+        28,
+        19
+      ],
+      "mainCategoryId": 5,
+      "categoryIds": [
+        5,
+        6
+      ],
+      "variants": []
+    },
+    {
+      "id": 31,
+      "name": {
+        "en": "Adidas NMD R1",
+        "de": "Adidas NMD R1"
+      },
+      "slug": "adidas-nmd-r1",
+      "description": {
+        "en": "Casual sneakers with Boost cushioning.",
+        "de": "Freizeit-Sneaker mit Boost-Dämpfung."
+      },
+      "media": [
+        {
+          "id": 36,
+          "src": "/images/adidas_nmd_r1.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        17,
+        20,
+        19
+      ],
+      "mainCategoryId": 5,
+      "categoryIds": [
+        5,
+        6
+      ],
+      "variants": []
+    },
+    {
+      "id": 32,
+      "name": {
+        "en": "DeLonghi Magnifica S",
+        "de": "DeLonghi Magnifica S"
+      },
+      "slug": "delonghi-magnifica-s",
+      "description": {
+        "en": "Automatic coffee machine with grinder.",
+        "de": "Vollautomatische Kaffeemaschine mit Mahlwerk."
+      },
+      "media": [
+        {
+          "id": 37,
+          "src": "/images/delonghi_magnifica.jpg",
+          "type": "image"
+        }
+      ],
+      "attributeValueIds": [
+        21,
+        22
+      ],
+      "mainCategoryId": 6,
+      "categoryIds": [
+        6,
+        7
+      ],
+      "variants": []
+    }
+  ],
+  "orders": []
+}
