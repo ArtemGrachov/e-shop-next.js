@@ -1,22 +1,15 @@
 import { ComponentType, useMemo } from 'react';
+import { useLocale } from 'next-intl';
 
 import type { IProduct } from '@/types/models/product';
-import { useLocale } from 'next-intl';
-import { IProductVariant } from '../../../types/models/product-variant';
+import type { IProductVariant } from '@/types/models/product-variant';
 
-interface IProductProps {
+interface IProps {
   product: IProduct;
-  productVariant?: never;
+  productVariant?: IProductVariant | null;
 }
 
-interface IVariantProps {
-  product?: never;
-  productVariant: IProductVariant;
-}
-
-type Props = | IProductProps | IVariantProps;
-
-const ProductDescription: ComponentType<Props> = ({ product, productVariant }) => {
+const ProductDescription: ComponentType<IProps> = ({ product, productVariant }) => {
   const locale = useLocale();
 
   const outputDescription = useMemo(() => {
