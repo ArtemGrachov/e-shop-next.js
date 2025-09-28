@@ -1,17 +1,14 @@
 import { createStore } from 'zustand/vanilla';
 
-import { EStatus } from '@/constants/status';
-
-import type { ProductState, ProductStore } from './types';
+import type { State, ProductStore } from './types';
 import { defaultInitState } from './state';
+import { reducer } from './reducer';
 
 export const createProductStore = (
-  initState: ProductState = defaultInitState,
+  initState: State = defaultInitState,
 ) => {
   return createStore<ProductStore>()((set) => ({
     ...initState,
-    getProduct: () => set({ getStatus: EStatus.PROCESSING }),
-    getProductSuccess: (product) => set({ product }),
-    getProductError: () => set({ getStatus: EStatus.ERROR }),
+    dispatch: action => set(state => reducer(state, action)),
   }));
 }

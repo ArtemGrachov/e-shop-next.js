@@ -1,7 +1,7 @@
 import { EStatus } from '@/constants/status';
-import type { ProductState } from './types';
+import type { State } from './types';
 
-export const defaultInitState: ProductState = {
+export const defaultInitState: State = {
   getStatus: EStatus.INIT,
   product: null,
 };
