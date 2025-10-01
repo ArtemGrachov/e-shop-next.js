@@ -1,6 +1,7 @@
 import { ComponentType, useMemo } from 'react';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { useRouter } from 'next/router';
+import { useLocale } from 'next-intl';
 
 import { ProductProvider } from '@/providers/product';
 import { fetchProduct } from '@/providers/product/api/fetch-product';
@@ -8,10 +9,14 @@ import { createHttpClient } from '@/providers/http-client/utils/create-http-clie
 import { useProductStore } from '@/providers/product/hooks/use-product-store';
 
 import ProductDescription from '@/components/products/ProductDescription';
+import FormProductVariant from '@/components/products/FormProductVariant';
+
+import type { IProductVariant } from '@/types/models/product-variant';
 
 const PageProduct: ComponentType = () => {
   const product = useProductStore(s => s.product);
   const router = useRouter();
+  const locale = useLocale();
 
   const currentVariantSlug = useMemo(() => {
     const slug = router.query.slug;
@@ -39,8 +44,19 @@ const PageProduct: ComponentType = () => {
     if (currentVariantId == null) {
       return defaultVariant;
     }
+
     return product?.variants.find(v => v.id === currentVariantId) ?? defaultVariant;
   }, [product, currentVariantId]);
+
+  const variantChangeHandler = (variant?: IProductVariant) => {
+    let newPath = `/products/${product?.slug}-${product?.id}`;
+
+    if (variant) {
+      newPath += `/${variant.slug[locale]}-${variant.id}`;
+    }
+
+    router.push(newPath, undefined, { shallow: true });
+  }
 
   return (
     <>
@@ -48,6 +64,7 @@ const PageProduct: ComponentType = () => {
         Product page
       </h1>
       {product && <ProductDescription product={product} productVariant={currentVariant} />}
+      {product?.variants?.length && <FormProductVariant product={product} currentVariant={currentVariant} onSubmit={variantChangeHandler} />}
     </>
   )
 }

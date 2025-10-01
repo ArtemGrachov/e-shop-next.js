@@ -944,8 +944,8 @@
       },
       "slug": "iphone-14-pro",
       "description": {
-        "en": "Flagship Apple smartphone with advanced camera.",
-        "de": "Apple-Flaggschiff mit fortschrittlicher Kamera."
+        "en": "Latest Apple flagship smartphone with ProMotion display.",
+        "de": "Neuestes Apple-Flaggschiff-Smartphone mit ProMotion-Display."
       },
       "media": [
         {
@@ -957,8 +957,7 @@
       "attributeValueIds": [
         1,
         2,
-        3,
-        8
+        3
       ],
       "mainCategoryId": 1,
       "categoryIds": [
@@ -969,20 +968,20 @@
         {
           "id": 101,
           "name": {
-            "en": "iPhone 14 Pro 128GB",
-            "de": "iPhone 14 Pro 128GB"
+            "en": "iPhone 14 Pro 128GB - Silver",
+            "de": "iPhone 14 Pro 128GB - Silber"
           },
           "description": {
-            "en": "Base storage model",
-            "de": "Basisspeichermodell"
+            "en": "Base model with 128GB storage in Silver.",
+            "de": "Basismodell mit 128GB Speicher in Silber."
           },
           "slug": {
-            "en": "iphone-14-pro-128",
-            "de": "iphone-14-pro-128"
+            "en": "iphone-14-pro-128-silver",
+            "de": "iphone-14-pro-128-silber"
           },
           "prices": [
             {
-              "value": 1099,
+              "value": 999,
               "currency": "USD",
               "discount": 0,
               "discountType": "absolute"
@@ -991,12 +990,154 @@
           "media": [
             {
               "id": 2,
-              "src": "/images/iphone14pro_128.jpg",
+              "src": "/images/iphone14pro_silver.jpg",
               "type": "image"
             }
           ],
           "attributeValueIds": [
-            4
+            2,
+            30,
+            31
+          ]
+        },
+        {
+          "id": 102,
+          "name": {
+            "en": "iPhone 14 Pro 256GB - Space Black",
+            "de": "iPhone 14 Pro 256GB - Space Schwarz"
+          },
+          "description": {
+            "en": "256GB storage in Space Black.",
+            "de": "256GB Speicher in Space Schwarz."
+          },
+          "slug": {
+            "en": "iphone-14-pro-256-black",
+            "de": "iphone-14-pro-256-schwarz"
+          },
+          "prices": [
+            {
+              "value": 1099,
+              "currency": "USD",
+              "discount": 50,
+              "discountType": "absolute"
+            }
+          ],
+          "media": [
+            {
+              "id": 3,
+              "src": "/images/iphone14pro_black.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            2,
+            32,
+            33
+          ]
+        },
+        {
+          "id": 103,
+          "name": {
+            "en": "iPhone 14 Pro 512GB - Gold",
+            "de": "iPhone 14 Pro 512GB - Gold"
+          },
+          "description": {
+            "en": "512GB storage in Gold.",
+            "de": "512GB Speicher in Gold."
+          },
+          "slug": {
+            "en": "iphone-14-pro-512-gold",
+            "de": "iphone-14-pro-512-gold"
+          },
+          "prices": [
+            {
+              "value": 1299,
+              "currency": "USD",
+              "discount": 0,
+              "discountType": "absolute"
+            }
+          ],
+          "media": [
+            {
+              "id": 4,
+              "src": "/images/iphone14pro_gold.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            2,
+            29,
+            34
+          ]
+        },
+        {
+          "id": 104,
+          "name": {
+            "en": "iPhone 14 Pro 1TB - Deep Purple",
+            "de": "iPhone 14 Pro 1TB - Dunkellila"
+          },
+          "description": {
+            "en": "1TB storage in Deep Purple.",
+            "de": "1TB Speicher in Dunkellila."
+          },
+          "slug": {
+            "en": "iphone-14-pro-1tb-purple",
+            "de": "iphone-14-pro-1tb-lila"
+          },
+          "prices": [
+            {
+              "value": 1499,
+              "currency": "USD",
+              "discount": 100,
+              "discountType": "absolute"
+            }
+          ],
+          "media": [
+            {
+              "id": 5,
+              "src": "/images/iphone14pro_purple.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            2,
+            35,
+            36
+          ]
+        },
+        {
+          "id": 105,
+          "name": {
+            "en": "iPhone 14 Pro 256GB - Alpine Green",
+            "de": "iPhone 14 Pro 256GB - Alpingrün"
+          },
+          "description": {
+            "en": "256GB storage in Alpine Green.",
+            "de": "256GB Speicher in Alpingrün."
+          },
+          "slug": {
+            "en": "iphone-14-pro-256-green",
+            "de": "iphone-14-pro-256-gruen"
+          },
+          "prices": [
+            {
+              "value": 1149,
+              "currency": "USD",
+              "discount": 0,
+              "discountType": "absolute"
+            }
+          ],
+          "media": [
+            {
+              "id": 6,
+              "src": "/images/iphone14pro_green.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            2,
+            32,
+            37
           ]
         }
       ]
