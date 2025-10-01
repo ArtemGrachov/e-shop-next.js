@@ -942,7 +942,10 @@
         "en": "iPhone 14 Pro",
         "de": "iPhone 14 Pro"
       },
-      "slug": "iphone-14-pro",
+      "slug": {
+        "en": "iphone-14-pro",
+        "de": "iphone-14-pro"
+      },
       "description": {
         "en": "Latest Apple flagship smartphone with ProMotion display.",
         "de": "Neuestes Apple-Flaggschiff-Smartphone mit ProMotion-Display."
@@ -984,7 +987,8 @@
               "value": 999,
               "currency": "USD",
               "discount": 0,
-              "discountType": "absolute"
+              "discountType": "absolute",
+              "originalValue": 999
             }
           ],
           "media": [
@@ -1019,7 +1023,8 @@
               "value": 1099,
               "currency": "USD",
               "discount": 50,
-              "discountType": "absolute"
+              "discountType": "absolute",
+              "originalValue": 1149
             }
           ],
           "media": [
@@ -1054,7 +1059,8 @@
               "value": 1299,
               "currency": "USD",
               "discount": 0,
-              "discountType": "absolute"
+              "discountType": "absolute",
+              "originalValue": 1299
             }
           ],
           "media": [
@@ -1089,7 +1095,8 @@
               "value": 1499,
               "currency": "USD",
               "discount": 100,
-              "discountType": "absolute"
+              "discountType": "absolute",
+              "originalValue": 1599
             }
           ],
           "media": [
@@ -1124,7 +1131,8 @@
               "value": 1149,
               "currency": "USD",
               "discount": 0,
-              "discountType": "absolute"
+              "discountType": "absolute",
+              "originalValue": 1149
             }
           ],
           "media": [
@@ -1148,7 +1156,10 @@
         "en": "Samsung Galaxy S23",
         "de": "Samsung Galaxy S23"
       },
-      "slug": "samsung-galaxy-s23",
+      "slug": {
+        "en": "samsung-galaxy-s23",
+        "de": "samsung-galaxy-s23"
+      },
       "description": {
         "en": "Latest Samsung flagship with dynamic AMOLED.",
         "de": "Neuestes Samsung-Flaggschiff mit dynamischem AMOLED."
@@ -1191,7 +1202,8 @@
               "value": 999,
               "currency": "USD",
               "discount": 10,
-              "discountType": "percentage"
+              "discountType": "percentage",
+              "originalValue": 1110
             }
           ],
           "media": [
@@ -1213,7 +1225,10 @@
         "en": "Sony WH-1000XM5",
         "de": "Sony WH-1000XM5"
       },
-      "slug": "sony-wh-1000xm5",
+      "slug": {
+        "en": "sony-wh-1000xm5",
+        "de": "sony-wh-1000xm5"
+      },
       "description": {
         "en": "Noise-canceling wireless headphones.",
         "de": "Geräuschunterdrückende kabellose Kopfhörer."
@@ -1235,7 +1250,16 @@
         2,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 372,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 372
+        }
+      ]
     },
     {
       "id": 4,
@@ -1243,7 +1267,10 @@
         "en": "MacBook Pro 16",
         "de": "MacBook Pro 16"
       },
-      "slug": "macbook-pro-16",
+      "slug": {
+        "en": "macbook-pro-16",
+        "de": "macbook-pro-16"
+      },
       "description": {
         "en": "Apple laptop with M2 Max chip.",
         "de": "Apple-Laptop mit M2 Max Chip."
@@ -1265,7 +1292,16 @@
         1,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1388,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1388
+        }
+      ]
     },
     {
       "id": 5,
@@ -1273,7 +1309,10 @@
         "en": "Dell XPS 13",
         "de": "Dell XPS 13"
       },
-      "slug": "dell-xps-13",
+      "slug": {
+        "en": "dell-xps-13",
+        "de": "dell-xps-13"
+      },
       "description": {
         "en": "Premium ultrabook with InfinityEdge display.",
         "de": "Premium-Ultrabook mit InfinityEdge-Display."
@@ -1295,7 +1334,16 @@
         1,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1208,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1208
+        }
+      ]
     },
     {
       "id": 6,
@@ -1303,7 +1351,10 @@
         "en": "Nike Air Max 270",
         "de": "Nike Air Max 270"
       },
-      "slug": "nike-air-max-270",
+      "slug": {
+        "en": "nike-air-max-270",
+        "de": "nike-air-max-270"
+      },
       "description": {
         "en": "Comfortable lifestyle sneakers.",
         "de": "Bequeme Lifestyle-Sneaker."
@@ -1325,7 +1376,16 @@
         5,
         6
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 268,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 268
+        }
+      ]
     },
     {
       "id": 7,
@@ -1333,7 +1393,10 @@
         "en": "Adidas Ultraboost 22",
         "de": "Adidas Ultraboost 22"
       },
-      "slug": "adidas-ultraboost-22",
+      "slug": {
+        "en": "adidas-ultraboost-22",
+        "de": "adidas-ultraboost-22"
+      },
       "description": {
         "en": "High-performance running shoes.",
         "de": "Hochleistungs-Laufschuhe."
@@ -1355,7 +1418,16 @@
         5,
         6
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 135,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 135
+        }
+      ]
     },
     {
       "id": 8,
@@ -1363,7 +1435,10 @@
         "en": "KitchenAid Mixer",
         "de": "KitchenAid Mixer"
       },
-      "slug": "kitchenaid-mixer",
+      "slug": {
+        "en": "kitchenaid-mixer",
+        "de": "kitchenaid-mixer"
+      },
       "description": {
         "en": "Classic stand mixer for every kitchen.",
         "de": "Klassische Küchenmaschine für jede Küche."
@@ -1384,7 +1459,16 @@
         7,
         8
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 285,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 285
+        }
+      ]
     },
     {
       "id": 9,
@@ -1392,7 +1476,10 @@
         "en": "Apple Watch Series 9",
         "de": "Apple Watch Series 9"
       },
-      "slug": "apple-watch-series-9",
+      "slug": {
+        "en": "apple-watch-series-9",
+        "de": "apple-watch-series-9"
+      },
       "description": {
         "en": "Smartwatch with health tracking and notifications.",
         "de": "Smartwatch mit Gesundheitsüberwachung und Benachrichtigungen."
@@ -1434,7 +1521,8 @@
               "value": 499,
               "currency": "USD",
               "discount": 20,
-              "discountType": "absolute"
+              "discountType": "absolute",
+              "originalValue": 519
             }
           ],
           "media": [
@@ -1456,7 +1544,10 @@
         "en": "GoPro Hero 12",
         "de": "GoPro Hero 12"
       },
-      "slug": "gopro-hero-12",
+      "slug": {
+        "en": "gopro-hero-12",
+        "de": "gopro-hero-12"
+      },
       "description": {
         "en": "Action camera with 5K video recording.",
         "de": "Action-Kamera mit 5K Videoaufnahme."
@@ -1477,7 +1568,16 @@
         1,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1627,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1627
+        }
+      ]
     },
     {
       "id": 11,
@@ -1485,7 +1585,10 @@
         "en": "Sony PlayStation 5",
         "de": "Sony PlayStation 5"
       },
-      "slug": "sony-ps5",
+      "slug": {
+        "en": "sony-ps5",
+        "de": "sony-ps5"
+      },
       "description": {
         "en": "Next-gen gaming console with ultra-fast SSD.",
         "de": "Next-Gen Spielkonsole mit ultraschneller SSD."
@@ -1527,7 +1630,8 @@
               "value": 499,
               "currency": "USD",
               "discount": 0,
-              "discountType": "absolute"
+              "discountType": "absolute",
+              "originalValue": 499
             }
           ],
           "media": [
@@ -1549,7 +1653,10 @@
         "en": "Canon EOS R6",
         "de": "Canon EOS R6"
       },
-      "slug": "canon-eos-r6",
+      "slug": {
+        "en": "canon-eos-r6",
+        "de": "canon-eos-r6"
+      },
       "description": {
         "en": "Full-frame mirrorless camera with 20MP sensor.",
         "de": "Vollformat-Spiegellose Kamera mit 20MP Sensor."
@@ -1570,7 +1677,16 @@
         1,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1748,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1748
+        }
+      ]
     },
     {
       "id": 13,
@@ -1578,7 +1694,10 @@
         "en": "Fitbit Charge 6",
         "de": "Fitbit Charge 6"
       },
-      "slug": "fitbit-charge-6",
+      "slug": {
+        "en": "fitbit-charge-6",
+        "de": "fitbit-charge-6"
+      },
       "description": {
         "en": "Activity tracker with heart rate monitoring.",
         "de": "Aktivitätstracker mit Herzfrequenzüberwachung."
@@ -1600,7 +1719,16 @@
         3,
         5
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 454,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 454
+        }
+      ]
     },
     {
       "id": 14,
@@ -1608,7 +1736,10 @@
         "en": "Bose QuietComfort 45",
         "de": "Bose QuietComfort 45"
       },
-      "slug": "bose-qc45",
+      "slug": {
+        "en": "bose-qc45",
+        "de": "bose-qc45"
+      },
       "description": {
         "en": "Wireless noise-canceling headphones.",
         "de": "Kabellose geräuschunterdrückende Kopfhörer."
@@ -1629,7 +1760,16 @@
         2,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 322,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 322
+        }
+      ]
     },
     {
       "id": 15,
@@ -1637,7 +1777,10 @@
         "en": "Instant Pot Duo 7-in-1",
         "de": "Instant Pot Duo 7-in-1"
       },
-      "slug": "instant-pot-duo",
+      "slug": {
+        "en": "instant-pot-duo",
+        "de": "instant-pot-duo"
+      },
       "description": {
         "en": "Multi-cooker with pressure, slow cooking, and more.",
         "de": "Multikocher mit Druck-, Slow-Cooking und mehr."
@@ -1658,7 +1801,16 @@
         6,
         7
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 320,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 320
+        }
+      ]
     },
     {
       "id": 16,
@@ -1666,7 +1818,10 @@
         "en": "Lenovo ThinkPad X1 Carbon",
         "de": "Lenovo ThinkPad X1 Carbon"
       },
-      "slug": "lenovo-thinkpad-x1-carbon",
+      "slug": {
+        "en": "lenovo-thinkpad-x1-carbon",
+        "de": "lenovo-thinkpad-x1-carbon"
+      },
       "description": {
         "en": "Business ultrabook with lightweight carbon body.",
         "de": "Business-Ultrabook mit leichtem Carbon-Gehäuse."
@@ -1687,7 +1842,16 @@
         1,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1306,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1306
+        }
+      ]
     },
     {
       "id": 17,
@@ -1695,7 +1859,10 @@
         "en": "HP Spectre x360",
         "de": "HP Spectre x360"
       },
-      "slug": "hp-spectre-x360",
+      "slug": {
+        "en": "hp-spectre-x360",
+        "de": "hp-spectre-x360"
+      },
       "description": {
         "en": "Convertible laptop with touch screen.",
         "de": "Convertible-Laptop mit Touchscreen."
@@ -1716,7 +1883,16 @@
         1,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1821,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1821
+        }
+      ]
     },
     {
       "id": 18,
@@ -1724,7 +1900,10 @@
         "en": "Samsung Galaxy Watch 6",
         "de": "Samsung Galaxy Watch 6"
       },
-      "slug": "samsung-galaxy-watch-6",
+      "slug": {
+        "en": "samsung-galaxy-watch-6",
+        "de": "samsung-galaxy-watch-6"
+      },
       "description": {
         "en": "Smartwatch with fitness tracking and AMOLED display.",
         "de": "Smartwatch mit Fitness-Tracking und AMOLED-Display."
@@ -1765,7 +1944,8 @@
               "value": 399,
               "currency": "USD",
               "discount": 15,
-              "discountType": "percentage"
+              "discountType": "percentage",
+              "originalValue": 469
             }
           ],
           "media": [
@@ -1787,7 +1967,10 @@
         "en": "Garmin Fenix 7",
         "de": "Garmin Fenix 7"
       },
-      "slug": "garmin-fenix-7",
+      "slug": {
+        "en": "garmin-fenix-7",
+        "de": "garmin-fenix-7"
+      },
       "description": {
         "en": "Rugged smartwatch for outdoor sports.",
         "de": "Robuste Smartwatch für Outdoor-Sportarten."
@@ -1808,7 +1991,16 @@
         3,
         5
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 465,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 465
+        }
+      ]
     },
     {
       "id": 20,
@@ -1816,7 +2008,10 @@
         "en": "JBL Flip 6",
         "de": "JBL Flip 6"
       },
-      "slug": "jbl-flip-6",
+      "slug": {
+        "en": "jbl-flip-6",
+        "de": "jbl-flip-6"
+      },
       "description": {
         "en": "Portable Bluetooth speaker with waterproof design.",
         "de": "Tragbarer Bluetooth-Lautsprecher mit wasserdichtem Design."
@@ -1837,7 +2032,16 @@
         2,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 159,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 159
+        }
+      ]
     },
     {
       "id": 21,
@@ -1845,7 +2049,10 @@
         "en": "Adidas Predator 22",
         "de": "Adidas Predator 22"
       },
-      "slug": "adidas-predator-22",
+      "slug": {
+        "en": "adidas-predator-22",
+        "de": "adidas-predator-22"
+      },
       "description": {
         "en": "Soccer cleats with primeknit upper.",
         "de": "Fußballschuhe mit Primeknit-Obermaterial."
@@ -1867,7 +2074,16 @@
         5,
         6
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 300,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 300
+        }
+      ]
     },
     {
       "id": 22,
@@ -1875,7 +2091,10 @@
         "en": "Instant Pot Duo Nova",
         "de": "Instant Pot Duo Nova"
       },
-      "slug": "instant-pot-duo-nova",
+      "slug": {
+        "en": "instant-pot-duo-nova",
+        "de": "instant-pot-duo-nova"
+      },
       "description": {
         "en": "Updated multi-cooker with 7-in-1 functions.",
         "de": "Aktualisierter Multikocher mit 7-in-1 Funktionen."
@@ -1896,7 +2115,16 @@
         6,
         7
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 457,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 457
+        }
+      ]
     },
     {
       "id": 23,
@@ -1904,7 +2132,10 @@
         "en": "Microsoft Surface Laptop 5",
         "de": "Microsoft Surface Laptop 5"
       },
-      "slug": "surface-laptop-5",
+      "slug": {
+        "en": "surface-laptop-5",
+        "de": "surface-laptop-5"
+      },
       "description": {
         "en": "Portable laptop with touchscreen and Windows 11.",
         "de": "Tragbares Laptop mit Touchscreen und Windows 11."
@@ -1925,7 +2156,16 @@
         1,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1108,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1108
+        }
+      ]
     },
     {
       "id": 24,
@@ -1933,7 +2173,10 @@
         "en": "Oculus Quest 3",
         "de": "Oculus Quest 3"
       },
-      "slug": "oculus-quest-3",
+      "slug": {
+        "en": "oculus-quest-3",
+        "de": "oculus-quest-3"
+      },
       "description": {
         "en": "Standalone VR headset with high-resolution display.",
         "de": "Autonomes VR-Headset mit hochauflösendem Display."
@@ -1955,7 +2198,16 @@
         3,
         5
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1399,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1399
+        }
+      ]
     },
     {
       "id": 25,
@@ -1963,7 +2215,10 @@
         "en": "Apple iPad Pro 12.9",
         "de": "Apple iPad Pro 12.9"
       },
-      "slug": "ipad-pro-12-9",
+      "slug": {
+        "en": "ipad-pro-12-9",
+        "de": "ipad-pro-12-9"
+      },
       "description": {
         "en": "High-end tablet with M2 chip and Liquid Retina XDR display.",
         "de": "High-End-Tablet mit M2 Chip und Liquid Retina XDR Display."
@@ -1986,7 +2241,16 @@
         2,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1293,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1293
+        }
+      ]
     },
     {
       "id": 26,
@@ -1994,7 +2258,10 @@
         "en": "Samsung Galaxy Tab S9",
         "de": "Samsung Galaxy Tab S9"
       },
-      "slug": "galaxy-tab-s9",
+      "slug": {
+        "en": "galaxy-tab-s9",
+        "de": "galaxy-tab-s9"
+      },
       "description": {
         "en": "Android tablet with AMOLED display and stylus support.",
         "de": "Android-Tablet mit AMOLED-Display und Stiftunterstützung."
@@ -2016,7 +2283,16 @@
         2,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 953,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 953
+        }
+      ]
     },
     {
       "id": 27,
@@ -2024,7 +2300,10 @@
         "en": "Sony WF-1000XM5",
         "de": "Sony WF-1000XM5"
       },
-      "slug": "sony-wf-1000xm5",
+      "slug": {
+        "en": "sony-wf-1000xm5",
+        "de": "sony-wf-1000xm5"
+      },
       "description": {
         "en": "Wireless noise-canceling earbuds.",
         "de": "Kabellose geräuschunterdrückende Ohrhörer."
@@ -2045,7 +2324,16 @@
         2,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 322,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 322
+        }
+      ]
     },
     {
       "id": 28,
@@ -2053,7 +2341,10 @@
         "en": "Fitbit Versa 4",
         "de": "Fitbit Versa 4"
       },
-      "slug": "fitbit-versa-4",
+      "slug": {
+        "en": "fitbit-versa-4",
+        "de": "fitbit-versa-4"
+      },
       "description": {
         "en": "Smartwatch with activity tracking and sleep monitoring.",
         "de": "Smartwatch mit Aktivitäts- und Schlaftracking."
@@ -2075,7 +2366,16 @@
         3,
         5
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 467,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 467
+        }
+      ]
     },
     {
       "id": 29,
@@ -2083,7 +2383,10 @@
         "en": "KitchenAid Artisan Mini",
         "de": "KitchenAid Artisan Mini"
       },
-      "slug": "kitchenaid-artisan-mini",
+      "slug": {
+        "en": "kitchenaid-artisan-mini",
+        "de": "kitchenaid-artisan-mini"
+      },
       "description": {
         "en": "Compact stand mixer for small kitchens.",
         "de": "Kompakte Küchenmaschine für kleine Küchen."
@@ -2104,7 +2407,16 @@
         7,
         8
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 623,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 623
+        }
+      ]
     },
     {
       "id": 30,
@@ -2112,7 +2424,10 @@
         "en": "Nike ZoomX Vaporfly",
         "de": "Nike ZoomX Vaporfly"
       },
-      "slug": "nike-zoomx-vaporfly",
+      "slug": {
+        "en": "nike-zoomx-vaporfly",
+        "de": "nike-zoomx-vaporfly"
+      },
       "description": {
         "en": "High-performance running shoes for competitions.",
         "de": "Hochleistungs-Laufschuhe für Wettkämpfe."
@@ -2134,7 +2449,16 @@
         5,
         6
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 181,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 181
+        }
+      ]
     },
     {
       "id": 31,
@@ -2142,7 +2466,10 @@
         "en": "Adidas NMD R1",
         "de": "Adidas NMD R1"
       },
-      "slug": "adidas-nmd-r1",
+      "slug": {
+        "en": "adidas-nmd-r1",
+        "de": "adidas-nmd-r1"
+      },
       "description": {
         "en": "Casual sneakers with Boost cushioning.",
         "de": "Freizeit-Sneaker mit Boost-Dämpfung."
@@ -2164,7 +2491,16 @@
         5,
         6
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 288,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 288
+        }
+      ]
     },
     {
       "id": 32,
@@ -2172,7 +2508,10 @@
         "en": "DeLonghi Magnifica S",
         "de": "DeLonghi Magnifica S"
       },
-      "slug": "delonghi-magnifica-s",
+      "slug": {
+        "en": "delonghi-magnifica-s",
+        "de": "delonghi-magnifica-s"
+      },
       "description": {
         "en": "Automatic coffee machine with grinder.",
         "de": "Vollautomatische Kaffeemaschine mit Mahlwerk."
@@ -2193,7 +2532,16 @@
         6,
         7
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 559,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 559
+        }
+      ]
     }
   ],
   "orders": []
