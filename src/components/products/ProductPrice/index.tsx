@@ -3,15 +3,17 @@ import { ComponentType } from 'react';
 import Price from '@/components/other/Price';
 
 import type { IProductVariant } from '@/types/models/product-variant';
+import { IProduct } from '@/types/models/product';
 
 interface IProps {
-  productVariant: IProductVariant;
+  product: IProduct;
+  productVariant?: IProductVariant;
 }
 
-const ProductPrice: ComponentType<IProps> = ({ productVariant }) => {
+const ProductPrice: ComponentType<IProps> = ({ product, productVariant }) => {
   return (
     <ul>
-      {productVariant.prices.map((price, index) => {
+      {(productVariant ?? product).prices.map((price, index) => {
         return (
           <li key={index}>
             <Price price={price} />

@@ -1,7 +1,7 @@
 import { ComponentType } from 'react';
 
-import { IPrice } from '@/types/models/price';
 import { EDiscountType } from '@/constants/prices';
+import type { IPrice } from '@/types/models/price';
 
 interface IProps {
   price: IPrice;
@@ -16,8 +16,12 @@ const Price: ComponentType<IProps> = ({ price }) => {
       {price.discount ? (
         <>
           {' '}
+          <s>
+            {price.originalValue} {price.currency}
+          </s>
+          {' '}
           <span>
-            -{price.discount} {price.discountType === EDiscountType.ABSOLUTE ? price.currency : '%'}
+          -{price.discount} {price.discountType === EDiscountType.ABSOLUTE ? price.currency : '%'}
           </span>
         </>
       ) : null}

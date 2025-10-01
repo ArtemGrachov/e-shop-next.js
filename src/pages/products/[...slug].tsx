@@ -55,7 +55,7 @@ const PageProduct: ComponentType = () => {
   const variantChangeHandler = (variant?: IProductVariant) => {
     let newPath;
 
-    const slugId = `${product?.slug}-${product?.id}`;
+    const slugId = `${product?.slug[locale]}-${product?.id}`;
 
     if (variant) {
       const variantSlugId = `${variant.slug[locale]}-${variant.id}`;
@@ -82,7 +82,7 @@ const PageProduct: ComponentType = () => {
       </h1>
       {product && <ProductDescription product={product} productVariant={currentVariant} />}
       {product?.variants?.length && <FormProductVariant product={product} currentVariant={currentVariant} onSubmit={variantChangeHandler} />}
-      {currentVariant && <ProductPrice productVariant={currentVariant} />}
+      {product && currentVariant && <ProductPrice product={product} productVariant={currentVariant} />}
     </>
   )
 }
