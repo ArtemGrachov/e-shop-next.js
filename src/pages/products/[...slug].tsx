@@ -13,6 +13,7 @@ import { useProductStore } from '@/providers/product/hooks/use-product-store';
 
 import ProductDescription from '@/components/products/ProductDescription';
 import FormProductVariant from '@/components/products/FormProductVariant';
+import ProductPrice from '@/components/products/ProductPrice';
 
 import type { IProductVariant } from '@/types/models/product-variant';
 
@@ -81,6 +82,7 @@ const PageProduct: ComponentType = () => {
       </h1>
       {product && <ProductDescription product={product} productVariant={currentVariant} />}
       {product?.variants?.length && <FormProductVariant product={product} currentVariant={currentVariant} onSubmit={variantChangeHandler} />}
+      {currentVariant && <ProductPrice productVariant={currentVariant} />}
     </>
   )
 }
