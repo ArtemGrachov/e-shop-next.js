@@ -2,6 +2,9 @@ import { ComponentType, useMemo } from 'react';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { useRouter } from 'next/router';
 import { useLocale } from 'next-intl';
+import { pathcat } from 'pathcat';
+
+import { ROUTES } from '@/router/routes';
 
 import { ProductProvider } from '@/providers/product';
 import { fetchProduct } from '@/providers/product/api/fetch-product';
@@ -12,8 +15,6 @@ import ProductDescription from '@/components/products/ProductDescription';
 import FormProductVariant from '@/components/products/FormProductVariant';
 
 import type { IProductVariant } from '@/types/models/product-variant';
-import { pathcat } from 'pathcat';
-import { ROUTES } from '@/router/routes';
 
 const PageProduct: ComponentType = () => {
   const product = useProductStore(s => s.product);
@@ -28,14 +29,14 @@ const PageProduct: ComponentType = () => {
     }
 
     return slug[1];
-  }, [router.query])
+  }, [router.query]);
 
   const currentVariantId = useMemo(() => {
     if (currentVariantSlug == null) {
       return null;
     }
 
-    const variantId = +currentVariantSlug.split('').slice(-1)[0];
+    const variantId = +currentVariantSlug.split('-').slice(-1)[0];
 
     return variantId;
   }, [currentVariantSlug]);
