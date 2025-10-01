@@ -63,6 +63,14 @@ const PageProduct: ComponentType = () => {
       newPath = pathcat('/', ROUTES.PRODUCT, { slugId });
     }
 
+    if (location.search) {
+      newPath += location.search;
+    }
+
+    if (location.hash) {
+      newPath += location.hash;
+    }
+
     router.push(newPath, undefined, { shallow: true });
   }
 
