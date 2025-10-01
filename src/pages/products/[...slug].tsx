@@ -12,6 +12,8 @@ import ProductDescription from '@/components/products/ProductDescription';
 import FormProductVariant from '@/components/products/FormProductVariant';
 
 import type { IProductVariant } from '@/types/models/product-variant';
+import { pathcat } from 'pathcat';
+import { ROUTES } from '@/router/routes';
 
 const PageProduct: ComponentType = () => {
   const product = useProductStore(s => s.product);
@@ -49,10 +51,15 @@ const PageProduct: ComponentType = () => {
   }, [product, currentVariantId]);
 
   const variantChangeHandler = (variant?: IProductVariant) => {
-    let newPath = `/products/${product?.slug}-${product?.id}`;
+    let newPath;
+
+    const slugId = `${product?.slug}-${product?.id}`;
 
     if (variant) {
-      newPath += `/${variant.slug[locale]}-${variant.id}`;
+      const variantSlugId = `${variant.slug[locale]}-${variant.id}`;
+      newPath = pathcat('/', ROUTES.PRODUCT_VARIANT, { slugId, variantSlugId });
+    } else {
+      newPath = pathcat('/', ROUTES.PRODUCT, { slugId });
     }
 
     router.push(newPath, undefined, { shallow: true });
