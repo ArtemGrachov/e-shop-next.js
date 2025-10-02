@@ -1,4 +1,4 @@
-import { ComponentType, useMemo } from 'react';
+import { ComponentType, useEffect, useMemo } from 'react';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { useRouter } from 'next/router';
 import { useLocale } from 'next-intl';
@@ -7,6 +7,7 @@ import { pathcat } from 'pathcat';
 import { ROUTES } from '@/router/routes';
 
 import { ProductProvider } from '@/providers/product';
+import { ReviewsProvider } from '@/providers/reviews';
 import { fetchProduct } from '@/providers/product/api/fetch-product';
 import { createHttpClient } from '@/providers/http-client/utils/create-http-client';
 import { useProductStore } from '@/providers/product/hooks/use-product-store';
@@ -125,7 +126,9 @@ export const getServerSideProps = (async ({ params }) => {
 const Wrapper = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <ProductProvider initialState={props.productState}>
-      <PageProduct />
+      <ReviewsProvider>
+        <PageProduct />
+      </ReviewsProvider>
     </ProductProvider>
   )
 }

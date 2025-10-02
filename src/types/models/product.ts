@@ -1,7 +1,8 @@
-import { IPrice } from '@/types/models/price';
-import { IMedia } from './media';
-import { IProductVariant } from './product-variant';
-import { TextTranslation } from './translation';
+import type { IPrice } from '@/types/models/price';
+import type { IMedia } from './media';
+import type { IProductVariant } from './product-variant';
+import type { TextTranslation } from './translation';
+import type { IReview } from '@/types/models/review';
 
 export interface IProduct {
   id: string | number;
@@ -14,4 +15,5 @@ export interface IProduct {
   categoryIds: number;
   variants: IProductVariant[];
   prices: IPrice[];
+  reviews?: IReview[];
 }
