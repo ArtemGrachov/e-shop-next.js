@@ -1169,6 +1169,21 @@
           "rate": 5,
           "message": null,
           "id": "e216e45f-76a3-4418-a17e-f6301af2b0cf"
+        },
+        {
+          "rate": 5,
+          "message": "Test form",
+          "id": "baad4072-ecda-4554-b945-b920ad219ef7"
+        },
+        {
+          "rate": "4",
+          "message": "Test form 2",
+          "id": "53ab2ab0-5a28-4b65-a4c2-840d6c08d4f6"
+        },
+        {
+          "rate": 5,
+          "message": "",
+          "id": "d04dd638-bcce-4ae8-b9bc-0112aacec1a1"
         }
       ]
     },

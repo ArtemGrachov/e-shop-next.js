@@ -12,20 +12,25 @@ import { fetchProduct } from '@/providers/product/api/fetch-product';
 import { createHttpClient } from '@/providers/http-client/utils/create-http-client';
 import { useProductStore } from '@/providers/product/hooks/use-product-store';
 import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
+import { useReviewCtx } from '@/providers/reviews/hooks/use-review-ctx';
+import { useReviewStore } from '@/providers/reviews/hooks/use-review-store';
 
 import ProductDescription from '@/components/products/ProductDescription';
 import FormBuyProduct, { IFormBuyOutput } from '@/components/products/FormBuyProduct';
 import ProductPrice from '@/components/products/ProductPrice';
 import FavouritesToggle from '@/components/products/FavouritesToggle';
+import ReviewsList from '@/components/reviews/ReviewsList';
+import FormReview, { IFormReview } from '@/components/reviews/FormReview';
 
 import type { IProductVariant } from '@/types/models/product-variant';
-import ReviewsList from '@/components/reviews/ReviewsList';
 
 const PageProduct: ComponentType = () => {
   const product = useProductStore(s => s.product);
   const router = useRouter();
   const locale = useLocale();
   const { addProduct } = useCartCtx();
+  const { sendReview } = useReviewCtx();
+  const reviewSubmitStaus = useReviewStore(s => s.submitStatus);
 
   const currentVariantSlug = useMemo(() => {
     const slug = router.query.slug;
@@ -85,6 +90,10 @@ const PageProduct: ComponentType = () => {
     addProduct(result.quantity, price, product!, result.variant);
   }
 
+  const sendReviewHandler = (formValue: IFormReview) => {
+    return sendReview(product!.id, formValue);
+  }
+
   return (
     <>
       <h1>
@@ -102,6 +111,7 @@ const PageProduct: ComponentType = () => {
       {product && currentVariant && <ProductPrice product={product} productVariant={currentVariant} />}
       {product && <FavouritesToggle product={product} />}
       {product && <ReviewsList reviews={product.reviews} />}
+      <FormReview onSubmit={sendReviewHandler} submitStatus={reviewSubmitStaus} />
     </>
   )
 }

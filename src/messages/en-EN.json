@@ -2,5 +2,11 @@
   "test": "Test EN",
   "form_buy_product": {
     "submit": "Buy"
+  },
+  "form_review": {
+    "submit": "Send"
+  },
+  "common_error": {
+    "any": "An error occured"
   }
 }
