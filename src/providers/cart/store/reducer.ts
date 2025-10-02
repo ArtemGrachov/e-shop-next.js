@@ -1,6 +1,8 @@
 import type { Reducer } from '@/types/store';
 import { Action, EActions, State } from './types';
 
+import { productToOrderItem } from '@/utils/products/product-to-order-item';
+
 export const reducer: Reducer<State, Action> = (state, action): State => {
   switch (action.type) {
     case EActions.INIT: {
@@ -14,6 +16,12 @@ export const reducer: Reducer<State, Action> = (state, action): State => {
         ...state,
         orderItems: [
           ...state.orderItems,
+          productToOrderItem(
+            action.product,
+            action.quantity,
+            action.price,
+            action.productVariant,
+          ),
         ],
       };
     }

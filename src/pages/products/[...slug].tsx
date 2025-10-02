@@ -10,9 +10,10 @@ import { ProductProvider } from '@/providers/product';
 import { fetchProduct } from '@/providers/product/api/fetch-product';
 import { createHttpClient } from '@/providers/http-client/utils/create-http-client';
 import { useProductStore } from '@/providers/product/hooks/use-product-store';
+import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
 
 import ProductDescription from '@/components/products/ProductDescription';
-import FormProductVariant from '@/components/products/FormProductVariant';
+import FormBuyProduct, { IFormBuyOutput } from '@/components/products/FormBuyProduct';
 import ProductPrice from '@/components/products/ProductPrice';
 
 import type { IProductVariant } from '@/types/models/product-variant';
@@ -21,6 +22,7 @@ const PageProduct: ComponentType = () => {
   const product = useProductStore(s => s.product);
   const router = useRouter();
   const locale = useLocale();
+  const { addProduct } = useCartCtx();
 
   const currentVariantSlug = useMemo(() => {
     const slug = router.query.slug;
@@ -75,13 +77,25 @@ const PageProduct: ComponentType = () => {
     router.push(newPath, undefined, { shallow: true });
   }
 
+  const addToCartHandler = (result: IFormBuyOutput) => {
+    const price = (result.variant?.prices?.[0] ?? product?.prices?.[0])!;
+    addProduct(result.quantity, price, product!, result.variant);
+  }
+
   return (
     <>
       <h1>
         Product page
       </h1>
       {product && <ProductDescription product={product} productVariant={currentVariant} />}
-      {product?.variants?.length && <FormProductVariant product={product} currentVariant={currentVariant} onSubmit={variantChangeHandler} />}
+      {product?.variants?.length && (
+        <FormBuyProduct
+          product={product}
+          currentVariant={currentVariant}
+          onVariantSelect={variantChangeHandler}
+          onSubmit={addToCartHandler}
+        />
+      )}
       {product && currentVariant && <ProductPrice product={product} productVariant={currentVariant} />}
     </>
   )

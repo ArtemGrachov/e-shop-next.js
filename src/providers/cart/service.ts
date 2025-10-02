@@ -16,7 +16,6 @@ export const useCartService = (initialState?: State) => {
   const { getItemJSON, setItemJSON } = useStorageCtx();
   const storeRef = useRef(createCartStore(initialState));
   const dispatch = useStore(storeRef.current, s => s.dispatch);
-  const orderItems = useStore(storeRef.current, s => s.orderItems);
 
   const init = () => {
     const orderItems = getItemJSON(CART_STORAGE_KEY) ?? [];
@@ -25,16 +24,20 @@ export const useCartService = (initialState?: State) => {
 
   const addProduct = (quantity: number, price: IPrice, product: IProduct, productVariant?: IProductVariant) => {
     dispatch({ type: EActions.ADD_PRODUCT, product, productVariant, quantity, price });
+    const { orderItems } = storeRef.current.getState();
+
     setItemJSON(CART_STORAGE_KEY, orderItems);
   }
 
   const removeItem = (itemId: number) => {
     dispatch({ type: EActions.REMOVE_ITEM, itemId });
+    const { orderItems} = storeRef.current.getState();
     setItemJSON(CART_STORAGE_KEY, orderItems);
   }
 
   const updateQuantity = (itemId: number, quantity: number) => {
     dispatch({ type: EActions.UPDATE_QUANTITY, itemId, quantity });
+    const { orderItems} = storeRef.current.getState();
     setItemJSON(CART_STORAGE_KEY, orderItems);
   }
 

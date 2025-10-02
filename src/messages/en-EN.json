@@ -1,3 +1,6 @@
 {
-  "test": "Test EN"
+  "test": "Test EN",
+  "form_buy_product": {
+    "submit": "Buy"
+  }
 }
