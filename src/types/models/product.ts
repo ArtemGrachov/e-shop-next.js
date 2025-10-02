@@ -4,7 +4,7 @@ import { IProductVariant } from './product-variant';
 import { TextTranslation } from './translation';
 
 export interface IProduct {
-  id: string,
+  id: string | number;
   name: TextTranslation;
   slug: TextTranslation;
   description: TextTranslation;

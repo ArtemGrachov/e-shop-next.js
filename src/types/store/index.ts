@@ -4,4 +4,4 @@ export interface IReducerAction<T = string> {
   type: T;
 }
 
-export type Dispatch = (action: any) => void;
+export type Dispatch<A> = (action: A) => void;
