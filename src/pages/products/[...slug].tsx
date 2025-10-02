@@ -1,4 +1,4 @@
-import { ComponentType, useEffect, useMemo } from 'react';
+import { ComponentType, useMemo } from 'react';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { useRouter } from 'next/router';
 import { useLocale } from 'next-intl';
@@ -19,6 +19,7 @@ import ProductPrice from '@/components/products/ProductPrice';
 import FavouritesToggle from '@/components/products/FavouritesToggle';
 
 import type { IProductVariant } from '@/types/models/product-variant';
+import ReviewsList from '@/components/reviews/ReviewsList';
 
 const PageProduct: ComponentType = () => {
   const product = useProductStore(s => s.product);
@@ -100,6 +101,7 @@ const PageProduct: ComponentType = () => {
       )}
       {product && currentVariant && <ProductPrice product={product} productVariant={currentVariant} />}
       {product && <FavouritesToggle product={product} />}
+      {product && <ReviewsList reviews={product.reviews} />}
     </>
   )
 }

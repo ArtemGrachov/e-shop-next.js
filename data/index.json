@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "Electronics",
         "de": "Elektronik"
@@ -20,7 +20,7 @@
       "primaryMedia": 8001
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "Computers & Laptops",
         "de": "Computer & Laptops"
@@ -39,7 +39,7 @@
       "primaryMedia": 8002
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Smart Home",
         "de": "Smart Home"
@@ -58,7 +58,7 @@
       "primaryMedia": 8003
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "Fashion",
         "de": "Mode"
@@ -77,7 +77,7 @@
       "primaryMedia": 8004
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "Sports & Outdoors",
         "de": "Sport & Outdoor"
@@ -96,7 +96,7 @@
       "primaryMedia": 8005
     },
     {
-      "id": 6,
+      "id": "6",
       "name": {
         "en": "Home & Kitchen",
         "de": "Haushalt & Küche"
@@ -115,7 +115,7 @@
       "primaryMedia": 8006
     },
     {
-      "id": 7,
+      "id": "7",
       "name": {
         "en": "Beauty & Health",
         "de": "Schönheit & Gesundheit"
@@ -134,7 +134,7 @@
       "primaryMedia": 8007
     },
     {
-      "id": 8,
+      "id": "8",
       "name": {
         "en": "Toys & Games",
         "de": "Spielzeug & Spiele"
@@ -153,7 +153,7 @@
       "primaryMedia": 8008
     },
     {
-      "id": 9,
+      "id": "9",
       "name": {
         "en": "Books & Media",
         "de": "Bücher & Medien"
@@ -172,7 +172,7 @@
       "primaryMedia": 8009
     },
     {
-      "id": 10,
+      "id": "10",
       "name": {
         "en": "Automotive",
         "de": "Auto & Motorrad"
@@ -191,7 +191,7 @@
       "primaryMedia": 8010
     },
     {
-      "id": 11,
+      "id": "11",
       "name": {
         "en": "Pet Supplies",
         "de": "Haustierbedarf"
@@ -210,7 +210,7 @@
       "primaryMedia": 8011
     },
     {
-      "id": 12,
+      "id": "12",
       "name": {
         "en": "Garden & DIY",
         "de": "Garten & Heimwerken"
@@ -231,7 +231,7 @@
   ],
   "delivery-methods": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "Standard Shipping",
         "de": "Standardversand"
@@ -253,7 +253,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "Express Shipping",
         "de": "Expressversand"
@@ -275,7 +275,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Overnight Shipping",
         "de": "Übernachtversand"
@@ -297,7 +297,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "Pickup Point",
         "de": "Abholstation"
@@ -319,7 +319,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "International Shipping",
         "de": "Internationaler Versand"
@@ -343,7 +343,7 @@
   ],
   "payment-methods": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "Credit Card",
         "de": "Kreditkarte"
@@ -359,7 +359,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "PayPal",
         "de": "PayPal"
@@ -375,7 +375,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Bank Transfer",
         "de": "Banküberweisung"
@@ -391,7 +391,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "Cash on Delivery",
         "de": "Nachnahme"
@@ -407,7 +407,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "Apple Pay",
         "de": "Apple Pay"
@@ -423,7 +423,7 @@
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "name": {
         "en": "Google Pay",
         "de": "Google Pay"
@@ -441,7 +441,7 @@
   ],
   "product-attribute-values": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "Silver",
         "de": "Silber"
@@ -453,7 +453,7 @@
       "attributeId": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "Black",
         "de": "Schwarz"
@@ -465,7 +465,7 @@
       "attributeId": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Gold",
         "de": "Gold"
@@ -477,7 +477,7 @@
       "attributeId": 1
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "128 GB",
         "de": "128 GB"
@@ -489,7 +489,7 @@
       "attributeId": 2
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "256 GB",
         "de": "256 GB"
@@ -501,7 +501,7 @@
       "attributeId": 2
     },
     {
-      "id": 6,
+      "id": "6",
       "name": {
         "en": "512 GB",
         "de": "512 GB"
@@ -513,7 +513,7 @@
       "attributeId": 2
     },
     {
-      "id": 7,
+      "id": "7",
       "name": {
         "en": "1 TB",
         "de": "1 TB"
@@ -525,7 +525,7 @@
       "attributeId": 2
     },
     {
-      "id": 8,
+      "id": "8",
       "name": {
         "en": "0.5 kg",
         "de": "0,5 kg"
@@ -537,7 +537,7 @@
       "attributeId": 3
     },
     {
-      "id": 9,
+      "id": "9",
       "name": {
         "en": "Plastic",
         "de": "Kunststoff"
@@ -549,7 +549,7 @@
       "attributeId": 4
     },
     {
-      "id": 10,
+      "id": "10",
       "name": {
         "en": "Aluminium",
         "de": "Aluminium"
@@ -561,7 +561,7 @@
       "attributeId": 4
     },
     {
-      "id": 11,
+      "id": "11",
       "name": {
         "en": "Leather",
         "de": "Leder"
@@ -573,7 +573,7 @@
       "attributeId": 4
     },
     {
-      "id": 12,
+      "id": "12",
       "name": {
         "en": "1.2 kg",
         "de": "1,2 kg"
@@ -585,7 +585,7 @@
       "attributeId": 3
     },
     {
-      "id": 13,
+      "id": "13",
       "name": {
         "en": "1.8 kg",
         "de": "1,8 kg"
@@ -597,7 +597,7 @@
       "attributeId": 3
     },
     {
-      "id": 14,
+      "id": "14",
       "name": {
         "en": "2.1 kg",
         "de": "2,1 kg"
@@ -609,7 +609,7 @@
       "attributeId": 3
     },
     {
-      "id": 15,
+      "id": "15",
       "name": {
         "en": "8 US",
         "de": "8 US"
@@ -621,7 +621,7 @@
       "attributeId": 5
     },
     {
-      "id": 16,
+      "id": "16",
       "name": {
         "en": "9 US",
         "de": "9 US"
@@ -633,7 +633,7 @@
       "attributeId": 5
     },
     {
-      "id": 17,
+      "id": "17",
       "name": {
         "en": "10 US",
         "de": "10 US"
@@ -645,7 +645,7 @@
       "attributeId": 5
     },
     {
-      "id": 18,
+      "id": "18",
       "name": {
         "en": "Red",
         "de": "Rot"
@@ -657,7 +657,7 @@
       "attributeId": 1
     },
     {
-      "id": 19,
+      "id": "19",
       "name": {
         "en": "Blue",
         "de": "Blau"
@@ -669,7 +669,7 @@
       "attributeId": 1
     },
     {
-      "id": 20,
+      "id": "20",
       "name": {
         "en": "White",
         "de": "Weiß"
@@ -681,7 +681,7 @@
       "attributeId": 1
     },
     {
-      "id": 21,
+      "id": "21",
       "name": {
         "en": "Metal",
         "de": "Metall"
@@ -693,7 +693,7 @@
       "attributeId": 4
     },
     {
-      "id": 22,
+      "id": "22",
       "name": {
         "en": "3.5 kg",
         "de": "3,5 kg"
@@ -705,7 +705,7 @@
       "attributeId": 3
     },
     {
-      "id": 23,
+      "id": "23",
       "name": {
         "en": "44mm",
         "de": "44mm"
@@ -717,7 +717,7 @@
       "attributeId": 23
     },
     {
-      "id": 24,
+      "id": "24",
       "name": {
         "en": "825 GB",
         "de": "825 GB"
@@ -729,7 +729,7 @@
       "attributeId": 24
     },
     {
-      "id": 25,
+      "id": "25",
       "name": {
         "en": "Disc Edition",
         "de": "Disc Edition"
@@ -741,7 +741,7 @@
       "attributeId": 25
     },
     {
-      "id": 26,
+      "id": "26",
       "name": {
         "en": "20 MP",
         "de": "20 MP"
@@ -753,7 +753,7 @@
       "attributeId": 26
     },
     {
-      "id": 27,
+      "id": "27",
       "name": {
         "en": "42mm",
         "de": "42mm"
@@ -765,7 +765,7 @@
       "attributeId": 27
     },
     {
-      "id": 28,
+      "id": "28",
       "name": {
         "en": "10 US",
         "de": "10 US"
@@ -777,7 +777,7 @@
       "attributeId": 28
     },
     {
-      "id": 29,
+      "id": "29",
       "name": {
         "en": "Tablet Storage",
         "de": "Tablet-Speicher"
@@ -789,7 +789,7 @@
       "unitType": "number"
     },
     {
-      "id": 29,
+      "id": "29",
       "name": {
         "en": "512 GB",
         "de": "512 GB"
@@ -803,7 +803,7 @@
   ],
   "product-attributes": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "Color",
         "de": "Farbe"
@@ -815,7 +815,7 @@
       "unitType": "string"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "Storage",
         "de": "Speicher"
@@ -827,7 +827,7 @@
       "unitType": "number"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Weight",
         "de": "Gewicht"
@@ -839,7 +839,7 @@
       "unitType": "kg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "Material",
         "de": "Material"
@@ -851,7 +851,7 @@
       "unitType": "string"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "Size",
         "de": "Größe"
@@ -863,7 +863,7 @@
       "unitType": "string"
     },
     {
-      "id": 23,
+      "id": "23",
       "name": {
         "en": "Watch Size",
         "de": "Uhrengröße"
@@ -875,7 +875,7 @@
       "unitType": "number"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": {
         "en": "Storage",
         "de": "Speicher"
@@ -887,7 +887,7 @@
       "unitType": "number"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": {
         "en": "PS5 Edition",
         "de": "PS5 Edition"
@@ -899,7 +899,7 @@
       "unitType": "string"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": {
         "en": "Camera Sensor",
         "de": "Kamerasensor"
@@ -911,7 +911,7 @@
       "unitType": "string"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": {
         "en": "Watch Size 42mm",
         "de": "Uhrengröße 42mm"
@@ -923,7 +923,7 @@
       "unitType": "number"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": {
         "en": "Soccer Shoe Size",
         "de": "Fußballschuhgröße"
@@ -937,7 +937,7 @@
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "iPhone 14 Pro",
         "de": "iPhone 14 Pro"
@@ -1148,10 +1148,32 @@
             37
           ]
         }
+      ],
+      "reviews": [
+        {
+          "rate": 4,
+          "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+          "id": "0440c6ee-75c7-453a-82b2-20885e544349"
+        },
+        {
+          "rate": 2,
+          "message": "Voluptate facilis dolorem quam quaerat quo veniam cumque, repellat aliquid sequi, nulla sapiente!",
+          "id": "1da120bc-9a62-4cc8-947a-599248afc095"
+        },
+        {
+          "rate": 5,
+          "message": "Hello, world!",
+          "id": "Fuga, inventore quo perferendis voluptatum voluptas nam esse doloremque."
+        },
+        {
+          "rate": 5,
+          "message": null,
+          "id": "e216e45f-76a3-4418-a17e-f6301af2b0cf"
+        }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "Samsung Galaxy S23",
         "de": "Samsung Galaxy S23"
@@ -1220,7 +1242,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Sony WH-1000XM5",
         "de": "Sony WH-1000XM5"
@@ -1262,7 +1284,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "MacBook Pro 16",
         "de": "MacBook Pro 16"
@@ -1304,7 +1326,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "Dell XPS 13",
         "de": "Dell XPS 13"
@@ -1346,7 +1368,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": {
         "en": "Nike Air Max 270",
         "de": "Nike Air Max 270"
@@ -1388,7 +1410,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "name": {
         "en": "Adidas Ultraboost 22",
         "de": "Adidas Ultraboost 22"
@@ -1430,7 +1452,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": {
         "en": "KitchenAid Mixer",
         "de": "KitchenAid Mixer"
@@ -1471,7 +1493,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": {
         "en": "Apple Watch Series 9",
         "de": "Apple Watch Series 9"
@@ -1539,7 +1561,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "name": {
         "en": "GoPro Hero 12",
         "de": "GoPro Hero 12"
@@ -1580,7 +1602,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "name": {
         "en": "Sony PlayStation 5",
         "de": "Sony PlayStation 5"
@@ -1648,7 +1670,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "name": {
         "en": "Canon EOS R6",
         "de": "Canon EOS R6"
@@ -1689,7 +1711,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "13",
       "name": {
         "en": "Fitbit Charge 6",
         "de": "Fitbit Charge 6"
@@ -1731,7 +1753,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": "14",
       "name": {
         "en": "Bose QuietComfort 45",
         "de": "Bose QuietComfort 45"
@@ -1772,7 +1794,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": "15",
       "name": {
         "en": "Instant Pot Duo 7-in-1",
         "de": "Instant Pot Duo 7-in-1"
@@ -1813,7 +1835,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": "16",
       "name": {
         "en": "Lenovo ThinkPad X1 Carbon",
         "de": "Lenovo ThinkPad X1 Carbon"
@@ -1854,7 +1876,7 @@
       ]
     },
     {
-      "id": 17,
+      "id": "17",
       "name": {
         "en": "HP Spectre x360",
         "de": "HP Spectre x360"
@@ -1895,7 +1917,7 @@
       ]
     },
     {
-      "id": 18,
+      "id": "18",
       "name": {
         "en": "Samsung Galaxy Watch 6",
         "de": "Samsung Galaxy Watch 6"
@@ -1962,7 +1984,7 @@
       ]
     },
     {
-      "id": 19,
+      "id": "19",
       "name": {
         "en": "Garmin Fenix 7",
         "de": "Garmin Fenix 7"
@@ -2003,7 +2025,7 @@
       ]
     },
     {
-      "id": 20,
+      "id": "20",
       "name": {
         "en": "JBL Flip 6",
         "de": "JBL Flip 6"
@@ -2044,7 +2066,7 @@
       ]
     },
     {
-      "id": 21,
+      "id": "21",
       "name": {
         "en": "Adidas Predator 22",
         "de": "Adidas Predator 22"
@@ -2086,7 +2108,7 @@
       ]
     },
     {
-      "id": 22,
+      "id": "22",
       "name": {
         "en": "Instant Pot Duo Nova",
         "de": "Instant Pot Duo Nova"
@@ -2127,7 +2149,7 @@
       ]
     },
     {
-      "id": 23,
+      "id": "23",
       "name": {
         "en": "Microsoft Surface Laptop 5",
         "de": "Microsoft Surface Laptop 5"
@@ -2168,7 +2190,7 @@
       ]
     },
     {
-      "id": 24,
+      "id": "24",
       "name": {
         "en": "Oculus Quest 3",
         "de": "Oculus Quest 3"
@@ -2210,7 +2232,7 @@
       ]
     },
     {
-      "id": 25,
+      "id": "25",
       "name": {
         "en": "Apple iPad Pro 12.9",
         "de": "Apple iPad Pro 12.9"
@@ -2253,7 +2275,7 @@
       ]
     },
     {
-      "id": 26,
+      "id": "26",
       "name": {
         "en": "Samsung Galaxy Tab S9",
         "de": "Samsung Galaxy Tab S9"
@@ -2295,7 +2317,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": "27",
       "name": {
         "en": "Sony WF-1000XM5",
         "de": "Sony WF-1000XM5"
@@ -2336,7 +2358,7 @@
       ]
     },
     {
-      "id": 28,
+      "id": "28",
       "name": {
         "en": "Fitbit Versa 4",
         "de": "Fitbit Versa 4"
@@ -2378,7 +2400,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": "29",
       "name": {
         "en": "KitchenAid Artisan Mini",
         "de": "KitchenAid Artisan Mini"
@@ -2419,7 +2441,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": "30",
       "name": {
         "en": "Nike ZoomX Vaporfly",
         "de": "Nike ZoomX Vaporfly"
@@ -2461,7 +2483,7 @@
       ]
     },
     {
-      "id": 31,
+      "id": "31",
       "name": {
         "en": "Adidas NMD R1",
         "de": "Adidas NMD R1"
@@ -2503,7 +2525,7 @@
       ]
     },
     {
-      "id": 32,
+      "id": "32",
       "name": {
         "en": "DeLonghi Magnifica S",
         "de": "DeLonghi Magnifica S"
