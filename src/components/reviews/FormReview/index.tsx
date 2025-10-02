@@ -21,13 +21,13 @@ const FormReview: ComponentType<IProps> = ({ submitStatus, onSubmit }) => {
   const rateInput = register('rate', { required: true });
   const messageInput = register('message');
 
-  const submitHandler: SubmitHandler<IFormReview> = (formValue) => {
+  const submitHandler: SubmitHandler<IFormReview> = async (formValue) => {
     if (submitProcessing) {
       return;
     }
 
     try {
-      onSubmit && onSubmit(formValue);
+      await (onSubmit && onSubmit(formValue));
       reset();
     } catch (err) {
       alert(t('common_error.any'));
