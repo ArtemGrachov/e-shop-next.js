@@ -10,6 +10,7 @@ import { useAppInit } from '@/hooks/common/use-app-init';
 import { HttpClientProvider } from '@/providers/http-client';
 import { StorageProvider } from '@/providers/storage';
 import { CartProvider } from '@/providers/cart';
+import { FavouritesProvider } from '@/providers/favourites';
 
 const Inner: ComponentType<PropsWithChildren> = ({ children }) => {
   useAppInit();
@@ -26,9 +27,11 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <HttpClientProvider>
         <StorageProvider>
           <CartProvider>
-            <Inner>
-              <Component {...pageProps} />
-            </Inner>
+            <FavouritesProvider>
+              <Inner>
+                <Component {...pageProps} />
+              </Inner>
+            </FavouritesProvider>
           </CartProvider>
         </StorageProvider>
       </HttpClientProvider>
