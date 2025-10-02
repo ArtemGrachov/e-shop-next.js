@@ -21,7 +21,7 @@ export interface IAddProductAction extends IReducerAction<EActions.ADD_PRODUCT> 
 }
 
 export interface IRemoveProductAction extends IReducerAction<EActions.REMOVE_ITEM> {
-  itemId: number;
+  product: IProduct;
 }
 
 export type Action = IInitFavouritesAction |

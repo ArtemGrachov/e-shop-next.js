@@ -15,6 +15,7 @@ import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
 import ProductDescription from '@/components/products/ProductDescription';
 import FormBuyProduct, { IFormBuyOutput } from '@/components/products/FormBuyProduct';
 import ProductPrice from '@/components/products/ProductPrice';
+import FavouritesToggle from '@/components/products/FavouritesToggle';
 
 import type { IProductVariant } from '@/types/models/product-variant';
 
@@ -97,6 +98,7 @@ const PageProduct: ComponentType = () => {
         />
       )}
       {product && currentVariant && <ProductPrice product={product} productVariant={currentVariant} />}
+      {product && <FavouritesToggle product={product} />}
     </>
   )
 }

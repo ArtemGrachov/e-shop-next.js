@@ -21,7 +21,7 @@ export const reducer: Reducer<State, Action> = (state, action): State => {
     case EActions.REMOVE_ITEM: {
       return {
         ...state,
-        productIds: state.productIds.filter(id => id !== action.itemId),
+        productIds: state.productIds.filter(id => id !== action.product.id),
       };
     }
     default: {

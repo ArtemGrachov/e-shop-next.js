@@ -16,21 +16,21 @@ export const useFavouritesService = (initialState?: State) => {
   const dispatch = useStore(storeRef.current, s => s.dispatch);
 
   const init = () => {
-    const orderItems = getItemJSON(FAVOURITES_STORAGE_KEY) ?? [];
-    dispatch({ type: EActions.INIT, productIds: orderItems });
+    const productIds = getItemJSON(FAVOURITES_STORAGE_KEY) ?? [];
+    dispatch({ type: EActions.INIT, productIds });
   }
 
   const addProduct = (product: IProduct) => {
     dispatch({ type: EActions.ADD_PRODUCT, product });
-    const { productIds: orderItems } = storeRef.current.getState();
+    const { productIds } = storeRef.current.getState();
 
-    setItemJSON(FAVOURITES_STORAGE_KEY, orderItems);
+    setItemJSON(FAVOURITES_STORAGE_KEY, productIds);
   }
 
-  const removeProduct = (itemId: number) => {
-    dispatch({ type: EActions.REMOVE_ITEM, itemId });
-    const { productIds: orderItems} = storeRef.current.getState();
-    setItemJSON(FAVOURITES_STORAGE_KEY, orderItems);
+  const removeProduct = (product: IProduct) => {
+    dispatch({ type: EActions.REMOVE_ITEM, product });
+    const { productIds } = storeRef.current.getState();
+    setItemJSON(FAVOURITES_STORAGE_KEY, productIds);
   }
 
   return {
