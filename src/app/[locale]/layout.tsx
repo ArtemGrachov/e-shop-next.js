@@ -5,6 +5,7 @@ import { CartProvider } from '@/providers/cart';
 import { FavouritesProvider } from '@/providers/favourites';
 import { HttpClientProvider } from '@/providers/http-client';
 import { StorageProvider } from '@/providers/storage';
+import { ShopProvider } from '@/providers/shop';
 
 import { Root } from './client';
 
@@ -18,17 +19,19 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           locale={locale}
           messages={messages}
         >
-          <HttpClientProvider>
-            <StorageProvider>
-              <CartProvider>
-                <FavouritesProvider>
-                  <Root>
-                    {children}
-                  </Root>
-                </FavouritesProvider>
-              </CartProvider>
-            </StorageProvider>
-          </HttpClientProvider>
+          <ShopProvider>
+            <HttpClientProvider>
+              <StorageProvider>
+                <CartProvider>
+                  <FavouritesProvider>
+                    <Root>
+                      {children}
+                    </Root>
+                  </FavouritesProvider>
+                </CartProvider>
+              </StorageProvider>
+            </HttpClientProvider>
+          </ShopProvider>
         </NextIntlClientProvider>
       </body>
     </html>

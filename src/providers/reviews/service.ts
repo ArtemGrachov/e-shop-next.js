@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { useStore } from 'zustand';
+import { v4 as uuid } from '@lukeed/uuid';
 
 import { EActions, type State } from './store/types';
 import { createReviewStore } from './store';
@@ -23,7 +24,7 @@ export const useReviewService = (initialState?: State) => {
 
       const payload: IReview = {
         ...review,
-        id: crypto.randomUUID(),
+        id: uuid(),
       };
 
       if (!product.reviews) {

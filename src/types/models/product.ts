@@ -14,6 +14,6 @@ export interface IProduct {
   mainCategoryId: number;
   categoryIds: number;
   variants: IProductVariant[];
-  prices: IPrice[];
+  price: IPrice;
   reviews?: IReview[];
 }
