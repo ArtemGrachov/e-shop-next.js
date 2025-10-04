@@ -9,6 +9,7 @@ import { useDeliveryMethodsCtx } from '@/providers/delivery-methods/hooks/use-de
 import { useCartItems } from '@/hooks/cart/cart-items';
 
 import CartList from '@/components/cart/CartList';
+import FormDeliveryMethod from '@/components/checkout/FormDeliveryMethod';
 
 const CheckoutPageClient: ComponentType = () => {
   const order = useCartStore(s => s.order);
@@ -23,6 +24,7 @@ const CheckoutPageClient: ComponentType = () => {
     <div>
       <h1>Checkout</h1>
       <CartList orderItems={cartItems} />
+      <FormDeliveryMethod />
     </div>
   )
 }

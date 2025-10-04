@@ -11,5 +11,8 @@
   },
   "common_order": {
     "total": "Total"
+  },
+  "form_delivery": {
+    "delivery_method": "Delivery method"
   }
 }
