@@ -1,29 +1,20 @@
-import { ComponentType, useMemo } from 'react';
-
-import type { IOrderItem } from '@/types/models/order-item';
+import { ComponentType } from 'react';
 import { useTranslations } from 'next-intl';
 
+import type { IOrder } from '@/types/models/order';
+
 interface IProps {
-  orderItems?: IOrderItem[];
+  order: IOrder;
 }
 
-const CartSummary: ComponentType<IProps> = ({ orderItems }) => {
+const CartSummary: ComponentType<IProps> = ({ order }) => {
   const t = useTranslations();
-
-  orderItems = orderItems ?? [];
-
-  const totalPrice = useMemo(() => {
-    return orderItems.reduce((acc, curr) => acc + curr.price.value, 0);
-  }, [orderItems]);
-
-  const currency = useMemo(() => {
-    return orderItems[0]?.price.currency;
-  }, [orderItems]);
+  const totalPrice = order.price.totalPrice;
 
   return (
     <div>
       <p>
-        {t('common_order.total')}: {totalPrice} {currency}
+        {t('common_order.total')}: {totalPrice}
       </p>
     </div>
   )

@@ -12,33 +12,67 @@ import type { IProduct } from '@/types/models/product';
 import type { IProductVariant } from '@/types/models/product-variant';
 import type { IPrice } from '@/types/models/price';
 
+import { createOrder } from '@/utils/orders/create-order';
+import { productToOrderItem } from '@/utils/products/product-to-order-item';
+import { updateOrder } from '@/utils/orders/update-order';
+
+/**
+ * In real apps order updating and recalculation is performed on backend
+ */
 export const useCartService = (initialState?: State) => {
   const { getItemJSON, setItemJSON } = useStorageCtx();
   const storeRef = useRef(createCartStore(initialState));
   const dispatch = useStore(storeRef.current, s => s.dispatch);
 
   const init = () => {
-    const orderItems = getItemJSON(CART_STORAGE_KEY) ?? [];
-    dispatch({ type: EActions.INIT, orderItems });
+    const order = getItemJSON(CART_STORAGE_KEY) ?? null;
+    dispatch({ type: EActions.SET, order });
   }
 
   const addProduct = (quantity: number, price: IPrice, product: IProduct, productVariant?: IProductVariant) => {
-    dispatch({ type: EActions.ADD_PRODUCT, product, productVariant, quantity, price });
-    const { orderItems } = storeRef.current.getState();
+    let order = storeRef.current.getState().order;
+    const orderItem = productToOrderItem(product, quantity, price, productVariant);
 
-    setItemJSON(CART_STORAGE_KEY, orderItems);
+    if (!order) {
+      order = createOrder([orderItem]);
+    } else {
+      order.items = [...order.items, orderItem];
+    }
+
+    order = updateOrder(order);
+
+    dispatch({ type: EActions.SET, order: { ...order } });
+    setItemJSON(CART_STORAGE_KEY, order);
   }
 
   const removeItem = (itemId: string) => {
-    dispatch({ type: EActions.REMOVE_ITEM, itemId });
-    const { orderItems} = storeRef.current.getState();
-    setItemJSON(CART_STORAGE_KEY, orderItems);
+    let order = storeRef.current.getState().order;
+
+    if (!order) {
+      return;
+    }
+
+    order.items = order.items.filter(orderItem => orderItem.id !== itemId);
+
+    order = updateOrder(order);
+
+    dispatch({ type: EActions.SET, order: { ...order } });
+    setItemJSON(CART_STORAGE_KEY, order);
   }
 
   const updateQuantity = (itemId: string, quantity: number) => {
-    dispatch({ type: EActions.UPDATE_QUANTITY, itemId, quantity });
-    const { orderItems} = storeRef.current.getState();
-    setItemJSON(CART_STORAGE_KEY, orderItems);
+    let order = storeRef.current.getState().order;
+
+    if (!order) {
+      return;
+    }
+
+    order.items = order.items.map(orderItem => orderItem.id === itemId ? { ...orderItem, quantity } : orderItem);
+
+    order = updateOrder(order);
+
+    dispatch({ type: EActions.SET, order: { ...order } });
+    setItemJSON(CART_STORAGE_KEY, order);
   }
 
   return {
@@ -47,5 +81,5 @@ export const useCartService = (initialState?: State) => {
     removeItem,
     updateQuantity,
     store: storeRef.current,
-  }
+  };
 }

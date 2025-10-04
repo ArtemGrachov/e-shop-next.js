@@ -1,16 +1,16 @@
 import { useMemo } from 'react';
 
-import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
+import { useCartItems } from '@/hooks/cart/cart-items';
 
 import type { IProduct } from '@/types/models/product';
 import type { IProductVariant } from '@/types/models/product-variant';
 
 export const useProductInCart = (product: IProduct, productVariant?: IProductVariant) => {
-  const orderItems = useCartStore(s => s.orderItems);
+  const cartItems = useCartItems();
 
   const orderItem = useMemo(() => {
-    return orderItems.find(orderItem => orderItem.productId == product.id && orderItem.productVariantId == productVariant?.id);
-  }, [orderItems, product, productVariant]);
+    return cartItems.find(orderItem => orderItem.productId == product.id && orderItem.productVariantId == productVariant?.id);
+  }, [cartItems, product, productVariant]);
 
   return {
     orderItem,
