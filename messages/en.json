@@ -13,7 +13,8 @@
     "total": "Total"
   },
   "form_delivery_method": {
-    "delivery_method": "Delivery method"
+    "delivery_method": "Delivery method",
+    "submit": "Save"
   },
   "form_delivery_address": {
     "first_name": "First name",
@@ -33,5 +34,9 @@
     "required": "This field is required",
     "pattern": "This field has incorrect pattern",
     "email": "This field must be a valid email"
+  },
+  "checkout_delivery": {
+    "title": "Delivery method",
+    "edit": "Edit"
   }
 }

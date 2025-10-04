@@ -6,4 +6,5 @@ export interface IOrder {
   code: string;
   items: IOrderItem[];
   price: IOrderPrice;
+  deliveryMethodId?: string | null;
 }

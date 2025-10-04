@@ -11,6 +11,7 @@ import { createCartStore } from './store';
 import type { IProduct } from '@/types/models/product';
 import type { IProductVariant } from '@/types/models/product-variant';
 import type { IPrice } from '@/types/models/price';
+import type { IOrder } from '@/types/models/order';
 
 import { createOrder } from '@/utils/orders/create-order';
 import { productToOrderItem } from '@/utils/products/product-to-order-item';
@@ -27,6 +28,11 @@ export const useCartService = (initialState?: State) => {
   const init = () => {
     const order = getItemJSON(CART_STORAGE_KEY) ?? null;
     dispatch({ type: EActions.SET, order });
+  }
+
+  const setOrder = (order: IOrder | null) => {
+    dispatch({ type: EActions.SET, order });
+    setItemJSON(CART_STORAGE_KEY, order);
   }
 
   const addProduct = (quantity: number, price: IPrice, product: IProduct, productVariant?: IProductVariant) => {
@@ -76,10 +82,11 @@ export const useCartService = (initialState?: State) => {
   }
 
   return {
+    store: storeRef.current,
     init,
     addProduct,
     removeItem,
     updateQuantity,
-    store: storeRef.current,
+    setOrder,
   };
 }
