@@ -12,7 +12,7 @@
   "common_order": {
     "total": "Total"
   },
-  "form_delivery": {
+  "form_delivery_method": {
     "delivery_method": "Delivery method"
   },
   "form_delivery_address": {

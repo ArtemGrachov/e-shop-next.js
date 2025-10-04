@@ -42,7 +42,7 @@ const FormDeliveryAddress: ComponentType = () => {
         <label htmlFor="email">
           {t('form_delivery_address.email')}
         </label>
-        <input id="email" type="text" {...emailInput} />
+        <input id="email" type="email" {...emailInput} />
       </div>
       <div>
         <label htmlFor="city">

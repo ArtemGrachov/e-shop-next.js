@@ -23,7 +23,7 @@ export const useFormDeliveryAddress = (selectedDeliveryMethod?: IDeliveryMethod)
 
   const firstNameInput = form.register('firstName', { required: 'This field is required' });
   const lastNameInput = form.register('lastName', { required: true });
-  const emailInput = form.register('email', { required: true });
+  const emailInput = form.register('email', { required: true, pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/ });
   const phoneNumberInput = form.register('phoneNumber', { required: true });
   const cityInput = form.register('city', { validate: { required: conditionalRequired } });
   const streetInput = form.register('street', { validate: { required: conditionalRequired } });

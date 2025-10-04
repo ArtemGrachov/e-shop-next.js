@@ -24,7 +24,7 @@ const FormDeliveryMethod: ComponentType = () => {
     <form onSubmit={e => e.preventDefault()}>
       <div>
         <label htmlFor="deliveryMethod">
-          {t('form_delivery.delivery_method')}
+          {t('form_delivery_method.delivery_method')}
         </label>
         <select id="deliveryMethod" {...deliveryMethodInput}>
           {deliveryMethodOptions.map(option => {
