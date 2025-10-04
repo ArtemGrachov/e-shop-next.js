@@ -29,13 +29,13 @@ export const useCartService = (initialState?: State) => {
     setItemJSON(CART_STORAGE_KEY, orderItems);
   }
 
-  const removeItem = (itemId: number) => {
+  const removeItem = (itemId: string) => {
     dispatch({ type: EActions.REMOVE_ITEM, itemId });
     const { orderItems} = storeRef.current.getState();
     setItemJSON(CART_STORAGE_KEY, orderItems);
   }
 
-  const updateQuantity = (itemId: number, quantity: number) => {
+  const updateQuantity = (itemId: string, quantity: number) => {
     dispatch({ type: EActions.UPDATE_QUANTITY, itemId, quantity });
     const { orderItems} = storeRef.current.getState();
     setItemJSON(CART_STORAGE_KEY, orderItems);

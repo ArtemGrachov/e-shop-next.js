@@ -5,7 +5,7 @@ import type { IProductVariant } from '@/types/models/product-variant';
 
 export const productToOrderItem = (product: IProduct, quantity: number, price: IPrice, productVariant?: IProductVariant): IOrderItem => {
   return {
-    id: 0,
+    id: crypto.randomUUID(),
     name: productVariant?.name ?? product.name,
     description: productVariant?.description ?? product.description,
     slug: product.slug,

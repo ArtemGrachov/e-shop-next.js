@@ -3,7 +3,7 @@ import type { IPrice } from '@/types/models/price'
 import type { TextTranslation } from '@/types/models/translation'
 
 export interface IOrderItem {
-  id: number;
+  id: string;
   name: TextTranslation;
   description: TextTranslation;
   slug: TextTranslation;

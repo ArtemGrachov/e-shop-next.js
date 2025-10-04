@@ -27,11 +27,11 @@ export interface IAddItemAction extends IReducerAction<EActions.ADD_PRODUCT> {
 }
 
 export interface IRemoveItemAction extends IReducerAction<EActions.REMOVE_ITEM> {
-  itemId: number;
+  itemId: string;
 }
 
 export interface IUpdateQuantityAction extends IReducerAction<EActions.UPDATE_QUANTITY> {
-  itemId: number;
+  itemId: string;
   quantity: number;
 }
 
