@@ -5,12 +5,15 @@ import { useTranslations } from 'use-intl';
 import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
 import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
 
+import FieldClientErrors from '@/components/forms/FieldClientErrors';
+
 const FormDeliveryMethod: ComponentType = () => {
   const locale = useLocale();
   const t = useTranslations();
   const deliveryMethods = useDeliveryMethodsStore(s => s.deliveryMethods);
   const { formDeliveryMethod } = useCheckoutCtx();
-  const { deliveryMethodInput } = formDeliveryMethod;
+  const { deliveryMethodInput, form } = formDeliveryMethod;
+  const errors = form.formState.errors;
 
   const deliveryMethodOptions = useMemo(() => {
     return deliveryMethods.map(deliveryMethod => ({
@@ -36,6 +39,7 @@ const FormDeliveryMethod: ComponentType = () => {
             )
           })}
         </select>
+        <FieldClientErrors error={errors.deliveryMethodId} />
       </div>
     </form>
   )

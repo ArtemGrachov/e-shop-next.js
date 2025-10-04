@@ -28,5 +28,10 @@
   },
   "form_payment_method": {
     "payment_method": "Payment method"
+  },
+  "common_validation": {
+    "required": "This field is required",
+    "pattern": "This field has incorrect pattern",
+    "email": "This field must be a valid email"
   }
 }

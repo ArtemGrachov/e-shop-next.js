@@ -5,12 +5,15 @@ import { useTranslations } from 'use-intl';
 import { usePaymentMethodsStore } from '@/providers/payment-methods/hooks/use-payment-methods-store';
 import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
 
+import FieldClientErrors from '@/components/forms/FieldClientErrors';
+
 const FormPaymentsMethod: ComponentType = () => {
   const locale = useLocale();
   const t = useTranslations();
   const paymentMethods = usePaymentMethodsStore(s => s.paymentMethods);
   const { formPaymentMethod } = useCheckoutCtx();
-  const { paymentMethodInput } = formPaymentMethod;
+  const { paymentMethodInput, form } = formPaymentMethod;
+  const errors = form.formState.errors;
 
   const paymentMethodOptions = useMemo(() => {
     return paymentMethods.map(paymentMethod => ({
@@ -36,6 +39,7 @@ const FormPaymentsMethod: ComponentType = () => {
             )
           })}
         </select>
+        <FieldClientErrors error={errors.paymentMethodId} />
       </div>
     </form>
   )
