@@ -1,8 +1,8 @@
 import { HttpClient } from '@/providers/http-client/types';
 
-import { EActions, type State } from '@/stores/product/types';
-import { defaultInitState } from '@/stores/product/state';
-import { reducer } from '@/stores/product/reducer';
+import { EActions, type State } from '../store/types';
+import { defaultInitState } from '../store/state';
+import { reducer } from '../store/reducer';
 
 import type { IProduct } from '@/types/models/product';
 

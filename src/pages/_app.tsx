@@ -1,9 +1,21 @@
+import { ComponentType, PropsWithChildren } from 'react';
 import type { NextPageContext } from 'next';
 import type { AppProps } from 'next/app';
 import { NextIntlClientProvider } from 'next-intl';
 
-import { HttpClientProvider } from '@/providers/http-client';
 import { MESSAGE_CONFIG } from '@/messages/config';
+
+import { useAppInit } from '@/hooks/common/use-app-init';
+
+import { HttpClientProvider } from '@/providers/http-client';
+import { StorageProvider } from '@/providers/storage';
+import { CartProvider } from '@/providers/cart';
+import { FavouritesProvider } from '@/providers/favourites';
+
+const Inner: ComponentType<PropsWithChildren> = ({ children }) => {
+  useAppInit();
+  return children;
+}
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
@@ -13,7 +25,15 @@ export default function App({ Component, pageProps, router }: AppProps) {
       messages={pageProps.messages}
     >
       <HttpClientProvider>
-        <Component {...pageProps} />
+        <StorageProvider>
+          <CartProvider>
+            <FavouritesProvider>
+              <Inner>
+                <Component {...pageProps} />
+              </Inner>
+            </FavouritesProvider>
+          </CartProvider>
+        </StorageProvider>
       </HttpClientProvider>
     </NextIntlClientProvider>
   )

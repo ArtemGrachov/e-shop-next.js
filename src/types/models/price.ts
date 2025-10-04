@@ -5,4 +5,5 @@ export interface IPrice {
   currency: string;
   discount: number;
   discountType: EDiscountType;
+  originalValue: number;
 }

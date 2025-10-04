@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "Electronics",
         "de": "Elektronik"
@@ -20,7 +20,7 @@
       "primaryMedia": 8001
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "Computers & Laptops",
         "de": "Computer & Laptops"
@@ -39,7 +39,7 @@
       "primaryMedia": 8002
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Smart Home",
         "de": "Smart Home"
@@ -58,7 +58,7 @@
       "primaryMedia": 8003
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "Fashion",
         "de": "Mode"
@@ -77,7 +77,7 @@
       "primaryMedia": 8004
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "Sports & Outdoors",
         "de": "Sport & Outdoor"
@@ -96,7 +96,7 @@
       "primaryMedia": 8005
     },
     {
-      "id": 6,
+      "id": "6",
       "name": {
         "en": "Home & Kitchen",
         "de": "Haushalt & Küche"
@@ -115,7 +115,7 @@
       "primaryMedia": 8006
     },
     {
-      "id": 7,
+      "id": "7",
       "name": {
         "en": "Beauty & Health",
         "de": "Schönheit & Gesundheit"
@@ -134,7 +134,7 @@
       "primaryMedia": 8007
     },
     {
-      "id": 8,
+      "id": "8",
       "name": {
         "en": "Toys & Games",
         "de": "Spielzeug & Spiele"
@@ -153,7 +153,7 @@
       "primaryMedia": 8008
     },
     {
-      "id": 9,
+      "id": "9",
       "name": {
         "en": "Books & Media",
         "de": "Bücher & Medien"
@@ -172,7 +172,7 @@
       "primaryMedia": 8009
     },
     {
-      "id": 10,
+      "id": "10",
       "name": {
         "en": "Automotive",
         "de": "Auto & Motorrad"
@@ -191,7 +191,7 @@
       "primaryMedia": 8010
     },
     {
-      "id": 11,
+      "id": "11",
       "name": {
         "en": "Pet Supplies",
         "de": "Haustierbedarf"
@@ -210,7 +210,7 @@
       "primaryMedia": 8011
     },
     {
-      "id": 12,
+      "id": "12",
       "name": {
         "en": "Garden & DIY",
         "de": "Garten & Heimwerken"
@@ -231,7 +231,7 @@
   ],
   "delivery-methods": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "Standard Shipping",
         "de": "Standardversand"
@@ -253,7 +253,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "Express Shipping",
         "de": "Expressversand"
@@ -275,7 +275,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Overnight Shipping",
         "de": "Übernachtversand"
@@ -297,7 +297,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "Pickup Point",
         "de": "Abholstation"
@@ -319,7 +319,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "International Shipping",
         "de": "Internationaler Versand"
@@ -343,7 +343,7 @@
   ],
   "payment-methods": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "Credit Card",
         "de": "Kreditkarte"
@@ -359,7 +359,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "PayPal",
         "de": "PayPal"
@@ -375,7 +375,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Bank Transfer",
         "de": "Banküberweisung"
@@ -391,7 +391,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "Cash on Delivery",
         "de": "Nachnahme"
@@ -407,7 +407,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "Apple Pay",
         "de": "Apple Pay"
@@ -423,7 +423,7 @@
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "name": {
         "en": "Google Pay",
         "de": "Google Pay"
@@ -441,7 +441,7 @@
   ],
   "product-attribute-values": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "Silver",
         "de": "Silber"
@@ -453,7 +453,7 @@
       "attributeId": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "Black",
         "de": "Schwarz"
@@ -465,7 +465,7 @@
       "attributeId": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Gold",
         "de": "Gold"
@@ -477,7 +477,7 @@
       "attributeId": 1
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "128 GB",
         "de": "128 GB"
@@ -489,7 +489,7 @@
       "attributeId": 2
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "256 GB",
         "de": "256 GB"
@@ -501,7 +501,7 @@
       "attributeId": 2
     },
     {
-      "id": 6,
+      "id": "6",
       "name": {
         "en": "512 GB",
         "de": "512 GB"
@@ -513,7 +513,7 @@
       "attributeId": 2
     },
     {
-      "id": 7,
+      "id": "7",
       "name": {
         "en": "1 TB",
         "de": "1 TB"
@@ -525,7 +525,7 @@
       "attributeId": 2
     },
     {
-      "id": 8,
+      "id": "8",
       "name": {
         "en": "0.5 kg",
         "de": "0,5 kg"
@@ -537,7 +537,7 @@
       "attributeId": 3
     },
     {
-      "id": 9,
+      "id": "9",
       "name": {
         "en": "Plastic",
         "de": "Kunststoff"
@@ -549,7 +549,7 @@
       "attributeId": 4
     },
     {
-      "id": 10,
+      "id": "10",
       "name": {
         "en": "Aluminium",
         "de": "Aluminium"
@@ -561,7 +561,7 @@
       "attributeId": 4
     },
     {
-      "id": 11,
+      "id": "11",
       "name": {
         "en": "Leather",
         "de": "Leder"
@@ -573,7 +573,7 @@
       "attributeId": 4
     },
     {
-      "id": 12,
+      "id": "12",
       "name": {
         "en": "1.2 kg",
         "de": "1,2 kg"
@@ -585,7 +585,7 @@
       "attributeId": 3
     },
     {
-      "id": 13,
+      "id": "13",
       "name": {
         "en": "1.8 kg",
         "de": "1,8 kg"
@@ -597,7 +597,7 @@
       "attributeId": 3
     },
     {
-      "id": 14,
+      "id": "14",
       "name": {
         "en": "2.1 kg",
         "de": "2,1 kg"
@@ -609,7 +609,7 @@
       "attributeId": 3
     },
     {
-      "id": 15,
+      "id": "15",
       "name": {
         "en": "8 US",
         "de": "8 US"
@@ -621,7 +621,7 @@
       "attributeId": 5
     },
     {
-      "id": 16,
+      "id": "16",
       "name": {
         "en": "9 US",
         "de": "9 US"
@@ -633,7 +633,7 @@
       "attributeId": 5
     },
     {
-      "id": 17,
+      "id": "17",
       "name": {
         "en": "10 US",
         "de": "10 US"
@@ -645,7 +645,7 @@
       "attributeId": 5
     },
     {
-      "id": 18,
+      "id": "18",
       "name": {
         "en": "Red",
         "de": "Rot"
@@ -657,7 +657,7 @@
       "attributeId": 1
     },
     {
-      "id": 19,
+      "id": "19",
       "name": {
         "en": "Blue",
         "de": "Blau"
@@ -669,7 +669,7 @@
       "attributeId": 1
     },
     {
-      "id": 20,
+      "id": "20",
       "name": {
         "en": "White",
         "de": "Weiß"
@@ -681,7 +681,7 @@
       "attributeId": 1
     },
     {
-      "id": 21,
+      "id": "21",
       "name": {
         "en": "Metal",
         "de": "Metall"
@@ -693,7 +693,7 @@
       "attributeId": 4
     },
     {
-      "id": 22,
+      "id": "22",
       "name": {
         "en": "3.5 kg",
         "de": "3,5 kg"
@@ -705,7 +705,7 @@
       "attributeId": 3
     },
     {
-      "id": 23,
+      "id": "23",
       "name": {
         "en": "44mm",
         "de": "44mm"
@@ -717,7 +717,7 @@
       "attributeId": 23
     },
     {
-      "id": 24,
+      "id": "24",
       "name": {
         "en": "825 GB",
         "de": "825 GB"
@@ -729,7 +729,7 @@
       "attributeId": 24
     },
     {
-      "id": 25,
+      "id": "25",
       "name": {
         "en": "Disc Edition",
         "de": "Disc Edition"
@@ -741,7 +741,7 @@
       "attributeId": 25
     },
     {
-      "id": 26,
+      "id": "26",
       "name": {
         "en": "20 MP",
         "de": "20 MP"
@@ -753,7 +753,7 @@
       "attributeId": 26
     },
     {
-      "id": 27,
+      "id": "27",
       "name": {
         "en": "42mm",
         "de": "42mm"
@@ -765,7 +765,7 @@
       "attributeId": 27
     },
     {
-      "id": 28,
+      "id": "28",
       "name": {
         "en": "10 US",
         "de": "10 US"
@@ -777,7 +777,7 @@
       "attributeId": 28
     },
     {
-      "id": 29,
+      "id": "29",
       "name": {
         "en": "Tablet Storage",
         "de": "Tablet-Speicher"
@@ -789,7 +789,7 @@
       "unitType": "number"
     },
     {
-      "id": 29,
+      "id": "29",
       "name": {
         "en": "512 GB",
         "de": "512 GB"
@@ -803,7 +803,7 @@
   ],
   "product-attributes": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "Color",
         "de": "Farbe"
@@ -815,7 +815,7 @@
       "unitType": "string"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "Storage",
         "de": "Speicher"
@@ -827,7 +827,7 @@
       "unitType": "number"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Weight",
         "de": "Gewicht"
@@ -839,7 +839,7 @@
       "unitType": "kg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "Material",
         "de": "Material"
@@ -851,7 +851,7 @@
       "unitType": "string"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "Size",
         "de": "Größe"
@@ -863,7 +863,7 @@
       "unitType": "string"
     },
     {
-      "id": 23,
+      "id": "23",
       "name": {
         "en": "Watch Size",
         "de": "Uhrengröße"
@@ -875,7 +875,7 @@
       "unitType": "number"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": {
         "en": "Storage",
         "de": "Speicher"
@@ -887,7 +887,7 @@
       "unitType": "number"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": {
         "en": "PS5 Edition",
         "de": "PS5 Edition"
@@ -899,7 +899,7 @@
       "unitType": "string"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": {
         "en": "Camera Sensor",
         "de": "Kamerasensor"
@@ -911,7 +911,7 @@
       "unitType": "string"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": {
         "en": "Watch Size 42mm",
         "de": "Uhrengröße 42mm"
@@ -923,7 +923,7 @@
       "unitType": "number"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": {
         "en": "Soccer Shoe Size",
         "de": "Fußballschuhgröße"
@@ -937,15 +937,18 @@
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": {
         "en": "iPhone 14 Pro",
         "de": "iPhone 14 Pro"
       },
-      "slug": "iphone-14-pro",
+      "slug": {
+        "en": "iphone-14-pro",
+        "de": "iphone-14-pro"
+      },
       "description": {
-        "en": "Flagship Apple smartphone with advanced camera.",
-        "de": "Apple-Flaggschiff mit fortschrittlicher Kamera."
+        "en": "Latest Apple flagship smartphone with ProMotion display.",
+        "de": "Neuestes Apple-Flaggschiff-Smartphone mit ProMotion-Display."
       },
       "media": [
         {
@@ -957,8 +960,7 @@
       "attributeValueIds": [
         1,
         2,
-        3,
-        8
+        3
       ],
       "mainCategoryId": 1,
       "categoryIds": [
@@ -969,45 +971,232 @@
         {
           "id": 101,
           "name": {
-            "en": "iPhone 14 Pro 128GB",
-            "de": "iPhone 14 Pro 128GB"
+            "en": "iPhone 14 Pro 128GB - Silver",
+            "de": "iPhone 14 Pro 128GB - Silber"
           },
           "description": {
-            "en": "Base storage model",
-            "de": "Basisspeichermodell"
+            "en": "Base model with 128GB storage in Silver.",
+            "de": "Basismodell mit 128GB Speicher in Silber."
           },
           "slug": {
-            "en": "iphone-14-pro-128",
-            "de": "iphone-14-pro-128"
+            "en": "iphone-14-pro-128-silver",
+            "de": "iphone-14-pro-128-silber"
           },
           "prices": [
             {
-              "value": 1099,
+              "value": 999,
               "currency": "USD",
               "discount": 0,
-              "discountType": "absolute"
+              "discountType": "absolute",
+              "originalValue": 999
             }
           ],
           "media": [
             {
               "id": 2,
-              "src": "/images/iphone14pro_128.jpg",
+              "src": "/images/iphone14pro_silver.jpg",
               "type": "image"
             }
           ],
           "attributeValueIds": [
-            4
+            2,
+            30,
+            31
           ]
+        },
+        {
+          "id": 102,
+          "name": {
+            "en": "iPhone 14 Pro 256GB - Space Black",
+            "de": "iPhone 14 Pro 256GB - Space Schwarz"
+          },
+          "description": {
+            "en": "256GB storage in Space Black.",
+            "de": "256GB Speicher in Space Schwarz."
+          },
+          "slug": {
+            "en": "iphone-14-pro-256-black",
+            "de": "iphone-14-pro-256-schwarz"
+          },
+          "prices": [
+            {
+              "value": 1099,
+              "currency": "USD",
+              "discount": 50,
+              "discountType": "absolute",
+              "originalValue": 1149
+            }
+          ],
+          "media": [
+            {
+              "id": 3,
+              "src": "/images/iphone14pro_black.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            2,
+            32,
+            33
+          ]
+        },
+        {
+          "id": 103,
+          "name": {
+            "en": "iPhone 14 Pro 512GB - Gold",
+            "de": "iPhone 14 Pro 512GB - Gold"
+          },
+          "description": {
+            "en": "512GB storage in Gold.",
+            "de": "512GB Speicher in Gold."
+          },
+          "slug": {
+            "en": "iphone-14-pro-512-gold",
+            "de": "iphone-14-pro-512-gold"
+          },
+          "prices": [
+            {
+              "value": 1299,
+              "currency": "USD",
+              "discount": 0,
+              "discountType": "absolute",
+              "originalValue": 1299
+            }
+          ],
+          "media": [
+            {
+              "id": 4,
+              "src": "/images/iphone14pro_gold.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            2,
+            29,
+            34
+          ]
+        },
+        {
+          "id": 104,
+          "name": {
+            "en": "iPhone 14 Pro 1TB - Deep Purple",
+            "de": "iPhone 14 Pro 1TB - Dunkellila"
+          },
+          "description": {
+            "en": "1TB storage in Deep Purple.",
+            "de": "1TB Speicher in Dunkellila."
+          },
+          "slug": {
+            "en": "iphone-14-pro-1tb-purple",
+            "de": "iphone-14-pro-1tb-lila"
+          },
+          "prices": [
+            {
+              "value": 1499,
+              "currency": "USD",
+              "discount": 100,
+              "discountType": "absolute",
+              "originalValue": 1599
+            }
+          ],
+          "media": [
+            {
+              "id": 5,
+              "src": "/images/iphone14pro_purple.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            2,
+            35,
+            36
+          ]
+        },
+        {
+          "id": 105,
+          "name": {
+            "en": "iPhone 14 Pro 256GB - Alpine Green",
+            "de": "iPhone 14 Pro 256GB - Alpingrün"
+          },
+          "description": {
+            "en": "256GB storage in Alpine Green.",
+            "de": "256GB Speicher in Alpingrün."
+          },
+          "slug": {
+            "en": "iphone-14-pro-256-green",
+            "de": "iphone-14-pro-256-gruen"
+          },
+          "prices": [
+            {
+              "value": 1149,
+              "currency": "USD",
+              "discount": 0,
+              "discountType": "absolute",
+              "originalValue": 1149
+            }
+          ],
+          "media": [
+            {
+              "id": 6,
+              "src": "/images/iphone14pro_green.jpg",
+              "type": "image"
+            }
+          ],
+          "attributeValueIds": [
+            2,
+            32,
+            37
+          ]
+        }
+      ],
+      "reviews": [
+        {
+          "rate": 4,
+          "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+          "id": "0440c6ee-75c7-453a-82b2-20885e544349"
+        },
+        {
+          "rate": 2,
+          "message": "Voluptate facilis dolorem quam quaerat quo veniam cumque, repellat aliquid sequi, nulla sapiente!",
+          "id": "1da120bc-9a62-4cc8-947a-599248afc095"
+        },
+        {
+          "rate": 5,
+          "message": "Hello, world!",
+          "id": "Fuga, inventore quo perferendis voluptatum voluptas nam esse doloremque."
+        },
+        {
+          "rate": 5,
+          "message": null,
+          "id": "e216e45f-76a3-4418-a17e-f6301af2b0cf"
+        },
+        {
+          "rate": 5,
+          "message": "Test form",
+          "id": "baad4072-ecda-4554-b945-b920ad219ef7"
+        },
+        {
+          "rate": "4",
+          "message": "Test form 2",
+          "id": "53ab2ab0-5a28-4b65-a4c2-840d6c08d4f6"
+        },
+        {
+          "rate": 5,
+          "message": "",
+          "id": "d04dd638-bcce-4ae8-b9bc-0112aacec1a1"
         }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": {
         "en": "Samsung Galaxy S23",
         "de": "Samsung Galaxy S23"
       },
-      "slug": "samsung-galaxy-s23",
+      "slug": {
+        "en": "samsung-galaxy-s23",
+        "de": "samsung-galaxy-s23"
+      },
       "description": {
         "en": "Latest Samsung flagship with dynamic AMOLED.",
         "de": "Neuestes Samsung-Flaggschiff mit dynamischem AMOLED."
@@ -1050,7 +1239,8 @@
               "value": 999,
               "currency": "USD",
               "discount": 10,
-              "discountType": "percentage"
+              "discountType": "percentage",
+              "originalValue": 1110
             }
           ],
           "media": [
@@ -1067,12 +1257,15 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": {
         "en": "Sony WH-1000XM5",
         "de": "Sony WH-1000XM5"
       },
-      "slug": "sony-wh-1000xm5",
+      "slug": {
+        "en": "sony-wh-1000xm5",
+        "de": "sony-wh-1000xm5"
+      },
       "description": {
         "en": "Noise-canceling wireless headphones.",
         "de": "Geräuschunterdrückende kabellose Kopfhörer."
@@ -1094,15 +1287,27 @@
         2,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 372,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 372
+        }
+      ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": {
         "en": "MacBook Pro 16",
         "de": "MacBook Pro 16"
       },
-      "slug": "macbook-pro-16",
+      "slug": {
+        "en": "macbook-pro-16",
+        "de": "macbook-pro-16"
+      },
       "description": {
         "en": "Apple laptop with M2 Max chip.",
         "de": "Apple-Laptop mit M2 Max Chip."
@@ -1124,15 +1329,27 @@
         1,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1388,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1388
+        }
+      ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": {
         "en": "Dell XPS 13",
         "de": "Dell XPS 13"
       },
-      "slug": "dell-xps-13",
+      "slug": {
+        "en": "dell-xps-13",
+        "de": "dell-xps-13"
+      },
       "description": {
         "en": "Premium ultrabook with InfinityEdge display.",
         "de": "Premium-Ultrabook mit InfinityEdge-Display."
@@ -1154,15 +1371,27 @@
         1,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1208,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1208
+        }
+      ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": {
         "en": "Nike Air Max 270",
         "de": "Nike Air Max 270"
       },
-      "slug": "nike-air-max-270",
+      "slug": {
+        "en": "nike-air-max-270",
+        "de": "nike-air-max-270"
+      },
       "description": {
         "en": "Comfortable lifestyle sneakers.",
         "de": "Bequeme Lifestyle-Sneaker."
@@ -1184,15 +1413,27 @@
         5,
         6
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 268,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 268
+        }
+      ]
     },
     {
-      "id": 7,
+      "id": "7",
       "name": {
         "en": "Adidas Ultraboost 22",
         "de": "Adidas Ultraboost 22"
       },
-      "slug": "adidas-ultraboost-22",
+      "slug": {
+        "en": "adidas-ultraboost-22",
+        "de": "adidas-ultraboost-22"
+      },
       "description": {
         "en": "High-performance running shoes.",
         "de": "Hochleistungs-Laufschuhe."
@@ -1214,15 +1455,27 @@
         5,
         6
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 135,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 135
+        }
+      ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": {
         "en": "KitchenAid Mixer",
         "de": "KitchenAid Mixer"
       },
-      "slug": "kitchenaid-mixer",
+      "slug": {
+        "en": "kitchenaid-mixer",
+        "de": "kitchenaid-mixer"
+      },
       "description": {
         "en": "Classic stand mixer for every kitchen.",
         "de": "Klassische Küchenmaschine für jede Küche."
@@ -1243,15 +1496,27 @@
         7,
         8
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 285,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 285
+        }
+      ]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": {
         "en": "Apple Watch Series 9",
         "de": "Apple Watch Series 9"
       },
-      "slug": "apple-watch-series-9",
+      "slug": {
+        "en": "apple-watch-series-9",
+        "de": "apple-watch-series-9"
+      },
       "description": {
         "en": "Smartwatch with health tracking and notifications.",
         "de": "Smartwatch mit Gesundheitsüberwachung und Benachrichtigungen."
@@ -1293,7 +1558,8 @@
               "value": 499,
               "currency": "USD",
               "discount": 20,
-              "discountType": "absolute"
+              "discountType": "absolute",
+              "originalValue": 519
             }
           ],
           "media": [
@@ -1310,12 +1576,15 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "name": {
         "en": "GoPro Hero 12",
         "de": "GoPro Hero 12"
       },
-      "slug": "gopro-hero-12",
+      "slug": {
+        "en": "gopro-hero-12",
+        "de": "gopro-hero-12"
+      },
       "description": {
         "en": "Action camera with 5K video recording.",
         "de": "Action-Kamera mit 5K Videoaufnahme."
@@ -1336,15 +1605,27 @@
         1,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1627,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1627
+        }
+      ]
     },
     {
-      "id": 11,
+      "id": "11",
       "name": {
         "en": "Sony PlayStation 5",
         "de": "Sony PlayStation 5"
       },
-      "slug": "sony-ps5",
+      "slug": {
+        "en": "sony-ps5",
+        "de": "sony-ps5"
+      },
       "description": {
         "en": "Next-gen gaming console with ultra-fast SSD.",
         "de": "Next-Gen Spielkonsole mit ultraschneller SSD."
@@ -1386,7 +1667,8 @@
               "value": 499,
               "currency": "USD",
               "discount": 0,
-              "discountType": "absolute"
+              "discountType": "absolute",
+              "originalValue": 499
             }
           ],
           "media": [
@@ -1403,12 +1685,15 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "name": {
         "en": "Canon EOS R6",
         "de": "Canon EOS R6"
       },
-      "slug": "canon-eos-r6",
+      "slug": {
+        "en": "canon-eos-r6",
+        "de": "canon-eos-r6"
+      },
       "description": {
         "en": "Full-frame mirrorless camera with 20MP sensor.",
         "de": "Vollformat-Spiegellose Kamera mit 20MP Sensor."
@@ -1429,15 +1714,27 @@
         1,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1748,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1748
+        }
+      ]
     },
     {
-      "id": 13,
+      "id": "13",
       "name": {
         "en": "Fitbit Charge 6",
         "de": "Fitbit Charge 6"
       },
-      "slug": "fitbit-charge-6",
+      "slug": {
+        "en": "fitbit-charge-6",
+        "de": "fitbit-charge-6"
+      },
       "description": {
         "en": "Activity tracker with heart rate monitoring.",
         "de": "Aktivitätstracker mit Herzfrequenzüberwachung."
@@ -1459,15 +1756,27 @@
         3,
         5
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 454,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 454
+        }
+      ]
     },
     {
-      "id": 14,
+      "id": "14",
       "name": {
         "en": "Bose QuietComfort 45",
         "de": "Bose QuietComfort 45"
       },
-      "slug": "bose-qc45",
+      "slug": {
+        "en": "bose-qc45",
+        "de": "bose-qc45"
+      },
       "description": {
         "en": "Wireless noise-canceling headphones.",
         "de": "Kabellose geräuschunterdrückende Kopfhörer."
@@ -1488,15 +1797,27 @@
         2,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 322,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 322
+        }
+      ]
     },
     {
-      "id": 15,
+      "id": "15",
       "name": {
         "en": "Instant Pot Duo 7-in-1",
         "de": "Instant Pot Duo 7-in-1"
       },
-      "slug": "instant-pot-duo",
+      "slug": {
+        "en": "instant-pot-duo",
+        "de": "instant-pot-duo"
+      },
       "description": {
         "en": "Multi-cooker with pressure, slow cooking, and more.",
         "de": "Multikocher mit Druck-, Slow-Cooking und mehr."
@@ -1517,15 +1838,27 @@
         6,
         7
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 320,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 320
+        }
+      ]
     },
     {
-      "id": 16,
+      "id": "16",
       "name": {
         "en": "Lenovo ThinkPad X1 Carbon",
         "de": "Lenovo ThinkPad X1 Carbon"
       },
-      "slug": "lenovo-thinkpad-x1-carbon",
+      "slug": {
+        "en": "lenovo-thinkpad-x1-carbon",
+        "de": "lenovo-thinkpad-x1-carbon"
+      },
       "description": {
         "en": "Business ultrabook with lightweight carbon body.",
         "de": "Business-Ultrabook mit leichtem Carbon-Gehäuse."
@@ -1546,15 +1879,27 @@
         1,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1306,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1306
+        }
+      ]
     },
     {
-      "id": 17,
+      "id": "17",
       "name": {
         "en": "HP Spectre x360",
         "de": "HP Spectre x360"
       },
-      "slug": "hp-spectre-x360",
+      "slug": {
+        "en": "hp-spectre-x360",
+        "de": "hp-spectre-x360"
+      },
       "description": {
         "en": "Convertible laptop with touch screen.",
         "de": "Convertible-Laptop mit Touchscreen."
@@ -1575,15 +1920,27 @@
         1,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1821,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1821
+        }
+      ]
     },
     {
-      "id": 18,
+      "id": "18",
       "name": {
         "en": "Samsung Galaxy Watch 6",
         "de": "Samsung Galaxy Watch 6"
       },
-      "slug": "samsung-galaxy-watch-6",
+      "slug": {
+        "en": "samsung-galaxy-watch-6",
+        "de": "samsung-galaxy-watch-6"
+      },
       "description": {
         "en": "Smartwatch with fitness tracking and AMOLED display.",
         "de": "Smartwatch mit Fitness-Tracking und AMOLED-Display."
@@ -1624,7 +1981,8 @@
               "value": 399,
               "currency": "USD",
               "discount": 15,
-              "discountType": "percentage"
+              "discountType": "percentage",
+              "originalValue": 469
             }
           ],
           "media": [
@@ -1641,12 +1999,15 @@
       ]
     },
     {
-      "id": 19,
+      "id": "19",
       "name": {
         "en": "Garmin Fenix 7",
         "de": "Garmin Fenix 7"
       },
-      "slug": "garmin-fenix-7",
+      "slug": {
+        "en": "garmin-fenix-7",
+        "de": "garmin-fenix-7"
+      },
       "description": {
         "en": "Rugged smartwatch for outdoor sports.",
         "de": "Robuste Smartwatch für Outdoor-Sportarten."
@@ -1667,15 +2028,27 @@
         3,
         5
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 465,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 465
+        }
+      ]
     },
     {
-      "id": 20,
+      "id": "20",
       "name": {
         "en": "JBL Flip 6",
         "de": "JBL Flip 6"
       },
-      "slug": "jbl-flip-6",
+      "slug": {
+        "en": "jbl-flip-6",
+        "de": "jbl-flip-6"
+      },
       "description": {
         "en": "Portable Bluetooth speaker with waterproof design.",
         "de": "Tragbarer Bluetooth-Lautsprecher mit wasserdichtem Design."
@@ -1696,15 +2069,27 @@
         2,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 159,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 159
+        }
+      ]
     },
     {
-      "id": 21,
+      "id": "21",
       "name": {
         "en": "Adidas Predator 22",
         "de": "Adidas Predator 22"
       },
-      "slug": "adidas-predator-22",
+      "slug": {
+        "en": "adidas-predator-22",
+        "de": "adidas-predator-22"
+      },
       "description": {
         "en": "Soccer cleats with primeknit upper.",
         "de": "Fußballschuhe mit Primeknit-Obermaterial."
@@ -1726,15 +2111,27 @@
         5,
         6
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 300,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 300
+        }
+      ]
     },
     {
-      "id": 22,
+      "id": "22",
       "name": {
         "en": "Instant Pot Duo Nova",
         "de": "Instant Pot Duo Nova"
       },
-      "slug": "instant-pot-duo-nova",
+      "slug": {
+        "en": "instant-pot-duo-nova",
+        "de": "instant-pot-duo-nova"
+      },
       "description": {
         "en": "Updated multi-cooker with 7-in-1 functions.",
         "de": "Aktualisierter Multikocher mit 7-in-1 Funktionen."
@@ -1755,15 +2152,27 @@
         6,
         7
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 457,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 457
+        }
+      ]
     },
     {
-      "id": 23,
+      "id": "23",
       "name": {
         "en": "Microsoft Surface Laptop 5",
         "de": "Microsoft Surface Laptop 5"
       },
-      "slug": "surface-laptop-5",
+      "slug": {
+        "en": "surface-laptop-5",
+        "de": "surface-laptop-5"
+      },
       "description": {
         "en": "Portable laptop with touchscreen and Windows 11.",
         "de": "Tragbares Laptop mit Touchscreen und Windows 11."
@@ -1784,15 +2193,27 @@
         1,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1108,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1108
+        }
+      ]
     },
     {
-      "id": 24,
+      "id": "24",
       "name": {
         "en": "Oculus Quest 3",
         "de": "Oculus Quest 3"
       },
-      "slug": "oculus-quest-3",
+      "slug": {
+        "en": "oculus-quest-3",
+        "de": "oculus-quest-3"
+      },
       "description": {
         "en": "Standalone VR headset with high-resolution display.",
         "de": "Autonomes VR-Headset mit hochauflösendem Display."
@@ -1814,15 +2235,27 @@
         3,
         5
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1399,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1399
+        }
+      ]
     },
     {
-      "id": 25,
+      "id": "25",
       "name": {
         "en": "Apple iPad Pro 12.9",
         "de": "Apple iPad Pro 12.9"
       },
-      "slug": "ipad-pro-12-9",
+      "slug": {
+        "en": "ipad-pro-12-9",
+        "de": "ipad-pro-12-9"
+      },
       "description": {
         "en": "High-end tablet with M2 chip and Liquid Retina XDR display.",
         "de": "High-End-Tablet mit M2 Chip und Liquid Retina XDR Display."
@@ -1845,15 +2278,27 @@
         2,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 1293,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 1293
+        }
+      ]
     },
     {
-      "id": 26,
+      "id": "26",
       "name": {
         "en": "Samsung Galaxy Tab S9",
         "de": "Samsung Galaxy Tab S9"
       },
-      "slug": "galaxy-tab-s9",
+      "slug": {
+        "en": "galaxy-tab-s9",
+        "de": "galaxy-tab-s9"
+      },
       "description": {
         "en": "Android tablet with AMOLED display and stylus support.",
         "de": "Android-Tablet mit AMOLED-Display und Stiftunterstützung."
@@ -1875,15 +2320,27 @@
         2,
         4
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 953,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 953
+        }
+      ]
     },
     {
-      "id": 27,
+      "id": "27",
       "name": {
         "en": "Sony WF-1000XM5",
         "de": "Sony WF-1000XM5"
       },
-      "slug": "sony-wf-1000xm5",
+      "slug": {
+        "en": "sony-wf-1000xm5",
+        "de": "sony-wf-1000xm5"
+      },
       "description": {
         "en": "Wireless noise-canceling earbuds.",
         "de": "Kabellose geräuschunterdrückende Ohrhörer."
@@ -1904,15 +2361,27 @@
         2,
         3
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 322,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 322
+        }
+      ]
     },
     {
-      "id": 28,
+      "id": "28",
       "name": {
         "en": "Fitbit Versa 4",
         "de": "Fitbit Versa 4"
       },
-      "slug": "fitbit-versa-4",
+      "slug": {
+        "en": "fitbit-versa-4",
+        "de": "fitbit-versa-4"
+      },
       "description": {
         "en": "Smartwatch with activity tracking and sleep monitoring.",
         "de": "Smartwatch mit Aktivitäts- und Schlaftracking."
@@ -1934,15 +2403,27 @@
         3,
         5
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 467,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 467
+        }
+      ]
     },
     {
-      "id": 29,
+      "id": "29",
       "name": {
         "en": "KitchenAid Artisan Mini",
         "de": "KitchenAid Artisan Mini"
       },
-      "slug": "kitchenaid-artisan-mini",
+      "slug": {
+        "en": "kitchenaid-artisan-mini",
+        "de": "kitchenaid-artisan-mini"
+      },
       "description": {
         "en": "Compact stand mixer for small kitchens.",
         "de": "Kompakte Küchenmaschine für kleine Küchen."
@@ -1963,15 +2444,27 @@
         7,
         8
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 623,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 623
+        }
+      ]
     },
     {
-      "id": 30,
+      "id": "30",
       "name": {
         "en": "Nike ZoomX Vaporfly",
         "de": "Nike ZoomX Vaporfly"
       },
-      "slug": "nike-zoomx-vaporfly",
+      "slug": {
+        "en": "nike-zoomx-vaporfly",
+        "de": "nike-zoomx-vaporfly"
+      },
       "description": {
         "en": "High-performance running shoes for competitions.",
         "de": "Hochleistungs-Laufschuhe für Wettkämpfe."
@@ -1993,15 +2486,27 @@
         5,
         6
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 181,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 181
+        }
+      ]
     },
     {
-      "id": 31,
+      "id": "31",
       "name": {
         "en": "Adidas NMD R1",
         "de": "Adidas NMD R1"
       },
-      "slug": "adidas-nmd-r1",
+      "slug": {
+        "en": "adidas-nmd-r1",
+        "de": "adidas-nmd-r1"
+      },
       "description": {
         "en": "Casual sneakers with Boost cushioning.",
         "de": "Freizeit-Sneaker mit Boost-Dämpfung."
@@ -2023,15 +2528,27 @@
         5,
         6
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 288,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 288
+        }
+      ]
     },
     {
-      "id": 32,
+      "id": "32",
       "name": {
         "en": "DeLonghi Magnifica S",
         "de": "DeLonghi Magnifica S"
       },
-      "slug": "delonghi-magnifica-s",
+      "slug": {
+        "en": "delonghi-magnifica-s",
+        "de": "delonghi-magnifica-s"
+      },
       "description": {
         "en": "Automatic coffee machine with grinder.",
         "de": "Vollautomatische Kaffeemaschine mit Mahlwerk."
@@ -2052,7 +2569,16 @@
         6,
         7
       ],
-      "variants": []
+      "variants": [],
+      "prices": [
+        {
+          "value": 559,
+          "currency": "USD",
+          "discount": 0,
+          "discountType": "absolute",
+          "originalValue": 559
+        }
+      ]
     }
   ],
   "orders": []
