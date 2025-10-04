@@ -2,10 +2,12 @@
 
 import { ComponentType, useEffect } from 'react';
 
-import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 import { DeliveryMethodsProvider } from '@/providers/delivery-methods';
-import { useDeliveryMethodsCtx } from '@/providers/delivery-methods/hooks/use-delivery-methods-ctx';
+import { PaymentMethodsProvider } from '@/providers/payment-methods';
 import { CheckoutProvider } from '@/providers/checkout';
+import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
+import { useDeliveryMethodsCtx } from '@/providers/delivery-methods/hooks/use-delivery-methods-ctx';
+import { usePaymentMethodsCtx } from '@/providers/payment-methods/hooks/use-payment-methods-ctx';
 
 import { useCartItems } from '@/hooks/cart/cart-items';
 
@@ -17,9 +19,11 @@ const CheckoutPageClient: ComponentType = () => {
   const order = useCartStore(s => s.order);
   const cartItems = useCartItems();
   const { getDeliveryMethods } = useDeliveryMethodsCtx();
+  const { getPaymentMethods } = usePaymentMethodsCtx();
 
   useEffect(() => {
     getDeliveryMethods();
+    getPaymentMethods();
   }, []);
 
   return (
@@ -35,9 +39,11 @@ const CheckoutPageClient: ComponentType = () => {
 const CheckoutPageWrapper: ComponentType = () => {
   return (
     <DeliveryMethodsProvider>
-      <CheckoutProvider>
-        <CheckoutPageClient />
-      </CheckoutProvider>
+      <PaymentMethodsProvider>
+        <CheckoutProvider>
+          <CheckoutPageClient />
+        </CheckoutProvider>
+      </PaymentMethodsProvider>
     </DeliveryMethodsProvider>
   )
 }
