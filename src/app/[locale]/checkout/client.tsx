@@ -2,11 +2,10 @@
 
 import { ComponentType } from 'react';
 
-import { EStatus } from '@/constants/status';
-
 import { DeliveryMethodsProvider } from '@/providers/delivery-methods';
 import { PaymentMethodsProvider } from '@/providers/payment-methods';
 import { CheckoutProvider } from '@/providers/checkout';
+import { useCheckoutReady } from '@/providers/checkout/hooks/use-checkout-ready';
 
 import { useCartItems } from '@/hooks/cart/cart-items';
 
@@ -14,17 +13,16 @@ import CartList from '@/components/cart/CartList';
 import FormDeliveryAddress from '@/components/checkout/FormDeliveryAddress';
 import FormPaymentsMethod from '@/components/checkout/FormPaymentsMethod';
 import CheckoutDelivery from '@/components/checkout/CheckoutDelivery';
-import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
 
 const CheckoutPageClient: ComponentType = () => {
   const cartItems = useCartItems();
-  const { status } = useCheckoutCtx();
+  const isReady = useCheckoutReady();
 
   return (
     <div>
       <h1>Checkout</h1>
       <h2>Items</h2>
-      {status === EStatus.SUCCESS ? (
+      {isReady ? (
         <>
           <CartList orderItems={cartItems} />
           <hr />

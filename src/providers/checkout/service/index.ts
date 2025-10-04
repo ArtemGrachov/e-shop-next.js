@@ -1,25 +1,24 @@
-import { useEffect, useMemo, useState } from 'react';
-
-import { EStatus } from '@/constants/status';
+import { useEffect, useMemo } from 'react';
+import { useStore } from 'zustand';
 
 import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
-import { usePaymentMethodsStore } from '@/providers/payment-methods/hooks/use-payment-methods-store';
 import { useDeliveryMethodsCtx } from '@/providers/delivery-methods/hooks/use-delivery-methods-ctx';
 import { usePaymentMethodsCtx } from '@/providers/payment-methods/hooks/use-payment-methods-ctx';
 import { useAppCtx } from '@/providers/app/hooks/use-app-ctx';
+import { createCheckoutStore } from '@/providers/checkout/store';
 
 import { useFormDeliveryAddress } from './use-form-delivery-address';
 import { useFormDeliveryMethod } from './use-form-delivery-method';
 import { useFormPaymentMethod } from './use-form-payment-method';
 
+import { EActions } from '../store/types';
+
 export const useCheckoutService = () => {
+  const store = createCheckoutStore();
   const { getDeliveryMethods } = useDeliveryMethodsCtx();
   const { getPaymentMethods } = usePaymentMethodsCtx();
 
-  const deliveryMethodsStatus = useDeliveryMethodsStore(s => s.getStatus);
-  const paymentMethodsStatus = usePaymentMethodsStore(s => s.getStatus);
-
-  const [formsStatus, setStatus] = useState(EStatus.INIT);
+  const dispatch = useStore(store, s => s.dispatch);
 
   const { subscribe } = useAppCtx();
   const formDeliveryMethod = useFormDeliveryMethod();
@@ -36,7 +35,7 @@ export const useCheckoutService = () => {
 
   const init = () => {
     formDeliveryMethod.init();
-    setStatus(EStatus.SUCCESS);
+    dispatch({ type: EActions.INIT_SUCCESS });
   }
 
   useEffect(() => {
@@ -45,30 +44,8 @@ export const useCheckoutService = () => {
     getPaymentMethods();
   }, []);
 
-  const status = useMemo(() => {
-    const statuses = [formsStatus, deliveryMethodsStatus, paymentMethodsStatus];
-
-    if (statuses.every(s => s === EStatus.INIT)) {
-      return EStatus.INIT;
-    }
-
-    if (statuses.includes(EStatus.PROCESSING)) {
-      return EStatus.PROCESSING;
-    }
-
-    if (statuses.includes(EStatus.ERROR)) {
-      return EStatus.ERROR;
-    }
-
-    if (statuses.every(s => s === EStatus.SUCCESS)) {
-      return EStatus.SUCCESS;
-    }
-
-    return EStatus.ERROR;
-  }, [formsStatus, deliveryMethodsStatus, paymentMethodsStatus]);
-
   return {
-    status,
+    store,
     formDeliveryMethod,
     formDeliveryAddress,
     formPaymentMethod,
