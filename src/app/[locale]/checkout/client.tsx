@@ -14,6 +14,7 @@ import { useCartItems } from '@/hooks/cart/cart-items';
 import CartList from '@/components/cart/CartList';
 import FormDeliveryMethod from '@/components/checkout/FormDeliveryMethod';
 import FormDeliveryAddress from '@/components/checkout/FormDeliveryAddress';
+import FormPaymentsMethod from '@/components/checkout/FormPaymentsMethod';
 
 const CheckoutPageClient: ComponentType = () => {
   const order = useCartStore(s => s.order);
@@ -32,6 +33,7 @@ const CheckoutPageClient: ComponentType = () => {
       <CartList orderItems={cartItems} />
       <FormDeliveryMethod />
       <FormDeliveryAddress />
+      <FormPaymentsMethod />
     </div>
   )
 }

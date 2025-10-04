@@ -25,5 +25,8 @@
     "house_number": "House number",
     "apartment_number": "Apartment number",
     "comment": "Comment"
+  },
+  "form_payment_method": {
+    "payment_method": "Payment method"
   }
 }

@@ -1,7 +1,10 @@
 import { useMemo } from 'react';
+
+import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
+
 import { useFormDeliveryAddress } from './use-form-delivery-address';
 import { useFormDeliveryMethod } from './use-form-delivery-method';
-import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
+import { useFormPaymentMethod } from './use-form-payment-method';
 
 export const useCheckoutService = () => {
   const formDeliveryMethod = useFormDeliveryMethod();
@@ -14,9 +17,11 @@ export const useCheckoutService = () => {
   }, [deliveryMethodId, deliveryMethods]);
 
   const formDeliveryAddress = useFormDeliveryAddress(selectedDeliveryMethod);
+  const formPaymentMethod = useFormPaymentMethod();
 
   return {
     formDeliveryMethod,
     formDeliveryAddress,
+    formPaymentMethod,
   };
 }
