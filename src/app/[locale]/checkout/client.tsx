@@ -10,8 +10,8 @@ import { useCheckoutReady } from '@/providers/checkout/hooks/use-checkout-ready'
 import { useCartItems } from '@/hooks/cart/cart-items';
 
 import CartList from '@/components/cart/CartList';
-import FormPaymentsMethod from '@/components/checkout/FormPaymentsMethod';
 import CheckoutDelivery from '@/components/checkout/CheckoutDelivery';
+import CheckoutPayment from '@/components/checkout/CheckoutPayment';
 
 const CheckoutPageClient: ComponentType = () => {
   const cartItems = useCartItems();
@@ -27,8 +27,7 @@ const CheckoutPageClient: ComponentType = () => {
           <hr />
           <CheckoutDelivery />
           <hr />
-          <h2>Payment method</h2>
-          <FormPaymentsMethod />
+          <CheckoutPayment />
         </>
       ) : '...'}
     </div>

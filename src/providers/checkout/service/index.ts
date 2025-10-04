@@ -28,6 +28,7 @@ export const useCheckoutService = () => {
   const init = () => {
     formDeliveryMethod.init();
     formDeliveryAddress.init();
+    formPaymentMethod.init();
     dispatch({ type: EActions.INIT_SUCCESS });
   }
 

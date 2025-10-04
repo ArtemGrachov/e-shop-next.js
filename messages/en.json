@@ -29,7 +29,8 @@
     "submit": "Save"
   },
   "form_payment_method": {
-    "payment_method": "Payment method"
+    "payment_method": "Payment method",
+    "submit": "Save"
   },
   "common_validation": {
     "required": "This field is required",
@@ -51,5 +52,9 @@
     "house_number": "House number",
     "apartment_number": "Apartment number",
     "comment": "Comment"
+  },
+  "checkout_payment": {
+    "edit": "Edit",
+    "title_method": "Payment method"
   }
 }

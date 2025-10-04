@@ -9,4 +9,5 @@ export interface IOrder {
   price: IOrderPrice;
   deliveryMethodId?: string | null;
   deliveryAddress?: IDeliveryAddress | null;
+  paymentMethodId?: string | null;
 }

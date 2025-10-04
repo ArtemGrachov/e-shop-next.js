@@ -7,12 +7,16 @@ import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
 
-const FormPaymentsMethod: ComponentType = () => {
+interface IProps {
+  onSubmitSuccess?: Function;
+}
+
+const FormPaymentMethod: ComponentType<IProps> = ({ onSubmitSuccess }) => {
   const locale = useLocale();
   const t = useTranslations();
   const paymentMethods = usePaymentMethodsStore(s => s.paymentMethods);
   const { formPaymentMethod } = useCheckoutCtx();
-  const { paymentMethodInput, form } = formPaymentMethod;
+  const { paymentMethodInput, form, submit } = formPaymentMethod;
   const errors = form.formState.errors;
 
   const paymentMethodOptions = useMemo(() => {
@@ -23,13 +27,19 @@ const FormPaymentsMethod: ComponentType = () => {
     }))
   }, [paymentMethods]);
 
+  const submitHandler = () => {
+    submit();
+    onSubmitSuccess && onSubmitSuccess();
+  }
+
   return (
-    <form onSubmit={e => e.preventDefault()}>
+    <form onSubmit={form.handleSubmit(submitHandler)}>
       <div>
         <label htmlFor="paymentMethod">
           {t('form_payment_method.payment_method')}
         </label>
         <select id="paymentMethod" {...paymentMethodInput}>
+          <option value="">-</option>
           {paymentMethodOptions.map(option => {
             return (
               <option key={option.id} value={option.id}>
@@ -41,8 +51,11 @@ const FormPaymentsMethod: ComponentType = () => {
         </select>
         <FieldClientErrors error={errors.paymentMethodId} />
       </div>
+      <button type="submit">
+        {t('form_payment_method.submit')}
+      </button>
     </form>
   )
 }
 
-export default FormPaymentsMethod;
+export default FormPaymentMethod;
