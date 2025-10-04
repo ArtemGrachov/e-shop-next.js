@@ -1,3 +1,5 @@
+import { v4 as uuid } from '@lukeed/uuid';
+
 import type { IOrderItem } from '@/types/models/order-item';
 import type { IPrice } from '@/types/models/price';
 import type { IProduct } from '@/types/models/product';
@@ -7,7 +9,7 @@ import { updateOrderItem } from '@/utils/orders/update-order-item';
 
 export const productToOrderItem = (product: IProduct, quantity: number, price: IPrice, productVariant?: IProductVariant): IOrderItem => {
   return updateOrderItem({
-    id: crypto.randomUUID(),
+    id: uuid(),
     name: productVariant?.name ?? product.name,
     description: productVariant?.description ?? product.description,
     slug: product.slug,
