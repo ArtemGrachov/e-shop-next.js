@@ -5,6 +5,7 @@ import { ComponentType, useEffect } from 'react';
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 import { DeliveryMethodsProvider } from '@/providers/delivery-methods';
 import { useDeliveryMethodsCtx } from '@/providers/delivery-methods/hooks/use-delivery-methods-ctx';
+import { CheckoutProvider } from '@/providers/checkout';
 
 import { useCartItems } from '@/hooks/cart/cart-items';
 
@@ -33,9 +34,11 @@ const CheckoutPageClient: ComponentType = () => {
 
 const CheckoutPageWrapper: ComponentType = () => {
   return (
-    <DeliveryMethodsProvider>
-      <CheckoutPageClient />
-    </DeliveryMethodsProvider>
+    <CheckoutProvider>
+      <DeliveryMethodsProvider>
+        <CheckoutPageClient />
+      </DeliveryMethodsProvider>
+    </CheckoutProvider>
   )
 }
 

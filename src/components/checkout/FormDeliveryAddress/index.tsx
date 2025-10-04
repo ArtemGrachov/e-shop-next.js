@@ -1,21 +1,21 @@
 import { ComponentType } from 'react';
 import { useTranslations } from 'next-intl';
-import { useForm } from 'react-hook-form';
 
-import type { IFormDeliveryAddress } from '@/types/forms/form-delivery-address';
+import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
 
 const FormDeliveryAddress: ComponentType = () => {
   const t = useTranslations();
-  const { register } = useForm<IFormDeliveryAddress>();
-
-  const firstNameInput = register('firstName', { required: true });
-  const lastNameInput = register('lastName', { required: true });
-  const emailInput = register('email', { required: true });
-  const cityInput = register('city', { required: true });
-  const streetInput = register('street', { required: true });
-  const houseNumberInput = register('houseNumber', { required: true });
-  const apartmentNumberInput = register('apartmentNumber');
-  const commentInput = register('comment');
+  const { formDeliveryAddress } = useCheckoutCtx();
+  const {
+    firstNameInput,
+    lastNameInput,
+    emailInput,
+    cityInput,
+    streetInput,
+    houseNumberInput,
+    apartmentNumberInput,
+    commentInput,
+  } = formDeliveryAddress;
 
   return (
     <form>

@@ -6,14 +6,14 @@ import { useTranslations } from 'use-intl';
 import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
 
 import type { IFormDeliveryMethod } from '@/types/forms/form-delivery-method';
+import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
 
 const FormDeliveryMethod: ComponentType = () => {
-  const { register } = useForm<IFormDeliveryMethod>({ defaultValues: { deliveryMethodId: null } })
-  const deliveryMethods = useDeliveryMethodsStore(s => s.deliveryMethods);
   const locale = useLocale();
   const t = useTranslations();
-
-  const deliveryMethodInput = register('deliveryMethodId');
+  const deliveryMethods = useDeliveryMethodsStore(s => s.deliveryMethods);
+  const { formDeliveryMethod } = useCheckoutCtx();
+  const { deliveryMethodInput } = formDeliveryMethod;
 
   const deliveryMethodOptions = useMemo(() => {
     return deliveryMethods.map(deliveryMethod => ({
