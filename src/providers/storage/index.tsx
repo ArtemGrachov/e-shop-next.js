@@ -1,3 +1,5 @@
+'use client';
+
 import { ComponentType, createContext, PropsWithChildren } from 'react';
 import { useStorageService } from '@/providers/storage/service';
 
