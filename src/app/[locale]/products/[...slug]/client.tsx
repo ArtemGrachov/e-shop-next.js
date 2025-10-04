@@ -1,15 +1,14 @@
+'use client';
+
 import { ComponentType, useMemo } from 'react';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { useRouter } from 'next/router';
 import { useLocale } from 'next-intl';
 import { pathcat } from 'pathcat';
+import { useParams, useRouter } from 'next/navigation';
 
 import { ROUTES } from '@/router/routes';
 
 import { ProductProvider } from '@/providers/product';
 import { ReviewsProvider } from '@/providers/reviews';
-import { fetchProduct } from '@/providers/product/api/fetch-product';
-import { createHttpClient } from '@/providers/http-client/utils/create-http-client';
 import { useProductStore } from '@/providers/product/hooks/use-product-store';
 import { useReviewCtx } from '@/providers/reviews/hooks/use-review-ctx';
 import { useReviewStore } from '@/providers/reviews/hooks/use-review-store';
@@ -24,23 +23,26 @@ import ReviewsList from '@/components/reviews/ReviewsList';
 import FormReview, { IFormReview } from '@/components/reviews/FormReview';
 
 import type { IProductVariant } from '@/types/models/product-variant';
+import { IPageProductProps } from '@/app/[locale]/products/[...slug]/types';
+import type { getPageData } from './server';
 
-const PageProduct: ComponentType = () => {
+const ProductPageClient: ComponentType<IPageProductProps> = () => {
   const product = useProductStore(s => s.product);
   const router = useRouter();
   const locale = useLocale();
   const { sendReview } = useReviewCtx();
   const reviewSubmitStaus = useReviewStore(s => s.submitStatus);
+  const params = useParams();
 
   const currentVariantSlug = useMemo(() => {
-    const slug = router.query.slug;
+    const slug = params.slug;
 
     if (!slug) {
       return null;
     }
 
     return slug[1];
-  }, [router.query]);
+  }, [params]);
 
   const currentVariantId = useMemo(() => {
     if (currentVariantSlug == null) {
@@ -84,7 +86,7 @@ const PageProduct: ComponentType = () => {
       newPath += location.hash;
     }
 
-    router.push(newPath, undefined, { shallow: true });
+    router.push(newPath);
   }
 
   const addToCartHandler = (result: IFormBuyOutput) => {
@@ -117,33 +119,14 @@ const PageProduct: ComponentType = () => {
   )
 }
 
-interface IWrapperProps {
-  productState: Awaited<ReturnType<typeof fetchProduct>>;
-}
-
-export const getServerSideProps = (async ({ params }) => {
-  if (!params) {
-    throw new Error('404');
-  }
-
-  const httpClient = createHttpClient();
-
-  const [productSlug] = params.slug as string[];
-  const id = productSlug.split('-').slice(-1)[0];
-
-  const productState = await fetchProduct(httpClient, { id });
-
-  return { props: { productState } };
-}) satisfies GetServerSideProps<IWrapperProps>;
-
-const Wrapper = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const ProductPageWrapper: ComponentType<IPageProductProps & Awaited<ReturnType<typeof getPageData>>> = (props) => {
   return (
     <ProductProvider initialState={props.productState}>
       <ReviewsProvider>
-        <PageProduct />
+        <ProductPageClient {...props} />
       </ReviewsProvider>
     </ProductProvider>
   )
 }
 
-export default Wrapper;
+export default ProductPageWrapper;
