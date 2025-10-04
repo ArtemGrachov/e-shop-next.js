@@ -7,7 +7,7 @@ export interface IProductVariant {
   name: TextTranslation;
   description: TextTranslation;
   slug: TextTranslation;
-  prices: IPrice[];
+  price: IPrice;
   media: IMedia[];
   attributeValueIds: number[];
 }

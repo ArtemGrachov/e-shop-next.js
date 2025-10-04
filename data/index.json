@@ -247,7 +247,6 @@
       },
       "deliveryPrice": {
         "value": 5.99,
-        "currency": "USD",
         "discount": 0,
         "discountType": "absolute"
       }
@@ -269,7 +268,6 @@
       },
       "deliveryPrice": {
         "value": 14.99,
-        "currency": "USD",
         "discount": 0,
         "discountType": "absolute"
       }
@@ -291,7 +289,6 @@
       },
       "deliveryPrice": {
         "value": 24.99,
-        "currency": "USD",
         "discount": 0,
         "discountType": "absolute"
       }
@@ -313,7 +310,6 @@
       },
       "deliveryPrice": {
         "value": 0,
-        "currency": "USD",
         "discount": 0,
         "discountType": "absolute"
       }
@@ -335,7 +331,6 @@
       },
       "deliveryPrice": {
         "value": 29.99,
-        "currency": "USD",
         "discount": 0,
         "discountType": "absolute"
       }
@@ -982,15 +977,12 @@
             "en": "iphone-14-pro-128-silver",
             "de": "iphone-14-pro-128-silber"
           },
-          "prices": [
-            {
-              "value": 999,
-              "currency": "USD",
-              "discount": 0,
-              "discountType": "absolute",
-              "originalValue": 999
-            }
-          ],
+          "price": {
+            "value": 999,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 999
+          },
           "media": [
             {
               "id": 2,
@@ -1018,15 +1010,12 @@
             "en": "iphone-14-pro-256-black",
             "de": "iphone-14-pro-256-schwarz"
           },
-          "prices": [
-            {
-              "value": 1099,
-              "currency": "USD",
-              "discount": 50,
-              "discountType": "absolute",
-              "originalValue": 1149
-            }
-          ],
+          "price": {
+            "value": 1099,
+            "discount": 50,
+            "discountType": "absolute",
+            "originalValue": 1149
+          },
           "media": [
             {
               "id": 3,
@@ -1054,15 +1043,12 @@
             "en": "iphone-14-pro-512-gold",
             "de": "iphone-14-pro-512-gold"
           },
-          "prices": [
-            {
-              "value": 1299,
-              "currency": "USD",
-              "discount": 0,
-              "discountType": "absolute",
-              "originalValue": 1299
-            }
-          ],
+          "price": {
+            "value": 1299,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1299
+          },
           "media": [
             {
               "id": 4,
@@ -1090,15 +1076,12 @@
             "en": "iphone-14-pro-1tb-purple",
             "de": "iphone-14-pro-1tb-lila"
           },
-          "prices": [
-            {
-              "value": 1499,
-              "currency": "USD",
-              "discount": 100,
-              "discountType": "absolute",
-              "originalValue": 1599
-            }
-          ],
+          "price": {
+            "value": 1499,
+            "discount": 100,
+            "discountType": "absolute",
+            "originalValue": 1599
+          },
           "media": [
             {
               "id": 5,
@@ -1126,15 +1109,12 @@
             "en": "iphone-14-pro-256-green",
             "de": "iphone-14-pro-256-gruen"
           },
-          "prices": [
-            {
-              "value": 1149,
-              "currency": "USD",
-              "discount": 0,
-              "discountType": "absolute",
-              "originalValue": 1149
-            }
-          ],
+          "price": {
+            "value": 1149,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1149
+          },
           "media": [
             {
               "id": 6,
@@ -1234,15 +1214,12 @@
             "en": "galaxy-s23-256",
             "de": "galaxy-s23-256"
           },
-          "prices": [
-            {
-              "value": 999,
-              "currency": "USD",
-              "discount": 10,
-              "discountType": "percentage",
-              "originalValue": 1110
-            }
-          ],
+          "price": {
+            "value": 999,
+            "discount": 10,
+            "discountType": "percentage",
+            "originalValue": 1110
+          },
           "media": [
             {
               "id": 4,
@@ -1288,15 +1265,12 @@
         3
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 372,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 372
-        }
-      ]
+      "price": {
+        "value": 372,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 372
+      }
     },
     {
       "id": "4",
@@ -1330,15 +1304,12 @@
         4
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 1388,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 1388
-        }
-      ]
+      "price": {
+        "value": 1388,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1388
+      }
     },
     {
       "id": "5",
@@ -1372,15 +1343,12 @@
         4
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 1208,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 1208
-        }
-      ]
+      "price": {
+        "value": 1208,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1208
+      }
     },
     {
       "id": "6",
@@ -1414,15 +1382,12 @@
         6
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 268,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 268
-        }
-      ]
+      "price": {
+        "value": 268,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 268
+      }
     },
     {
       "id": "7",
@@ -1456,15 +1421,12 @@
         6
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 135,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 135
-        }
-      ]
+      "price": {
+        "value": 135,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 135
+      }
     },
     {
       "id": "8",
@@ -1497,15 +1459,12 @@
         8
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 285,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 285
-        }
-      ]
+      "price": {
+        "value": 285,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 285
+      }
     },
     {
       "id": "9",
@@ -1553,15 +1512,12 @@
             "en": "apple-watch-9-44",
             "de": "apple-watch-9-44"
           },
-          "prices": [
-            {
-              "value": 499,
-              "currency": "USD",
-              "discount": 20,
-              "discountType": "absolute",
-              "originalValue": 519
-            }
-          ],
+          "price": {
+            "value": 499,
+            "discount": 20,
+            "discountType": "absolute",
+            "originalValue": 519
+          },
           "media": [
             {
               "id": 12,
@@ -1606,15 +1562,12 @@
         3
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 1627,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 1627
-        }
-      ]
+      "price": {
+        "value": 1627,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1627
+      }
     },
     {
       "id": "11",
@@ -1662,15 +1615,12 @@
             "en": "ps5-standard",
             "de": "ps5-standard"
           },
-          "prices": [
-            {
-              "value": 499,
-              "currency": "USD",
-              "discount": 0,
-              "discountType": "absolute",
-              "originalValue": 499
-            }
-          ],
+          "price": {
+            "value": 499,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 499
+          },
           "media": [
             {
               "id": 15,
@@ -1715,15 +1665,12 @@
         3
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 1748,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 1748
-        }
-      ]
+      "price": {
+        "value": 1748,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1748
+      }
     },
     {
       "id": "13",
@@ -1757,15 +1704,12 @@
         5
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 454,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 454
-        }
-      ]
+      "price": {
+        "value": 454,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 454
+      }
     },
     {
       "id": "14",
@@ -1798,15 +1742,12 @@
         3
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 322,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 322
-        }
-      ]
+      "price": {
+        "value": 322,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 322
+      }
     },
     {
       "id": "15",
@@ -1839,15 +1780,12 @@
         7
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 320,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 320
-        }
-      ]
+      "price": {
+        "value": 320,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 320
+      }
     },
     {
       "id": "16",
@@ -1880,15 +1818,12 @@
         4
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 1306,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 1306
-        }
-      ]
+      "price": {
+        "value": 1306,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1306
+      }
     },
     {
       "id": "17",
@@ -1921,15 +1856,12 @@
         4
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 1821,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 1821
-        }
-      ]
+      "price": {
+        "value": 1821,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1821
+      }
     },
     {
       "id": "18",
@@ -1976,15 +1908,12 @@
             "en": "galaxy-watch-6-42",
             "de": "galaxy-watch-6-42"
           },
-          "prices": [
-            {
-              "value": 399,
-              "currency": "USD",
-              "discount": 15,
-              "discountType": "percentage",
-              "originalValue": 469
-            }
-          ],
+          "price": {
+            "value": 399,
+            "discount": 15,
+            "discountType": "percentage",
+            "originalValue": 469
+          },
           "media": [
             {
               "id": 23,
@@ -2029,15 +1958,12 @@
         5
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 465,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 465
-        }
-      ]
+      "price": {
+        "value": 465,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 465
+      }
     },
     {
       "id": "20",
@@ -2070,15 +1996,12 @@
         3
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 159,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 159
-        }
-      ]
+      "price": {
+        "value": 159,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 159
+      }
     },
     {
       "id": "21",
@@ -2112,15 +2035,12 @@
         6
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 300,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 300
-        }
-      ]
+      "price": {
+        "value": 300,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 300
+      }
     },
     {
       "id": "22",
@@ -2153,15 +2073,12 @@
         7
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 457,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 457
-        }
-      ]
+      "price": {
+        "value": 457,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 457
+      }
     },
     {
       "id": "23",
@@ -2194,15 +2111,12 @@
         4
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 1108,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 1108
-        }
-      ]
+      "price": {
+        "value": 1108,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1108
+      }
     },
     {
       "id": "24",
@@ -2236,15 +2150,12 @@
         5
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 1399,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 1399
-        }
-      ]
+      "price": {
+        "value": 1399,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1399
+      }
     },
     {
       "id": "25",
@@ -2279,15 +2190,12 @@
         4
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 1293,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 1293
-        }
-      ]
+      "price": {
+        "value": 1293,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1293
+      }
     },
     {
       "id": "26",
@@ -2321,15 +2229,12 @@
         4
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 953,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 953
-        }
-      ]
+      "price": {
+        "value": 953,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 953
+      }
     },
     {
       "id": "27",
@@ -2362,15 +2267,12 @@
         3
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 322,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 322
-        }
-      ]
+      "price": {
+        "value": 322,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 322
+      }
     },
     {
       "id": "28",
@@ -2404,15 +2306,12 @@
         5
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 467,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 467
-        }
-      ]
+      "price": {
+        "value": 467,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 467
+      }
     },
     {
       "id": "29",
@@ -2445,15 +2344,12 @@
         8
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 623,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 623
-        }
-      ]
+      "price": {
+        "value": 623,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 623
+      }
     },
     {
       "id": "30",
@@ -2487,15 +2383,12 @@
         6
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 181,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 181
-        }
-      ]
+      "price": {
+        "value": 181,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 181
+      }
     },
     {
       "id": "31",
@@ -2529,15 +2422,12 @@
         6
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 288,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 288
-        }
-      ]
+      "price": {
+        "value": 288,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 288
+      }
     },
     {
       "id": "32",
@@ -2570,15 +2460,12 @@
         7
       ],
       "variants": [],
-      "prices": [
-        {
-          "value": 559,
-          "currency": "USD",
-          "discount": 0,
-          "discountType": "absolute",
-          "originalValue": 559
-        }
-      ]
+      "price": {
+        "value": 559,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 559
+      }
     }
   ],
   "orders": []

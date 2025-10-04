@@ -12,15 +12,7 @@ interface IProps {
 
 const ProductPrice: ComponentType<IProps> = ({ product, productVariant }) => {
   return (
-    <ul>
-      {(productVariant ?? product).prices.map((price, index) => {
-        return (
-          <li key={index}>
-            <Price price={price} />
-          </li>
-        )
-      })}
-    </ul>
+    <Price price={productVariant?.price ?? product.price} />
   )
 }
 
