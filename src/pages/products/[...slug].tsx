@@ -11,9 +11,10 @@ import { ReviewsProvider } from '@/providers/reviews';
 import { fetchProduct } from '@/providers/product/api/fetch-product';
 import { createHttpClient } from '@/providers/http-client/utils/create-http-client';
 import { useProductStore } from '@/providers/product/hooks/use-product-store';
-import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
 import { useReviewCtx } from '@/providers/reviews/hooks/use-review-ctx';
 import { useReviewStore } from '@/providers/reviews/hooks/use-review-store';
+
+import { useAddToCart } from '@/hooks/cart/add-to-cart';
 
 import ProductDescription from '@/components/products/ProductDescription';
 import FormBuyProduct, { IFormBuyOutput } from '@/components/products/FormBuyProduct';
@@ -28,7 +29,6 @@ const PageProduct: ComponentType = () => {
   const product = useProductStore(s => s.product);
   const router = useRouter();
   const locale = useLocale();
-  const { addProduct } = useCartCtx();
   const { sendReview } = useReviewCtx();
   const reviewSubmitStaus = useReviewStore(s => s.submitStatus);
 
@@ -62,6 +62,8 @@ const PageProduct: ComponentType = () => {
     return product?.variants.find(v => v.id === currentVariantId) ?? defaultVariant;
   }, [product, currentVariantId]);
 
+  const { addToCart } = useAddToCart(product!, currentVariant);
+
   const variantChangeHandler = (variant?: IProductVariant) => {
     let newPath;
 
@@ -86,8 +88,7 @@ const PageProduct: ComponentType = () => {
   }
 
   const addToCartHandler = (result: IFormBuyOutput) => {
-    const price = (result.variant?.prices?.[0] ?? product?.prices?.[0])!;
-    addProduct(result.quantity, price, product!, result.variant);
+    addToCart(result.quantity);
   }
 
   const sendReviewHandler = (formValue: IFormReview) => {

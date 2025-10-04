@@ -14,7 +14,7 @@ interface IProps {
 
 export interface IFormBuyProduct {
   variantId: number | undefined;
-  quantity: number;
+  quantity: string;
 }
 
 export interface IFormBuyOutput {
@@ -25,7 +25,7 @@ export interface IFormBuyOutput {
 const FormBuyProduct: ComponentType<IProps> = ({ product, currentVariant, onSubmit, onVariantSelect }) => {
   const t = useTranslations();
   const locale = useLocale();
-  const { register, handleSubmit, setValue, getValues, watch } = useForm<IFormBuyProduct>({ defaultValues: { variantId: currentVariant?.id, quantity: 1 } });
+  const { register, handleSubmit, setValue, getValues, watch } = useForm<IFormBuyProduct>({ defaultValues: { variantId: currentVariant?.id, quantity: '1' } });
 
   const variantId = watch('variantId');
 
@@ -35,7 +35,7 @@ const FormBuyProduct: ComponentType<IProps> = ({ product, currentVariant, onSubm
 
   const submitHandler: SubmitHandler<IFormBuyProduct> = (formValue) => {
     const output: IFormBuyOutput = {
-      quantity: formValue.quantity,
+      quantity: +formValue.quantity,
       variant: selectedVariant,
     }
     onSubmit && onSubmit(output);
