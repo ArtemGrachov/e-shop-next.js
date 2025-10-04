@@ -16,6 +16,9 @@ const CartItem: ComponentType<IProps> = ({ orderItem }) => {
       <p>
         {orderItem.name[locale]}
       </p>
+      <p>
+        x{orderItem.quantity}
+      </p>
       <Price price={orderItem.price} />
     </div>
   )

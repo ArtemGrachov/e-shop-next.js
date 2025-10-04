@@ -8,5 +8,8 @@
   },
   "common_error": {
     "any": "An error occured"
+  },
+  "common_order": {
+    "total": "Total"
   }
 }
