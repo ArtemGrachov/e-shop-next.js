@@ -249,7 +249,8 @@
         "value": 5.99,
         "discount": 0,
         "discountType": "absolute"
-      }
+      },
+      "type": "courier"
     },
     {
       "id": "2",
@@ -270,7 +271,8 @@
         "value": 14.99,
         "discount": 0,
         "discountType": "absolute"
-      }
+      },
+      "type": "courier"
     },
     {
       "id": "3",
@@ -291,7 +293,8 @@
         "value": 24.99,
         "discount": 0,
         "discountType": "absolute"
-      }
+      },
+      "type": "courier"
     },
     {
       "id": "4",
@@ -312,7 +315,8 @@
         "value": 0,
         "discount": 0,
         "discountType": "absolute"
-      }
+      },
+      "type": "pick_up_point"
     },
     {
       "id": "5",
@@ -333,7 +337,8 @@
         "value": 29.99,
         "discount": 0,
         "discountType": "absolute"
-      }
+      },
+      "type": "courier"
     }
   ],
   "payment-methods": [

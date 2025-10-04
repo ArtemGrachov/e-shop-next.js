@@ -34,11 +34,11 @@ const CheckoutPageClient: ComponentType = () => {
 
 const CheckoutPageWrapper: ComponentType = () => {
   return (
-    <CheckoutProvider>
-      <DeliveryMethodsProvider>
+    <DeliveryMethodsProvider>
+      <CheckoutProvider>
         <CheckoutPageClient />
-      </DeliveryMethodsProvider>
-    </CheckoutProvider>
+      </CheckoutProvider>
+    </DeliveryMethodsProvider>
   )
 }
 

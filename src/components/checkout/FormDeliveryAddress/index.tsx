@@ -10,6 +10,7 @@ const FormDeliveryAddress: ComponentType = () => {
     firstNameInput,
     lastNameInput,
     emailInput,
+    phoneNumberInput,
     cityInput,
     streetInput,
     houseNumberInput,
@@ -18,7 +19,7 @@ const FormDeliveryAddress: ComponentType = () => {
   } = formDeliveryAddress;
 
   return (
-    <form>
+    <form onSubmit={e => e.preventDefault()}>
       <div>
         <label htmlFor="firstName">
           {t('form_delivery_address.first_name')}
@@ -30,6 +31,12 @@ const FormDeliveryAddress: ComponentType = () => {
           {t('form_delivery_address.last_name')}
         </label>
         <input id="lastName" type="text" {...lastNameInput} />
+      </div>
+      <div>
+        <label htmlFor="phoneNumber">
+          {t('form_delivery_address.phone_number')}
+        </label>
+        <input id="phoneNumber" type="text" {...phoneNumberInput} />
       </div>
       <div>
         <label htmlFor="email">
@@ -65,11 +72,8 @@ const FormDeliveryAddress: ComponentType = () => {
         <label htmlFor="comment">
           {t('form_delivery_address.comment')}
         </label>
-        <input id="comment" type="text" {...commentInput} />
+        <textarea id="comment" {...commentInput} />
       </div>
-      <button type="submit">
-        {t('form_delivery_address.submit')}
-      </button>
     </form>
   )
 }

@@ -1,11 +1,8 @@
 import { ComponentType, useMemo } from 'react';
-import { useForm } from 'react-hook-form';
 import { useLocale } from 'next-intl';
 import { useTranslations } from 'use-intl';
 
 import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
-
-import type { IFormDeliveryMethod } from '@/types/forms/form-delivery-method';
 import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
 
 const FormDeliveryMethod: ComponentType = () => {
@@ -24,7 +21,7 @@ const FormDeliveryMethod: ComponentType = () => {
   }, [deliveryMethods]);
 
   return (
-    <form>
+    <form onSubmit={e => e.preventDefault()}>
       <div>
         <label htmlFor="deliveryMethod">
           {t('form_delivery.delivery_method')}
