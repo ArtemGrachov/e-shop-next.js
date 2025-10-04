@@ -14,5 +14,16 @@
   },
   "form_delivery": {
     "delivery_method": "Delivery method"
+  },
+  "form_delivery_address": {
+    "first_name": "First name",
+    "last_name": "Last name",
+    "email": "Email",
+    "city": "City",
+    "street": "Street",
+    "house_number": "House number",
+    "apartment_number": "Apartment number",
+    "comment": "Comment",
+    "submit": "Save"
   }
 }

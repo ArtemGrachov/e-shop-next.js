@@ -1,0 +1,10 @@
+export interface IFormDeliveryAddress {
+  firstName: string;
+  lastName: string;
+  email: string;
+  city: string;
+  street: string;
+  houseNumber: string;
+  apartmentNumber: string;
+  comment: string;
+}
