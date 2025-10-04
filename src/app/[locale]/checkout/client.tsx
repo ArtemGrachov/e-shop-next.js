@@ -1,8 +1,10 @@
 'use client';
 
-import { ComponentType } from 'react';
+import { ComponentType, useEffect } from 'react';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
+import { DeliveryMethodsProvider } from '@/providers/delivery-methods';
+import { useDeliveryMethodsCtx } from '@/providers/delivery-methods/hooks/use-delivery-methods-ctx';
 
 import { useCartItems } from '@/hooks/cart/cart-items';
 
@@ -11,6 +13,11 @@ import CartList from '@/components/cart/CartList';
 const CheckoutPageClient: ComponentType = () => {
   const order = useCartStore(s => s.order);
   const cartItems = useCartItems();
+  const { getDeliveryMethods } = useDeliveryMethodsCtx();
+
+  useEffect(() => {
+    getDeliveryMethods();
+  }, []);
 
   return (
     <div>
@@ -20,4 +27,12 @@ const CheckoutPageClient: ComponentType = () => {
   )
 }
 
-export default CheckoutPageClient;
+const CheckoutPageWrapper: ComponentType = () => {
+  return (
+    <DeliveryMethodsProvider>
+      <CheckoutPageClient />
+    </DeliveryMethodsProvider>
+  )
+}
+
+export default CheckoutPageWrapper;
