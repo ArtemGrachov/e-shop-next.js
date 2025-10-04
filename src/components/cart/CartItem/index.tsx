@@ -4,6 +4,7 @@ import { useLocale } from 'next-intl';
 import Price from '@/components/other/Price';
 
 import type { IOrderItem } from '@/types/models/order-item';
+import CartItemCounter from '@/components/cart/CartItemCounter';
 
 interface IProps {
   orderItem: IOrderItem;
@@ -11,6 +12,7 @@ interface IProps {
 
 const CartItem: ComponentType<IProps> = ({ orderItem }) => {
   const locale = useLocale();
+
   return (
     <div>
       <p>
@@ -20,6 +22,7 @@ const CartItem: ComponentType<IProps> = ({ orderItem }) => {
         x{orderItem.quantity}
       </p>
       <Price price={orderItem.price} />
+      <CartItemCounter orderItem={orderItem} />
     </div>
   )
 }
