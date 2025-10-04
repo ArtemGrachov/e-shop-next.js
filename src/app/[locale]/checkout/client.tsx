@@ -10,7 +10,6 @@ import { useCheckoutReady } from '@/providers/checkout/hooks/use-checkout-ready'
 import { useCartItems } from '@/hooks/cart/cart-items';
 
 import CartList from '@/components/cart/CartList';
-import FormDeliveryAddress from '@/components/checkout/FormDeliveryAddress';
 import FormPaymentsMethod from '@/components/checkout/FormPaymentsMethod';
 import CheckoutDelivery from '@/components/checkout/CheckoutDelivery';
 
@@ -27,8 +26,6 @@ const CheckoutPageClient: ComponentType = () => {
           <CartList orderItems={cartItems} />
           <hr />
           <CheckoutDelivery />
-          <hr />
-          <FormDeliveryAddress />
           <hr />
           <h2>Payment method</h2>
           <FormPaymentsMethod />

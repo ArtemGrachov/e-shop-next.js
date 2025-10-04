@@ -30,7 +30,7 @@ export const useFormDeliveryMethod = () => {
 
     order.deliveryMethodId = deliveryMethodId;
 
-    setOrder(order);
+    setOrder({ ...order });
   }
 
   return {

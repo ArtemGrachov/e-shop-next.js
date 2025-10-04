@@ -1,11 +1,3 @@
-export interface IFormDeliveryAddress {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-  city: string;
-  street: string;
-  houseNumber: string;
-  apartmentNumber: string;
-  comment: string;
-}
+import type { IDeliveryAddress } from '@/types/models/delivery-address';
+
+export interface IFormDeliveryAddress extends IDeliveryAddress {}

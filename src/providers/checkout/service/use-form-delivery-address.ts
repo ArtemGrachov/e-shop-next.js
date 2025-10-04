@@ -3,11 +3,16 @@ import { useForm } from 'react-hook-form';
 
 import { EDeliveryMethodTypes } from '@/constants/delivery-methods';
 
-import type { IFormDeliveryAddress } from '@/types/forms/form-delivery-address';
-import type { IDeliveryMethod } from '@/types/models/delivery-method';
+import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
+import { useSelectedDeliveryMethod } from '@/providers/checkout/hooks/use-selected-delivery-method';
 
-export const useFormDeliveryAddress = (selectedDeliveryMethod?: IDeliveryMethod) => {
+import type { IFormDeliveryAddress } from '@/types/forms/form-delivery-address';
+
+export const useFormDeliveryAddress = () => {
+  const { store, setOrder } = useCartCtx();
   const form = useForm<IFormDeliveryAddress>({ mode: 'onChange' });
+
+  const selectedDeliveryMethod = useSelectedDeliveryMethod();
 
   const addressIsRequired = useMemo(() => {
     return selectedDeliveryMethod?.type === EDeliveryMethodTypes.COURIER;
@@ -21,7 +26,7 @@ export const useFormDeliveryAddress = (selectedDeliveryMethod?: IDeliveryMethod)
     form.trigger();
   }, [addressIsRequired]);
 
-  const conditionalRequired = (v: string) => {
+  const conditionalRequired = (v?: string | null) => {
     return addressIsRequired ? !!v : true
   };
 
@@ -41,6 +46,29 @@ export const useFormDeliveryAddress = (selectedDeliveryMethod?: IDeliveryMethod)
   const apartmentNumberInput = form.register('apartmentNumber');
   const commentInput = form.register('comment');
 
+  const init = () => {
+    const order = store.getState().order;
+    const deliveryAddress = order?.deliveryAddress;
+
+    if (!deliveryAddress) {
+      return;
+    }
+
+    form.reset(deliveryAddress);
+  };
+
+  const submit = () => {
+    const order = store.getState().order;
+
+    if (!order) {
+      return;
+    }
+
+    const formValue = form.getValues();
+    order.deliveryAddress = formValue;
+    setOrder({ ...order });
+  }
+
   return {
     form,
     firstNameInput,
@@ -52,5 +80,7 @@ export const useFormDeliveryAddress = (selectedDeliveryMethod?: IDeliveryMethod)
     houseNumberInput,
     apartmentNumberInput,
     commentInput,
+    init,
+    submit,
   };
 }

@@ -1,7 +1,6 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import { useStore } from 'zustand';
 
-import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
 import { useDeliveryMethodsCtx } from '@/providers/delivery-methods/hooks/use-delivery-methods-ctx';
 import { usePaymentMethodsCtx } from '@/providers/payment-methods/hooks/use-payment-methods-ctx';
 import { useAppCtx } from '@/providers/app/hooks/use-app-ctx';
@@ -22,19 +21,13 @@ export const useCheckoutService = () => {
 
   const { subscribe } = useAppCtx();
   const formDeliveryMethod = useFormDeliveryMethod();
-  const deliveryMethods = useDeliveryMethodsStore(s => s.deliveryMethods);
 
-  const deliveryMethodId = formDeliveryMethod.form.watch('deliveryMethodId');
-
-  const selectedDeliveryMethod = useMemo(() => {
-    return deliveryMethods.find(deliveryMethod => deliveryMethod.id === deliveryMethodId);
-  }, [deliveryMethodId, deliveryMethods]);
-
-  const formDeliveryAddress = useFormDeliveryAddress(selectedDeliveryMethod);
+  const formDeliveryAddress = useFormDeliveryAddress();
   const formPaymentMethod = useFormPaymentMethod();
 
   const init = () => {
     formDeliveryMethod.init();
+    formDeliveryAddress.init();
     dispatch({ type: EActions.INIT_SUCCESS });
   }
 
@@ -49,7 +42,6 @@ export const useCheckoutService = () => {
     formDeliveryMethod,
     formDeliveryAddress,
     formPaymentMethod,
-    selectedDeliveryMethod,
     init,
   };
 }

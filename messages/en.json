@@ -25,7 +25,8 @@
     "street": "Street",
     "house_number": "House number",
     "apartment_number": "Apartment number",
-    "comment": "Comment"
+    "comment": "Comment",
+    "submit": "Save"
   },
   "form_payment_method": {
     "payment_method": "Payment method"
@@ -36,7 +37,19 @@
     "email": "This field must be a valid email"
   },
   "checkout_delivery": {
-    "title": "Delivery method",
+    "title_method": "Delivery method",
+    "title_address": "Delivery address",
+    "title_contacts": "Delivery contacts",
     "edit": "Edit"
+  },
+  "deliery_address": {
+    "name": "Name",
+    "email": "Email",
+    "phone_number": "Phone number",
+    "city": "City",
+    "street": "Street",
+    "house_number": "House number",
+    "apartment_number": "Apartment number",
+    "comment": "Comment"
   }
 }

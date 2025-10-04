@@ -5,7 +5,11 @@ import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
 
-const FormDeliveryAddress: ComponentType = () => {
+interface IProps {
+  onSubmitSuccess?: Function;
+}
+
+const FormDeliveryAddress: ComponentType<IProps> = ({ onSubmitSuccess }) => {
   const t = useTranslations();
   const { formDeliveryAddress } = useCheckoutCtx();
   const {
@@ -19,12 +23,18 @@ const FormDeliveryAddress: ComponentType = () => {
     apartmentNumberInput,
     commentInput,
     form,
+    submit,
   } = formDeliveryAddress;
 
   const errors = form.formState.errors;
 
+  const submitHandler = () => {
+    submit();
+    onSubmitSuccess && onSubmitSuccess();
+  }
+
   return (
-    <form onSubmit={e => e.preventDefault()}>
+    <form onSubmit={form.handleSubmit(submitHandler)}>
       <div>
         <label htmlFor="firstName">
           {t('form_delivery_address.first_name')}
@@ -88,6 +98,9 @@ const FormDeliveryAddress: ComponentType = () => {
         <textarea id="comment" {...commentInput} />
         <FieldClientErrors error={errors.comment} />
       </div>
+      <button type="submit">
+        {t('form_delivery_address.submit')}
+      </button>
     </form>
   )
 }
