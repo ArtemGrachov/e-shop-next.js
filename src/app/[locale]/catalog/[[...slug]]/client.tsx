@@ -9,6 +9,8 @@ import { ProductsProvider } from '@/providers/products';
 import { useCategoriesStore } from '@/providers/categories/hooks/use-categories-store';
 import { useProductsStore } from '@/providers/products/hooks/use-products-store';
 
+import ProductList from '@/components/products/ProductList';
+
 import type { IPageCategoryProps } from './types';
 import type { getPageData } from './server';
 
@@ -67,6 +69,7 @@ const CategoryPageClient: ComponentType<IPageCategoryProps> = () => {
       {description && <p>
         {description}
       </p>}
+      <ProductList products={products} />
     </>
   )
 }
