@@ -10,7 +10,6 @@ export interface IProduct {
   slug: TextTranslation;
   description: TextTranslation;
   media: IMedia[];
-  attributeValueIds: number;
   mainCategoryId: number;
   categoryIds: Array<string | number>;
   variants: IProductVariant[];
