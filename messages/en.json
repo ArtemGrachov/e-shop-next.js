@@ -69,5 +69,8 @@
   },
   "pick_up_point": {
     "opening_hours": "Opening hours"
+  },
+  "page_catalog": {
+    "title_catalog": "Catalog"
   }
 }
