@@ -5,15 +5,18 @@ import { EDeliveryMethodTypes } from '@/constants/delivery-methods';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 import { useSelectedDeliveryMethod } from '@/providers/checkout/hooks/use-selected-delivery-method';
+import { useSelectedPickUpPoint } from '@/providers/checkout/hooks/use-selected-pick-up-point';
 
 import FormDeliveryMethod from '@/components/checkout/FormDeliveryMethod';
 import DeliveryMethod from '@/components/delivery/DeliveryMethod';
 import FormDeliveryAddress from '@/components/checkout/FormDeliveryAddress';
 import DeliveryAddress from '@/components/delivery/DeliveryAddress';
+import PickUpPoint from '@/components/delivery/PickUpPoint';
 
 const CheckoutDelivery: ComponentType = () => {
   const t = useTranslations();
   const selectedDeliveryMethod = useSelectedDeliveryMethod();
+  const selectedPickUpPoint = useSelectedPickUpPoint();
   const order = useCartStore(s => s.order);
   const deliveryAddress = order?.deliveryAddress;
   const [methodSelectionActive, setMethodSelectionActive] = useState(!selectedDeliveryMethod);
@@ -23,6 +26,10 @@ const CheckoutDelivery: ComponentType = () => {
     setMethodSelectionActive(false);
     setAddressEditingActive(true);
   }
+
+  const isPickUpPoint = useMemo(() => {
+    return selectedDeliveryMethod?.type === EDeliveryMethodTypes.PICK_UP_POINT;
+  }, [selectedDeliveryMethod]);
 
   const addressTitle = useMemo(() => {
     switch (selectedDeliveryMethod?.type) {
@@ -43,6 +50,7 @@ const CheckoutDelivery: ComponentType = () => {
   ) : selectedDeliveryMethod ? (
     <>
       <DeliveryMethod deliveryMethod={selectedDeliveryMethod} />
+      {(isPickUpPoint && selectedPickUpPoint) ? <PickUpPoint pickUpPoint={selectedPickUpPoint} /> : null}
       <button type="button" onClick={() => setMethodSelectionActive(true)}>
         {t('checkout_delivery.edit')}
       </button>

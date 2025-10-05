@@ -66,5 +66,8 @@
   },
   "order_page": {
     "title": "Order page"
+  },
+  "pick_up_point": {
+    "opening_hours": "Opening hours"
   }
 }
