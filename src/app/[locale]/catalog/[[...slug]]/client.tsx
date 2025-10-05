@@ -17,6 +17,7 @@ import Pagination from '@/components/other/Pagination';
 import { PaginationModelItem } from 'ultimate-pagination';
 import { pathcat } from 'pathcat';
 import { ROUTES } from '@/router/routes';
+import CategoryNav from '@/components/categories/CategoryNav';
 
 const CategoryPageClient: ComponentType<IPageCategoryProps> = () => {
   const locale = useLocale();
@@ -84,6 +85,7 @@ const CategoryPageClient: ComponentType<IPageCategoryProps> = () => {
       {description && <p>
         {description}
       </p>}
+      <CategoryNav categories={categories} />
       <ProductList products={productsData?.items} />
       <Pagination
         options={{ currentPage: productsData?.currentPage ?? 1, totalPages: productsData?.totalPages ?? 1 }}
