@@ -13,6 +13,7 @@ import { useOrderStore } from '@/providers/order/hooks/use-order-store';
 import DeliveryMethod from '@/components/delivery/DeliveryMethod';
 import DeliveryAddress from '@/components/delivery/DeliveryAddress';
 import PaymentMethod from '@/components/payment/PaymentMethod';
+import OrderItemList from '@/components/order/OrderItemList';
 
 const OrderPageClient: ComponentType = () => {
   const t = useTranslations();
@@ -36,6 +37,7 @@ const OrderPageClient: ComponentType = () => {
       </h1>
       {isProcessing ? '...' : (isSuccess && order) ? (
         <>
+          <OrderItemList orderItems={order.items} />
           <DeliveryMethod deliveryMethod={order.deliveryMethod!} />
           <DeliveryAddress deliveryMethod={order.deliveryMethod!} deliveryAddress={order.deliveryAddress!} />
           <PaymentMethod paymentMethod={order.paymentMethod!} />
