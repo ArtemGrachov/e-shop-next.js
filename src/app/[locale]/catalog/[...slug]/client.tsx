@@ -4,10 +4,11 @@ import { ComponentType } from 'react';
 import { useLocale } from 'next-intl';
 
 import { CategoryProvider } from '@/providers/category';
+import { CategoriesProvider } from '@/providers/categories';
+import { useCategoryStore } from '@/providers/category/hooks/use-category-store';
 
 import type { IPageCategoryProps } from './types';
 import type { getPageData } from './server';
-import { useCategoryStore } from '@/providers/category/hooks/use-category-store';
 
 const CategoryPageClient: ComponentType<IPageCategoryProps> = () => {
   const category = useCategoryStore(s => s.category);
@@ -28,7 +29,9 @@ const CategoryPageClient: ComponentType<IPageCategoryProps> = () => {
 const CategoryPageWrapper: ComponentType<IPageCategoryProps & Awaited<ReturnType<typeof getPageData>>> = (props) => {
   return (
     <CategoryProvider initialState={props.categoryState}>
+      <CategoriesProvider initialState={props.categoriesState}>
         <CategoryPageClient {...props} />
+      </CategoriesProvider>
     </CategoryProvider>
   )
 }
