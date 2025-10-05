@@ -4,12 +4,14 @@ import { fetchProducts } from '@/providers/products/api/fetch-products';
 
 import { IPageCategoryProps } from './types';
 
-export const getPageData = async (_props: IPageCategoryProps) => {
+export const getPageData = async ({ searchParams }: IPageCategoryProps) => {
+  const { page } = await searchParams;
+
   const httpClient = createHttpClient();
 
   const [categoriesState, productsState] = await Promise.all([
     fetchCategories(httpClient),
-    fetchProducts(httpClient),
+    fetchProducts(httpClient, { page }),
   ]);
 
   return { categoriesState, productsState };

@@ -9,7 +9,7 @@ import { reducer } from '../store/reducer';
 import type { IProduct } from '@/types/models/product';
 
 export interface IFetchProductsParams {
-  page?: number;
+  page?: number | string;
 }
 
 export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProductsParams): Promise<State> => {
@@ -18,9 +18,17 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
   try {
     state = reducer(state, { type: EActions.GET });
 
-    let page = params?.page ?? 1;
+    let page = 1;
+
+    if (params?.page) {
+      page = +params.page;
+    }
 
     if (isNaN(page)) {
+      page = 1;
+    }
+
+    if (page < 1) {
       page = 1;
     }
 

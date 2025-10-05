@@ -5,4 +5,7 @@ export interface IPageCategoryProps extends IPageProps {
     locale: string;
     slug: string[];
   }>;
+  searchParams: Promise<{
+    page?: string;
+  }>
 }
