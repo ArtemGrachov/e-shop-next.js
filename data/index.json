@@ -404,7 +404,8 @@
         "id": 7004,
         "src": "/icons/payment/cash.png",
         "type": "image"
-      }
+      },
+      "hasRedirect": false
     },
     {
       "id": "5",
@@ -2593,6 +2594,128 @@
         "comment": ""
       },
       "paymentMethodId": "5",
+      "status": "fulfilled"
+    },
+    {
+      "id": "270caec7-812e-4e0c-aac2-d6519e218705",
+      "code": "0caec781-2ede-4c6a-82d6-519e21870585",
+      "items": [
+        {
+          "id": "18270cae-c781-4ede-8c6a-c2d6519e2187",
+          "name": {
+            "en": "iPhone 14 Pro 128GB - Silver",
+            "de": "iPhone 14 Pro 128GB - Silber"
+          },
+          "description": {
+            "en": "Base model with 128GB storage in Silver.",
+            "de": "Basismodell mit 128GB Speicher in Silber."
+          },
+          "slug": {
+            "en": "iphone-14-pro",
+            "de": "iphone-14-pro"
+          },
+          "variantSlug": {
+            "en": "iphone-14-pro-128-silver",
+            "de": "iphone-14-pro-128-silber"
+          },
+          "productId": "1",
+          "productVariantId": 101,
+          "media": [
+            {
+              "id": 2,
+              "src": "/images/iphone14pro_silver.jpg",
+              "type": "image"
+            }
+          ],
+          "price": {
+            "value": 999,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 999,
+            "total": 999
+          },
+          "quantity": 1
+        }
+      ],
+      "price": {
+        "itemsPrice": 999,
+        "deliveryPrice": 0,
+        "totalPrice": 999
+      },
+      "deliveryMethodId": "4",
+      "deliveryAddress": {
+        "firstName": "Test",
+        "lastName": "Test",
+        "email": "test@test.com",
+        "phoneNumber": "Test",
+        "city": "",
+        "street": "",
+        "houseNumber": "",
+        "apartmentNumber": "",
+        "comment": ""
+      },
+      "paymentMethodId": "3",
+      "status": "fulfilled"
+    },
+    {
+      "id": "20a647c1-9947-4640-a33f-7adc2120def1",
+      "code": "a647c199-4746-4023-bf7a-dc2120def1db",
+      "items": [
+        {
+          "id": "7d20a647-c199-4746-8023-3f7adc2120de",
+          "name": {
+            "en": "iPhone 14 Pro 128GB - Silver",
+            "de": "iPhone 14 Pro 128GB - Silber"
+          },
+          "description": {
+            "en": "Base model with 128GB storage in Silver.",
+            "de": "Basismodell mit 128GB Speicher in Silber."
+          },
+          "slug": {
+            "en": "iphone-14-pro",
+            "de": "iphone-14-pro"
+          },
+          "variantSlug": {
+            "en": "iphone-14-pro-128-silver",
+            "de": "iphone-14-pro-128-silber"
+          },
+          "productId": "1",
+          "productVariantId": 101,
+          "media": [
+            {
+              "id": 2,
+              "src": "/images/iphone14pro_silver.jpg",
+              "type": "image"
+            }
+          ],
+          "price": {
+            "value": 999,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 999,
+            "total": 999
+          },
+          "quantity": 1
+        }
+      ],
+      "price": {
+        "itemsPrice": 999,
+        "deliveryPrice": 0,
+        "totalPrice": 999
+      },
+      "deliveryMethodId": "3",
+      "deliveryAddress": {
+        "firstName": "Test",
+        "lastName": "Test",
+        "email": "test@test.com",
+        "phoneNumber": "Test",
+        "city": "Test",
+        "street": "Test",
+        "houseNumber": "Test",
+        "apartmentNumber": "Test",
+        "comment": ""
+      },
+      "paymentMethodId": "3",
       "status": "fulfilled"
     }
   ]

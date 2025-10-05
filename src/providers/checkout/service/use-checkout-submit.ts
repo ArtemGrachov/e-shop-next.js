@@ -1,4 +1,5 @@
 import { useStore } from 'zustand';
+import { useLocale } from 'next-intl';
 
 import { EOrderStatus } from '@/constants/order';
 
@@ -12,6 +13,7 @@ import type { useFormDeliveryMethod } from './use-form-delivery-method';
 import type { useFormPaymentMethod } from './use-form-payment-method';
 
 import { EActions } from '../store/types';
+import { usePaymentMethodsStore } from '@/providers/payment-methods/hooks/use-payment-methods-store';
 
 export const useCheckoutSubmit = (
   store: ReturnType<typeof createCheckoutStore>,
@@ -23,6 +25,8 @@ export const useCheckoutSubmit = (
   const dispatch = useStore(store, s => s.dispatch);
   const order = useCartStore(s => s.order);
   const { setOrder } = useCartCtx();
+  const paymentMethods = usePaymentMethodsStore(s => s.paymentMethods);
+  const locale = useLocale();
 
   const submit = async () => {
     if (
@@ -39,7 +43,17 @@ export const useCheckoutSubmit = (
       order.status = EOrderStatus.FULFILLED;
       await httpClient.post('/orders', JSON.stringify(order));
       dispatch({ type: EActions.SUBMIT_SUCCESS });
+
+      const paymentMethod = paymentMethods.find(pM => pM.id === order.paymentMethodId);
+
       setOrder(null);
+
+      /**
+       * On real projects redirect is performed according to backend response
+       */
+      if (paymentMethod?.hasRedirect ?? true) {
+        window.location.href = `/payment.html?locale=${locale}&orderId=${order.id}`;
+      }
 
       return true;
     } catch (err) {
