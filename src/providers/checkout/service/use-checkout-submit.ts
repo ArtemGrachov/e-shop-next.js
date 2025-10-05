@@ -6,6 +6,8 @@ import { EOrderStatus } from '@/constants/order';
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 import { useHttpClientCtx } from '@/providers/http-client/hooks/use-http-client-ctx';
 import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
+import { usePaymentMethodsStore } from '@/providers/payment-methods/hooks/use-payment-methods-store';
+import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
 
 import type { createCheckoutStore } from '../store';
 import type { useFormDeliveryAddress } from './use-form-delivery-address';
@@ -13,7 +15,6 @@ import type { useFormDeliveryMethod } from './use-form-delivery-method';
 import type { useFormPaymentMethod } from './use-form-payment-method';
 
 import { EActions } from '../store/types';
-import { usePaymentMethodsStore } from '@/providers/payment-methods/hooks/use-payment-methods-store';
 
 export const useCheckoutSubmit = (
   store: ReturnType<typeof createCheckoutStore>,
@@ -25,6 +26,7 @@ export const useCheckoutSubmit = (
   const dispatch = useStore(store, s => s.dispatch);
   const order = useCartStore(s => s.order);
   const { setOrder } = useCartCtx();
+  const deliveryMethods = useDeliveryMethodsStore(s => s.deliveryMethods);
   const paymentMethods = usePaymentMethodsStore(s => s.paymentMethods);
   const locale = useLocale();
 
@@ -40,11 +42,15 @@ export const useCheckoutSubmit = (
 
     try {
       dispatch({ type: EActions.SUBMIT });
+      const paymentMethod = paymentMethods.find(pM => pM.id === order.paymentMethodId);
+      const deliveryMethod = deliveryMethods.find(dM => dM.id === order.deliveryMethodId);
+
       order.status = EOrderStatus.FULFILLED;
+      order.paymentMethod = paymentMethod;
+      order.deliveryMethod = deliveryMethod;
+
       await httpClient.post('/orders', JSON.stringify(order));
       dispatch({ type: EActions.SUBMIT_SUCCESS });
-
-      const paymentMethod = paymentMethods.find(pM => pM.id === order.paymentMethodId);
 
       setOrder(null);
 
