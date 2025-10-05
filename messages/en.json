@@ -10,7 +10,9 @@
     "any": "An error occured"
   },
   "common_order": {
-    "total": "Total"
+    "total": "Total",
+    "items_price": "Items price",
+    "delivery_price": "Delivery price"
   },
   "form_delivery_method": {
     "delivery_method": "Delivery method",

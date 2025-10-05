@@ -5,7 +5,7 @@ import { calculateItemsPrice } from '@/utils/orders/calculate-items-price';
 
 export const calculateOrderPrice = (order: IOrder): IOrderPrice => {
   const itemsPrice = calculateItemsPrice(order.items);
-  const deliveryPrice = 0;
+  const deliveryPrice = order.deliveryMethod?.deliveryPrice.value ?? 0;
 
   return {
     itemsPrice: calculateItemsPrice(order.items),

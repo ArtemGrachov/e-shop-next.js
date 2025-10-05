@@ -14,6 +14,7 @@ import DeliveryMethod from '@/components/delivery/DeliveryMethod';
 import DeliveryAddress from '@/components/delivery/DeliveryAddress';
 import PaymentMethod from '@/components/payment/PaymentMethod';
 import OrderItemList from '@/components/order/OrderItemList';
+import OrderSummary from '@/components/order/OrderSummary';
 
 const OrderPageClient: ComponentType = () => {
   const t = useTranslations();
@@ -41,6 +42,7 @@ const OrderPageClient: ComponentType = () => {
           <DeliveryMethod deliveryMethod={order.deliveryMethod!} />
           <DeliveryAddress deliveryMethod={order.deliveryMethod!} deliveryAddress={order.deliveryAddress!} />
           <PaymentMethod paymentMethod={order.paymentMethod!} />
+          <OrderSummary order={order} />
         </>
       ) : null}
     </div>
