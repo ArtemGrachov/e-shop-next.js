@@ -12,7 +12,7 @@ export interface IProduct {
   media: IMedia[];
   attributeValueIds: number;
   mainCategoryId: number;
-  categoryIds: number[];
+  categoryIds: Array<string | number>;
   variants: IProductVariant[];
   price: IPrice;
   reviews?: IReview[];

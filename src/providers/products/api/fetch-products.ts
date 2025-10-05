@@ -13,6 +13,12 @@ export interface IFetchProductsParams {
   categoryId?: number | string;
 }
 
+/**
+ * JSON-server filters are very limited, so filtering
+ * is performed on the frontend side
+ * Real projects normally use filtering only and only
+ * on the backend side
+ */
 export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProductsParams): Promise<State> => {
   let state = defaultInitState;
 
@@ -36,15 +42,23 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
     const _start = (page - 1) * PRODUCTS_PAGINATION.ITEMS_PER_PAGE;
     const _end = page * PRODUCTS_PAGINATION.ITEMS_PER_PAGE;
 
-    const response = await httpClient.get<IProduct[]>('/products', {
-      params: {
-        _start,
-        _end,
-        mainCategoryId: params?.categoryId,
-      },
+    const categoryId = params?.categoryId;
+
+    const { data } = await httpClient.get<IProduct[]>('/products');
+
+    let products = data.filter(product => {
+      if (categoryId && !product.categoryIds.some(cId => cId == categoryId)) {
+        return false;
+      }
+
+      return true;
     });
 
-    state = reducer(state, { type: EActions.GET_SUCCESS, products: response.data });
+    if (_start != null && _end != null) {
+      products = products.slice(_start, _end);
+    }
+
+    state = reducer(state, { type: EActions.GET_SUCCESS, products });
   } catch (err) {
     console.error(err);
     state = reducer(state, { type: EActions.GET_ERROR });
