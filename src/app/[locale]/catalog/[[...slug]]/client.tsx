@@ -3,6 +3,10 @@
 import { ComponentType, useMemo } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useParams, useSearchParams } from 'next/navigation';
+import { PaginationModelItem } from 'ultimate-pagination';
+import { pathcat } from 'pathcat';
+
+import { ROUTES } from '@/router/routes';
 
 import { CategoriesProvider } from '@/providers/categories';
 import { ProductsProvider } from '@/providers/products';
@@ -10,14 +14,11 @@ import { useCategoriesStore } from '@/providers/categories/hooks/use-categories-
 import { useProductsStore } from '@/providers/products/hooks/use-products-store';
 
 import ProductList from '@/components/products/ProductList';
+import CategoryNav from '@/components/categories/CategoryNav';
+import Pagination from '@/components/other/Pagination';
 
 import type { IPageCategoryProps } from './types';
 import type { getPageData } from './server';
-import Pagination from '@/components/other/Pagination';
-import { PaginationModelItem } from 'ultimate-pagination';
-import { pathcat } from 'pathcat';
-import { ROUTES } from '@/router/routes';
-import CategoryNav from '@/components/categories/CategoryNav';
 
 const CategoryPageClient: ComponentType<IPageCategoryProps> = () => {
   const locale = useLocale();
