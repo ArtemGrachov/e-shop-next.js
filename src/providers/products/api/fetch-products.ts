@@ -9,9 +9,11 @@ import { reducer } from '../store/reducer';
 import type { IProduct } from '@/types/models/product';
 
 export interface IFetchProductsParams {
-  page?: number | string;
-  categoryId?: number | string;
-  search?: string;
+  page?: number | string | null;
+  categoryId?: number | string | null;
+  search?: string | null;
+  priceMin?: string | number | null;
+  priceMax?: string | number | null;
 }
 
 /**
@@ -40,6 +42,25 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       page = 1;
     }
 
+    let priceMin: number | null = null;
+    let priceMax: number | null = null;
+
+    if (params?.priceMin) {
+      const num = +params.priceMin;
+
+      if (!isNaN(num)) {
+        priceMin = num;
+      }
+    }
+
+    if (params?.priceMax) {
+      const num = +params.priceMax;
+
+      if (!isNaN(num)) {
+        priceMax = num;
+      }
+    }
+
     const _start = (page - 1) * PRODUCTS_PAGINATION.ITEMS_PER_PAGE;
     const _end = page * PRODUCTS_PAGINATION.ITEMS_PER_PAGE;
 
@@ -60,6 +81,18 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
         ].join(' | ');
 
         if (!searchIn.includes(search)) {
+          return false;
+        }
+      }
+
+      if (priceMin != null || priceMax != null) {
+        const prices = [product.price?.value, ...(product.variants ?? []).map(pV => pV.price.value)].filter(v => v != null);
+
+        if (priceMin != null && prices.every(v => v < priceMin)) {
+          return false;
+        }
+
+        if (priceMax != null && prices.every(v => v > priceMax)) {
           return false;
         }
       }
