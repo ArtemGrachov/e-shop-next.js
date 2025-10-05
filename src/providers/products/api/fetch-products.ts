@@ -7,6 +7,7 @@ import { defaultInitState } from '../store/state';
 import { reducer } from '../store/reducer';
 
 import type { IProduct } from '@/types/models/product';
+import type { IPagination } from '@/types/models/pagination';
 
 export interface IFetchProductsParams {
   page?: number | string | null;
@@ -14,6 +15,7 @@ export interface IFetchProductsParams {
   search?: string | null;
   priceMin?: string | number | null;
   priceMax?: string | number | null;
+  itemsPerPage?: string | number | null;
 }
 
 /**
@@ -42,6 +44,16 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       page = 1;
     }
 
+    let itemsPerPage = PRODUCTS_PAGINATION.ITEMS_PER_PAGE;
+
+    if (params?.itemsPerPage) {
+      const num = +params.itemsPerPage;
+
+      if (!isNaN(num)) {
+        itemsPerPage = num;
+      }
+    }
+
     let priceMin: number | null = null;
     let priceMax: number | null = null;
 
@@ -61,8 +73,8 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       }
     }
 
-    const _start = (page - 1) * PRODUCTS_PAGINATION.ITEMS_PER_PAGE;
-    const _end = page * PRODUCTS_PAGINATION.ITEMS_PER_PAGE;
+    const _start = (page - 1) * itemsPerPage;
+    const _end = page * itemsPerPage;
 
     const categoryId = params?.categoryId;
     const search = params?.search?.toLowerCase();
@@ -100,11 +112,22 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       return true;
     });
 
+    const totalItems = products.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+
     if (_start != null && _end != null) {
       products = products.slice(_start, _end);
     }
 
-    state = reducer(state, { type: EActions.GET_SUCCESS, products });
+    const result: IPagination<IProduct> = {
+      items: products,
+      totalItems,
+      totalPages,
+      currentPage: page,
+      itemsPerPage,
+    }
+
+    state = reducer(state, { type: EActions.GET_SUCCESS, data: result });
   } catch (err) {
     console.error(err);
     state = reducer(state, { type: EActions.GET_ERROR });

@@ -14,7 +14,7 @@ export const reducer: Reducer<State, Action> = (state, action) => {
       return {
         ...state,
         getStatus: EStatus.SUCCESS,
-        products: action.products,
+        data: action.data,
       };
     }
     case EActions.GET_ERROR: {
