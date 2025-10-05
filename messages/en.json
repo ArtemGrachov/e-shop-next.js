@@ -16,6 +16,7 @@
   },
   "form_delivery_method": {
     "delivery_method": "Delivery method",
+    "pick_up_point": "Pick-up point",
     "submit": "Save"
   },
   "form_delivery_address": {
@@ -65,5 +66,8 @@
   },
   "order_page": {
     "title": "Order page"
+  },
+  "pick_up_point": {
+    "opening_hours": "Opening hours"
   }
 }

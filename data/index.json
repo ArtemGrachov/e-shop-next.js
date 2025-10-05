@@ -2574,5 +2574,157 @@
         "type": "courier"
       }
     }
+  ],
+  "pick-up-points": [
+    {
+      "id": "1",
+      "name": "Pickup Point - 12 Oak Street, Central District",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 37.7749,
+        "lng": -122.4194
+      },
+      "openingHours": "Mon–Sat: 09:00–18:00"
+    },
+    {
+      "id": "2",
+      "name": "Pickup Point - 58 River Road, Downtown",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 40.7128,
+        "lng": -74.006
+      },
+      "openingHours": "Mon–Fri: 08:00–19:00, Sat: 09:00–15:00"
+    },
+    {
+      "id": "3",
+      "name": "Pickup Point - 101 Hillview Avenue, East Side",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 34.0522,
+        "lng": -118.2437
+      },
+      "openingHours": "Daily: 10:00–20:00"
+    },
+    {
+      "id": "4",
+      "name": "Pickup Point - 77 Market Street, City Center",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 41.8781,
+        "lng": -87.6298
+      },
+      "openingHours": "Mon–Sat: 09:00–18:00"
+    },
+    {
+      "id": "5",
+      "name": "Pickup Point - 34 Lakeview Drive, North Park",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 47.6062,
+        "lng": -122.3321
+      },
+      "openingHours": "Mon–Fri: 08:30–17:30"
+    },
+    {
+      "id": "6",
+      "name": "Pickup Point - 89 Sunset Boulevard, West End",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 29.7604,
+        "lng": -95.3698
+      },
+      "openingHours": "Daily: 09:00–21:00"
+    },
+    {
+      "id": "7",
+      "name": "Pickup Point - 16 Garden Lane, Old Town",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "openingHours": "Mon–Sat: 09:00–18:00"
+    },
+    {
+      "id": "8",
+      "name": "Pickup Point - 220 Forest Road, Green Valley",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      },
+      "openingHours": "Mon–Fri: 08:00–19:00"
+    },
+    {
+      "id": "9",
+      "name": "Pickup Point - 9 Main Avenue, Riverside",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 52.52,
+        "lng": 13.405
+      },
+      "openingHours": "Daily: 10:00–20:00"
+    },
+    {
+      "id": "10",
+      "name": "Pickup Point - 300 Station Street, Midtown",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 35.6895,
+        "lng": 139.6917
+      },
+      "openingHours": "Mon–Sat: 09:00–18:00"
+    },
+    {
+      "id": "11",
+      "name": "Pickup Point - 45 Maple Court, North Hills",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 55.7558,
+        "lng": 37.6173
+      },
+      "openingHours": "Mon–Fri: 08:30–17:30"
+    },
+    {
+      "id": "12",
+      "name": "Pickup Point - 128 Bridge Way, East Harbor",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": -33.8688,
+        "lng": 151.2093
+      },
+      "openingHours": "Daily: 09:00–20:00"
+    },
+    {
+      "id": "13",
+      "name": "Pickup Point - 73 Pine Road, South Gate",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 19.4326,
+        "lng": -99.1332
+      },
+      "openingHours": "Mon–Sat: 10:00–19:00"
+    },
+    {
+      "id": "14",
+      "name": "Pickup Point - 5 Central Plaza, Downtown",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": 1.3521,
+        "lng": 103.8198
+      },
+      "openingHours": "Mon–Fri: 08:00–18:00, Sat: 09:00–14:00"
+    },
+    {
+      "id": "15",
+      "name": "Pickup Point - 190 Meadow Street, Westfield",
+      "deliveryMethodId": "4",
+      "coordinates": {
+        "lat": -37.8136,
+        "lng": 144.9631
+      },
+      "openingHours": "Daily: 09:00–19:00"
+    }
   ]
 }

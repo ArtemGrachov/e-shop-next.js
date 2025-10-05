@@ -15,6 +15,7 @@ import DeliveryAddress from '@/components/delivery/DeliveryAddress';
 import PaymentMethod from '@/components/payment/PaymentMethod';
 import OrderItemList from '@/components/order/OrderItemList';
 import OrderSummary from '@/components/order/OrderSummary';
+import PickUpPoint from '@/components/delivery/PickUpPoint';
 
 const OrderPageClient: ComponentType = () => {
   const t = useTranslations();
@@ -40,6 +41,7 @@ const OrderPageClient: ComponentType = () => {
         <>
           <OrderItemList orderItems={order.items} />
           <DeliveryMethod deliveryMethod={order.deliveryMethod!} />
+          {order.pickUpPoint && <PickUpPoint pickUpPoint={order.pickUpPoint} />}
           <DeliveryAddress deliveryMethod={order.deliveryMethod!} deliveryAddress={order.deliveryAddress!} />
           <PaymentMethod paymentMethod={order.paymentMethod!} />
           <OrderSummary order={order} />
