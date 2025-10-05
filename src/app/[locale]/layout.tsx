@@ -7,7 +7,7 @@ import { HttpClientProvider } from '@/providers/http-client';
 import { StorageProvider } from '@/providers/storage';
 import { ShopProvider } from '@/providers/shop';
 
-import { Root } from './client';
+import { AppProvider } from '@/providers/app';
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const [locale, messages] = await Promise.all([getLocale(), getMessages()]);
@@ -24,9 +24,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <StorageProvider>
                 <CartProvider>
                   <FavouritesProvider>
-                    <Root>
+                    <AppProvider>
                       {children}
-                    </Root>
+                    </AppProvider>
                   </FavouritesProvider>
                 </CartProvider>
               </StorageProvider>

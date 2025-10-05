@@ -11,5 +11,54 @@
   },
   "common_order": {
     "total": "Total"
+  },
+  "form_delivery_method": {
+    "delivery_method": "Delivery method",
+    "submit": "Save"
+  },
+  "form_delivery_address": {
+    "first_name": "First name",
+    "last_name": "Last name",
+    "email": "Email",
+    "phone_number": "Phone number",
+    "city": "City",
+    "street": "Street",
+    "house_number": "House number",
+    "apartment_number": "Apartment number",
+    "comment": "Comment",
+    "submit": "Save"
+  },
+  "form_payment_method": {
+    "payment_method": "Payment method",
+    "submit": "Save"
+  },
+  "common_validation": {
+    "required": "This field is required",
+    "pattern": "This field has incorrect pattern",
+    "email": "This field must be a valid email"
+  },
+  "checkout_delivery": {
+    "title_method": "Delivery method",
+    "title_address": "Delivery address",
+    "title_contacts": "Delivery contacts",
+    "edit": "Edit"
+  },
+  "deliery_address": {
+    "name": "Name",
+    "email": "Email",
+    "phone_number": "Phone number",
+    "city": "City",
+    "street": "Street",
+    "house_number": "House number",
+    "apartment_number": "Apartment number",
+    "comment": "Comment"
+  },
+  "checkout_payment": {
+    "edit": "Edit",
+    "title_method": "Payment method"
+  },
+  "checkout_submit": {
+    "title": "Buy",
+    "submit": "Submit order"
   }
 }

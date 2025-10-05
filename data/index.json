@@ -249,7 +249,8 @@
         "value": 5.99,
         "discount": 0,
         "discountType": "absolute"
-      }
+      },
+      "type": "courier"
     },
     {
       "id": "2",
@@ -270,7 +271,8 @@
         "value": 14.99,
         "discount": 0,
         "discountType": "absolute"
-      }
+      },
+      "type": "courier"
     },
     {
       "id": "3",
@@ -291,7 +293,8 @@
         "value": 24.99,
         "discount": 0,
         "discountType": "absolute"
-      }
+      },
+      "type": "courier"
     },
     {
       "id": "4",
@@ -312,7 +315,8 @@
         "value": 0,
         "discount": 0,
         "discountType": "absolute"
-      }
+      },
+      "type": "pick_up_point"
     },
     {
       "id": "5",
@@ -333,7 +337,8 @@
         "value": 29.99,
         "discount": 0,
         "discountType": "absolute"
-      }
+      },
+      "type": "courier"
     }
   ],
   "payment-methods": [
@@ -2468,5 +2473,127 @@
       }
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "id": "b8db885f-867d-48cb-9014-a20e6512ab75",
+      "code": "db885f86-7da8-4bd0-94a2-0e6512ab75af",
+      "items": [
+        {
+          "id": "58b8db88-5f86-4da8-8bd0-14a20e6512ab",
+          "name": {
+            "en": "iPhone 14 Pro 128GB - Silver",
+            "de": "iPhone 14 Pro 128GB - Silber"
+          },
+          "description": {
+            "en": "Base model with 128GB storage in Silver.",
+            "de": "Basismodell mit 128GB Speicher in Silber."
+          },
+          "slug": {
+            "en": "iphone-14-pro",
+            "de": "iphone-14-pro"
+          },
+          "variantSlug": {
+            "en": "iphone-14-pro-128-silver",
+            "de": "iphone-14-pro-128-silber"
+          },
+          "productId": "1",
+          "productVariantId": 101,
+          "media": [
+            {
+              "id": 2,
+              "src": "/images/iphone14pro_silver.jpg",
+              "type": "image"
+            }
+          ],
+          "price": {
+            "value": 999,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 999,
+            "total": 1998
+          },
+          "quantity": 2
+        }
+      ],
+      "price": {
+        "itemsPrice": 1998,
+        "deliveryPrice": 0,
+        "totalPrice": 1998
+      },
+      "deliveryMethodId": "3",
+      "deliveryAddress": {
+        "firstName": "Test",
+        "lastName": "Test",
+        "email": "test@test.com",
+        "phoneNumber": "Test",
+        "city": "Test",
+        "street": "Test",
+        "houseNumber": "Test",
+        "apartmentNumber": "Test",
+        "comment": ""
+      },
+      "paymentMethodId": "4"
+    },
+    {
+      "id": "a9b2d99c-b1a3-45bf-ac02-2b7e337d585d",
+      "code": "b2d99cb1-a325-4f2c-822b-7e337d585d56",
+      "items": [
+        {
+          "id": "f4a9b2d9-9cb1-4325-bf2c-022b7e337d58",
+          "name": {
+            "en": "iPhone 14 Pro 128GB - Silver",
+            "de": "iPhone 14 Pro 128GB - Silber"
+          },
+          "description": {
+            "en": "Base model with 128GB storage in Silver.",
+            "de": "Basismodell mit 128GB Speicher in Silber."
+          },
+          "slug": {
+            "en": "iphone-14-pro",
+            "de": "iphone-14-pro"
+          },
+          "variantSlug": {
+            "en": "iphone-14-pro-128-silver",
+            "de": "iphone-14-pro-128-silber"
+          },
+          "productId": "1",
+          "productVariantId": 101,
+          "media": [
+            {
+              "id": 2,
+              "src": "/images/iphone14pro_silver.jpg",
+              "type": "image"
+            }
+          ],
+          "price": {
+            "value": 999,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 999,
+            "total": 999
+          },
+          "quantity": 1
+        }
+      ],
+      "price": {
+        "itemsPrice": 999,
+        "deliveryPrice": 0,
+        "totalPrice": 999
+      },
+      "deliveryMethodId": "1",
+      "deliveryAddress": {
+        "firstName": "Test",
+        "lastName": "Test",
+        "email": "test11@test.com",
+        "phoneNumber": "Test",
+        "city": "Test",
+        "street": "Test",
+        "houseNumber": "Test",
+        "apartmentNumber": "Test",
+        "comment": ""
+      },
+      "paymentMethodId": "5",
+      "status": "fulfilled"
+    }
+  ]
 }
