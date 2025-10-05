@@ -5,6 +5,7 @@ export interface ICategory {
   id: string;
   name: TextTranslation;
   description: TextTranslation;
+  slug: TextTranslation;
   media: IMedia[];
   primaryMedia: number;
 }

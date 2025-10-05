@@ -6,6 +6,10 @@
         "en": "Electronics",
         "de": "Elektronik"
       },
+      "slug": {
+        "en": "electronics",
+        "de": "elektronik"
+      },
       "description": {
         "en": "Smartphones, tablets, TVs, and other electronic devices.",
         "de": "Smartphones, Tablets, Fernseher und andere elektronische Geräte."
@@ -24,6 +28,10 @@
       "name": {
         "en": "Computers & Laptops",
         "de": "Computer & Laptops"
+      },
+      "slug": {
+        "en": "computers-laptops",
+        "de": "computer-laptops"
       },
       "description": {
         "en": "Laptops, desktops, and accessories for work and play.",
@@ -44,6 +52,10 @@
         "en": "Smart Home",
         "de": "Smart Home"
       },
+      "slug": {
+        "en": "smart-home",
+        "de": "smart-home"
+      },
       "description": {
         "en": "Connected devices for a smarter lifestyle.",
         "de": "Vernetzte Geräte für ein smarteres Zuhause."
@@ -62,6 +74,10 @@
       "name": {
         "en": "Fashion",
         "de": "Mode"
+      },
+      "slug": {
+        "en": "fashion",
+        "de": "mode"
       },
       "description": {
         "en": "Clothing, shoes, and accessories for men and women.",
@@ -82,6 +98,10 @@
         "en": "Sports & Outdoors",
         "de": "Sport & Outdoor"
       },
+      "slug": {
+        "en": "sports-outdoors",
+        "de": "sport-outdoor"
+      },
       "description": {
         "en": "Equipment and apparel for indoor and outdoor activities.",
         "de": "Ausrüstung und Bekleidung für Indoor- und Outdoor-Aktivitäten."
@@ -100,6 +120,10 @@
       "name": {
         "en": "Home & Kitchen",
         "de": "Haushalt & Küche"
+      },
+      "slug": {
+        "en": "home-kitchen",
+        "de": "haushalt-kuche"
       },
       "description": {
         "en": "Appliances, cookware, and home essentials.",
@@ -120,6 +144,10 @@
         "en": "Beauty & Health",
         "de": "Schönheit & Gesundheit"
       },
+      "slug": {
+        "en": "beauty-health",
+        "de": "schoenheit-gesundheit"
+      },
       "description": {
         "en": "Cosmetics, skincare, and wellness products.",
         "de": "Kosmetik, Hautpflege und Wellness-Produkte."
@@ -138,6 +166,10 @@
       "name": {
         "en": "Toys & Games",
         "de": "Spielzeug & Spiele"
+      },
+      "slug": {
+        "en": "toys-games",
+        "de": "spielzeug-spiele"
       },
       "description": {
         "en": "Toys for kids and games for all ages.",
@@ -158,6 +190,10 @@
         "en": "Books & Media",
         "de": "Bücher & Medien"
       },
+      "slug": {
+        "en": "books-media",
+        "de": "buecher-medien"
+      },
       "description": {
         "en": "Books, audiobooks, and digital media.",
         "de": "Bücher, Hörbücher und digitale Medien."
@@ -176,6 +212,10 @@
       "name": {
         "en": "Automotive",
         "de": "Auto & Motorrad"
+      },
+      "slug": {
+        "en": "automotive",
+        "de": "auto-motorrad"
       },
       "description": {
         "en": "Car accessories, tools, and maintenance products.",
@@ -196,6 +236,10 @@
         "en": "Pet Supplies",
         "de": "Haustierbedarf"
       },
+      "slug": {
+        "en": "pet-supplies",
+        "de": "haustierbedarf"
+      },
       "description": {
         "en": "Food, toys, and care items for pets.",
         "de": "Futter, Spielzeug und Pflegeartikel für Haustiere."
@@ -214,6 +258,10 @@
       "name": {
         "en": "Garden & DIY",
         "de": "Garten & Heimwerken"
+      },
+      "slug": {
+        "en": "garden-diy",
+        "de": "garten-heimwerken"
       },
       "description": {
         "en": "Gardening tools and DIY supplies.",
