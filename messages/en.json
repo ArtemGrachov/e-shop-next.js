@@ -60,5 +60,8 @@
   "checkout_submit": {
     "title": "Buy",
     "submit": "Submit order"
+  },
+  "order_page": {
+    "title": "Order page"
   }
 }
