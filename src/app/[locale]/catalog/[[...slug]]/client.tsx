@@ -5,7 +5,9 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 
 import { CategoriesProvider } from '@/providers/categories';
+import { ProductsProvider } from '@/providers/products';
 import { useCategoriesStore } from '@/providers/categories/hooks/use-categories-store';
+import { useProductsStore } from '@/providers/products/hooks/use-products-store';
 
 import type { IPageCategoryProps } from './types';
 import type { getPageData } from './server';
@@ -14,6 +16,7 @@ const CategoryPageClient: ComponentType<IPageCategoryProps> = () => {
   const locale = useLocale();
   const params = useParams();
   const categories = useCategoriesStore(s => s.categories);
+  const products = useProductsStore(s => s.products);
   const t = useTranslations();
 
   const categorySlug = useMemo(() => {
@@ -71,7 +74,9 @@ const CategoryPageClient: ComponentType<IPageCategoryProps> = () => {
 const CategoryPageWrapper: ComponentType<IPageCategoryProps & Awaited<ReturnType<typeof getPageData>>> = (props) => {
   return (
     <CategoriesProvider initialState={props.categoriesState}>
-      <CategoryPageClient {...props} />
+      <ProductsProvider initialState={props.productsState}>
+        <CategoryPageClient {...props} />
+      </ProductsProvider>
     </CategoriesProvider>
   )
 }
