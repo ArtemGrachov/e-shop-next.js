@@ -1,5 +1,6 @@
 export const ROUTES = {
   PRODUCT: '/products/:slugId',
   PRODUCT_VARIANT: '/products/:slugId/:variantSlugId',
-  ORDER: '/order/:orderId'
+  ORDER: '/order/:orderId',
+  CATALOG: '/catalog/:slugId',
 }

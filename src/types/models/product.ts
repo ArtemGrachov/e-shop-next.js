@@ -10,9 +10,8 @@ export interface IProduct {
   slug: TextTranslation;
   description: TextTranslation;
   media: IMedia[];
-  attributeValueIds: number;
   mainCategoryId: number;
-  categoryIds: number;
+  categoryIds: Array<string | number>;
   variants: IProductVariant[];
   price: IPrice;
   reviews?: IReview[];

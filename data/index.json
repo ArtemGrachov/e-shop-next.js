@@ -6,6 +6,10 @@
         "en": "Electronics",
         "de": "Elektronik"
       },
+      "slug": {
+        "en": "electronics",
+        "de": "elektronik"
+      },
       "description": {
         "en": "Smartphones, tablets, TVs, and other electronic devices.",
         "de": "Smartphones, Tablets, Fernseher und andere elektronische Geräte."
@@ -24,6 +28,10 @@
       "name": {
         "en": "Computers & Laptops",
         "de": "Computer & Laptops"
+      },
+      "slug": {
+        "en": "computers-laptops",
+        "de": "computer-laptops"
       },
       "description": {
         "en": "Laptops, desktops, and accessories for work and play.",
@@ -44,6 +52,10 @@
         "en": "Smart Home",
         "de": "Smart Home"
       },
+      "slug": {
+        "en": "smart-home",
+        "de": "smart-home"
+      },
       "description": {
         "en": "Connected devices for a smarter lifestyle.",
         "de": "Vernetzte Geräte für ein smarteres Zuhause."
@@ -62,6 +74,10 @@
       "name": {
         "en": "Fashion",
         "de": "Mode"
+      },
+      "slug": {
+        "en": "fashion",
+        "de": "mode"
       },
       "description": {
         "en": "Clothing, shoes, and accessories for men and women.",
@@ -82,6 +98,10 @@
         "en": "Sports & Outdoors",
         "de": "Sport & Outdoor"
       },
+      "slug": {
+        "en": "sports-outdoors",
+        "de": "sport-outdoor"
+      },
       "description": {
         "en": "Equipment and apparel for indoor and outdoor activities.",
         "de": "Ausrüstung und Bekleidung für Indoor- und Outdoor-Aktivitäten."
@@ -100,6 +120,10 @@
       "name": {
         "en": "Home & Kitchen",
         "de": "Haushalt & Küche"
+      },
+      "slug": {
+        "en": "home-kitchen",
+        "de": "haushalt-kuche"
       },
       "description": {
         "en": "Appliances, cookware, and home essentials.",
@@ -120,6 +144,10 @@
         "en": "Beauty & Health",
         "de": "Schönheit & Gesundheit"
       },
+      "slug": {
+        "en": "beauty-health",
+        "de": "schoenheit-gesundheit"
+      },
       "description": {
         "en": "Cosmetics, skincare, and wellness products.",
         "de": "Kosmetik, Hautpflege und Wellness-Produkte."
@@ -138,6 +166,10 @@
       "name": {
         "en": "Toys & Games",
         "de": "Spielzeug & Spiele"
+      },
+      "slug": {
+        "en": "toys-games",
+        "de": "spielzeug-spiele"
       },
       "description": {
         "en": "Toys for kids and games for all ages.",
@@ -158,6 +190,10 @@
         "en": "Books & Media",
         "de": "Bücher & Medien"
       },
+      "slug": {
+        "en": "books-media",
+        "de": "buecher-medien"
+      },
       "description": {
         "en": "Books, audiobooks, and digital media.",
         "de": "Bücher, Hörbücher und digitale Medien."
@@ -176,6 +212,10 @@
       "name": {
         "en": "Automotive",
         "de": "Auto & Motorrad"
+      },
+      "slug": {
+        "en": "automotive",
+        "de": "auto-motorrad"
       },
       "description": {
         "en": "Car accessories, tools, and maintenance products.",
@@ -196,6 +236,10 @@
         "en": "Pet Supplies",
         "de": "Haustierbedarf"
       },
+      "slug": {
+        "en": "pet-supplies",
+        "de": "haustierbedarf"
+      },
       "description": {
         "en": "Food, toys, and care items for pets.",
         "de": "Futter, Spielzeug und Pflegeartikel für Haustiere."
@@ -214,6 +258,10 @@
       "name": {
         "en": "Garden & DIY",
         "de": "Garten & Heimwerken"
+      },
+      "slug": {
+        "en": "garden-diy",
+        "de": "garten-heimwerken"
       },
       "description": {
         "en": "Gardening tools and DIY supplies.",
@@ -440,502 +488,6 @@
       }
     }
   ],
-  "product-attribute-values": [
-    {
-      "id": "1",
-      "name": {
-        "en": "Silver",
-        "de": "Silber"
-      },
-      "description": {
-        "en": "Silver color",
-        "de": "Silberfarbe"
-      },
-      "attributeId": 1
-    },
-    {
-      "id": "2",
-      "name": {
-        "en": "Black",
-        "de": "Schwarz"
-      },
-      "description": {
-        "en": "Black color",
-        "de": "Schwarze Farbe"
-      },
-      "attributeId": 1
-    },
-    {
-      "id": "3",
-      "name": {
-        "en": "Gold",
-        "de": "Gold"
-      },
-      "description": {
-        "en": "Gold color",
-        "de": "Goldfarbe"
-      },
-      "attributeId": 1
-    },
-    {
-      "id": "4",
-      "name": {
-        "en": "128 GB",
-        "de": "128 GB"
-      },
-      "description": {
-        "en": "128 gigabytes of storage",
-        "de": "128 Gigabyte Speicher"
-      },
-      "attributeId": 2
-    },
-    {
-      "id": "5",
-      "name": {
-        "en": "256 GB",
-        "de": "256 GB"
-      },
-      "description": {
-        "en": "256 gigabytes of storage",
-        "de": "256 Gigabyte Speicher"
-      },
-      "attributeId": 2
-    },
-    {
-      "id": "6",
-      "name": {
-        "en": "512 GB",
-        "de": "512 GB"
-      },
-      "description": {
-        "en": "512 gigabytes of storage",
-        "de": "512 Gigabyte Speicher"
-      },
-      "attributeId": 2
-    },
-    {
-      "id": "7",
-      "name": {
-        "en": "1 TB",
-        "de": "1 TB"
-      },
-      "description": {
-        "en": "1 terabyte of storage",
-        "de": "1 Terabyte Speicher"
-      },
-      "attributeId": 2
-    },
-    {
-      "id": "8",
-      "name": {
-        "en": "0.5 kg",
-        "de": "0,5 kg"
-      },
-      "description": {
-        "en": "Weight half kilogram",
-        "de": "Gewicht ein halbes Kilo"
-      },
-      "attributeId": 3
-    },
-    {
-      "id": "9",
-      "name": {
-        "en": "Plastic",
-        "de": "Kunststoff"
-      },
-      "description": {
-        "en": "Plastic material",
-        "de": "Material Kunststoff"
-      },
-      "attributeId": 4
-    },
-    {
-      "id": "10",
-      "name": {
-        "en": "Aluminium",
-        "de": "Aluminium"
-      },
-      "description": {
-        "en": "Aluminium material",
-        "de": "Material Aluminium"
-      },
-      "attributeId": 4
-    },
-    {
-      "id": "11",
-      "name": {
-        "en": "Leather",
-        "de": "Leder"
-      },
-      "description": {
-        "en": "Leather material",
-        "de": "Material Leder"
-      },
-      "attributeId": 4
-    },
-    {
-      "id": "12",
-      "name": {
-        "en": "1.2 kg",
-        "de": "1,2 kg"
-      },
-      "description": {
-        "en": "Laptop weight 1.2 kg",
-        "de": "Laptopgewicht 1,2 kg"
-      },
-      "attributeId": 3
-    },
-    {
-      "id": "13",
-      "name": {
-        "en": "1.8 kg",
-        "de": "1,8 kg"
-      },
-      "description": {
-        "en": "Laptop weight 1.8 kg",
-        "de": "Laptopgewicht 1,8 kg"
-      },
-      "attributeId": 3
-    },
-    {
-      "id": "14",
-      "name": {
-        "en": "2.1 kg",
-        "de": "2,1 kg"
-      },
-      "description": {
-        "en": "Laptop weight 2.1 kg",
-        "de": "Laptopgewicht 2,1 kg"
-      },
-      "attributeId": 3
-    },
-    {
-      "id": "15",
-      "name": {
-        "en": "8 US",
-        "de": "8 US"
-      },
-      "description": {
-        "en": "Shoe size US 8",
-        "de": "Schuhgröße US 8"
-      },
-      "attributeId": 5
-    },
-    {
-      "id": "16",
-      "name": {
-        "en": "9 US",
-        "de": "9 US"
-      },
-      "description": {
-        "en": "Shoe size US 9",
-        "de": "Schuhgröße US 9"
-      },
-      "attributeId": 5
-    },
-    {
-      "id": "17",
-      "name": {
-        "en": "10 US",
-        "de": "10 US"
-      },
-      "description": {
-        "en": "Shoe size US 10",
-        "de": "Schuhgröße US 10"
-      },
-      "attributeId": 5
-    },
-    {
-      "id": "18",
-      "name": {
-        "en": "Red",
-        "de": "Rot"
-      },
-      "description": {
-        "en": "Red color",
-        "de": "Rote Farbe"
-      },
-      "attributeId": 1
-    },
-    {
-      "id": "19",
-      "name": {
-        "en": "Blue",
-        "de": "Blau"
-      },
-      "description": {
-        "en": "Blue color",
-        "de": "Blaue Farbe"
-      },
-      "attributeId": 1
-    },
-    {
-      "id": "20",
-      "name": {
-        "en": "White",
-        "de": "Weiß"
-      },
-      "description": {
-        "en": "White color",
-        "de": "Weiße Farbe"
-      },
-      "attributeId": 1
-    },
-    {
-      "id": "21",
-      "name": {
-        "en": "Metal",
-        "de": "Metall"
-      },
-      "description": {
-        "en": "Metal material",
-        "de": "Material Metall"
-      },
-      "attributeId": 4
-    },
-    {
-      "id": "22",
-      "name": {
-        "en": "3.5 kg",
-        "de": "3,5 kg"
-      },
-      "description": {
-        "en": "Weight 3.5 kg",
-        "de": "Gewicht 3,5 kg"
-      },
-      "attributeId": 3
-    },
-    {
-      "id": "23",
-      "name": {
-        "en": "44mm",
-        "de": "44mm"
-      },
-      "description": {
-        "en": "Watch diameter 44mm",
-        "de": "Uhrendurchmesser 44mm"
-      },
-      "attributeId": 23
-    },
-    {
-      "id": "24",
-      "name": {
-        "en": "825 GB",
-        "de": "825 GB"
-      },
-      "description": {
-        "en": "Console storage 825GB",
-        "de": "Konsolenspeicher 825GB"
-      },
-      "attributeId": 24
-    },
-    {
-      "id": "25",
-      "name": {
-        "en": "Disc Edition",
-        "de": "Disc Edition"
-      },
-      "description": {
-        "en": "Physical disc edition",
-        "de": "Physische Disc Edition"
-      },
-      "attributeId": 25
-    },
-    {
-      "id": "26",
-      "name": {
-        "en": "20 MP",
-        "de": "20 MP"
-      },
-      "description": {
-        "en": "20 megapixel sensor",
-        "de": "20 Megapixel Sensor"
-      },
-      "attributeId": 26
-    },
-    {
-      "id": "27",
-      "name": {
-        "en": "42mm",
-        "de": "42mm"
-      },
-      "description": {
-        "en": "Watch diameter 42mm",
-        "de": "Uhrendurchmesser 42mm"
-      },
-      "attributeId": 27
-    },
-    {
-      "id": "28",
-      "name": {
-        "en": "10 US",
-        "de": "10 US"
-      },
-      "description": {
-        "en": "Soccer shoe size US 10",
-        "de": "Fußballschuhgröße US 10"
-      },
-      "attributeId": 28
-    },
-    {
-      "id": "29",
-      "name": {
-        "en": "Tablet Storage",
-        "de": "Tablet-Speicher"
-      },
-      "description": {
-        "en": "Storage capacity of tablet",
-        "de": "Speicherkapazität des Tablets"
-      },
-      "unitType": "number"
-    },
-    {
-      "id": "29",
-      "name": {
-        "en": "512 GB",
-        "de": "512 GB"
-      },
-      "description": {
-        "en": "Tablet storage 512 GB",
-        "de": "Tablet-Speicher 512 GB"
-      },
-      "attributeId": 29
-    }
-  ],
-  "product-attributes": [
-    {
-      "id": "1",
-      "name": {
-        "en": "Color",
-        "de": "Farbe"
-      },
-      "description": {
-        "en": "Product color",
-        "de": "Produktfarbe"
-      },
-      "unitType": "string"
-    },
-    {
-      "id": "2",
-      "name": {
-        "en": "Storage",
-        "de": "Speicher"
-      },
-      "description": {
-        "en": "Device storage size",
-        "de": "Gerätespeichergröße"
-      },
-      "unitType": "number"
-    },
-    {
-      "id": "3",
-      "name": {
-        "en": "Weight",
-        "de": "Gewicht"
-      },
-      "description": {
-        "en": "Product weight",
-        "de": "Produktgewicht"
-      },
-      "unitType": "kg"
-    },
-    {
-      "id": "4",
-      "name": {
-        "en": "Material",
-        "de": "Material"
-      },
-      "description": {
-        "en": "Main material of product",
-        "de": "Hauptmaterial des Produkts"
-      },
-      "unitType": "string"
-    },
-    {
-      "id": "5",
-      "name": {
-        "en": "Size",
-        "de": "Größe"
-      },
-      "description": {
-        "en": "Clothing or shoe size",
-        "de": "Kleidungs- oder Schuhgröße"
-      },
-      "unitType": "string"
-    },
-    {
-      "id": "23",
-      "name": {
-        "en": "Watch Size",
-        "de": "Uhrengröße"
-      },
-      "description": {
-        "en": "Diameter of watch face",
-        "de": "Durchmesser des Zifferblatts"
-      },
-      "unitType": "number"
-    },
-    {
-      "id": "24",
-      "name": {
-        "en": "Storage",
-        "de": "Speicher"
-      },
-      "description": {
-        "en": "Console storage size",
-        "de": "Konsolenspeichergröße"
-      },
-      "unitType": "number"
-    },
-    {
-      "id": "25",
-      "name": {
-        "en": "PS5 Edition",
-        "de": "PS5 Edition"
-      },
-      "description": {
-        "en": "Disc or Digital edition",
-        "de": "Disc oder Digital Edition"
-      },
-      "unitType": "string"
-    },
-    {
-      "id": "26",
-      "name": {
-        "en": "Camera Sensor",
-        "de": "Kamerasensor"
-      },
-      "description": {
-        "en": "Sensor type of camera",
-        "de": "Sensortyp der Kamera"
-      },
-      "unitType": "string"
-    },
-    {
-      "id": "27",
-      "name": {
-        "en": "Watch Size 42mm",
-        "de": "Uhrengröße 42mm"
-      },
-      "description": {
-        "en": "Watch diameter 42mm",
-        "de": "Uhrdurchmesser 42mm"
-      },
-      "unitType": "number"
-    },
-    {
-      "id": "28",
-      "name": {
-        "en": "Soccer Shoe Size",
-        "de": "Fußballschuhgröße"
-      },
-      "description": {
-        "en": "Size of soccer cleats",
-        "de": "Größe der Fußballschuhe"
-      },
-      "unitType": "number"
-    }
-  ],
   "products": [
     {
       "id": "1",
@@ -957,11 +509,6 @@
           "src": "/images/iphone14pro.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        1,
-        2,
-        3
       ],
       "mainCategoryId": 1,
       "categoryIds": [
@@ -995,11 +542,6 @@
               "src": "/images/iphone14pro_silver.jpg",
               "type": "image"
             }
-          ],
-          "attributeValueIds": [
-            2,
-            30,
-            31
           ]
         },
         {
@@ -1028,11 +570,6 @@
               "src": "/images/iphone14pro_black.jpg",
               "type": "image"
             }
-          ],
-          "attributeValueIds": [
-            2,
-            32,
-            33
           ]
         },
         {
@@ -1061,11 +598,6 @@
               "src": "/images/iphone14pro_gold.jpg",
               "type": "image"
             }
-          ],
-          "attributeValueIds": [
-            2,
-            29,
-            34
           ]
         },
         {
@@ -1094,11 +626,6 @@
               "src": "/images/iphone14pro_purple.jpg",
               "type": "image"
             }
-          ],
-          "attributeValueIds": [
-            2,
-            35,
-            36
           ]
         },
         {
@@ -1127,11 +654,6 @@
               "src": "/images/iphone14pro_green.jpg",
               "type": "image"
             }
-          ],
-          "attributeValueIds": [
-            2,
-            32,
-            37
           ]
         }
       ],
@@ -1194,12 +716,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        2,
-        5,
-        6,
-        8
-      ],
       "mainCategoryId": 1,
       "categoryIds": [
         1,
@@ -1232,9 +748,6 @@
               "src": "/images/galaxyS23_256.jpg",
               "type": "image"
             }
-          ],
-          "attributeValueIds": [
-            7
           ]
         }
       ]
@@ -1259,11 +772,6 @@
           "src": "/images/sony_wh1000xm5.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        9,
-        10,
-        11
       ],
       "mainCategoryId": 2,
       "categoryIds": [
@@ -1299,11 +807,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        12,
-        13,
-        14
-      ],
       "mainCategoryId": 1,
       "categoryIds": [
         1,
@@ -1337,11 +840,6 @@
           "src": "/images/dellxps13.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        12,
-        15,
-        16
       ],
       "mainCategoryId": 1,
       "categoryIds": [
@@ -1377,11 +875,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        17,
-        18,
-        19
-      ],
       "mainCategoryId": 5,
       "categoryIds": [
         5,
@@ -1415,11 +908,6 @@
           "src": "/images/ultraboost22.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        17,
-        20,
-        19
       ],
       "mainCategoryId": 5,
       "categoryIds": [
@@ -1455,10 +943,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        21,
-        22
-      ],
       "mainCategoryId": 7,
       "categoryIds": [
         7,
@@ -1493,11 +977,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        1,
-        8,
-        12
-      ],
       "mainCategoryId": 1,
       "categoryIds": [
         1,
@@ -1530,9 +1009,6 @@
               "src": "/images/applewatch9_44.jpg",
               "type": "image"
             }
-          ],
-          "attributeValueIds": [
-            23
           ]
         }
       ]
@@ -1557,10 +1033,6 @@
           "src": "/images/gopro12.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        9,
-        8
       ],
       "mainCategoryId": 1,
       "categoryIds": [
@@ -1596,10 +1068,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        8,
-        24
-      ],
       "mainCategoryId": 1,
       "categoryIds": [
         1,
@@ -1633,9 +1101,6 @@
               "src": "/images/ps5_standard.jpg",
               "type": "image"
             }
-          ],
-          "attributeValueIds": [
-            25
           ]
         }
       ]
@@ -1660,10 +1125,6 @@
           "src": "/images/canon_eos_r6.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        9,
-        26
       ],
       "mainCategoryId": 1,
       "categoryIds": [
@@ -1698,10 +1159,6 @@
           "src": "/images/fitbit_charge6.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        1,
-        8
       ],
       "mainCategoryId": 3,
       "categoryIds": [
@@ -1738,10 +1195,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        9,
-        10
-      ],
       "mainCategoryId": 2,
       "categoryIds": [
         2,
@@ -1775,10 +1228,6 @@
           "src": "/images/instantpot.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        21,
-        22
       ],
       "mainCategoryId": 6,
       "categoryIds": [
@@ -1814,10 +1263,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        12,
-        14
-      ],
       "mainCategoryId": 1,
       "categoryIds": [
         1,
@@ -1851,10 +1296,6 @@
           "src": "/images/hp_spectre.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        13,
-        15
       ],
       "mainCategoryId": 1,
       "categoryIds": [
@@ -1890,10 +1331,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        18,
-        23
-      ],
       "mainCategoryId": 3,
       "categoryIds": [
         1,
@@ -1926,9 +1363,6 @@
               "src": "/images/galaxywatch6_42.jpg",
               "type": "image"
             }
-          ],
-          "attributeValueIds": [
-            27
           ]
         }
       ]
@@ -1953,10 +1387,6 @@
           "src": "/images/garmin_fenix7.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        18,
-        23
       ],
       "mainCategoryId": 3,
       "categoryIds": [
@@ -1992,10 +1422,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        9,
-        8
-      ],
       "mainCategoryId": 2,
       "categoryIds": [
         2,
@@ -2029,11 +1455,6 @@
           "src": "/images/adidas_predator22.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        17,
-        28,
-        19
       ],
       "mainCategoryId": 5,
       "categoryIds": [
@@ -2069,10 +1490,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        21,
-        22
-      ],
       "mainCategoryId": 6,
       "categoryIds": [
         6,
@@ -2107,10 +1524,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        12,
-        15
-      ],
       "mainCategoryId": 1,
       "categoryIds": [
         1,
@@ -2144,10 +1557,6 @@
           "src": "/images/oculus_quest3.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        8,
-        9
       ],
       "mainCategoryId": 1,
       "categoryIds": [
@@ -2184,11 +1593,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        2,
-        8,
-        12
-      ],
       "mainCategoryId": 1,
       "categoryIds": [
         1,
@@ -2223,10 +1627,6 @@
           "src": "/images/galaxy_tab_s9.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        2,
-        8
       ],
       "mainCategoryId": 1,
       "categoryIds": [
@@ -2263,10 +1663,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        9,
-        10
-      ],
       "mainCategoryId": 2,
       "categoryIds": [
         2,
@@ -2300,11 +1696,6 @@
           "src": "/images/fitbit_versa4.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        1,
-        8,
-        23
       ],
       "mainCategoryId": 3,
       "categoryIds": [
@@ -2340,10 +1731,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        21,
-        22
-      ],
       "mainCategoryId": 7,
       "categoryIds": [
         7,
@@ -2377,11 +1764,6 @@
           "src": "/images/nike_zoomx.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        17,
-        28,
-        19
       ],
       "mainCategoryId": 5,
       "categoryIds": [
@@ -2417,11 +1799,6 @@
           "type": "image"
         }
       ],
-      "attributeValueIds": [
-        17,
-        20,
-        19
-      ],
       "mainCategoryId": 5,
       "categoryIds": [
         5,
@@ -2455,10 +1832,6 @@
           "src": "/images/delonghi_magnifica.jpg",
           "type": "image"
         }
-      ],
-      "attributeValueIds": [
-        21,
-        22
       ],
       "mainCategoryId": 6,
       "categoryIds": [

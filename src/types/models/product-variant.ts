@@ -9,5 +9,4 @@ export interface IProductVariant {
   slug: TextTranslation;
   price: IPrice;
   media: IMedia[];
-  attributeValueIds: number[];
 }
