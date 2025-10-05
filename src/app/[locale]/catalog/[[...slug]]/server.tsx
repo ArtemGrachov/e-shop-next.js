@@ -5,7 +5,7 @@ import { fetchProducts } from '@/providers/products/api/fetch-products';
 import { IPageCategoryProps } from './types';
 
 export const getPageData = async ({ params ,searchParams }: IPageCategoryProps) => {
-  const [{ slug }, { page }] = await Promise.all([params, searchParams]);
+  const [{ slug }, { page, search }] = await Promise.all([params, searchParams]);
 
   let categoryId;
 
@@ -18,7 +18,7 @@ export const getPageData = async ({ params ,searchParams }: IPageCategoryProps) 
 
   const [categoriesState, productsState] = await Promise.all([
     fetchCategories(httpClient),
-    fetchProducts(httpClient, { page, categoryId }),
+    fetchProducts(httpClient, { page, categoryId, search }),
   ]);
 
   return { categoriesState, productsState };

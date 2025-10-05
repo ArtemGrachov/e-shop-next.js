@@ -11,6 +11,7 @@ import type { IProduct } from '@/types/models/product';
 export interface IFetchProductsParams {
   page?: number | string;
   categoryId?: number | string;
+  search?: string;
 }
 
 /**
@@ -43,12 +44,24 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
     const _end = page * PRODUCTS_PAGINATION.ITEMS_PER_PAGE;
 
     const categoryId = params?.categoryId;
+    const search = params?.search?.toLowerCase();
 
     const { data } = await httpClient.get<IProduct[]>('/products');
 
     let products = data.filter(product => {
       if (categoryId && !product.categoryIds.some(cId => cId == categoryId)) {
         return false;
+      }
+
+      if (search) {
+        const searchIn = [
+          ...Object.values(product.name).map(s => s.toLowerCase()),
+          ...Object.values(product.description).map(s => s.toLowerCase()),
+        ].join(' | ');
+
+        if (!searchIn.includes(search)) {
+          return false;
+        }
       }
 
       return true;

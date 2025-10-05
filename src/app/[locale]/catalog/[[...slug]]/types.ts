@@ -7,5 +7,6 @@ export interface IPageCategoryProps extends IPageProps {
   }>;
   searchParams: Promise<{
     page?: string;
+    search?: string;
   }>
 }
