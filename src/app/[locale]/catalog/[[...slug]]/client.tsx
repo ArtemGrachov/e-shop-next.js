@@ -53,10 +53,6 @@ const CategoryPageClient: ComponentType<IPageCategoryProps> = () => {
   }, [category]);
 
   const description = useMemo(() => {
-    if (!category) {
-      return t('page_catalog.title_catalog');
-    }
-
     return category?.description?.[locale];
   }, [category]);
 
