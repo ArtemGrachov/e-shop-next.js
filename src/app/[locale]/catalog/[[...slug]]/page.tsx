@@ -64,11 +64,21 @@ const CatalogPage: ComponentType<IPageCategoryProps> = async (props) => {
   const category = getCategory();
 
   const getTitle = () => {
-    if (!category) {
-      return t('page_catalog.title_catalog');
+    const categoryName = category?.name[locale];
+
+    if (searchParams.search) {
+      if (categoryName) {
+        return t('page_catalog.title_category_search', { categoryName, query: searchParams.search })
+      } else {
+        return t('page_catalog.title_search', { query: searchParams.search })
+      }
     }
 
-    return category?.name[locale];
+    if (categoryName) {
+      return categoryName;
+    }
+
+    return t('page_catalog.title_catalog');
   };
 
   const title = getTitle();
