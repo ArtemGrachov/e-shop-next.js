@@ -10,6 +10,7 @@ import type { IProduct } from '@/types/models/product';
 
 export interface IFetchProductsParams {
   page?: number | string;
+  categoryId?: number | string;
 }
 
 export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProductsParams): Promise<State> => {
@@ -39,6 +40,7 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       params: {
         _start,
         _end,
+        mainCategoryId: params?.categoryId,
       },
     });
 
