@@ -14,9 +14,12 @@ export const useFormDeliveryMethod = () => {
     const order = store.getState().order;
     const deliveryMethodId = order?.deliveryMethodId;
 
-    if (deliveryMethodId) {
-      form.setValue('deliveryMethodId', deliveryMethodId);
+    if (!deliveryMethodId) {
+      return;
     }
+
+    form.reset({ deliveryMethodId });
+    form.trigger();
   };
 
   const submit = () => {

@@ -5,6 +5,7 @@ import { useDeliveryMethodsCtx } from '@/providers/delivery-methods/hooks/use-de
 import { usePaymentMethodsCtx } from '@/providers/payment-methods/hooks/use-payment-methods-ctx';
 import { useAppCtx } from '@/providers/app/hooks/use-app-ctx';
 import { createCheckoutStore } from '@/providers/checkout/store';
+import { useCheckoutSubmit } from '@/providers/checkout/service/use-checkout-submit';
 
 import { useFormDeliveryAddress } from './use-form-delivery-address';
 import { useFormDeliveryMethod } from './use-form-delivery-method';
@@ -21,9 +22,9 @@ export const useCheckoutService = () => {
 
   const { subscribe } = useAppCtx();
   const formDeliveryMethod = useFormDeliveryMethod();
-
   const formDeliveryAddress = useFormDeliveryAddress();
   const formPaymentMethod = useFormPaymentMethod();
+  const checkoutSubmit = useCheckoutSubmit(store, formDeliveryMethod, formDeliveryAddress, formPaymentMethod);
 
   const init = () => {
     formDeliveryMethod.init();
@@ -44,5 +45,6 @@ export const useCheckoutService = () => {
     formDeliveryAddress,
     formPaymentMethod,
     init,
+    checkoutSubmit,
   };
 }

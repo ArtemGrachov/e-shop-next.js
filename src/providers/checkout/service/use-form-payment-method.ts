@@ -13,9 +13,12 @@ export const useFormPaymentMethod = () => {
     const order = store.getState().order;
     const paymentMethodId = order?.paymentMethodId;
 
-    if (paymentMethodId) {
-      form.setValue('paymentMethodId', paymentMethodId);
+    if (!paymentMethodId) {
+      return;
     }
+
+    form.reset({ paymentMethodId });
+    form.trigger();
   };
 
   const submit = () => {

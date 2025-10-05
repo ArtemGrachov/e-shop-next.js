@@ -14,10 +14,10 @@ import DeliveryAddress from '@/components/delivery/DeliveryAddress';
 const CheckoutDelivery: ComponentType = () => {
   const t = useTranslations();
   const selectedDeliveryMethod = useSelectedDeliveryMethod();
-  const [methodSelectionActive, setMethodSelectionActive] = useState(!selectedDeliveryMethod);
-  const [addressEditingActive, setAddressEditingActive] = useState(!selectedDeliveryMethod);
   const order = useCartStore(s => s.order);
   const deliveryAddress = order?.deliveryAddress;
+  const [methodSelectionActive, setMethodSelectionActive] = useState(!selectedDeliveryMethod);
+  const [addressEditingActive, setAddressEditingActive] = useState(!methodSelectionActive && !deliveryAddress);
 
   const onMethodChange = () => {
     setMethodSelectionActive(false);
@@ -49,7 +49,7 @@ const CheckoutDelivery: ComponentType = () => {
     </>
   ) : null;
 
-  const addressEl = deliveryAddress && selectedDeliveryMethod && !methodSelectionActive ? (
+  const addressEl = selectedDeliveryMethod && !methodSelectionActive ? (
     <>
       <hr />
       <h2>

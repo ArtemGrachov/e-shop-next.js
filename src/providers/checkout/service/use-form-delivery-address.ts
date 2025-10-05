@@ -55,6 +55,7 @@ export const useFormDeliveryAddress = () => {
     }
 
     form.reset(deliveryAddress);
+    form.trigger();
   };
 
   const submit = () => {

@@ -6,30 +6,34 @@ import { DeliveryMethodsProvider } from '@/providers/delivery-methods';
 import { PaymentMethodsProvider } from '@/providers/payment-methods';
 import { CheckoutProvider } from '@/providers/checkout';
 import { useCheckoutReady } from '@/providers/checkout/hooks/use-checkout-ready';
+import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 
 import { useCartItems } from '@/hooks/cart/cart-items';
 
 import CartList from '@/components/cart/CartList';
 import CheckoutDelivery from '@/components/checkout/CheckoutDelivery';
 import CheckoutPayment from '@/components/checkout/CheckoutPayment';
+import CheckoutSubmit from '@/components/checkout/CheckoutSubmit';
 
 const CheckoutPageClient: ComponentType = () => {
   const cartItems = useCartItems();
   const isReady = useCheckoutReady();
+  const cartOrder = useCartStore(s => s.order)
 
   return (
     <div>
       <h1>Checkout</h1>
-      <h2>Items</h2>
-      {isReady ? (
+      {isReady ? cartOrder ? (
         <>
           <CartList orderItems={cartItems} />
           <hr />
           <CheckoutDelivery />
           <hr />
           <CheckoutPayment />
+          <hr />
+          <CheckoutSubmit />
         </>
-      ) : '...'}
+      ) : null : '...'}
     </div>
   )
 }

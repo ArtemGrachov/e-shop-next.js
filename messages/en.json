@@ -56,5 +56,9 @@
   "checkout_payment": {
     "edit": "Edit",
     "title_method": "Payment method"
+  },
+  "checkout_submit": {
+    "title": "Buy",
+    "submit": "Submit order"
   }
 }

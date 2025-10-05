@@ -10,6 +10,24 @@ export const reducer: Reducer<State, Action> = (state, action) => {
         status: EStatus.SUCCESS,
       };
     }
+    case EActions.SUBMIT: {
+      return {
+        ...state,
+        submitStatus: EStatus.PROCESSING,
+      };
+    }
+    case EActions.SUBMIT_SUCCESS: {
+      return {
+        ...state,
+        submitStatus: EStatus.SUCCESS,
+      };
+    }
+    case EActions.SUBMIT_ERROR: {
+      return {
+        ...state,
+        submitStatus: EStatus.ERROR,
+      };
+    }
     default: {
       return state;
     }
