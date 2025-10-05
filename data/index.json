@@ -404,7 +404,8 @@
         "id": 7004,
         "src": "/icons/payment/cash.png",
         "type": "image"
-      }
+      },
+      "hasRedirect": false
     },
     {
       "id": "5",
@@ -2475,71 +2476,11 @@
   ],
   "orders": [
     {
-      "id": "b8db885f-867d-48cb-9014-a20e6512ab75",
-      "code": "db885f86-7da8-4bd0-94a2-0e6512ab75af",
+      "id": "b165bbb6-ef16-4f4b-8bf4-8f2b77ad6acd",
+      "code": "65bbb6ef-169f-4b0b-b48f-2b77ad6acda3",
       "items": [
         {
-          "id": "58b8db88-5f86-4da8-8bd0-14a20e6512ab",
-          "name": {
-            "en": "iPhone 14 Pro 128GB - Silver",
-            "de": "iPhone 14 Pro 128GB - Silber"
-          },
-          "description": {
-            "en": "Base model with 128GB storage in Silver.",
-            "de": "Basismodell mit 128GB Speicher in Silber."
-          },
-          "slug": {
-            "en": "iphone-14-pro",
-            "de": "iphone-14-pro"
-          },
-          "variantSlug": {
-            "en": "iphone-14-pro-128-silver",
-            "de": "iphone-14-pro-128-silber"
-          },
-          "productId": "1",
-          "productVariantId": 101,
-          "media": [
-            {
-              "id": 2,
-              "src": "/images/iphone14pro_silver.jpg",
-              "type": "image"
-            }
-          ],
-          "price": {
-            "value": 999,
-            "discount": 0,
-            "discountType": "absolute",
-            "originalValue": 999,
-            "total": 1998
-          },
-          "quantity": 2
-        }
-      ],
-      "price": {
-        "itemsPrice": 1998,
-        "deliveryPrice": 0,
-        "totalPrice": 1998
-      },
-      "deliveryMethodId": "3",
-      "deliveryAddress": {
-        "firstName": "Test",
-        "lastName": "Test",
-        "email": "test@test.com",
-        "phoneNumber": "Test",
-        "city": "Test",
-        "street": "Test",
-        "houseNumber": "Test",
-        "apartmentNumber": "Test",
-        "comment": ""
-      },
-      "paymentMethodId": "4"
-    },
-    {
-      "id": "a9b2d99c-b1a3-45bf-ac02-2b7e337d585d",
-      "code": "b2d99cb1-a325-4f2c-822b-7e337d585d56",
-      "items": [
-        {
-          "id": "f4a9b2d9-9cb1-4325-bf2c-022b7e337d58",
+          "id": "32b165bb-b6ef-469f-8b0b-f48f2b77ad6a",
           "name": {
             "en": "iPhone 14 Pro 128GB - Silver",
             "de": "iPhone 14 Pro 128GB - Silber"
@@ -2580,20 +2521,58 @@
         "deliveryPrice": 0,
         "totalPrice": 999
       },
-      "deliveryMethodId": "1",
+      "deliveryMethodId": "3",
       "deliveryAddress": {
         "firstName": "Test",
         "lastName": "Test",
-        "email": "test11@test.com",
+        "email": "test@test.com",
         "phoneNumber": "Test",
         "city": "Test",
         "street": "Test",
-        "houseNumber": "Test",
+        "houseNumber": "11",
         "apartmentNumber": "Test",
-        "comment": ""
+        "comment": "Test"
       },
-      "paymentMethodId": "5",
-      "status": "fulfilled"
+      "paymentMethodId": "3",
+      "status": "fulfilled",
+      "paymentMethod": {
+        "id": "3",
+        "name": {
+          "en": "Bank Transfer",
+          "de": "Banküberweisung"
+        },
+        "description": {
+          "en": "Transfer the payment directly from your bank account.",
+          "de": "Überweisen Sie den Betrag direkt von Ihrem Bankkonto."
+        },
+        "icon": {
+          "id": 7003,
+          "src": "/icons/payment/bank.png",
+          "type": "image"
+        }
+      },
+      "deliveryMethod": {
+        "id": "3",
+        "name": {
+          "en": "Overnight Shipping",
+          "de": "Übernachtversand"
+        },
+        "description": {
+          "en": "Next-day delivery by morning.",
+          "de": "Lieferung am nächsten Morgen."
+        },
+        "icon": {
+          "id": 3,
+          "src": "/icons/overnight_shipping.png",
+          "type": "image"
+        },
+        "deliveryPrice": {
+          "value": 24.99,
+          "discount": 0,
+          "discountType": "absolute"
+        },
+        "type": "courier"
+      }
     }
   ]
 }

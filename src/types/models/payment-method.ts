@@ -6,4 +6,9 @@ export interface IPaymentMethod {
   name: TextTranslation;
   description: TextTranslation;
   icon: IMedia;
+  /**
+   * Needed to handle redirect on client side
+   * On real projects it is solved by backend
+   */
+  hasRedirect?: boolean;
 }
