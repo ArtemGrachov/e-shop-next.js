@@ -14,7 +14,7 @@ export const reducer: Reducer<State, Action> = (state, action) => {
       return {
         ...state,
         getStatus: EStatus.SUCCESS,
-        pickUpPoins: action.pickUpPoints,
+        pickUpPoints: action.pickUpPoints,
       };
     }
     case EActions.GET_ERROR: {

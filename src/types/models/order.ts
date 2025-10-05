@@ -17,7 +17,7 @@ export interface IOrder {
   deliveryAddress?: IDeliveryAddress | null;
   paymentMethodId?: string | null;
   paymentMethod?: IPaymentMethod | null;
-  pickUpPointId?: string;
+  pickUpPointId?: string | null;
   pickUpPoint?: IPickUpPoint | null;
   status?: EOrderStatus;
 }

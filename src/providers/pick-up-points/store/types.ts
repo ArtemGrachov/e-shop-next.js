@@ -4,7 +4,7 @@ import type { IReducerAction, Dispatch } from '@/types/store';
 
 export type State = {
   getStatus: EStatus;
-  pickUpPoins: IPickUpPoint[];
+  pickUpPoints: IPickUpPoint[];
 }
 
 export const enum EActions {

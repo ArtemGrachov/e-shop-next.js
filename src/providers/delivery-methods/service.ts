@@ -10,8 +10,15 @@ import type { IDeliveryMethod } from '@/types/models/delivery-method';
 
 export const useDeliveryMethodsService = (initialState?: State) => {
   const httpClient = useHttpClientCtx();
-  const storeRef = useRef(createDeliveryMethodsStore(initialState));
-  const dispatch = useStore(storeRef.current, s => s.dispatch);
+  const storeRef = useRef<ReturnType<typeof createDeliveryMethodsStore>>(null);
+
+  if (!storeRef.current) {
+    storeRef.current = createDeliveryMethodsStore(initialState);
+  }
+
+  const store = storeRef.current;
+
+  const dispatch = useStore(store, s => s.dispatch);
 
   const getDeliveryMethods = async () => {
     try {
@@ -27,7 +34,7 @@ export const useDeliveryMethodsService = (initialState?: State) => {
   }
 
   return {
-    store: storeRef.current,
+    store,
     getDeliveryMethods,
   };
 }
