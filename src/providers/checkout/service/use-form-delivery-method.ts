@@ -12,17 +12,18 @@ export const useFormDeliveryMethod = () => {
   const { store: deliveryMethodsStore } = useDeliveryMethodsCtx();
   const form = useForm<IFormDeliveryMethod>({ mode: 'onTouched' });
 
-  const deliveryMethodInput = form.register('deliveryMethodId');
+  const deliveryMethodInput = form.register('deliveryMethodId', { required: true });
 
   const init = () => {
     const order = store.getState().order;
     const deliveryMethodId = order?.deliveryMethodId;
+    const pickUpPointId = order?.pickUpPointId;
 
     if (!deliveryMethodId) {
       return;
     }
 
-    form.reset({ deliveryMethodId });
+    form.reset({ deliveryMethodId, pickUpPointId });
     form.trigger();
   };
 

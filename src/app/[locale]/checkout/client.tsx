@@ -2,6 +2,7 @@
 
 import { ComponentType } from 'react';
 
+import { PickUpPointsProvider } from '@/providers/pick-up-points';
 import { DeliveryMethodsProvider } from '@/providers/delivery-methods';
 import { PaymentMethodsProvider } from '@/providers/payment-methods';
 import { CheckoutProvider } from '@/providers/checkout';
@@ -40,13 +41,15 @@ const CheckoutPageClient: ComponentType = () => {
 
 const CheckoutPageWrapper: ComponentType = () => {
   return (
-    <DeliveryMethodsProvider>
-      <PaymentMethodsProvider>
-        <CheckoutProvider>
-          <CheckoutPageClient />
-        </CheckoutProvider>
-      </PaymentMethodsProvider>
-    </DeliveryMethodsProvider>
+    <PickUpPointsProvider>
+      <DeliveryMethodsProvider>
+        <PaymentMethodsProvider>
+          <CheckoutProvider>
+            <CheckoutPageClient />
+          </CheckoutProvider>
+        </PaymentMethodsProvider>
+      </DeliveryMethodsProvider>
+    </PickUpPointsProvider>
   )
 }
 
