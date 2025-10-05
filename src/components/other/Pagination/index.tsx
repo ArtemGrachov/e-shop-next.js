@@ -1,19 +1,29 @@
+'use client';
+
 import { ComponentType, useMemo } from 'react';
+import { pathcat } from 'pathcat';
 import { UrlObject } from 'url';
 import { getPaginationModel, PaginationModelItem, PaginationModelOptions } from 'ultimate-pagination';
 
-import PageItem from '@/components/other/PageItem';
+import PageItem, { ILinkParams } from '@/components/other/PageItem';
 
 interface IProps {
-  linkPath?: (page: PaginationModelItem) => string | UrlObject;
   options: PaginationModelOptions;
+  linkParams: ILinkParams;
+  linkPath?: (page: PaginationModelItem) => string | UrlObject;
   onChange?: (page: PaginationModelItem) => any;
 }
 
-const Pagination: ComponentType<IProps> = ({ options, linkPath, onChange }) => {
+const Pagination: ComponentType<IProps> = ({ options, linkParams, linkPath, onChange }) => {
   const pagination = useMemo(() => {
     return getPaginationModel(options);
   }, [options]);
+
+  if (!linkPath && linkParams) {
+    linkPath = (page) => {
+      return pathcat('/', linkParams.path, { ...linkParams.params, [linkParams.pageKey ?? 'page']: page.value });
+    }
+  }
 
   return (
     <div>
@@ -41,7 +51,7 @@ const Pagination: ComponentType<IProps> = ({ options, linkPath, onChange }) => {
 
           return (
             <li key={index}>
-              <PageItem page={page} linkPath={linkPath} onChange={onChange}>
+              <PageItem page={page} linkPath={linkPath} linkParams={linkParams} onChange={onChange}>
                 {label}
               </PageItem>
             </li>

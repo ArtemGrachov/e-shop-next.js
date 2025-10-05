@@ -3,8 +3,15 @@ import Link from 'next/link';
 import { PaginationModelItem } from 'ultimate-pagination';
 import { UrlObject } from 'url';
 
+export interface ILinkParams {
+  path: string;
+  params: Record<string, any>;
+  pageKey?: string;
+};
+
 interface IProps {
   page: PaginationModelItem;
+  linkParams?: ILinkParams;
   linkPath?: (page: PaginationModelItem) => string | UrlObject;
   onChange?: (page: PaginationModelItem) => any;
 }
