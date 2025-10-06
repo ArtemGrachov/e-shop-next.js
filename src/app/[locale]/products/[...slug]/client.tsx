@@ -11,7 +11,7 @@ import type { getPageData } from './server';
 const ProductPageWrapper: ComponentType<PropsWithChildren & IPageProductProps & Awaited<ReturnType<typeof getPageData>>> = (props) => {
   return (
     <CurrentVariantProvider product={props.product}>
-      <ReviewsProvider>
+      <ReviewsProvider reviews={props.product.reviews}>
         {props.children}
       </ReviewsProvider>
     </CurrentVariantProvider>

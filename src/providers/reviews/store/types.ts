@@ -1,7 +1,9 @@
 import type { EStatus } from '@/constants/status';
+import { IReview } from '@/types/models/review';
 import type { IReducerAction, Dispatch } from '@/types/store';
 
 export type State = {
+  reviews: IReview[];
   submitStatus: EStatus;
 }
 
@@ -13,7 +15,9 @@ export const enum EActions {
 
 export interface ISubmitAction extends IReducerAction<EActions.SUBMIT> { }
 
-export interface ISubmitSuccessAction extends IReducerAction<EActions.SUBMIT_SUCCESS> { }
+export interface ISubmitSuccessAction extends IReducerAction<EActions.SUBMIT_SUCCESS> {
+  review: IReview;
+}
 
 export interface ISubmitErrorAction extends IReducerAction<EActions.SUBMIT_ERROR> { }
 

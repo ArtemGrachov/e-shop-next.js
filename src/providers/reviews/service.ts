@@ -2,16 +2,21 @@ import { useRef } from 'react';
 import { useStore } from 'zustand';
 import { v4 as uuid } from '@lukeed/uuid';
 
-import { EActions, type State } from './store/types';
+import { EActions } from './store/types';
 import { createReviewStore } from './store';
 
 import { useHttpClientCtx } from '@/providers/http-client/hooks/use-http-client-ctx';
+import { defaultInitState } from '@/providers/reviews/store/state';
 
 import type { IReview } from '@/types/models/review';
 import type { IProduct } from '@/types/models/product';
 
-export const useReviewService = (initialState?: State) => {
-  const storeRef = useRef(createReviewStore(initialState));
+export interface IOptions {
+  reviews?: IReview[];
+}
+
+export const useReviewService = ({ reviews }: IOptions) => {
+  const storeRef = useRef(createReviewStore({ ...defaultInitState, reviews: reviews ?? [] }));
   const dispatch = useStore(storeRef.current, s => s.dispatch);
   const httpClient = useHttpClientCtx();
 
@@ -35,7 +40,7 @@ export const useReviewService = (initialState?: State) => {
 
       const { data } = await httpClient.patch<IProduct>(`/products/${productId}`, JSON.stringify(product));
 
-      dispatch({ type: EActions.SUBMIT_SUCCESS });
+      dispatch({ type: EActions.SUBMIT_SUCCESS, review: payload });
 
       return data;
     } catch (err) {

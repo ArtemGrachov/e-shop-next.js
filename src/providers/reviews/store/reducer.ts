@@ -14,6 +14,7 @@ export const reducer: Reducer<State, Action> = (state, action) => {
       return {
         ...state,
         submitStatus: EStatus.SUCCESS,
+        reviews: [...state.reviews, action.review],
       };
     }
     case EActions.SUBMIT_ERROR: {

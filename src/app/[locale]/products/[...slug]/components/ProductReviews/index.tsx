@@ -16,6 +16,7 @@ interface IProps {
 
 const ProductReviews: ComponentType<IProps> = ({ product }) => {
   const { sendReview } = useReviewCtx();
+  const reviews = useReviewStore(s => s.reviews);
   const reviewSubmitStaus = useReviewStore(s => s.submitStatus);
 
   const sendReviewHandler = (formValue: IFormReview) => {
@@ -24,7 +25,7 @@ const ProductReviews: ComponentType<IProps> = ({ product }) => {
 
   return (
     <>
-      {<ReviewsList reviews={product.reviews} />}
+      {<ReviewsList reviews={reviews} />}
       <FormReview onSubmit={sendReviewHandler} submitStatus={reviewSubmitStaus} />
     </>
   )
