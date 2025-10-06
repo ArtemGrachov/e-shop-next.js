@@ -6,6 +6,7 @@ import { ROUTES } from '@/router/routes';
 import CategoryNav from '@/components/categories/CategoryNav';
 import ProductList from '@/components/products/ProductList';
 import Pagination from '@/components/other/Pagination';
+import ProductFilters from '@/components/products/ProductFilters';
 
 import CategoryPageWrapper from './client';
 import { getPageData } from './server';
@@ -98,9 +99,13 @@ const CatalogPage: ComponentType<IPageCategoryProps> = async (props) => {
         {description}
       </p>}
       <CategoryNav categories={categories} />
+      {productsData && <ProductFilters filters={productsData.filters} />}
       <ProductList products={productsData?.items} />
       <Pagination
-        options={{ currentPage: productsData?.currentPage ?? 1, totalPages: productsData?.totalPages ?? 1 }}
+        options={{
+          currentPage: productsData?.pagination.currentPage ?? 1,
+          totalPages: productsData?.pagination.totalPages ?? 1,
+        }}
         linkParams={{
           path: ROUTES.CATALOG,
           params: {

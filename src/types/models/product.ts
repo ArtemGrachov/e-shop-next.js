@@ -1,8 +1,8 @@
-import type { IPrice } from '@/types/models/price';
+import type { IPrice } from './price';
 import type { IMedia } from './media';
 import type { IProductVariant } from './product-variant';
 import type { TextTranslation } from './translation';
-import type { IReview } from '@/types/models/review';
+import type { IReview } from './review';
 
 export interface IProduct {
   id: string | number;
