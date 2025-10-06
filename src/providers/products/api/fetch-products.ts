@@ -13,9 +13,13 @@ export interface IFetchProductsParams {
   page?: number | string | null;
   categoryId?: number | string | null;
   search?: string | null;
-  priceMin?: string | number | null;
-  priceMax?: string | number | null;
   itemsPerPage?: string | number | null;
+  filters?: {
+    price: {
+      min?: string | number | null;
+      max?: string | number | null;
+    };
+  };
 }
 
 /**
@@ -57,16 +61,16 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
     let priceMin: number | null = null;
     let priceMax: number | null = null;
 
-    if (params?.priceMin) {
-      const num = +params.priceMin;
+    if (params?.filters?.price?.min) {
+      const num = +params?.filters?.price?.min;
 
       if (!isNaN(num)) {
         priceMin = num;
       }
     }
 
-    if (params?.priceMax) {
-      const num = +params.priceMax;
+    if (params?.filters?.price?.max) {
+      const num = +params?.filters?.price?.max;
 
       if (!isNaN(num)) {
         priceMax = num;
@@ -97,18 +101,6 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
         }
       }
 
-      if (priceMin != null || priceMax != null) {
-        const prices = [product.price?.value, ...(product.variants ?? []).map(pV => pV.price.value)].filter(v => v != null);
-
-        if (priceMin != null && prices.every(v => v < priceMin)) {
-          return false;
-        }
-
-        if (priceMax != null && prices.every(v => v > priceMax)) {
-          return false;
-        }
-      }
-
       return true;
     });
 
@@ -128,6 +120,23 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
 
     const maxPrice = Math.max(...allPrices);
     const minPrice = Math.min(...allPrices);
+
+    if (priceMin != null || priceMax != null) {
+      products = data.filter(product => {
+        const prices = [product.price?.value, ...(product.variants ?? []).map(pV => pV.price.value)].filter(v => v != null);
+
+        if (priceMin != null && prices.every(v => v < priceMin)) {
+          return false;
+        }
+
+        if (priceMax != null && prices.every(v => v > priceMax)) {
+          return false;
+        }
+
+        return true;
+      });
+    }
+
 
     const totalItems = products.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);

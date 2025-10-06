@@ -5,7 +5,7 @@ import { fetchProducts } from '@/providers/products/api/fetch-products';
 import { IPageCategoryProps } from './types';
 
 export const getPageData = async ({ params ,searchParams }: IPageCategoryProps) => {
-  const [{ slug }, { page, search, priceMin, priceMax }] = await Promise.all([params, searchParams]);
+  const [{ slug }, { page, search, ['price[min]']: priceMin, ['price[max]']: priceMax }] = await Promise.all([params, searchParams]);
 
   let categoryId;
 
@@ -18,7 +18,19 @@ export const getPageData = async ({ params ,searchParams }: IPageCategoryProps) 
 
   const [categoriesState, productsState] = await Promise.all([
     fetchCategories(httpClient),
-    fetchProducts(httpClient, { page, categoryId, search, priceMin, priceMax }),
+    fetchProducts(
+      httpClient,
+      {
+        page,
+        categoryId,
+        search,
+        filters: {
+          price: {
+            min: priceMin,
+            max: priceMax,
+          },
+        },
+      }),
   ]);
 
   return { categoriesState, productsState };

@@ -8,7 +8,7 @@ export interface IPageCategoryProps extends IPageProps {
   searchParams: Promise<{
     page?: string;
     search?: string;
-    priceMin?: string;
-    priceMax?: string;
+    ['price[min]']?: string;
+    ['price[max]']?: string;
   }>
 }
