@@ -1,16 +1,19 @@
+'use client';
+
 import { ComponentType, useMemo } from 'react';
 import { useLocale } from 'next-intl';
 
+import { useCurrentVariantCtx } from '../../providers/current-variant/hooks/use-current-variant-ctx';
+
 import type { IProduct } from '@/types/models/product';
-import type { IProductVariant } from '@/types/models/product-variant';
 
 interface IProps {
   product: IProduct;
-  productVariant?: IProductVariant | null;
 }
 
-const ProductDescription: ComponentType<IProps> = ({ product, productVariant }) => {
+const ProductDescription: ComponentType<IProps> = ({ product }) => {
   const locale = useLocale();
+  const { currentVariant } = useCurrentVariantCtx();
 
   const productDescription = useMemo(() => {
     const descriptions = product?.description;
@@ -20,17 +23,17 @@ const ProductDescription: ComponentType<IProps> = ({ product, productVariant }) 
     }
 
     return descriptions[locale] ?? Object.values(descriptions)[0];
-  }, [product, productVariant, locale]);
+  }, [product, currentVariant, locale]);
 
   const variantDescription = useMemo(() => {
-    const descriptions = productVariant?.description;
+    const descriptions = currentVariant?.description;
 
     if (!descriptions) {
       return null;
     }
 
     return descriptions[locale] ?? Object.values(descriptions)[0];
-  }, [product, productVariant, locale]);
+  }, [product, currentVariant, locale]);
 
   return (
     <div>

@@ -1,3 +1,5 @@
+'use client';
+
 import { ComponentType } from 'react';
 
 import { useFavouritesToggle } from '@/hooks/products/use-favourites-toggle';
