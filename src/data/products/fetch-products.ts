@@ -2,10 +2,6 @@ import { HttpClient } from '@/providers/http-client/types';
 
 import { PRODUCTS_PAGINATION } from '@/constants/products';
 
-import { EActions, type State } from '../store/types';
-import { defaultInitState } from '../store/state';
-import { reducer } from '../store/reducer';
-
 import type { IProduct } from '@/types/models/product';
 import type { IProductsResponse } from '@/types/api/products';
 
@@ -28,12 +24,8 @@ export interface IFetchProductsParams {
  * Real projects normally use filtering only and only
  * on the backend side
  */
-export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProductsParams): Promise<State> => {
-  let state = defaultInitState;
-
+export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProductsParams) => {
   try {
-    state = reducer(state, { type: EActions.GET });
-
     let page = 1;
 
     if (params?.page) {
@@ -118,8 +110,8 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       return acc;
     }, [] as number[]);
 
-    const priceRangeMax = Math.max(...allPrices);
-    const priceRangeMin = Math.min(...allPrices);
+    const priceRangeMin = Math.min(...allPrices, 0);
+    const priceRangeMax = Math.max(...allPrices, 1);
 
     if (priceMin != null || priceMax != null) {
       products = data.filter(product => {
@@ -148,7 +140,7 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
     const result: IProductsResponse = {
       pagination: {
         totalItems,
-        totalPages,
+        totalPages: totalPages || 1,
         currentPage: page,
         itemsPerPage,
       },
@@ -164,11 +156,9 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       },
     };
 
-    state = reducer(state, { type: EActions.GET_SUCCESS, data: result });
+    return result;
   } catch (err) {
     console.error(err);
-    state = reducer(state, { type: EActions.GET_ERROR });
+    throw err;
   }
-
-  return state;
 }
