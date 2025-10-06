@@ -1,7 +1,9 @@
 export interface IFilterRange {
   type: 'range';
-  max: number;
-  min: number;
+  rangeMin: number;
+  rangeMax: number;
+  valueMin: number;
+  valueMax: number;
 }
 
 export type Filters = IFilterRange;

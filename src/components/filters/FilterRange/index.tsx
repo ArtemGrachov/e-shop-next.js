@@ -1,4 +1,4 @@
-import { ComponentType, useState } from 'react';
+import { ComponentType, useEffect, useState } from 'react';
 import { Range } from 'react-range';
 
 interface IProps {
@@ -15,12 +15,16 @@ const FilterRange: ComponentType<IProps> = ({ max, min, value, onChange }) => {
   const [internalValue, setInternalValue] = useState<[number, number]>(value);
 
   const finalChangeHandler = () => {
-    if (internalValue[0] === value[0] && internalValue[1] === value[1]) {
+    onChange && onChange(internalValue);
+  }
+
+  useEffect(() => {
+    if (value[0] === internalValue[0] && value[1] === internalValue[1]) {
       return;
     }
 
-    onChange && onChange(internalValue);
-  }
+    setInternalValue(value);
+  }, [value]);
 
   return (
     <div>

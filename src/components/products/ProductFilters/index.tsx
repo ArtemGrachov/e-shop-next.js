@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import FilterRange from '@/components/filters/FilterRange';
 
 import type { IProductFilters } from '@/types/api/products';
+import type { IFilterRange } from '@/types/models/filter';
 
 interface IProps {
   filters: IProductFilters;
@@ -15,22 +16,45 @@ const ProductFilters: ComponentType<IProps> = ({ filters }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const handleFilter = (query: Record<string, string>) => {
+  const handleFilter = (query: Record<string, string | null>) => {
     const newQuery = {
       ...Object.fromEntries(searchParams),
       ...query,
     };
 
-    const newSearchParams = new URLSearchParams(newQuery);
+    const outputQuery = Object.entries(newQuery).reduce((acc, [currKey, currValue]) => {
+      if (currValue != null) {
+        acc[currKey] = currValue;
+      }
+      return acc;
+    }, {} as Record<string, string>);
+
+    const newSearchParams = new URLSearchParams(outputQuery);
 
     router.push(`?${newSearchParams.toString()}`);
   }
 
-  const handleRangeFilter = (key: string, value: [number, number]) => {
-    const query = {
-      [`${key}[min]`]: value[0].toString(),
-      [`${key}[max]`]: value[1].toString(),
+  const handleRangeFilter = (key: string, value: [number, number], filter: IFilterRange) => {
+    const min = value[0];
+    const max = value[1];
+
+    const minKey = `${key}[min]`;
+    const maxKey = `${key}[max]`;
+
+    const query: Record<string, string | null> = {};
+
+    if (min !== filter.rangeMin) {
+      query[minKey] = value[0].toString();
+    } else {
+      query[minKey] = null;
     }
+    
+    if (max !== filter.rangeMax) {
+      query[maxKey] = value[1].toString();
+    } else {
+      query[maxKey] = null;
+    }
+
 
     handleFilter(query);
   }
@@ -38,9 +62,10 @@ const ProductFilters: ComponentType<IProps> = ({ filters }) => {
   return (
     <div style={{ width: 300, padding: 20 }}>
       <FilterRange
-        max={filters.price.max}
-        min={filters.price.min}
-        onChange={value => handleRangeFilter('price', value)}
+        max={filters.price.rangeMax}
+        min={filters.price.rangeMin}
+        value={[filters.price.valueMin, filters.price.valueMax]}
+        onChange={value => handleRangeFilter('price', value, filters.price)}
       />
     </div>
   )

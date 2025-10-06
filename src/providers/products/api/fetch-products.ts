@@ -118,8 +118,8 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       return acc;
     }, [] as number[]);
 
-    const maxPrice = Math.max(...allPrices);
-    const minPrice = Math.min(...allPrices);
+    const priceRangeMax = Math.max(...allPrices);
+    const priceRangeMin = Math.min(...allPrices);
 
     if (priceMin != null || priceMax != null) {
       products = data.filter(product => {
@@ -156,8 +156,10 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       filters: {
         price: {
           type: 'range',
-          max: maxPrice,
-          min: minPrice,
+          rangeMin: priceRangeMin,
+          rangeMax: priceRangeMax,
+          valueMin: priceMin ?? priceRangeMin,
+          valueMax: priceMax ?? priceRangeMax,
         },
       },
     };
