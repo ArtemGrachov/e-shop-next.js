@@ -1,4 +1,4 @@
-import { ReviewsContext } from '@/providers/reviews';
+import { ReviewsContext } from '..';
 import { useContext } from 'react';
 
 export const useReviewCtx = () => useContext(ReviewsContext);

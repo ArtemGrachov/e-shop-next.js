@@ -2,7 +2,7 @@
 
 import { ComponentType, PropsWithChildren } from 'react';
 
-import { ReviewsProvider } from '@/providers/reviews';
+import { ReviewsProvider } from './providers/reviews';
 import { CurrentVariantProvider } from './providers/current-variant';
 
 import type { IViewProductProps } from './types';

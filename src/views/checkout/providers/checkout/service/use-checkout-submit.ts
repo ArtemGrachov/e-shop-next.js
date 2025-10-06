@@ -6,8 +6,8 @@ import { EOrderStatus } from '@/constants/order';
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 import { useHttpClientCtx } from '@/providers/http-client/hooks/use-http-client-ctx';
 import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
-import { usePaymentMethodsStore } from '@/providers/payment-methods/hooks/use-payment-methods-store';
-import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
+import { usePaymentMethodsStore } from '@/views/checkout/providers/payment-methods/hooks/use-payment-methods-store';
+import { useDeliveryMethodsStore } from '@/views/checkout/providers/delivery-methods/hooks/use-delivery-methods-store';
 
 import type { createCheckoutStore } from '../store';
 import type { useFormDeliveryAddress } from './use-form-delivery-address';

@@ -3,13 +3,13 @@ import { useStore } from 'zustand';
 
 import { EDeliveryMethodTypes } from '@/constants/delivery-methods';
 
-import { useDeliveryMethodsCtx } from '@/providers/delivery-methods/hooks/use-delivery-methods-ctx';
-import { usePaymentMethodsCtx } from '@/providers/payment-methods/hooks/use-payment-methods-ctx';
+import { useDeliveryMethodsCtx } from '@/views/checkout/providers/delivery-methods/hooks/use-delivery-methods-ctx';
+import { usePaymentMethodsCtx } from '@/views/checkout/providers/payment-methods/hooks/use-payment-methods-ctx';
 import { useAppCtx } from '@/providers/app/hooks/use-app-ctx';
-import { createCheckoutStore } from '@/providers/checkout/store';
-import { useCheckoutSubmit } from '@/providers/checkout/service/use-checkout-submit';
+import { createCheckoutStore } from '@/views/checkout/providers/checkout/store';
+import { useCheckoutSubmit } from '@/views/checkout/providers/checkout/service/use-checkout-submit';
 import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
-import { usePickUpPointsCtx } from '@/providers/pick-up-points/hooks/use-pick-up-points-ctx';
+import { usePickUpPointsCtx } from '@/views/checkout/providers/pick-up-points/hooks/use-pick-up-points-ctx';
 
 import { useFormDeliveryAddress } from './use-form-delivery-address';
 import { useFormDeliveryMethod } from './use-form-delivery-method';

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store'
-import { usePaymentMethodsStore } from '@/providers/payment-methods/hooks/use-payment-methods-store';
+import { usePaymentMethodsStore } from '@/views/checkout/providers/payment-methods/hooks/use-payment-methods-store';
 
 export const useSelectedPaymentMethod = () => {
   const order = useCartStore(s => s.order);

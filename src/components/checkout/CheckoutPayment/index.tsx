@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { ComponentType, useState } from 'react';
 
-import { useSelectedPaymentMethod } from '@/providers/checkout/hooks/use-selected-payment-method';
+import { useSelectedPaymentMethod } from '@/views/checkout/providers/checkout/hooks/use-selected-payment-method';
 
 import FormPaymentMethod from '@/components/checkout/FormPaymentMethod';
 import PaymentMethod from '@/components/payment/PaymentMethod';

@@ -2,8 +2,8 @@
 
 import { ComponentType } from 'react';
 
-import { useReviewCtx } from '@/providers/reviews/hooks/use-review-ctx';
-import { useReviewStore } from '@/providers/reviews/hooks/use-review-store';
+import { useReviewCtx } from '../../providers/reviews/hooks/use-review-ctx';
+import { useReviewStore } from '../../providers/reviews/hooks/use-review-store';
 
 import FormReview, { IFormReview } from '@/components/reviews/FormReview';
 import ReviewsList from '@/components/reviews/ReviewsList';

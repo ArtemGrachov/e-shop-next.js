@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
+import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-checkout-ctx';
 
 export const useCheckoutValid = () => {
   const { formDeliveryMethod, formDeliveryAddress, formPaymentMethod } = useCheckoutCtx();

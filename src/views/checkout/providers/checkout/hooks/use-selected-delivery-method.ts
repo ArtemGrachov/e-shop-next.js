@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store'
-import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
+import { useDeliveryMethodsStore } from '@/views/checkout/providers/delivery-methods/hooks/use-delivery-methods-store';
 
 export const useSelectedDeliveryMethod = () => {
   const order = useCartStore(s => s.order);

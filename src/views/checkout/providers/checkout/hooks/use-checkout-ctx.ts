@@ -1,5 +1,5 @@
 import { useContext } from 'react';
 
-import { CheckoutContext } from '../';
+import { CheckoutContext } from '..';
 
 export const useCheckoutCtx = () => useContext(CheckoutContext);

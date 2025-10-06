@@ -4,10 +4,10 @@ import { useTranslations } from 'use-intl';
 
 import { EDeliveryMethodTypes } from '@/constants/delivery-methods';
 
-import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
-import { usePickUpPointsStore } from '@/providers/pick-up-points/hooks/use-pick-up-points-store';
-import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
-import { usePickUpPointsCtx } from '@/providers/pick-up-points/hooks/use-pick-up-points-ctx';
+import { useDeliveryMethodsStore } from '@/views/checkout/providers/delivery-methods/hooks/use-delivery-methods-store';
+import { usePickUpPointsStore } from '@/views/checkout/providers/pick-up-points/hooks/use-pick-up-points-store';
+import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-checkout-ctx';
+import { usePickUpPointsCtx } from '@/views/checkout/providers/pick-up-points/hooks/use-pick-up-points-ctx';
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
 

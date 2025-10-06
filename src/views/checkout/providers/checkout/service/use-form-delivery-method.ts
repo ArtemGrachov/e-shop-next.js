@@ -4,8 +4,8 @@ import { useForm } from 'react-hook-form';
 import { EDeliveryMethodTypes } from '@/constants/delivery-methods';
 
 import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
-import { usePickUpPointsCtx } from '@/providers/pick-up-points/hooks/use-pick-up-points-ctx';
-import { useDeliveryMethodsStore } from '@/providers/delivery-methods/hooks/use-delivery-methods-store';
+import { usePickUpPointsCtx } from '@/views/checkout/providers/pick-up-points/hooks/use-pick-up-points-ctx';
+import { useDeliveryMethodsStore } from '@/views/checkout/providers/delivery-methods/hooks/use-delivery-methods-store';
 
 import type { IFormDeliveryMethod } from '@/types/forms/form-delivery-method';
 

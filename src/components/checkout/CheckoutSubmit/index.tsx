@@ -3,9 +3,9 @@ import { useTranslations } from 'next-intl';
 
 import { EStatus } from '@/constants/status';
 
-import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
-import { useCheckoutValid } from '@/providers/checkout/hooks/use-checkout-valid';
-import { useCheckoutStore } from '@/providers/checkout/hooks/use-checkout-store';
+import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-checkout-ctx';
+import { useCheckoutValid } from '@/views/checkout/providers/checkout/hooks/use-checkout-valid';
+import { useCheckoutStore } from '@/views/checkout/providers/checkout/hooks/use-checkout-store';
 
 const CheckoutSubmit: ComponentType = () => {
   const t = useTranslations();

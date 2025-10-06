@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { EDeliveryMethodTypes } from '@/constants/delivery-methods';
 
 import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
-import { useSelectedDeliveryMethod } from '@/providers/checkout/hooks/use-selected-delivery-method';
+import { useSelectedDeliveryMethod } from '@/views/checkout/providers/checkout/hooks/use-selected-delivery-method';
 
 import type { IFormDeliveryAddress } from '@/types/forms/form-delivery-address';
 

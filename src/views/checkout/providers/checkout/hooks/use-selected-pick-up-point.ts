@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store'
-import { usePickUpPointsStore } from '@/providers/pick-up-points/hooks/use-pick-up-points-store';
+import { usePickUpPointsStore } from '@/views/checkout/providers/pick-up-points/hooks/use-pick-up-points-store';
 
 export const useSelectedPickUpPoint = () => {
   const order = useCartStore(s => s.order);

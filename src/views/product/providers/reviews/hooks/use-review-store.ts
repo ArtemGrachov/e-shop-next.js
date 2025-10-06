@@ -1,7 +1,7 @@
 import { useStore } from 'zustand';
 
-import { useReviewCtx } from '@/providers/reviews/hooks/use-review-ctx';
-import { ReviewStore } from '@/providers/reviews/store/types';
+import { useReviewCtx } from '../hooks/use-review-ctx';
+import { ReviewStore } from '../store/types';
 
 export const useReviewStore = <T,>(
   selector: (store: ReviewStore) => T,

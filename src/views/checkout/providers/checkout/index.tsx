@@ -1,6 +1,6 @@
 import { ComponentType, createContext, PropsWithChildren } from 'react';
 
-import { useCheckoutService } from '@/providers/checkout/service';
+import { useCheckoutService } from '@/views/checkout/providers/checkout/service';
 
 export const CheckoutContext = createContext<ReturnType<typeof useCheckoutService>>(null as any);
 

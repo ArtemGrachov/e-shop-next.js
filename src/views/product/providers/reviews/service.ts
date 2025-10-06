@@ -6,7 +6,7 @@ import { EActions } from './store/types';
 import { createReviewStore } from './store';
 
 import { useHttpClientCtx } from '@/providers/http-client/hooks/use-http-client-ctx';
-import { defaultInitState } from '@/providers/reviews/store/state';
+import { defaultInitState } from '../../providers/reviews/store/state';
 
 import type { IReview } from '@/types/models/review';
 import type { IProduct } from '@/types/models/product';
