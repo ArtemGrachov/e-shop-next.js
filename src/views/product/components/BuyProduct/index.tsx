@@ -28,7 +28,7 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
 
   const { addToCart } = useAddToCart(product, currentVariant);
 
-  const variantChangeHandler = (variant?: IProductVariant) => {
+  const variantChangeHandler = (variant?: IProductVariant | null) => {
     let newPath;
 
     const slugId = `${product?.slug[locale]}-${product?.id}`;
