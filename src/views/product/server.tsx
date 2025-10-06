@@ -1,9 +1,9 @@
 import { fetchProduct } from '@/data/product/fetch-product';
 import { createHttpClient } from '@/providers/http-client/utils/create-http-client';
 
-import { IPageProductProps } from './types';
+import { IViewProductProps } from './types';
 
-export const getPageData = (async ({ params }: IPageProductProps) => {
+export const getPageData = (async ({ params }: IViewProductProps) => {
   const { slug } = await params;
   const httpClient = createHttpClient();
 

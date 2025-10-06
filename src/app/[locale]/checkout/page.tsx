@@ -1,4 +1,4 @@
-import CheckoutPageClient from './client';
+import CheckoutPageClient from '@/views/checkout/client';
 
 const CheckoutPage = () => {
   return <CheckoutPageClient />;

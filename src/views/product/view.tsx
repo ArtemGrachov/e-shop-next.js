@@ -8,9 +8,9 @@ import BuyProduct from './components/BuyProduct';
 import ProductPageWrapper from './client';
 import { getPageData } from './server';
 
-import type { IPageProductProps } from './types';
+import type { IViewProductProps } from './types';
 
-const ProductPage = async (props: IPageProductProps) => {
+const ProductView = async (props: IViewProductProps) => {
   const [locale, data] = await Promise.all([
     getLocale(),
     getPageData(props)],
@@ -31,4 +31,4 @@ const ProductPage = async (props: IPageProductProps) => {
   )
 }
 
-export default ProductPage;
+export default ProductView;

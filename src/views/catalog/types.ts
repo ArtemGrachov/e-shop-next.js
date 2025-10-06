@@ -1,6 +1,6 @@
 import { IPageProps } from '@/types/other/page-props';
 
-export interface IPageCategoryProps extends IPageProps {
+export interface IViewCategoryProps extends IPageProps {
   params: Promise<{
     locale: string;
     slug?: string[];

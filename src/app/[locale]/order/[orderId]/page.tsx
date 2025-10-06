@@ -1,7 +1,3 @@
-import CheckoutPageClient from './client';
+import OrderView from '@/views/order/view';
 
-const OrderPage = () => {
-  return <CheckoutPageClient />;
-}
-
-export default OrderPage;
+export default OrderView;
