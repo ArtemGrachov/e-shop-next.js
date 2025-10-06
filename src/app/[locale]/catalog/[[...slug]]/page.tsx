@@ -8,7 +8,6 @@ import ProductList from '@/components/products/ProductList';
 import Pagination from '@/components/other/Pagination';
 import ProductFilters from '@/components/products/ProductFilters';
 
-import CategoryPageWrapper from './client';
 import { getPageData } from './server';
 import type { IPageCategoryProps } from './types';
 
@@ -27,8 +26,8 @@ const CatalogPage: ComponentType<IPageCategoryProps> = async (props) => {
     getPageData(props),
   ])
 
-  const categories = data.categoriesState.categories;
-  const productsData = data.productsState.data;
+  const categories = data.categoriesResponse;
+  const productsData = data.productsResponse;
 
   const getCategorySlug = () => {
     const slug = params.slug;
@@ -91,7 +90,7 @@ const CatalogPage: ComponentType<IPageCategoryProps> = async (props) => {
   const description = getDescription();
 
   return (
-    <CategoryPageWrapper {...props} {...data}>
+    <>
       <h1>
         {title}
       </h1>
@@ -115,7 +114,7 @@ const CatalogPage: ComponentType<IPageCategoryProps> = async (props) => {
           pageKey: 'page',
         }}
       />
-    </CategoryPageWrapper>
+    </>
   )
 }
 
