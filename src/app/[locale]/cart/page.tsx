@@ -1,4 +1,4 @@
-import CartPageClient from './client';
+import CartPageClient from '@/views/cart/client';
 
 const CartPage = () => {
   return <CartPageClient />;

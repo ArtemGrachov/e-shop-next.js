@@ -4,8 +4,8 @@ import { ComponentType, useMemo, useState } from 'react';
 import { EDeliveryMethodTypes } from '@/constants/delivery-methods';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
-import { useSelectedDeliveryMethod } from '@/providers/checkout/hooks/use-selected-delivery-method';
-import { useSelectedPickUpPoint } from '@/providers/checkout/hooks/use-selected-pick-up-point';
+import { useSelectedDeliveryMethod } from '@/views/checkout/providers/checkout/hooks/use-selected-delivery-method';
+import { useSelectedPickUpPoint } from '@/views/checkout/providers/checkout/hooks/use-selected-pick-up-point';
 
 import FormDeliveryMethod from '@/components/checkout/FormDeliveryMethod';
 import DeliveryMethod from '@/components/delivery/DeliveryMethod';

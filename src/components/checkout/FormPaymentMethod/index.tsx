@@ -2,8 +2,8 @@ import { ComponentType, useMemo } from 'react';
 import { useLocale } from 'next-intl';
 import { useTranslations } from 'use-intl';
 
-import { usePaymentMethodsStore } from '@/providers/payment-methods/hooks/use-payment-methods-store';
-import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
+import { usePaymentMethodsStore } from '@/views/checkout/providers/payment-methods/hooks/use-payment-methods-store';
+import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-checkout-ctx';
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
 

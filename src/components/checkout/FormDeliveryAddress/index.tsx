@@ -1,7 +1,7 @@
 import { ComponentType } from 'react';
 import { useTranslations } from 'next-intl';
 
-import { useCheckoutCtx } from '@/providers/checkout/hooks/use-checkout-ctx';
+import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-checkout-ctx';
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
 
