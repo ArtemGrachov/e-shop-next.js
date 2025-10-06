@@ -1,11 +1,10 @@
 import type { EStatus } from '@/constants/status';
-import type { IPagination } from '@/types/models/pagination';
-import type { IProduct } from '@/types/models/product';
+import type { IProductsResponse } from '@/types/api/products';
 import type { IReducerAction, Dispatch } from '@/types/store';
 
 export type State = {
   getStatus: EStatus;
-  data: IPagination<IProduct> | null;
+  data: IProductsResponse | null;
 }
 
 export const enum EActions {
@@ -17,7 +16,7 @@ export const enum EActions {
 export interface IGetSuccessAction extends IReducerAction<EActions.GET> { }
 
 export interface IGetActionSuccess extends IReducerAction<EActions.GET_SUCCESS> {
-  data: IPagination<IProduct>;
+  data: IProductsResponse;
 }
 
 export interface IGetActionError extends IReducerAction<EActions.GET_ERROR> { }

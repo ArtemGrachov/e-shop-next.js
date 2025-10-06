@@ -102,7 +102,10 @@ const CatalogPage: ComponentType<IPageCategoryProps> = async (props) => {
       <ProductFilters />
       <ProductList products={productsData?.items} />
       <Pagination
-        options={{ currentPage: productsData?.currentPage ?? 1, totalPages: productsData?.totalPages ?? 1 }}
+        options={{
+          currentPage: productsData?.pagination.currentPage ?? 1,
+          totalPages: productsData?.pagination.totalPages ?? 1,
+        }}
         linkParams={{
           path: ROUTES.CATALOG,
           params: {

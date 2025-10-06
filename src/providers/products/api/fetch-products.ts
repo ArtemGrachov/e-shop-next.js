@@ -7,7 +7,7 @@ import { defaultInitState } from '../store/state';
 import { reducer } from '../store/reducer';
 
 import type { IProduct } from '@/types/models/product';
-import type { IPagination } from '@/types/models/pagination';
+import type { IProductsResponse } from '@/types/api/products';
 
 export interface IFetchProductsParams {
   page?: number | string | null;
@@ -112,6 +112,23 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       return true;
     });
 
+    const allPrices = products.reduce((acc, curr) => {
+      if (curr.price?.value != null) {
+        acc.push(curr.price?.value);
+      }
+
+      if (curr.variants) {
+        const variantPrices = curr.variants.map(v => v.price.value);
+
+        acc.push(...variantPrices);
+      }
+
+      return acc;
+    }, [] as number[]);
+
+    const maxPrice = Math.max(...allPrices);
+    const minPrice = Math.min(...allPrices);
+
     const totalItems = products.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
@@ -119,13 +136,22 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       products = products.slice(_start, _end);
     }
 
-    const result: IPagination<IProduct> = {
+    const result: IProductsResponse = {
+      pagination: {
+        totalItems,
+        totalPages,
+        currentPage: page,
+        itemsPerPage,
+      },
       items: products,
-      totalItems,
-      totalPages,
-      currentPage: page,
-      itemsPerPage,
-    }
+      filters: {
+        price: {
+          type: 'range',
+          max: maxPrice,
+          min: minPrice,
+        },
+      },
+    };
 
     state = reducer(state, { type: EActions.GET_SUCCESS, data: result });
   } catch (err) {
