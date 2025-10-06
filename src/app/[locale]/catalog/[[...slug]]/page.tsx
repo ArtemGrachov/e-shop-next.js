@@ -99,7 +99,7 @@ const CatalogPage: ComponentType<IPageCategoryProps> = async (props) => {
         {description}
       </p>}
       <CategoryNav categories={categories} />
-      <ProductFilters />
+      {productsData && <ProductFilters filters={productsData.filters} />}
       <ProductList products={productsData?.items} />
       <Pagination
         options={{
