@@ -26,7 +26,7 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
   const locale = useLocale();
   const { currentVariant } = useCurrentVariantCtx();
 
-  const { addToCart } = useAddToCart(product!, currentVariant);
+  const { addToCart } = useAddToCart(product, currentVariant);
 
   const variantChangeHandler = (variant?: IProductVariant) => {
     let newPath;

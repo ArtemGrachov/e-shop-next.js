@@ -18,7 +18,7 @@ export const useAddToCart = (product: IProduct, productVariant?: IProductVariant
 
   const handleAdd = (quantity: number) => {
     const price = productVariant?.price ?? product?.price!;
-    addProduct(quantity, price, product!, productVariant);
+    addProduct(quantity, price, product, productVariant);
   }
 
   const handleUpdate = (quantity: number) => {

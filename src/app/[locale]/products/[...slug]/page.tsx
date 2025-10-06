@@ -16,7 +16,7 @@ const ProductPage = async (props: IPageProductProps) => {
     getPageData(props)],
   );
 
-  const product = data.productState.product!;
+  const product = data.product;
 
   return (
     <ProductPageWrapper {...props} {...data}>

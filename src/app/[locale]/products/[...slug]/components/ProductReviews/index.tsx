@@ -19,7 +19,7 @@ const ProductReviews: ComponentType<IProps> = ({ product }) => {
   const reviewSubmitStaus = useReviewStore(s => s.submitStatus);
 
   const sendReviewHandler = (formValue: IFormReview) => {
-    return sendReview(product!.id, formValue);
+    return sendReview(product.id, formValue);
   }
 
   return (
