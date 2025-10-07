@@ -16,10 +16,8 @@ export const useOrderService = (initialState?: State) => {
   const getOrder = async (orderId: string) => {
     try {
       dispatch({ type: EActions.GET });
-      console.log(`/orders/${orderId}`);
 
       const { data } = await httpClient.get<IOrder>(`/orders/${orderId}`);
-      
 
       dispatch({ type: EActions.GET_SUCCESS, order: data });
     } catch (err) {

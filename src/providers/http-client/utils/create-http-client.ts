@@ -2,31 +2,12 @@ import axios from 'axios';
 import AxiosMockAdapter from 'axios-mock-adapter';
 
 const data = () => import('../../../../data/index.json');
+const productsBackend = () => import('@/mock-backend/products');
 
 const ORDER_STORAGE_KEY = 'ORDER;'
 
 export const createHttpClient = () => {
   const mockHttpClient = new AxiosMockAdapter(axios);
-
-  mockHttpClient.onGet('/products').reply(async () => {
-    const { products } = await data();
-
-    return [200, products];
-  });
-
-  mockHttpClient.onGet(/\/products\/\d+/).reply(async (config) => {
-    const { url } = config;
-    const id = url?.split('/').slice(-1)[0];
-    const { products } = await data();
-
-    const product = products.find(p => p.id == id);
-
-    if (!product) {
-      return [404];
-    }
-
-    return [200, product];
-  });
 
   mockHttpClient.onGet(/\/products\/\d+/).reply(async (config) => {
     const { url } = config;
@@ -58,10 +39,11 @@ export const createHttpClient = () => {
     return [200, parsed];
   });
 
-  mockHttpClient.onGet('/products').reply(async () => {
-    const { products } = await data();
+  mockHttpClient.onGet('/products').reply(async (config) => {
+    const { getProducts } = await productsBackend();
+    const response = await getProducts(config.params);
 
-    return [200, products];
+    return [200, response];
   });
 
   mockHttpClient.onGet('/categories').reply(async () => {
