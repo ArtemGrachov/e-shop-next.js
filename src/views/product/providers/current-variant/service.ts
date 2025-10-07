@@ -1,7 +1,10 @@
-import { useMemo} from 'react';
+import { useMemo, useState } from 'react';
 import { useParams } from 'next/navigation';
 
 import type { IProduct } from '@/types/models/product';
+import type { IProductVariant } from '@/types/models/product-variant';
+
+import { getIdFromSlug } from '@/utils/common/get-id-from-slug';
 
 export interface IOptions {
   product: IProduct;
@@ -10,38 +13,32 @@ export interface IOptions {
 export const useCurrentVariantService = ({ product }: IOptions) => {
   const params = useParams();
 
-  const currentVariantSlug = useMemo(() => {
-    const slug = params.slug;
-
-    if (!slug) {
-      return null;
-    }
-
-    return slug[1];
+  const initialSlugId = useMemo(() => {
+    return params.slug?.[1]
   }, [params]);
 
-  const currentVariantId = useMemo(() => {
-    if (currentVariantSlug == null) {
-      return null;
-    }
+  const initialVariantId = useMemo(() => {
+    return getIdFromSlug(initialSlugId);
+  }, [initialSlugId]);
 
-    const variantId = +currentVariantSlug.split('-').slice(-1)[0];
-
-    return variantId;
-  }, [currentVariantSlug]);
+  const [variantId, setVariantId] = useState<string | undefined | null>(initialVariantId);
 
   const currentVariant = useMemo(() => {
     const defaultVariant = product?.variants[0];
 
-    if (currentVariantId == null) {
+    if (variantId == null) {
       return defaultVariant;
     }
 
-    return product?.variants.find(v => v.id === currentVariantId) ?? defaultVariant;
-  }, [product, currentVariantId]);
+    return product?.variants.find(v => v.id == variantId) ?? defaultVariant;
+  }, [product, variantId]);
 
+  const setVariant = (productVariant?: IProductVariant | null) => {
+    setVariantId(productVariant?.id);
+  }
 
   return {
     currentVariant,
+    setVariant,
   };
 }

@@ -1,4 +1,4 @@
-import { ComponentType, useEffect, useMemo } from 'react';
+import { ChangeEvent, ComponentType, useMemo } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -9,40 +9,42 @@ interface IProps {
   product: IProduct;
   currentVariant?: IProductVariant;
   onSubmit?: (formValue: IFormBuyOutput) => any;
-  onVariantSelect?: (variant?: IProductVariant) => any;
+  onVariantSelect?: (variant?: IProductVariant | null) => any;
 }
 
 export interface IFormBuyProduct {
-  variantId: number | undefined;
+  variantId: string | undefined;
   quantity: string;
 }
 
 export interface IFormBuyOutput {
   quantity: number;
-  variant?: IProductVariant;
+  variant?: IProductVariant | null;
 }
 
 const FormBuyProduct: ComponentType<IProps> = ({ product, currentVariant, onSubmit, onVariantSelect }) => {
   const t = useTranslations();
   const locale = useLocale();
-  const { register, handleSubmit, setValue, getValues, watch } = useForm<IFormBuyProduct>({ defaultValues: { variantId: currentVariant?.id, quantity: '1' } });
+  const { register, handleSubmit } = useForm<IFormBuyProduct>({ defaultValues: { variantId: currentVariant?.id, quantity: '1' } });
 
-  const variantId = watch('variantId');
+  const getVariant = (variantId?: string | number) => {
+    if (variantId == null) {
+      return null;
+    }
 
-  const selectedVariant = useMemo(() => {
     return product.variants.find(v => v.id == variantId);
-  }, [variantId]);
+  }
 
   const submitHandler: SubmitHandler<IFormBuyProduct> = (formValue) => {
     const output: IFormBuyOutput = {
       quantity: +formValue.quantity,
-      variant: selectedVariant,
+      variant: getVariant(formValue.variantId),
     }
     onSubmit && onSubmit(output);
   }
 
-  const variantSelectHandler = () => {
-    onVariantSelect && onVariantSelect(selectedVariant);
+  const variantSelectHandler = (e: ChangeEvent<HTMLSelectElement>) => {
+    onVariantSelect && onVariantSelect(getVariant(e.target.value));
   }
 
   const variantIdOptions = useMemo(() => {
@@ -53,10 +55,6 @@ const FormBuyProduct: ComponentType<IProps> = ({ product, currentVariant, onSubm
 
   const variantIdInput = register('variantId', { onChange: variantSelectHandler });
   const quantityInput = register('quantity');
-
-  useEffect(() => {
-    setValue('variantId', currentVariant?.id);
-  }, [currentVariant]);
 
   return (
     <form onSubmit={formSubmitCallback}>
