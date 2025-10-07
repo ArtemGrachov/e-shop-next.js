@@ -1,35 +1,113 @@
-import { Axios, AxiosResponse } from 'axios';
+import axios from 'axios';
+import AxiosMockAdapter from 'axios-mock-adapter';
+
+const data = () => import('../../../../data/index.json');
+const productsBackend = () => import('@/mock-backend/products');
+
+const ORDER_STORAGE_KEY = 'ORDER;'
 
 export const createHttpClient = () => {
-  const httpClient = new Axios({
-    baseURL: process.env.NEXT_PUBLIC_API_URL,
+  const mockHttpClient = new AxiosMockAdapter(axios);
+
+  mockHttpClient.onGet(/\/products\/\d+/).reply(async (config) => {
+    const { url } = config;
+    const id = url?.split('/').slice(-1)[0];
+    const { products } = await data();
+
+    const product = products.find(p => p.id == id);
+
+    if (!product) {
+      return [404];
+    }
+
+    return [200, product];
   });
 
-  httpClient.interceptors.response.use(
-    (response: AxiosResponse) => {
-      const contentType = response.headers['content-type'];
+  mockHttpClient.onPatch(/\/products\/\d+/).reply(async (config) => {
+    const { url } = config;
+    const id = url?.split('/').slice(-1)[0];
+    const response = await data();
 
-      if (
-        contentType?.includes('application/json') &&
-        typeof response.data === 'string'
-      ) {
+    const parsed = JSON.parse(config.data);
+
+    const product = response.products.find(p => p.id == id);
+
+    if (!product) {
+      return [404];
+    }
+
+    return [200, parsed];
+  });
+
+  mockHttpClient.onGet('/products').reply(async (config) => {
+    const { getProducts } = await productsBackend();
+    const response = await getProducts(config.params);
+
+    return [200, response];
+  });
+
+  mockHttpClient.onGet('/categories').reply(async () => {
+    const { categories } = await data();
+
+    return [200, categories];
+  });
+
+  mockHttpClient.onGet('/delivery-methods').reply(async () => {
+    const { 'delivery-methods': deliveryMethods } = await data();
+
+    return [200, deliveryMethods];
+  });
+
+  mockHttpClient.onGet('/payment-methods').reply(async () => {
+    const { 'payment-methods': paymentMethods } = await data();
+
+    return [200, paymentMethods];
+  });
+
+  mockHttpClient.onGet('/pick-up-points').reply(async () => {
+    const { 'pick-up-points': pickUpPoints } = await data();
+
+    return [200, pickUpPoints];
+  });
+
+  mockHttpClient.onGet(/\/orders\/[\w-]+/).reply(async (config) => {
+    const { url } = config;
+    const id = url?.split('/').slice(-1)[0];
+    const { orders } = await data();
+
+    let order = orders.find(p => p.id == id);
+
+    if (!order) {
+      if (typeof sessionStorage !== 'undefined') {
         try {
-          response.data = JSON.parse(response.data);
+          const raw = sessionStorage.getItem(ORDER_STORAGE_KEY);
+
+          if (raw) {
+            order = JSON.parse(raw);
+          }
         } catch (err) {
-          console.warn('Failed to parse JSON response:', err);
+          console.warn(err);
         }
       }
+    }
 
-      if (response.status !== 200 && response.status !== 201) {
-        throw response.status;
-      }
+    if (!order) {
+      return [404];
+    }
 
-      return response;
-    },
-    (error) => {
-      return Promise.reject(error);
-    },
-  );
+    return [200, order];
+  });
 
-  return httpClient;
+  mockHttpClient.onPost('/orders').reply(async (config) => {
+    const parsed = JSON.parse(config.data);
+
+    // workaround for storing order data without real backend
+    if (typeof sessionStorage !== 'undefined') {
+      sessionStorage.setItem(ORDER_STORAGE_KEY, config.data);
+    }
+
+    return [200, parsed];
+  });
+
+  return axios;
 }

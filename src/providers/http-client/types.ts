@@ -1,3 +1,3 @@
-import { Axios } from 'axios';
+import { createHttpClient } from '@/providers/http-client/utils/create-http-client';
 
-export type HttpClient = Axios;
+export type HttpClient = ReturnType<typeof createHttpClient>;
