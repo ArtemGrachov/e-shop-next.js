@@ -1,5 +1,19 @@
 @use '/src/styles/mixins/input.scss' as input;
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.productSearch {
+  display: flex;
+  align-items: center;
+}
 
 .input {
   @include input.input-default();
+
+  flex: 1 1 auto;
+}
+
+.submit {
+  @include buttons.input-button();
+
+  flex: 0 0 auto;
 }

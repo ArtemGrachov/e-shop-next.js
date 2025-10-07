@@ -1,0 +1,19 @@
+@mixin input-button {
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: none;
+  transition: ease-in-out 200ms;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-link);
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:active {
+    opacity: 0.75;
+  }
+}

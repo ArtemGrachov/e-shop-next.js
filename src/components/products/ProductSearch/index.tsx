@@ -4,6 +4,7 @@ import { ComponentType, useMemo } from 'react';
 import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { pathcat } from 'pathcat';
+import { Search } from 'react-bootstrap-icons';
 
 import { ROUTES } from '@/router/routes';
 
@@ -57,13 +58,16 @@ const ProductSearch: ComponentType = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(submitHandler)}>
+    <form className={styles.productSearch} onSubmit={handleSubmit(submitHandler)}>
       <input
         type="text"
         className={styles.input}
         {...searchInput}
         defaultValue={search}
       />
+      <button type="submit" className={styles.submit}>
+        <Search size={'100%'} />
+      </button>
     </form>
   )
 }
