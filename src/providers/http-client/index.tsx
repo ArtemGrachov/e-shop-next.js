@@ -2,10 +2,9 @@
 
 import { ComponentType, createContext, PropsWithChildren } from 'react';
 
-import { HttpClient } from './types';
 import { useHttpClientService } from './service';
 
-export const HttpClientContext = createContext<HttpClient>(null as any);
+export const HttpClientContext = createContext<ReturnType<typeof useHttpClientService>>(null as any);
 
 export const HttpClientProvider: ComponentType<PropsWithChildren> = ({ children }) => {
   const service = useHttpClientService();
