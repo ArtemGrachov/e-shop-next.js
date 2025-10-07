@@ -1,15 +1,15 @@
 import { PropsWithChildren } from 'react';
 
-import ProductSearch from '@/components/products/ProductSearch';
+import Header from '@/layouts/DefaultLayout/components/Header';
 
 const DefaultLayout = ({ children }: PropsWithChildren) => {
   return (
-    <main>
-      <header>
-        <ProductSearch />
-      </header>
-      {children}
-    </main>
+    <>
+      <Header />
+      <main>
+        {children}
+      </main>
+    </>
   )
 }
 

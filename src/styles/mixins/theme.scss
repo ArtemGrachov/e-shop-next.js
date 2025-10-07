@@ -1,9 +1,13 @@
 @mixin theme-dark() {
-  --background: black;
-  --color: white;
+  --primary-background: black;
+  --text-color: white;
+  --primary-link: orange;
+  --border-primary: grey;
 }
 
 @mixin theme-light() {
-  --background: white;
-  --color: black;
+  --primary-background: white;
+  --text-color: black;
+  --primary-link: orange;
+  --border-primary: grey;
 }

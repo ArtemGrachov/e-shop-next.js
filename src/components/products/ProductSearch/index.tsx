@@ -7,6 +7,8 @@ import { pathcat } from 'pathcat';
 
 import { ROUTES } from '@/router/routes';
 
+import styles from './styles.module.scss';
+
 interface IFormSearch {
   search: string;
 }
@@ -56,7 +58,12 @@ const ProductSearch: ComponentType = () => {
 
   return (
     <form onSubmit={handleSubmit(submitHandler)}>
-      <input type="text" {...searchInput} defaultValue={search} />
+      <input
+        type="text"
+        className={styles.input}
+        {...searchInput}
+        defaultValue={search}
+      />
     </form>
   )
 }

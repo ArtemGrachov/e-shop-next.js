@@ -1,0 +1,5 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+
+.container {
+  @include layout.container;
+}
