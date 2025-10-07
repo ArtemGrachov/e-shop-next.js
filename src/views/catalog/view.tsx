@@ -1,5 +1,6 @@
 import { ComponentType } from 'react';
 import { getLocale, getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
 import { ROUTES } from '@/router/routes';
 
@@ -24,7 +25,13 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
     props.params,
     props.searchParams,
     getPageData(props),
-  ])
+  ]).catch(err => {
+    if (err === 404) {
+      return notFound();
+    }
+
+    throw err;
+  });
 
   const categories = data.categoriesResponse;
   const productsData = data.productsResponse;
@@ -62,6 +69,10 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
   };
 
   const category = getCategory();
+
+  if (!category) {
+    return notFound();
+  }
 
   const getTitle = () => {
     const categoryName = category?.name[locale];

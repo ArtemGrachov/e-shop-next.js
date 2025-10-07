@@ -1,4 +1,5 @@
 import { getLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
 import FavouritesToggle from '@/components/products/FavouritesToggle';
 import ProductDescription from './components/ProductDescription';
@@ -14,7 +15,14 @@ const ProductView = async (props: IViewProductProps) => {
   const [locale, data] = await Promise.all([
     getLocale(),
     getPageData(props)],
-  );
+  ).catch(err => {
+    if (err === 404) {
+      return notFound();
+    }
+
+    throw err;
+  });
+
 
   const product = data.product;
 
@@ -24,7 +32,7 @@ const ProductView = async (props: IViewProductProps) => {
         {product.name[locale]}
       </h1>
       {product && <ProductDescription product={product} />}
-      <BuyProduct  product={product} />
+      <BuyProduct product={product} />
       <FavouritesToggle product={product} />
       <ProductReviews product={product} />
     </ProductPageWrapper>

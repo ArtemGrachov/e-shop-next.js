@@ -74,5 +74,10 @@
     "title_catalog": "Catalog",
     "title_search": "Search \"{query}\"",
     "title_category_search": "{categoryName} | search \"{query}\""
+  },
+  "view_error": {
+    "not_found_title": "Not found",
+    "any_title": "An error occured",
+    "return": "Return to home page"
   }
 }
