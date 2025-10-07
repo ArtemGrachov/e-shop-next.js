@@ -1,8 +1,8 @@
-import { ComponentType, PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
 import ProductSearch from '@/components/products/ProductSearch';
 
-const DefaultLayout: ComponentType<PropsWithChildren> = ({ children }) => {
+const DefaultLayout = ({ children }: PropsWithChildren) => {
   return (
     <main>
       <header>

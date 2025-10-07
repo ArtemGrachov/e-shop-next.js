@@ -10,7 +10,7 @@ export interface IOrderItem {
   variantSlug?: TextTranslation;
   price: IOrderItemPrice;
   productId: number | string;
-  productVariantId?: number;
+  productVariantId?: string;
   media?: IMedia[];
   quantity: number;
 }

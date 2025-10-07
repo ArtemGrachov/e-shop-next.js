@@ -6,9 +6,9 @@ import { useTranslations } from 'next-intl';
 
 import { EStatus } from '@/constants/status';
 
-import { OrderProvider } from '@/providers/order';
-import { useOrderCtx } from '@/providers/order/hooks/use-order-ctx';
-import { useOrderStore } from '@/providers/order/hooks/use-order-store';
+import { OrderProvider } from './providers/order';
+import { useOrderCtx } from './providers/order/hooks/use-order-ctx';
+import { useOrderStore } from './providers/order/hooks/use-order-store';
 
 import DeliveryMethod from '@/components/delivery/DeliveryMethod';
 import DeliveryAddress from '@/components/delivery/DeliveryAddress';
