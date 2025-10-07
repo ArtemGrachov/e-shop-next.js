@@ -20,6 +20,10 @@ export const createHttpClient = () => {
         }
       }
 
+      if (response.status !== 200 && response.status !== 201) {
+        throw response.status;
+      }
+
       return response;
     },
     (error) => {
