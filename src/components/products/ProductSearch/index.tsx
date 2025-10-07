@@ -1,0 +1,53 @@
+'use client';
+
+import { ComponentType, useMemo } from 'react';
+import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useForm } from 'react-hook-form';
+import { pathcat } from 'pathcat';
+
+import { ROUTES } from '@/router/routes';
+
+interface IFormSearch {
+  search: string;
+}
+
+const ProductSearch: ComponentType = () => {
+  const pathname = usePathname();
+  const router = useRouter();
+  const params = useParams();
+  const searchParams = useSearchParams();
+  const search = useMemo(() => {
+    return searchParams.get('search') as string;
+  }, [searchParams]);
+
+  const { register, handleSubmit } = useForm<IFormSearch>({ defaultValues: { search } });
+
+  const searchInput = register('search');
+
+  const submitHandler = (formValue: IFormSearch) => {
+    const pathParams: Record<string, string | undefined> = {
+      ...Object.fromEntries(searchParams),
+      slugId: params.slug?.[0],
+    } as Record<string, string>;
+
+    const searchQuery = formValue.search?.trim();
+
+    if (searchQuery) {
+      pathParams.search = searchQuery;
+    } else {
+      pathParams.search = undefined;
+    }
+
+    const newPath = pathcat('/', ROUTES.CATALOG, pathParams);
+
+    router.push(newPath);
+  }
+
+  return (
+    <form onSubmit={handleSubmit(submitHandler)}>
+      <input type="text" {...searchInput} defaultValue={search} />
+    </form>
+  )
+}
+
+export default ProductSearch;
