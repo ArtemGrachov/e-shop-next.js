@@ -12,6 +12,8 @@ import ProductFilters from '@/components/products/ProductFilters';
 import { getPageData } from './server';
 import type { IViewCategoryProps } from './types';
 
+import styles from './styles.module.scss';
+
 const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
   const [
     t,
@@ -101,31 +103,37 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
   const description = getDescription();
 
   return (
-    <>
-      <h1>
-        {title}
-      </h1>
-      {description && <p>
-        {description}
-      </p>}
-      <CategoryNav categories={categories} />
-      {productsData && <ProductFilters filters={productsData.filters} />}
-      <ProductList products={productsData?.items} />
-      <Pagination
-        options={{
-          currentPage: productsData?.pagination.currentPage ?? 1,
-          totalPages: productsData?.pagination.totalPages ?? 1,
-        }}
-        linkParams={{
-          path: ROUTES.CATALOG,
-          params: {
-            slugId: categorySlug ? categorySlug : '',
-            ...searchParams,
-          },
-          pageKey: 'page',
-        }}
-      />
-    </>
+    <div className={styles.page}>
+      <div className={styles.container}>
+        <aside className={styles.sidebar}>
+          <CategoryNav categories={categories} />
+          {productsData && <ProductFilters filters={productsData.filters} />}
+        </aside>
+        <main className={styles.content}>
+          <h1>
+            {title}
+          </h1>
+          {description && <p>
+            {description}
+          </p>}
+          <ProductList products={productsData?.items} />
+          <Pagination
+            options={{
+              currentPage: productsData?.pagination.currentPage ?? 1,
+              totalPages: productsData?.pagination.totalPages ?? 1,
+            }}
+            linkParams={{
+              path: ROUTES.CATALOG,
+              params: {
+                slugId: categorySlug ? categorySlug : '',
+                ...searchParams,
+              },
+              pageKey: 'page',
+            }}
+          />
+        </main>
+      </div>
+    </div>
   )
 }
 

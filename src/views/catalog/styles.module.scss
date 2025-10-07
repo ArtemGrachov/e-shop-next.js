@@ -1,0 +1,18 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+
+.container {
+  @include layout.container();
+
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.sidebar {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+.content {
+  flex: 1 1 auto;
+}
