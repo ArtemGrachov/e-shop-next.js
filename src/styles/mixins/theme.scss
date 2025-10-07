@@ -5,6 +5,10 @@
   --primary-link: orange;
   --secondary-link: green;
   --border-primary: grey;
+  --image-placeholder-background: #3b3b3b;
+  --price-active: white;
+  --price-accent: red;
+  --price-inactive: grey;
 }
 
 @mixin theme-light() {
@@ -14,4 +18,8 @@
   --primary-link: orange;
   --secondary-link: green;
   --border-primary: grey;
+  --image-placeholder-background: #858585;
+  --price-active: black;
+  --price-accent: red;
+  --price-inactive: grey;
 }

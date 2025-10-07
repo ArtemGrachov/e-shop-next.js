@@ -1,0 +1,19 @@
+.value {
+  color: var(--price-active);
+  font-size: 20px;
+
+  &._active {
+    color: var(--price-accent);
+  }
+}
+
+.original {
+  color: var(--price-inactive);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.discount {
+  color: var(--price-accent);
+  font-size: 14px;
+}

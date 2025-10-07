@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+$gap: 24px;
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: math.div(-$gap, 2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 33.3%;
+  flex: 0 0 auto;
+  padding: math.div($gap, 2);
+}

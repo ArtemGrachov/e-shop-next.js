@@ -1,0 +1,24 @@
+.productCard {
+  position: relative;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--primary-link);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    content: '';
+  }
+}
+
+.image {
+  padding-top: 100%;
+  background: var(--image-placeholder-background);
+  border-radius: 4px;
+}
