@@ -1,6 +1,8 @@
 import { ComponentType, useEffect, useState } from 'react';
 import { Range } from 'react-range';
 
+import styles from './styles.module.scss';
+
 interface IProps {
   max?: number;
   min?: number;
@@ -28,42 +30,34 @@ const FilterRange: ComponentType<IProps> = ({ max, min, value, onChange }) => {
 
   return (
     <div>
-      <div style={{ marginBottom: 40 }}>
+      <div className={styles.value}>
         {internalValue[0]} - {internalValue[1]}
       </div>
-      <Range
-        step={1}
-        min={min}
-        max={max}
-        values={internalValue}
-        onChange={(v) => setInternalValue(v as [number, number])}
-        onFinalChange={finalChangeHandler}
-        renderTrack={({ props, children }) => (
-          <div
-            {...props}
-            style={{
-              ...props.style,
-              height: "6px",
-              width: "100%",
-              backgroundColor: "#ccc",
-            }}
-          >
-            {children}
-          </div>
-        )}
-        renderThumb={({ props }) => (
-          <div
-            {...props}
-            key={props.key}
-            style={{
-              ...props.style,
-              height: "42px",
-              width: "42px",
-              backgroundColor: "#999",
-            }}
-          />
-        )}
-      />
+      <div className={styles.rangeWrap}>
+        <Range
+          step={1}
+          min={min}
+          max={max}
+          values={internalValue}
+          onChange={(v) => setInternalValue(v as [number, number])}
+          onFinalChange={finalChangeHandler}
+          renderTrack={({ props, children }) => (
+            <div
+              {...props}
+              className={styles.track}
+            >
+              {children}
+            </div>
+          )}
+          renderThumb={({ props }) => (
+            <div
+              {...props}
+              key={props.key}
+              className={styles.thumb}
+            />
+          )}
+        />
+      </div>
     </div>
   )
 }

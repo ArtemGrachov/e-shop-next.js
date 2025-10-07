@@ -2,8 +2,10 @@
 
 import { ComponentType } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import FilterRange from '@/components/filters/FilterRange';
+import FormField from '@/components/forms/FormField';
 
 import type { IProductFilters } from '@/types/api/products';
 import type { IFilterRange } from '@/types/models/filter';
@@ -13,6 +15,7 @@ interface IProps {
 }
 
 const ProductFilters: ComponentType<IProps> = ({ filters }) => {
+  const t = useTranslations();
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -60,14 +63,14 @@ const ProductFilters: ComponentType<IProps> = ({ filters }) => {
   }
 
   return (
-    <div style={{ width: 300, padding: 20 }}>
+    <FormField label={t('product_filters.price')}>
       <FilterRange
         max={filters.price.rangeMax}
         min={filters.price.rangeMin}
         value={[filters.price.valueMin, filters.price.valueMax]}
         onChange={value => handleRangeFilter('price', value, filters.price)}
       />
-    </div>
+    </FormField>
   )
 }
 

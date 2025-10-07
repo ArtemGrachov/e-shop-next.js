@@ -1,0 +1,20 @@
+.value {
+  margin-bottom: 24px;
+}
+
+.track {
+  height: 4px;
+  width: 100%;
+  background-color: var(--border-primary);
+}
+
+.thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  background-color: var(--primary-link);
+}
+
+.rangeWrap {
+  padding: 0 8px;
+}

@@ -106,7 +106,7 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
     <div className={styles.page}>
       <div className={styles.container}>
         <aside className={styles.sidebar}>
-          <CategoryNav categories={categories} />
+          <CategoryNav className={styles.categoryNav} categories={categories} />
           {productsData && <ProductFilters filters={productsData.filters} />}
         </aside>
         <main className={styles.content}>

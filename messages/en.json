@@ -79,5 +79,8 @@
     "not_found_title": "Not found",
     "any_title": "An error occured",
     "return": "Return to home page"
+  },
+  "product_filters": {
+    "price": "Price"
   }
 }
