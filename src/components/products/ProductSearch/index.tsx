@@ -25,10 +25,21 @@ const ProductSearch: ComponentType = () => {
   const searchInput = register('search');
 
   const submitHandler = (formValue: IFormSearch) => {
-    const pathParams: Record<string, string | undefined> = {
-      ...Object.fromEntries(searchParams),
-      slugId: params.slug?.[0],
+    let pathParams: Record<string, string | undefined> = {
+      slugId: params.slug?.[0] ?? '',
     } as Record<string, string>;
+
+    let comparePath = pathcat('/', ROUTES.CATALOG, pathParams);
+
+    if (comparePath.slice(-1) === '/') {
+      comparePath = comparePath.slice(0, -1);
+    }
+
+    const currentlyOnCatalog = comparePath === pathname;
+
+    if (!currentlyOnCatalog) {
+      pathParams = { slugId: '' };
+    }
 
     const searchQuery = formValue.search?.trim();
 
