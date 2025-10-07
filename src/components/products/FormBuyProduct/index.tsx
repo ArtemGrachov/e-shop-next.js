@@ -13,7 +13,7 @@ interface IProps {
 }
 
 export interface IFormBuyProduct {
-  variantId: number | undefined;
+  variantId: string | undefined;
   quantity: string;
 }
 

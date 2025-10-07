@@ -22,9 +22,8 @@ interface IProps {
 }
 
 const BuyProduct: ComponentType<IProps> = ({ product }) => {
-  const router = useRouter();
   const locale = useLocale();
-  const { currentVariant } = useCurrentVariantCtx();
+  const { currentVariant, setVariant } = useCurrentVariantCtx();
 
   const { addToCart } = useAddToCart(product, currentVariant);
 
@@ -48,7 +47,8 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
       newPath += location.hash;
     }
 
-    router.push(newPath);
+    window.history.pushState({}, '', newPath);
+    setVariant(variant);
   }
 
   const addToCartHandler = (result: IFormBuyOutput) => {

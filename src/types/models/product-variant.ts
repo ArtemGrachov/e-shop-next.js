@@ -3,7 +3,7 @@ import { IPrice } from './price';
 import { TextTranslation } from './translation';
 
 export interface IProductVariant {
-  id: number;
+  id: string;
   name: TextTranslation;
   description: TextTranslation;
   slug: TextTranslation;
