@@ -1,0 +1,9 @@
+@mixin theme-dark() {
+  --background: black;
+  --color: white;
+}
+
+@mixin theme-light() {
+  --background: white;
+  --color: black;
+}

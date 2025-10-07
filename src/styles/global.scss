@@ -1,0 +1,38 @@
+@use './mixins/theme.scss' as theme;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include theme.theme-dark();
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @include theme.theme-light();
+  }
+}
+
+[data-theme="light"] {
+  @include theme.theme-light();
+}
+
+[data-theme="dark"] {
+  @include theme.theme-dark();
+}
+
+html {
+  background: var(--background);
+  color: var(--color);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
