@@ -1,5 +1,4 @@
 {
-  "test": "Test EN",
   "form_buy_product": {
     "variant": "Variant",
     "submit": "Buy"
@@ -91,5 +90,9 @@
   },
   "reviews_item": {
     "placeholder": "[no comment]"
+  },
+  "view_cart": {
+    "title": "Cart",
+    "checkout": "Checkout"
   }
 }

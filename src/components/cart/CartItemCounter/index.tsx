@@ -1,7 +1,10 @@
 import { ComponentType, useEffect, useState } from 'react';
 
-import type { IOrderItem } from '@/types/models/order-item';
 import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
+
+import type { IOrderItem } from '@/types/models/order-item';
+
+import styles from './styles.module.scss';
 
 interface IProps {
   orderItem: IOrderItem;
@@ -20,7 +23,12 @@ export const CartItemCounter: ComponentType<IProps> = ({ orderItem }) => {
   }, [value]);
 
   return (
-    <input type="number" value={value} onChange={e => setValue(+e.target.value)} />
+    <input
+      type="number"
+      className={styles.input}
+      value={value}
+      onChange={e => setValue(+e.target.value)}
+    />
   )
 }
 

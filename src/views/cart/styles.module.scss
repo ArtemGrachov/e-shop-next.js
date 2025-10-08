@@ -1,0 +1,33 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.page {
+  padding-top: 24px;
+  padding-bottom: 128px;
+}
+
+.container {
+  @include layout.container;
+}
+
+.row {
+  display: flex;
+  gap: 24px;
+}
+
+.col {
+  flex: 1 1 auto;
+
+  &._sm {
+    flex: 0 0 auto;
+    width: 300px;
+  }
+}
+
+.orderSummary {
+  margin-bottom: 24px;
+}
+
+.link {
+  @include buttons.button(100%);
+}

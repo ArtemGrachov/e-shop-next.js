@@ -3,4 +3,5 @@ export const ROUTES = {
   PRODUCT_VARIANT: '/products/:slugId/:variantSlugId',
   ORDER: '/order/:orderId',
   CATALOG: '/catalog/:slugId',
+  CHECKOUT: '/checkout',
 }
