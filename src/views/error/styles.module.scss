@@ -1,0 +1,19 @@
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.page {
+  padding-top: 24px;
+  padding-bottom: 128px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 64px;
+}
+
+.button {
+  @include buttons.button();
+}
