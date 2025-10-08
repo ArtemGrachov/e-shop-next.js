@@ -1,8 +1,13 @@
 import { ComponentType, useMemo } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
+import clsx from 'clsx';
 
 import { EStatus } from '@/constants/status';
+
+import FormField from '@/components/forms/FormField';
+
+import styles from './styles.module.scss';
 
 export interface IFormReview {
   rate: number;
@@ -39,9 +44,24 @@ const FormReview: ComponentType<IProps> = ({ submitStatus, onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit(submitHandler)}>
-      <input type="number" min="1" max="5" {...rateInput} readOnly={submitProcessing} />
-      <textarea {...messageInput} readOnly={submitProcessing}></textarea>
-      <button type="submit" disabled={submitProcessing}>
+      <FormField label={t('form_review.rate')}>
+        <input
+          type="number"
+          min="1"
+          max="5"
+          {...rateInput}
+          className={clsx(styles.input, styles.rate)}
+          readOnly={submitProcessing}
+        />
+      </FormField>
+      <FormField label={t('form_review.review')}>
+        <textarea
+          {...messageInput}
+          className={clsx(styles.input, styles.message)}
+          readOnly={submitProcessing}
+        ></textarea>
+      </FormField>
+      <button type="submit" className={styles.submit} disabled={submitProcessing}>
         {t('form_review.submit')}
       </button>
       {submitError &&(

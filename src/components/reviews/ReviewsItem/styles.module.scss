@@ -1,0 +1,25 @@
+.reviewsItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.rate {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary-color);
+  line-height: 1;
+  font-size: 14px;
+  flex: 0 0 auto;
+  min-width: 35px;
+}
+
+.message {
+  font-size: 14px;
+}
+
+.message {
+  margin: 0;
+}

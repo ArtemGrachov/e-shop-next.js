@@ -1,0 +1,20 @@
+@use '/src/styles/mixins/input.scss' as input;
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.input {
+  @include input.input-default();
+}
+
+.rate {
+  max-width: 80px;
+  text-align: center;
+}
+
+.message {
+  resize: vertical;
+  min-height: 200px;
+}
+
+.submit {
+  @include buttons.button();
+}

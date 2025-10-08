@@ -14,12 +14,12 @@ $gap: 24px;
 
 .row {
   display: flex;
-  margin: math.div(-$gap, 2);
+  margin: 0 math.div(-$gap, 2) 48px;
 }
 
 .col {
   flex: 0 0 auto;
-  padding: math.div($gap, 2);
+  padding: 0 math.div($gap, 2);
   width: 50%;
 }
 
@@ -47,4 +47,9 @@ $gap: 24px;
 
 .description {
   margin-bottom: 24px;
+}
+
+.reviews {
+  max-width: 800px;
+  margin: 0 auto;
 }

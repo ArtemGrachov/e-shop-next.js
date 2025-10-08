@@ -5,6 +5,8 @@
     "submit": "Buy"
   },
   "form_review": {
+    "rate": "Rate",
+    "review": "Review",
     "submit": "Send"
   },
   "common_error": {
@@ -83,5 +85,11 @@
   },
   "product_filters": {
     "price": "Price"
+  },
+  "view_product": {
+    "reviews": "Reviews"
+  },
+  "reviews_item": {
+    "placeholder": "[no comment]"
   }
 }

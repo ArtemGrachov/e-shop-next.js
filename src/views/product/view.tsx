@@ -1,4 +1,4 @@
-import { getLocale } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 import FavouritesToggle from '@/components/products/FavouritesToggle';
@@ -14,8 +14,9 @@ import type { IViewProductProps } from './types';
 import styles from './styles.module.scss';
 
 const ProductView = async (props: IViewProductProps) => {
-  const [locale, data] = await Promise.all([
+  const [locale, t, data] = await Promise.all([
     getLocale(),
+    getTranslations(),
     getPageData(props)],
   ).catch(err => {
     if (err === 404) {
@@ -47,7 +48,12 @@ const ProductView = async (props: IViewProductProps) => {
               <BuyProduct product={product} />
             </div>
           </div>
-          <ProductReviews product={product} />
+          <div className={styles.reviews}>
+            <h2>
+              {t('view_product.reviews')}
+            </h2>
+            <ProductReviews product={product} />
+          </div>
         </div>
       </div>
     </ProductPageWrapper>
