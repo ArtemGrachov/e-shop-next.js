@@ -9,6 +9,8 @@
   --price-active: white;
   --price-accent: red;
   --price-inactive: grey;
+  --button-background: green;
+  --button-label: white;
 }
 
 @mixin theme-light() {
@@ -22,4 +24,6 @@
   --price-active: black;
   --price-accent: red;
   --price-inactive: grey;
+  --button-background: green;
+  --button-label: white;
 }

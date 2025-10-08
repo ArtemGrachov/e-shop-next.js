@@ -1,6 +1,7 @@
 {
   "test": "Test EN",
   "form_buy_product": {
+    "variant": "Variant",
     "submit": "Buy"
   },
   "form_review": {
