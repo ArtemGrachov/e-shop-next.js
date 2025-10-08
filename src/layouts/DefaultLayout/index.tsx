@@ -6,9 +6,7 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <Header />
-      <main>
-        {children}
-      </main>
+      {children}
     </>
   )
 }

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { PaginationModelItem } from 'ultimate-pagination';
 import { UrlObject } from 'url';
 
+import type { IPropsWithClassName } from '@/types/other/component-props';
+
 export interface ILinkParams {
   path: string;
   params: Record<string, any>;
@@ -16,10 +18,10 @@ interface IProps {
   onChange?: (page: PaginationModelItem) => any;
 }
 
-const PageItem: ComponentType<IProps & PropsWithChildren> = ({ children, page, linkPath, onChange }) => {
+const PageItem: ComponentType<IProps & PropsWithChildren & IPropsWithClassName> = ({ children, page, className, linkPath, onChange }) => {
   if (page.type === 'ELLIPSIS') {
     return (
-      <span>
+      <span className={className}>
         {children}
       </span>
     )
@@ -27,14 +29,14 @@ const PageItem: ComponentType<IProps & PropsWithChildren> = ({ children, page, l
 
   if (linkPath) {
     return (
-      <Link href={linkPath(page)} onClick={() => onChange?.(page)}>
+      <Link href={linkPath(page)} className={className} onClick={() => onChange?.(page)}>
         {children}
       </Link>
     )
   }
 
   return (
-    <button type="button" onClick={() => onChange?.(page)}>
+    <button type="button" className={className} onClick={() => onChange?.(page)}>
       {children}
     </button>
   )

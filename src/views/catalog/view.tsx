@@ -116,7 +116,10 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
           {description && <p>
             {description}
           </p>}
-          <ProductList products={productsData?.items} />
+          <ProductList
+            className={styles.list}
+            products={productsData?.items}
+          />
           <Pagination
             options={{
               currentPage: productsData?.pagination.currentPage ?? 1,
