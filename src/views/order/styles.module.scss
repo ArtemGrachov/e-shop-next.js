@@ -1,0 +1,10 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+
+.page {
+  padding-top: 24px;
+  padding-bottom: 128px;
+}
+
+.container {
+  @include layout.container(600px);
+}
