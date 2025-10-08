@@ -2,6 +2,8 @@ import { useTranslations } from 'next-intl';
 import { ComponentType, useMemo } from 'react';
 import { FieldError } from 'react-hook-form';
 
+import styles from './styles.module.scss';
+
 interface IProps {
   error?: FieldError;
 }
@@ -26,7 +28,7 @@ const FieldClientErrors: ComponentType<IProps> = ({ error }) => {
   }
 
   return (
-    <p>
+    <p className={styles.error}>
       {errorMessage}
     </p>
   )

@@ -1,6 +1,8 @@
 'use client';
 
 import { ComponentType } from 'react';
+import { useTranslations } from 'next-intl';
+import clsx from 'clsx';
 
 import { PickUpPointsProvider } from '@/views/checkout/providers/pick-up-points';
 import { DeliveryMethodsProvider } from '@/views/checkout/providers/delivery-methods';
@@ -15,26 +17,35 @@ import CartList from '@/components/cart/CartList';
 import CheckoutDelivery from '@/components/checkout/CheckoutDelivery';
 import CheckoutPayment from '@/components/checkout/CheckoutPayment';
 import CheckoutSubmit from '@/components/checkout/CheckoutSubmit';
+import OrderSummary from '@/components/order/OrderSummary';
+
+import styles from './styles.module.scss';
 
 const CheckoutPageClient: ComponentType = () => {
+  const t = useTranslations();
+
   const cartItems = useCartItems();
   const isReady = useCheckoutReady();
   const cartOrder = useCartStore(s => s.order)
 
   return (
-    <div>
-      <h1>Checkout</h1>
-      {isReady ? cartOrder ? (
-        <>
-          <CartList orderItems={cartItems} />
-          <hr />
-          <CheckoutDelivery />
-          <hr />
-          <CheckoutPayment />
-          <hr />
-          <CheckoutSubmit />
-        </>
-      ) : null : '...'}
+    <div className={styles.page}>
+      <div className={styles.container}>
+        <h1>{t('view_checkout.title')}</h1>
+        {isReady ? cartOrder ? (
+          <div className={styles.row}>
+            <div className={styles.col}>
+              <CartList orderItems={cartItems} />
+              <CheckoutDelivery />
+              <CheckoutPayment />
+            </div>
+            <div className={clsx(styles.col, styles._sm)}>
+              <OrderSummary order={cartOrder} className={styles.orderSummary} />
+              <CheckoutSubmit />
+            </div>
+          </div>
+        ) : null : '...'}
+      </div>
     </div>
   )
 }

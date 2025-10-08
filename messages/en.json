@@ -94,5 +94,8 @@
   "view_cart": {
     "title": "Cart",
     "checkout": "Checkout"
+  },
+  "view_checkout": {
+    "title": "Checkout"
   }
 }

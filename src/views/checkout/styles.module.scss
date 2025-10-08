@@ -1,0 +1,24 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+
+.page {
+  padding-top: 24px;
+  padding-bottom: 128px;
+}
+
+.container {
+  @include layout.container();
+}
+
+.row {
+  display: flex;
+  gap: 24px;
+}
+
+.col {
+  flex: 1 1 auto;
+
+  &._sm {
+    width: 500px;
+    flex: 0 0 auto;
+  }
+}

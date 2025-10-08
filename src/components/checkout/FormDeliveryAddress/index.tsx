@@ -4,6 +4,9 @@ import { useTranslations } from 'next-intl';
 import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-checkout-ctx';
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
+import FormField from '@/components/forms/FormField';
+
+import styles from './styles.module.scss';
 
 interface IProps {
   onSubmitSuccess?: Function;
@@ -35,70 +38,114 @@ const FormDeliveryAddress: ComponentType<IProps> = ({ onSubmitSuccess }) => {
 
   return (
     <form onSubmit={form.handleSubmit(submitHandler)}>
-      <div>
-        <label htmlFor="firstName">
-          {t('form_delivery_address.first_name')}
-        </label>
-        <input id="firstName" type="text" {...firstNameInput} />
+      <FormField
+        htmlFor="firstName"
+        label={t('form_delivery_address.first_name')}
+      >
+        <input
+          id="firstName"
+          type="text"
+          className={styles.input}
+          {...firstNameInput}
+        />
         <FieldClientErrors error={errors.firstName} />
-      </div>
-      <div>
-        <label htmlFor="lastName">
-          {t('form_delivery_address.last_name')}
-        </label>
-        <input id="lastName" type="text" {...lastNameInput} />
+      </FormField>
+      <FormField
+        htmlFor="lastName"
+        label={t('form_delivery_address.last_name')}
+      >
+        <input
+          id="lastName"
+          type="text"
+          className={styles.input}
+          {...lastNameInput}
+        />
         <FieldClientErrors error={errors.lastName} />
-      </div>
-      <div>
-        <label htmlFor="phoneNumber">
-          {t('form_delivery_address.phone_number')}
-        </label>
-        <input id="phoneNumber" type="text" {...phoneNumberInput} />
+      </FormField>
+      <FormField
+        htmlFor="phoneNumber"
+        label={t('form_delivery_address.phone_number')}
+      >
+        <input
+          id="phoneNumber"
+          type="text"
+          className={styles.input}
+          {...phoneNumberInput}
+        />
         <FieldClientErrors error={errors.phoneNumber} />
-      </div>
-      <div>
-        <label htmlFor="email">
-          {t('form_delivery_address.email')}
-        </label>
-        <input id="email" type="email" {...emailInput} />
+      </FormField>
+      <FormField
+        htmlFor="email"
+        label={t('form_delivery_address.email')}
+      >
+        <input
+          id="email"
+          type="email"
+          className={styles.input}
+          {...emailInput}
+        />
         <FieldClientErrors error={errors.email} />
-      </div>
-      <div>
-        <label htmlFor="city">
-          {t('form_delivery_address.city')}
-        </label>
-        <input id="city" type="text" {...cityInput} />
+      </FormField>
+      <FormField
+        htmlFor="city"
+        label={t('form_delivery_address.city')}
+      >
+        <input
+          id="city"
+          type="text"
+          className={styles.input}
+          {...cityInput}
+        />
         <FieldClientErrors error={errors.city} />
-      </div>
-      <div>
-        <label htmlFor="street">
-          {t('form_delivery_address.street')}
-        </label>
-        <input id="street" type="text" {...streetInput} />
+      </FormField>
+      <FormField
+        htmlFor="street"
+        label={t('form_delivery_address.street')}
+      >
+        <input
+          id="street"
+          type="text"
+          className={styles.input}
+          {...streetInput}
+        />
         <FieldClientErrors error={errors.street} />
-      </div>
-      <div>
-        <label htmlFor="houseNumber">
-          {t('form_delivery_address.house_number')}
-        </label>
-        <input id="houseNumber" type="text" {...houseNumberInput} />
+      </FormField>
+      <FormField
+        htmlFor="houseNumber"
+        label={t('form_delivery_address.house_number')}
+      >
+        <input
+          id="houseNumber"
+          type="text"
+          className={styles.input}
+          {...houseNumberInput}
+        />
         <FieldClientErrors error={errors.houseNumber} />
-      </div>
-      <div>
-        <label htmlFor="apartmentNumber">
-          {t('form_delivery_address.apartment_number')}
-        </label>
-        <input id="apartmentNumber" type="text" {...apartmentNumberInput} />
+      </FormField>
+      <FormField
+        htmlFor="apartmentNumber"
+        label={t('form_delivery_address.apartment_number')}
+      >
+        <input
+          id="apartmentNumber"
+          type="text"
+          className={styles.input}
+          {...apartmentNumberInput}
+        />
         <FieldClientErrors error={errors.apartmentNumber} />
-      </div>
-      <div>
-        <label htmlFor="comment">
-          {t('form_delivery_address.comment')}
-        </label>
-        <textarea id="comment" {...commentInput} />
+      </FormField>
+      <FormField
+        htmlFor="comment"
+        label={t('form_delivery_address.comment')}
+      >
+        <textarea
+          id="comment"
+          className={styles.input}
+          {...commentInput}
+        />
         <FieldClientErrors error={errors.comment} />
-      </div>
-      <button type="submit">
+      </FormField>
+      <button type="submit" className={styles.submit}>
         {t('form_delivery_address.submit')}
       </button>
     </form>

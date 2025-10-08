@@ -11,6 +11,7 @@
   --price-inactive: grey;
   --button-background: green;
   --button-label: white;
+  --error: red;
 }
 
 @mixin theme-light() {
@@ -26,4 +27,5 @@
   --price-inactive: grey;
   --button-background: green;
   --button-label: white;
+  --error: red;
 }
