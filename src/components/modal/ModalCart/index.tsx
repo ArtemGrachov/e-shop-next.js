@@ -1,0 +1,39 @@
+import { ComponentType } from 'react';
+import { pathcat } from 'pathcat';
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+
+import { ROUTES } from '@/router/routes';
+
+import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
+import { IModalProps } from '@/providers/modals/types';
+
+import { useCartItems } from '@/hooks/cart/cart-items';
+
+import Modal from '@/components/modal/Modal';
+import ModalWindow from '@/components/modal/ModalWindow';
+import CartList from '@/components/cart/CartList';
+import OrderSummary from '@/components/order/OrderSummary';
+
+import styles from './styles.module.scss';
+
+const ModalCart: ComponentType<IModalProps> = (props) => {
+  const t = useTranslations();
+
+  const order = useCartStore(s => s.order);
+  const cartItems = useCartItems();
+
+  return (
+    <Modal>
+      <ModalWindow backdrop={true} {...props}>
+        <CartList orderItems={cartItems} />
+        {order && <OrderSummary order={order} className={styles.orderSummary} />}
+        <Link href={pathcat(ROUTES.CHECKOUT, '/')} className={styles.link}>
+          {t('view_cart.checkout')}
+        </Link>
+      </ModalWindow>
+    </Modal>
+  )
+}
+
+export default ModalCart;

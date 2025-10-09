@@ -11,6 +11,9 @@ import { StorageProvider } from '@/providers/storage';
 import { ShopProvider } from '@/providers/shop';
 import { AppProvider } from '@/providers/app';
 import { ThemeProvider } from '@/providers/theme';
+import { ModalsProvider } from '@/providers/modals';
+
+import ModalRoot from '@/components/modal/ModalRoot';
 
 import '@/styles/main.scss';
 
@@ -37,7 +40,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   <FavouritesProvider>
                     <ThemeProvider>
                       <AppProvider>
-                        {children}
+                        <ModalsProvider>
+                          {children}
+                          <ModalRoot />
+                        </ModalsProvider>
                       </AppProvider>
                     </ThemeProvider>
                   </FavouritesProvider>

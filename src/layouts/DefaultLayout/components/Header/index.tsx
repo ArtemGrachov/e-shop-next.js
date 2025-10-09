@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import ProductSearch from '@/components/products/ProductSearch';
 import ThemeSwitch from '@/components/other/ThemeSwitch';
+import CartToggle from '@/components/cart/CartToggle';
 
 import styles from './styles.module.scss';
 
@@ -15,6 +16,7 @@ const Header: ComponentType = () => {
         </Link>
         <ProductSearch />
         <ThemeSwitch />
+        <CartToggle />
       </div>
     </header>
   )
