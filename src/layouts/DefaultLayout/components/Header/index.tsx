@@ -2,6 +2,7 @@ import { ComponentType } from 'react';
 import Link from 'next/link';
 
 import ProductSearch from '@/components/products/ProductSearch';
+import ThemeSwitch from '@/components/other/ThemeSwitch';
 
 import styles from './styles.module.scss';
 
@@ -13,6 +14,7 @@ const Header: ComponentType = () => {
           E-Shop
         </Link>
         <ProductSearch />
+        <ThemeSwitch />
       </div>
     </header>
   )

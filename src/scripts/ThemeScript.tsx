@@ -1,6 +1,6 @@
 import { ComponentType } from 'react';
 
-import { ETheme, THEME_STORE_KEY } from '@/constants/theme';
+import type { ETheme } from '@/constants/theme';
 
 declare global {
   interface Window {
@@ -16,8 +16,10 @@ function initTheme() {
   }
 
   try {
-    theme = localStorage.getItem(THEME_STORE_KEY) as ETheme;
-  } catch (err) { }
+    theme = localStorage.getItem('theme') as ETheme;
+  } catch (err) {
+    console.log(err);
+  }
 
   if (theme) {
     window.__setTheme(theme);
