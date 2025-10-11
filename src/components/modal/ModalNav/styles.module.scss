@@ -1,4 +1,8 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+
 .content {
-  padding: 24px;
+  @include layout.container();
+
   flex: 1 1 auto;
+  overflow-y: auto;
 }
