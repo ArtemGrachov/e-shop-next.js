@@ -10,6 +10,9 @@ import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-ch
 import { usePickUpPointsCtx } from '@/views/checkout/providers/pick-up-points/hooks/use-pick-up-points-ctx';
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
+import FormField from '@/components/forms/FormField';
+
+import styles from './styles.module.scss';
 
 interface IProps {
   onSubmitSuccess?: Function;
@@ -73,11 +76,16 @@ const FormDeliveryMethod: ComponentType<IProps> = ({ onSubmitSuccess }) => {
 
   return (
     <form onSubmit={form.handleSubmit(submitHandler)}>
-      <div>
-        <label htmlFor="deliveryMethod">
-          {t('form_delivery_method.delivery_method')}
-        </label>
-        <select id="deliveryMethod" {...deliveryMethodInput} onChange={deliveryMethodChangeHandler}>
+      <FormField
+        htmlFor="deliveryMethod"
+        label={t('form_delivery_method.delivery_method')}
+      >
+        <select
+          id="deliveryMethod"
+          className={styles.input}
+          {...deliveryMethodInput}
+          onChange={deliveryMethodChangeHandler}
+        >
           <option value="">-</option>
           {deliveryMethodOptions.map(option => {
             return (
@@ -89,25 +97,31 @@ const FormDeliveryMethod: ComponentType<IProps> = ({ onSubmitSuccess }) => {
           })}
         </select>
         <FieldClientErrors error={errors.deliveryMethodId} />
-      </div>
-      {showPickUpSelection && <div>
-        <label htmlFor="pickUpPoint">
-          {t('form_delivery_method.pick_up_point')}
-        </label>
-        <select id="pickUpPoint" {...pickUpPointInput}>
-          <option value="">-</option>
-          {pickUpPoinsOptions.map(option => {
-            return (
-              <option key={option.id} value={option.id}>
-                {option.name} {' '} | {' '}
-                {option.openingHours}
-              </option>
-            )
-          })}
-        </select>
-        <FieldClientErrors error={errors.pickUpPointId} />
-      </div>}
-      <button type="submit">
+      </FormField>
+      {showPickUpSelection && (
+        <FormField
+          htmlFor="pickUpPoint"
+          label={t('form_delivery_method.pick_up_point')}
+        >
+          <select
+            id="pickUpPoint"
+            className={styles.input}
+            {...pickUpPointInput}
+          >
+            <option value="">-</option>
+            {pickUpPoinsOptions.map(option => {
+              return (
+                <option key={option.id} value={option.id}>
+                  {option.name} {' '} | {' '}
+                  {option.openingHours}
+                </option>
+              )
+            })}
+          </select>
+          <FieldClientErrors error={errors.pickUpPointId} />
+        </FormField>
+      )}
+      <button type="submit" className={styles.submit}>
         {t('form_delivery_method.submit')}
       </button>
     </form>

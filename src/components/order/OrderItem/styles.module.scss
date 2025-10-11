@@ -1,0 +1,33 @@
+.orderItem {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex: 1 1 auto;
+  color: var(--secondary-link);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--primary-link);
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  background: var(--image-placeholder-background);
+  border-radius: 4px;
+}
+
+.name {
+  flex: 1 1 auto;
+}

@@ -1,9 +1,15 @@
 import { ChangeEvent, ComponentType, useMemo } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useLocale, useTranslations } from 'next-intl';
+import clsx from 'clsx';
+
+import FormField from '@/components/forms/FormField';
 
 import type { IProduct } from '@/types/models/product';
 import type { IProductVariant } from '@/types/models/product-variant';
+import type { IPropsWithClassName } from '@/types/other/component-props';
+
+import styles from './styles.module.scss';
 
 interface IProps {
   product: IProduct;
@@ -22,7 +28,7 @@ export interface IFormBuyOutput {
   variant?: IProductVariant | null;
 }
 
-const FormBuyProduct: ComponentType<IProps> = ({ product, currentVariant, onSubmit, onVariantSelect }) => {
+const FormBuyProduct: ComponentType<IProps & IPropsWithClassName> = ({ className, product, currentVariant, onSubmit, onVariantSelect }) => {
   const t = useTranslations();
   const locale = useLocale();
   const { register, handleSubmit } = useForm<IFormBuyProduct>({ defaultValues: { variantId: currentVariant?.id, quantity: '1' } });
@@ -57,14 +63,23 @@ const FormBuyProduct: ComponentType<IProps> = ({ product, currentVariant, onSubm
   const quantityInput = register('quantity');
 
   return (
-    <form onSubmit={formSubmitCallback}>
-      <select {...variantIdInput}>
-        {variantIdOptions.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
-      </select>
-      <input type="number" min="1" {...quantityInput} />
-      <button type="submit">
-        {t('form_buy_product.submit')}
-      </button>
+    <form className={className} onSubmit={formSubmitCallback}>
+      <FormField label={t('form_buy_product.variant')}>
+        <select {...variantIdInput} className={styles.input}>
+          {variantIdOptions.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+        </select>
+      </FormField>
+      <div className={styles.buyRow}>
+        <input
+          type="number"
+          min="1"
+          className={clsx(styles.input, styles.quantity)}
+          {...quantityInput}
+        />
+        <button type="submit" className={styles.button}>
+          {t('form_buy_product.submit')}
+        </button>
+      </div>
     </form>
   )
 }

@@ -17,6 +17,8 @@ import ProductPrice from '@/components/products/ProductPrice';
 import type { IProduct } from '@/types/models/product';
 import type { IProductVariant } from '@/types/models/product-variant';
 
+import styles from './styles.module.scss';
+
 interface IProps {
   product: IProduct;
 }
@@ -56,9 +58,10 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
   }
 
   return (
-    <>
+    <div>
       {product?.variants?.length && (
         <FormBuyProduct
+          className={styles.formBuyProduct}
           product={product}
           currentVariant={currentVariant}
           onVariantSelect={variantChangeHandler}
@@ -66,7 +69,7 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
         />
       )}
       {product && currentVariant && <ProductPrice product={product} productVariant={currentVariant} />}
-    </>
+    </div>
   )
 }
 

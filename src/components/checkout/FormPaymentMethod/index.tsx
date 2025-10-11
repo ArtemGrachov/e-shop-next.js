@@ -6,6 +6,9 @@ import { usePaymentMethodsStore } from '@/views/checkout/providers/payment-metho
 import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-checkout-ctx';
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
+import FormField from '@/components/forms/FormField';
+
+import styles from './styles.module.scss';
 
 interface IProps {
   onSubmitSuccess?: Function;
@@ -34,11 +37,15 @@ const FormPaymentMethod: ComponentType<IProps> = ({ onSubmitSuccess }) => {
 
   return (
     <form onSubmit={form.handleSubmit(submitHandler)}>
-      <div>
-        <label htmlFor="paymentMethod">
-          {t('form_payment_method.payment_method')}
-        </label>
-        <select id="paymentMethod" {...paymentMethodInput}>
+      <FormField
+        htmlFor="paymentMethod"
+        label={t('form_payment_method.payment_method')}
+      >
+        <select
+          id="paymentMethod"
+          className={styles.input}
+          {...paymentMethodInput}
+        >
           <option value="">-</option>
           {paymentMethodOptions.map(option => {
             return (
@@ -50,8 +57,8 @@ const FormPaymentMethod: ComponentType<IProps> = ({ onSubmitSuccess }) => {
           })}
         </select>
         <FieldClientErrors error={errors.paymentMethodId} />
-      </div>
-      <button type="submit">
+      </FormField>
+      <button type="submit" className={styles.submit}>
         {t('form_payment_method.submit')}
       </button>
     </form>

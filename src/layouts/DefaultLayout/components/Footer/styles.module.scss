@@ -1,0 +1,15 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+
+.footer {
+  padding: 24px 0;
+  margin-top: auto;
+  text-align: right;
+}
+
+.container {
+  @include layout.container();
+}
+
+.link {
+  color: var(--primary-link);
+}

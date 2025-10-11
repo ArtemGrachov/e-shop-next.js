@@ -1,0 +1,55 @@
+@mixin input-button {
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: none;
+  transition: ease-in-out 200ms;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-link);
+  padding: 0;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:active {
+    opacity: 0.75;
+  }
+}
+
+@mixin button($max-width: 200px) {
+  height: 42px;
+  width: 100%;
+  max-width: $max-width;
+  border: none;
+  background: var(--button-background);
+  color: var(--button-label);
+  transition: ease-in-out 200ms;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 1;
+  font-family: 'Ubuntu', 'Ubuntu Fallback';
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:active {
+    opacity: 0.75;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

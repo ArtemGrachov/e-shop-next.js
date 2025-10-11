@@ -1,0 +1,11 @@
+@mixin input-default {
+  display: block;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-primary);
+  width: 100%;
+  color: var(--text-color);
+  background: var(--primary-background);
+  font-size: 16px;
+  font-family: 'Ubuntu', 'Ubuntu Fallback';
+}

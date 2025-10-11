@@ -1,9 +1,15 @@
 {
-  "test": "Test EN",
+  "nav": {
+    "home": "Home page",
+    "catalog": "Catalog"
+  },
   "form_buy_product": {
+    "variant": "Variant",
     "submit": "Buy"
   },
   "form_review": {
+    "rate": "Rate",
+    "review": "Review",
     "submit": "Send"
   },
   "common_error": {
@@ -79,5 +85,29 @@
     "not_found_title": "Not found",
     "any_title": "An error occured",
     "return": "Return to home page"
+  },
+  "view_product": {
+    "reviews": "Reviews"
+  },
+  "reviews_item": {
+    "placeholder": "[no comment]"
+  },
+  "view_cart": {
+    "title": "Cart",
+    "checkout": "Checkout"
+  },
+  "view_checkout": {
+    "title": "Checkout"
+  },
+  "footer": {
+    "developed_by": "Designed and developed by <name></name>, <year></year>"
+  },
+  "view_catalog": {
+    "product_filters": {
+      "price": "Price"
+    },
+    "mobile_filters": {
+      "filters": "Filters"
+    }
   }
 }

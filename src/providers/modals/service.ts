@@ -1,0 +1,57 @@
+import { useRef } from 'react';
+import { v4 as uuid } from '@lukeed/uuid';
+
+import type { IModalItem, IModalOptions } from '@/providers/modals/types';
+
+export const useModalService = () => {
+  const modals = useRef<IModalItem[]>([]);
+  const callbacks = useRef<Function[]>([]);
+
+  const openModal = <T,>({ id, component, props }: IModalOptions<T>) => {
+    const item = {
+      id: id ?? uuid(),
+      component,
+      props,
+      close: () => close(item),
+    };
+
+    modals.current = [...modals.current, item];
+    update();
+
+    return item.close;
+  }
+
+  const closeModalById = (id: string | number) => {
+    const item = modals.current.find(i => i.id === id);
+
+    if (!item) {
+      return;
+    }
+
+    close(item);
+  }
+
+  const close = (item: IModalItem) => {
+    modals.current = modals.current.filter(i => i !== item);
+    update();
+  }
+
+  const update = () => {
+    callbacks.current.forEach(cb => cb(modals.current));
+  }
+
+  const subscribe = (callback: (modals: IModalItem[]) => any) => {
+    callbacks.current.push(callback);
+
+    return () => {
+      const index = callbacks.current.indexOf(callback);
+      callbacks.current.splice(index, 1);
+    }
+  }
+
+  return {
+    subscribe,
+    openModal,
+    closeModalById,
+  };
+}

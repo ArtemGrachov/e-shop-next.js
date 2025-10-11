@@ -5,7 +5,11 @@ import { pathcat } from 'pathcat';
 
 import { ROUTES } from '@/router/routes';
 
+import ProductPrice from '@/components/products/ProductPrice';
+
 import type { IProduct } from '@/types/models/product';
+
+import styles from './styles.module.scss';
 
 interface IProps {
   product: IProduct;
@@ -19,12 +23,14 @@ const ProductCard: ComponentType<IProps> = ({ product }) => {
   }, [product]);
 
   return (
-    <article>
+    <article className={styles.productCard}>
+      <div className={styles.image}></div>
       <h3>
-        <Link href={href}>
+        <Link href={href} className={styles.link}>
           {product.name[locale]}
         </Link>
       </h3>
+      <ProductPrice product={product} productVariant={product.variants?.[0]} />
     </article>
   )
 }

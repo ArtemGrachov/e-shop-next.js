@@ -7,6 +7,8 @@ import { getPaginationModel, PaginationModelItem, PaginationModelOptions } from 
 
 import PageItem, { ILinkParams } from '@/components/other/PageItem';
 
+import styles from './styles.module.scss';
+
 interface IProps {
   options: PaginationModelOptions;
   linkParams: ILinkParams;
@@ -27,31 +29,42 @@ const Pagination: ComponentType<IProps> = ({ options, linkParams, linkPath, onCh
 
   return (
     <div>
-      <ul>
+      <ul className={styles.list}>
         {pagination.map((page, index) => {
           let label: number | string = page.value;
 
           switch (page.type) {
             case 'ELLIPSIS': {
               label = '...';
+              break;
             }
             case 'FIRST_PAGE_LINK': {
               label = '<<';
+              break;
             }
             case 'PREVIOUS_PAGE_LINK': {
               label = '<';
+              break;
             }
             case 'NEXT_PAGE_LINK': {
               label = '>';
+              break;
             }
             case 'LAST_PAGE_LINK': {
               label = '>>';
+              break;
             }
           }
 
           return (
-            <li key={index}>
-              <PageItem page={page} linkPath={linkPath} linkParams={linkParams} onChange={onChange}>
+            <li key={index} className={styles.item}>
+              <PageItem
+                className={styles.page}
+                page={page}
+                linkPath={linkPath}
+                linkParams={linkParams}
+                onChange={onChange}
+              >
                 {label}
               </PageItem>
             </li>

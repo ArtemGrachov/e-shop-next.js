@@ -1,0 +1,26 @@
+@use '/src/styles/mixins/breakpoints.scss' as breakpoints;
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @include breakpoints.sm {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+  }
+}
+
+.link {
+  display: block;
+  padding: 8px 24px;
+  text-decoration: none;
+  color: var(--primary-link);
+  font-size: 18px;
+
+  @include breakpoints.sm {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

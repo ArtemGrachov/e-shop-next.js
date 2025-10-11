@@ -1,4 +1,4 @@
-import { getLocale } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 import FavouritesToggle from '@/components/products/FavouritesToggle';
@@ -11,9 +11,12 @@ import { getPageData } from './server';
 
 import type { IViewProductProps } from './types';
 
+import styles from './styles.module.scss';
+
 const ProductView = async (props: IViewProductProps) => {
-  const [locale, data] = await Promise.all([
+  const [locale, t, data] = await Promise.all([
     getLocale(),
+    getTranslations(),
     getPageData(props)],
   ).catch(err => {
     if (err === 404) {
@@ -28,13 +31,31 @@ const ProductView = async (props: IViewProductProps) => {
 
   return (
     <ProductPageWrapper {...props} {...data}>
-      <h1>
-        {product.name[locale]}
-      </h1>
-      {product && <ProductDescription product={product} />}
-      <BuyProduct product={product} />
-      <FavouritesToggle product={product} />
-      <ProductReviews product={product} />
+      <main className={styles.page}>
+        <div className={styles.container}>
+          <div className={styles.row}>
+            <div className={styles.col}>
+              <div className={styles.media}></div>
+            </div>
+            <div className={styles.col}>
+              <div className={styles.titleRow}>
+                <FavouritesToggle className={styles.favouritesToggle} product={product} />
+                <h1 className={styles.title}>
+                  {product.name[locale]}
+                </h1>
+              </div>
+              {product && <ProductDescription className={styles.description} product={product} />}
+              <BuyProduct product={product} />
+            </div>
+          </div>
+          <div className={styles.reviews}>
+            <h2>
+              {t('view_product.reviews')}
+            </h2>
+            <ProductReviews product={product} />
+          </div>
+        </div>
+      </main>
     </ProductPageWrapper>
   )
 }

@@ -6,12 +6,13 @@ import { useLocale } from 'next-intl';
 import { useCurrentVariantCtx } from '../../providers/current-variant/hooks/use-current-variant-ctx';
 
 import type { IProduct } from '@/types/models/product';
+import { IPropsWithClassName } from '@/types/other/component-props';
 
 interface IProps {
   product: IProduct;
 }
 
-const ProductDescription: ComponentType<IProps> = ({ product }) => {
+const ProductDescription: ComponentType<IProps & IPropsWithClassName> = ({ product, className }) => {
   const locale = useLocale();
   const { currentVariant } = useCurrentVariantCtx();
 
@@ -36,7 +37,7 @@ const ProductDescription: ComponentType<IProps> = ({ product }) => {
   }, [product, currentVariant, locale]);
 
   return (
-    <div>
+    <div className={className}>
       {productDescription && <div dangerouslySetInnerHTML={{ __html: productDescription }} />}
       {variantDescription && <div dangerouslySetInnerHTML={{ __html: variantDescription }} />}
     </div>

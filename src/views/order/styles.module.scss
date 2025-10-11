@@ -1,0 +1,9 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+
+.page {
+  @include layout.page;
+}
+
+.container {
+  @include layout.container(600px);
+}

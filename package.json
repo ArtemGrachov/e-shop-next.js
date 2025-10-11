@@ -12,13 +12,16 @@
     "@lukeed/uuid": "^2.0.1",
     "axios": "^1.12.2",
     "axios-mock-adapter": "^2.1.0",
+    "clsx": "^2.1.1",
     "next": "15.5.3",
     "next-intl": "^4.3.9",
     "pathcat": "^1.4.0",
     "react": "19.1.0",
+    "react-bootstrap-icons": "^1.11.6",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.63.0",
     "react-range": "^1.10.0",
+    "react-screen-size-helper": "^1.0.3",
     "ultimate-pagination": "^1.0.0",
     "zustand": "^5.0.8"
   },
@@ -26,6 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "sass": "^1.93.2",
     "typescript": "^5"
   }
 }

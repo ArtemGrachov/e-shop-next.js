@@ -3,8 +3,8 @@ export const useStorageService = () => {
     localStorage.setItem(key, content);
   }
 
-  const getItem = (key: string) => {
-    return localStorage.getItem(key);
+  const getItem = <T = any, >(key: string): T | null => {
+    return localStorage.getItem(key) as T | null;
   }
 
   const removeItem = (key: string) => {
@@ -21,9 +21,9 @@ export const useStorageService = () => {
     }
   }
 
-  const getItemJSON = (key: string, throwError = false) => {
+  const getItemJSON = <T = any, >(key: string, throwError = false): T | null => {
     try {
-      const raw = getItem(key);
+      const raw = getItem<string>(key);
 
       if (raw == null) {
         return raw;

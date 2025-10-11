@@ -4,13 +4,16 @@ import { notFound } from 'next/navigation';
 
 import { ROUTES } from '@/router/routes';
 
-import CategoryNav from '@/components/categories/CategoryNav';
+import CategoryNav from '@/views/catalog/components/CategoryNav';
 import ProductList from '@/components/products/ProductList';
 import Pagination from '@/components/other/Pagination';
-import ProductFilters from '@/components/products/ProductFilters';
+import ProductFilters from '@/views/catalog/components/ProductFilters';
+import MobileFilters from '@/views/catalog/components/MobileFilters';
 
 import { getPageData } from './server';
 import type { IViewCategoryProps } from './types';
+
+import styles from './styles.module.scss';
 
 const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
   const [
@@ -101,31 +104,43 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
   const description = getDescription();
 
   return (
-    <>
-      <h1>
-        {title}
-      </h1>
-      {description && <p>
-        {description}
-      </p>}
-      <CategoryNav categories={categories} />
-      {productsData && <ProductFilters filters={productsData.filters} />}
-      <ProductList products={productsData?.items} />
-      <Pagination
-        options={{
-          currentPage: productsData?.pagination.currentPage ?? 1,
-          totalPages: productsData?.pagination.totalPages ?? 1,
-        }}
-        linkParams={{
-          path: ROUTES.CATALOG,
-          params: {
-            slugId: categorySlug ? categorySlug : '',
-            ...searchParams,
-          },
-          pageKey: 'page',
-        }}
-      />
-    </>
+    <main className={styles.page}>
+      <div className={styles.container}>
+        <aside className={styles.sidebar}>
+          <CategoryNav className={styles.categoryNav} categories={categories} />
+          {productsData && <ProductFilters filters={productsData.filters} />}
+        </aside>
+        <main className={styles.content}>
+          <h1>
+            {title}
+          </h1>
+          {description && <p>
+            {description}
+          </p>}
+          <div className={styles.mobileFilters}>
+            <MobileFilters data={data} />
+          </div>
+          <ProductList
+            className={styles.list}
+            products={productsData?.items}
+          />
+          <Pagination
+            options={{
+              currentPage: productsData?.pagination.currentPage ?? 1,
+              totalPages: productsData?.pagination.totalPages ?? 1,
+            }}
+            linkParams={{
+              path: ROUTES.CATALOG,
+              params: {
+                slugId: categorySlug ? categorySlug : '',
+                ...searchParams,
+              },
+              pageKey: 'page',
+            }}
+          />
+        </main>
+      </div>
+    </main>
   )
 }
 

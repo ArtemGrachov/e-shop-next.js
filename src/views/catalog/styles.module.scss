@@ -1,0 +1,47 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+@use '/src/styles/mixins/breakpoints.scss' as breakpoints;
+
+.page {
+  @include layout.page;
+}
+
+.container {
+  @include layout.container();
+
+  @include breakpoints.sm {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+  }
+}
+
+.sidebar {
+  flex: 0 0 auto;
+  width: 300px;
+  padding-top: 24px;
+  display: none;
+
+  @include breakpoints.md {
+    display: block;
+  }
+}
+
+.mobileFilters {
+  margin-bottom: 24px;
+
+  @include breakpoints.md {
+    display: none;
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.categoryNav {
+  margin-bottom: 24px;
+}
+
+.list {
+  margin-bottom: 48px;
+}

@@ -1,0 +1,9 @@
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.orderSummary {
+  margin-bottom: 24px;
+}
+
+.link {
+  @include buttons.button(100%);
+}

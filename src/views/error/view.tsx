@@ -6,6 +6,8 @@ import { useTranslations } from 'next-intl';
 
 import { EErrorView } from '@/views/error/constants';
 
+import styles from './styles.module.scss';
+
 interface IProps {
   pageType: EErrorView
 }
@@ -27,14 +29,14 @@ const ErrorView: ComponentType<IProps> = ({ pageType }) => {
   }
 
   return (
-    <div>
-      <h1>
+    <main className={styles.page}>
+      <h1 className={styles.title}>
         {title}
       </h1>
-      <Link href="/">
+      <Link href="/" className={styles.button}>
         {t('view_error.return')}
       </Link>
-    </div>
+    </main>
   )
 }
 

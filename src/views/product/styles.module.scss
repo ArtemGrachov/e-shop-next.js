@@ -1,0 +1,54 @@
+@use 'sass:math';
+@use '/src/styles/mixins/layout.scss' as layout;
+
+.page {
+  @include layout.page;
+}
+
+.container {
+  @include layout.container();
+}
+
+$gap: 24px;
+
+.row {
+  display: flex;
+  margin: 0 math.div(-$gap, 2) 48px;
+}
+
+.col {
+  flex: 0 0 auto;
+  padding: 0 math.div($gap, 2);
+  width: 50%;
+}
+
+.media {
+  padding-top: 100%;
+  background: var(--image-placeholder-background);
+  border-radius: 4px;
+}
+
+.titleRow {
+  gap: 24px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.favouritesToggle {
+  flex: 0 0 auto;
+}
+
+.title {
+  flex: 1 1 auto;
+  margin: 0;
+}
+
+.description {
+  margin-bottom: 24px;
+}
+
+.reviews {
+  max-width: 800px;
+  margin: 0 auto;
+}
