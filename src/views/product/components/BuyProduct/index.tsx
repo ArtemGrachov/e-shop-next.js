@@ -10,6 +10,7 @@ import { ROUTES } from '@/router/routes';
 import { useCurrentVariantCtx } from '../../providers/current-variant/hooks/use-current-variant-ctx';
 
 import { useAddToCart } from '@/hooks/cart/add-to-cart';
+import { useRoutePath } from '@/hooks/routing/use-route-path';
 
 import FormBuyProduct, { IFormBuyOutput } from '@/components/products/FormBuyProduct';
 import ProductPrice from '@/components/products/ProductPrice';
@@ -26,6 +27,7 @@ interface IProps {
 const BuyProduct: ComponentType<IProps> = ({ product }) => {
   const locale = useLocale();
   const { currentVariant, setVariant } = useCurrentVariantCtx();
+  const routePath = useRoutePath();
 
   const { addToCart } = useAddToCart(product, currentVariant);
 
@@ -36,9 +38,9 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
 
     if (variant) {
       const variantSlugId = `${variant.slug[locale]}-${variant.id}`;
-      newPath = pathcat('/', ROUTES.PRODUCT_VARIANT, { slugId, variantSlugId });
+      newPath = routePath(ROUTES.PRODUCT_VARIANT, { slugId, variantSlugId });
     } else {
-      newPath = pathcat('/', ROUTES.PRODUCT, { slugId });
+      newPath = routePath(ROUTES.PRODUCT, { slugId });
     }
 
     if (location.search) {

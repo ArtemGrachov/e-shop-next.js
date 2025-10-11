@@ -13,11 +13,14 @@ import Link from 'next/link';
 import { pathcat } from 'pathcat';
 import { ROUTES } from '@/router/routes';
 
+import { useRoutePath } from '@/hooks/routing/use-route-path';
+
 const ModalCart = lazy(() => import('@/components/modal/ModalCart'));
 
 const CartToggle: ComponentType = () => {
   const { openModal } = useModalsCtx();
   const { isMobile, isTablet } = useScreenSize({ breakpoints: BREAKPOINTS });
+  const routePath = useRoutePath();
 
   const openCartHandler = <T,>() => {
     openModal({ id: 'MODAL_CART', component: ModalCart });
@@ -30,7 +33,7 @@ const CartToggle: ComponentType = () => {
   )
 
   const CartLink = ({ children }: PropsWithChildren) => (
-    <Link href={pathcat(ROUTES.CART, '/')} className={styles.cartToggle}>
+    <Link href={routePath(ROUTES.CART)} className={styles.cartToggle}>
       {children}
     </Link>
   )

@@ -5,6 +5,7 @@ import { pathcat } from 'pathcat';
 import { UrlObject } from 'url';
 import { getPaginationModel, PaginationModelItem, PaginationModelOptions } from 'ultimate-pagination';
 
+import { useRoutePath } from '@/hooks/routing/use-route-path';
 import PageItem, { ILinkParams } from '@/components/other/PageItem';
 
 import styles from './styles.module.scss';
@@ -17,13 +18,15 @@ interface IProps {
 }
 
 const Pagination: ComponentType<IProps> = ({ options, linkParams, linkPath, onChange }) => {
+  const routePath = useRoutePath();
+
   const pagination = useMemo(() => {
     return getPaginationModel(options);
   }, [options]);
 
   if (!linkPath && linkParams) {
     linkPath = (page) => {
-      return pathcat('/', linkParams.path, { ...linkParams.params, [linkParams.pageKey ?? 'page']: page.value });
+      return routePath(linkParams.path, { ...linkParams.params, [linkParams.pageKey ?? 'page']: page.value });
     }
   }
 
