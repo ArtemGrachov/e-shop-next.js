@@ -1,5 +1,9 @@
 @use '/src/styles/mixins/layout.scss' as layout;
 
+.productSearch {
+  flex: 1 1 auto;
+}
+
 .content {
   @include layout.container();
 

@@ -4,16 +4,19 @@ import { ComponentType } from 'react';
 
 import Nav from '@/components/nav/Nav';
 import ModalFullscreen from '@/components/modal/ModalFullscreen';
+import ModalHeader from '@/components/modal/ModalHeader';
+import ProductSearch from '@/components/products/ProductSearch';
 
 import type { IModalProps } from '@/providers/modals/types';
 
 import styles from './styles.module.scss';
-import ModalHeader from '@/components/modal/ModalHeader';
 
 const ModalNav: ComponentType<IModalProps> = (props) => {
   return (
     <ModalFullscreen {...props}>
-      <ModalHeader {...props} />
+      <ModalHeader {...props}>
+        <ProductSearch className={styles.productSearch} />
+      </ModalHeader>
       <div className={styles.content}>
         <Nav />
       </div>

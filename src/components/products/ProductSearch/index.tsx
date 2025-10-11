@@ -4,6 +4,7 @@ import { ComponentType, useMemo } from 'react';
 import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { Search } from 'react-bootstrap-icons';
+import clsx from 'clsx';
 
 import { useRoutePath } from '@/hooks/routing/use-route-path';
 import InputPrimary from '@/components/inputs/InputPrimary';
@@ -11,13 +12,15 @@ import InputPrimaryButton from '@/components/inputs/InputPrimaryButton';
 
 import { ROUTES } from '@/router/routes';
 
+import type { IPropsWithClassName } from '@/types/other/component-props';
+
 import styles from './styles.module.scss';
 
 interface IFormSearch {
   search: string;
 }
 
-const ProductSearch: ComponentType = () => {
+const ProductSearch: ComponentType<IPropsWithClassName> = ({ className }) => {
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
@@ -62,7 +65,7 @@ const ProductSearch: ComponentType = () => {
   }
 
   return (
-    <form className={styles.productSearch} onSubmit={handleSubmit(submitHandler)}>
+    <form className={clsx(styles.productSearch, className)} onSubmit={handleSubmit(submitHandler)}>
       <InputPrimary
         formControl={searchInput}
         inputAttrs={{
