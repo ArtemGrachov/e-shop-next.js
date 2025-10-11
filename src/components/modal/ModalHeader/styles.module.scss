@@ -1,0 +1,15 @@
+@use '/src/styles/mixins/header.scss' as header;
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.header {
+  @include header.header-root();
+  justify-content: flex-end;
+}
+
+.container {
+  @include header.header-container();
+}
+
+.close {
+  @include buttons.input-button();
+}
