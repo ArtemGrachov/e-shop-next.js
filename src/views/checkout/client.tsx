@@ -29,7 +29,7 @@ const CheckoutPageClient: ComponentType = () => {
   const cartOrder = useCartStore(s => s.order)
 
   return (
-    <div className={styles.page}>
+    <main className={styles.page}>
       <div className={styles.container}>
         <h1>{t('view_checkout.title')}</h1>
         {isReady ? cartOrder ? (
@@ -46,7 +46,7 @@ const CheckoutPageClient: ComponentType = () => {
           </div>
         ) : null : '...'}
       </div>
-    </div>
+    </main>
   )
 }
 

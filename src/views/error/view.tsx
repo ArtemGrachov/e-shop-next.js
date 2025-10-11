@@ -29,14 +29,14 @@ const ErrorView: ComponentType<IProps> = ({ pageType }) => {
   }
 
   return (
-    <div className={styles.page}>
+    <main className={styles.page}>
       <h1 className={styles.title}>
         {title}
       </h1>
       <Link href="/" className={styles.button}>
         {t('view_error.return')}
       </Link>
-    </div>
+    </main>
   )
 }
 

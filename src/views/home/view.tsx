@@ -2,7 +2,7 @@ import styles from './styles.module.scss';
 
 const HomeView = () => {
   return (
-    <main>
+    <main className={styles.page}>
       <div className={styles.container}>
         <h1>
           Demo Next.js E-Commerce website

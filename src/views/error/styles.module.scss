@@ -1,4 +1,9 @@
+@use '/src/styles/mixins/layout.scss' as layout;
 @use '/src/styles/mixins/buttons.scss' as buttons;
+
+.page {
+  @include layout.page;
+}
 
 .page {
   padding-top: 24px;

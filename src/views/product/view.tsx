@@ -31,7 +31,7 @@ const ProductView = async (props: IViewProductProps) => {
 
   return (
     <ProductPageWrapper {...props} {...data}>
-      <div className={styles.page}>
+      <main className={styles.page}>
         <div className={styles.container}>
           <div className={styles.row}>
             <div className={styles.col}>
@@ -55,7 +55,7 @@ const ProductView = async (props: IViewProductProps) => {
             <ProductReviews product={product} />
           </div>
         </div>
-      </div>
+      </main>
     </ProductPageWrapper>
   )
 }

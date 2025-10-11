@@ -25,7 +25,7 @@ const CartPageClient: ComponentType = () => {
   const cartItems = useCartItems();
 
   return (
-    <div className={styles.page}>
+    <main className={styles.page}>
       <div className={styles.container}>
         <h1>{t('view_cart.title')}</h1>
         <div className={styles.row}>
@@ -40,7 +40,7 @@ const CartPageClient: ComponentType = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   )
 }
 

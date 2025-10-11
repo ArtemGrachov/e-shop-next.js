@@ -1,7 +1,8 @@
 import { PropsWithChildren } from 'react';
 
-import Header from '@/layouts/DefaultLayout/components/Header';
-import DesktopNav from '@/layouts/DefaultLayout/components/DesktopNav';
+import Header from './components/Header';
+import DesktopNav from './components/DesktopNav';
+import Footer from './components/Footer';
 
 import styles from './styles.module.scss';
 
@@ -11,6 +12,7 @@ const DefaultLayout = ({ children }: PropsWithChildren) => {
       <Header />
       <DesktopNav />
       {children}
+      <Footer />
     </div>
   )
 }

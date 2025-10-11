@@ -35,7 +35,7 @@ const OrderPageClient: ComponentType = () => {
   const order = useOrderStore(s => s.order);
 
   return (
-    <div className={styles.page}>
+    <main className={styles.page}>
       <div className={styles.container}>
         <h1>
           {t('order_page.title')}
@@ -51,7 +51,7 @@ const OrderPageClient: ComponentType = () => {
           </>
         ) : null}
       </div>
-    </div>
+    </main>
   )
 }
 

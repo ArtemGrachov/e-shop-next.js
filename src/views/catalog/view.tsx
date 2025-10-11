@@ -103,7 +103,7 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
   const description = getDescription();
 
   return (
-    <div className={styles.page}>
+    <main className={styles.page}>
       <div className={styles.container}>
         <aside className={styles.sidebar}>
           <CategoryNav className={styles.categoryNav} categories={categories} />
@@ -136,7 +136,7 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
           />
         </main>
       </div>
-    </div>
+    </main>
   )
 }
 

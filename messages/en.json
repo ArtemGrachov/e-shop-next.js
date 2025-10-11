@@ -101,5 +101,8 @@
   },
   "view_checkout": {
     "title": "Checkout"
+  },
+  "footer": {
+    "developed_by": "Designed and developed by <name></name>, <year></year>"
   }
 }

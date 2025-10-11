@@ -2,8 +2,7 @@
 @use '/src/styles/mixins/buttons.scss' as buttons;
 
 .page {
-  padding-top: 24px;
-  padding-bottom: 128px;
+  @include layout.page;
 }
 
 .container {
