@@ -39,7 +39,7 @@ const CartToggle: ComponentType = () => {
 
 return (
   <Component>
-    <Cart />
+    <Cart size={42} />
   </Component>
 )
 }

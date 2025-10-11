@@ -24,10 +24,10 @@ const ThemeSwitch: ComponentType = () => {
 
     switch (currentTheme) {
       case ETheme.DARK: {
-        return <Moon />
+        return <Moon size={42} />
       }
       case ETheme.LIGHT: {
-        return <SunFill />
+        return <SunFill size={42} />
       }
       default: {
         return null;
