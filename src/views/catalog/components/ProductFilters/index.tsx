@@ -63,7 +63,7 @@ const ProductFilters: ComponentType<IProps> = ({ filters }) => {
   }
 
   return (
-    <FormField label={t('product_filters.price')}>
+    <FormField label={t('view_catalog.product_filters.price')}>
       <FilterRange
         max={filters.price.rangeMax}
         min={filters.price.rangeMin}

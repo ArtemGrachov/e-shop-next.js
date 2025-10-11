@@ -1,0 +1,5 @@
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.filtersButton {
+  @include buttons.button(100%);
+}

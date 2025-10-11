@@ -4,10 +4,11 @@ import { notFound } from 'next/navigation';
 
 import { ROUTES } from '@/router/routes';
 
-import CategoryNav from '@/components/categories/CategoryNav';
+import CategoryNav from '@/views/catalog/components/CategoryNav';
 import ProductList from '@/components/products/ProductList';
 import Pagination from '@/components/other/Pagination';
-import ProductFilters from '@/components/products/ProductFilters';
+import ProductFilters from '@/views/catalog/components/ProductFilters';
+import MobileFilters from '@/views/catalog/components/MobileFilters';
 
 import { getPageData } from './server';
 import type { IViewCategoryProps } from './types';
@@ -116,6 +117,9 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
           {description && <p>
             {description}
           </p>}
+          <div className={styles.mobileFilters}>
+            <MobileFilters data={data} />
+          </div>
           <ProductList
             className={styles.list}
             products={productsData?.items}

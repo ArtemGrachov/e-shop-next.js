@@ -10,7 +10,7 @@ export interface IModalItem {
 export interface IModalOptions<T> {
   id?: string | number;
   component: ComponentType<T>;
-  props?: T;
+  props?: Partial<T>;
 }
 
 export interface IModalProps {

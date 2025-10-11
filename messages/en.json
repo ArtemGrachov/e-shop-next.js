@@ -86,9 +86,6 @@
     "any_title": "An error occured",
     "return": "Return to home page"
   },
-  "product_filters": {
-    "price": "Price"
-  },
   "view_product": {
     "reviews": "Reviews"
   },
@@ -104,5 +101,13 @@
   },
   "footer": {
     "developed_by": "Designed and developed by <name></name>, <year></year>"
+  },
+  "view_catalog": {
+    "product_filters": {
+      "price": "Price"
+    },
+    "mobile_filters": {
+      "filters": "Filters"
+    }
   }
 }
