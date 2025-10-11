@@ -14,6 +14,7 @@ import { useRoutePath } from '@/hooks/routing/use-route-path';
 import CartList from '@/components/cart/CartList';
 import OrderSummary from '@/components/order/OrderSummary';
 import Button from '@/components/buttons/Button';
+import CartPlaceholder from '@/components/cart/CartPlaceholder';
 
 import styles from './styles.module.scss';
 
@@ -23,6 +24,16 @@ const CartPageClient: ComponentType = () => {
 
   const order = useCartStore(s => s.order);
   const cartItems = useCartItems();
+
+  const isEmpty = cartItems.length === 0;
+
+  if (isEmpty) {
+    return (
+      <main className={styles.page}>
+        <CartPlaceholder />
+      </main>
+    )
+  }
 
   return (
     <main className={styles.page}>

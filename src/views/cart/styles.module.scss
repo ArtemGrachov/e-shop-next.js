@@ -3,6 +3,10 @@
 
 .page {
   @include layout.page;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .container {

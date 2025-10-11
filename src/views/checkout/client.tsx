@@ -18,6 +18,7 @@ import CheckoutDelivery from '@/components/checkout/CheckoutDelivery';
 import CheckoutPayment from '@/components/checkout/CheckoutPayment';
 import CheckoutSubmit from '@/components/checkout/CheckoutSubmit';
 import OrderSummary from '@/components/order/OrderSummary';
+import CartPlaceholder from '@/components/cart/CartPlaceholder';
 
 import styles from './styles.module.scss';
 
@@ -27,6 +28,16 @@ const CheckoutPageClient: ComponentType = () => {
   const cartItems = useCartItems();
   const isReady = useCheckoutReady();
   const cartOrder = useCartStore(s => s.order)
+
+  const isEmpty = isReady && cartItems.length === 0;
+
+  if (isEmpty) {
+    return (
+      <main className={styles.page}>
+        <CartPlaceholder />
+      </main>
+    )
+  }
 
   return (
     <main className={styles.page}>

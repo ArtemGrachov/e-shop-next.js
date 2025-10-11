@@ -109,5 +109,9 @@
     "mobile_filters": {
       "filters": "Filters"
     }
+  },
+  "cart_placeholder": {
+    "title": "The cart is empty yet",
+    "link": "Look for products"
   }
 }
