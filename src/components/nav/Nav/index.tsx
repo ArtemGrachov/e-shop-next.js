@@ -7,7 +7,11 @@ import { ROUTES } from '@/router/routes';
 
 import styles from './styles.module.scss';
 
-const Nav: ComponentType = () => {
+interface IProps {
+  onClick?: Function;
+}
+
+const Nav: ComponentType<IProps> = ({ onClick }) => {
   const t = useTranslations();
 
   const links = [
@@ -18,7 +22,7 @@ const Nav: ComponentType = () => {
     },
     {
       key: 'catalog',
-      path: pathcat(ROUTES.CATALOG, '/'),
+      path: pathcat(ROUTES.CATALOG, '/', { slugId: '' }),
       label: t('nav.catalog'),
     },
   ];
@@ -32,7 +36,7 @@ const Nav: ComponentType = () => {
               <Link
                 href={link.path}
                 className={styles.link}
-                onClick={close}
+                onClick={onClick ? () => onClick : undefined}
               >
                 {link.label}
               </Link>

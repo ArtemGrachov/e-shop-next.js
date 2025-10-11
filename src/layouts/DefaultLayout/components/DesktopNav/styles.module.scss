@@ -1,0 +1,17 @@
+@use '/src/styles/mixins/header.scss' as header;
+@use '/src/styles/mixins/breakpoints.scss' as breakpoints;
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.nav {
+  @include header.header-root();
+
+  display: none;
+
+  @include breakpoints.sm {
+    display: block;
+  }
+}
+
+.container {
+  @include header.header-container();
+}
