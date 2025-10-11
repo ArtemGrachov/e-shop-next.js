@@ -5,6 +5,7 @@ import { pathcat } from 'pathcat';
 
 import { ROUTES } from '@/router/routes';
 
+import { getRoutePath } from '@/hooks/routing/use-route-path';
 import CategoryNav from '@/views/catalog/components/CategoryNav';
 import ProductList from '@/components/products/ProductList';
 import Pagination from '@/components/other/Pagination';
@@ -23,12 +24,14 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
     params,
     searchParams,
     data,
+    routePath,
   ] = await Promise.all([
     getTranslations(),
     getLocale(),
     props.params,
     props.searchParams,
     getPageData(props),
+    getRoutePath(),
   ]).catch(err => {
     if (err === 404) {
       return notFound();
@@ -81,7 +84,7 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
 
   if (category!.slug[locale] !== categorySlug) {
     const correctSlugId = `${category!.slug[locale]}-${categoryId}`;
-    return redirect(pathcat(ROUTES.CATALOG, '/', { ...searchParams, slugId: correctSlugId }));
+    return redirect(routePath(ROUTES.CATALOG, { ...searchParams, slugId: correctSlugId }));
   }
 
   const getTitle = () => {

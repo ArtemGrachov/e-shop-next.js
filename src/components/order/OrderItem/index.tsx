@@ -1,10 +1,10 @@
 import { ComponentType, useMemo } from 'react';
 import { useLocale } from 'next-intl';
-import { pathcat } from 'pathcat';
 import Link from 'next/link';
 
 import { ROUTES } from '@/router/routes';
 
+import { useRoutePath } from '@/hooks/routing/use-route-path';
 import Price from '@/components/other/Price';
 
 import type { IOrderItem } from '@/types/models/order-item';
@@ -17,6 +17,7 @@ interface IProps {
 
 const OrderItem: ComponentType<IProps> = ({ orderItem }) => {
   const locale = useLocale();
+  const routePath = useRoutePath();
 
   const href = useMemo(() => {
     let slugId = `${orderItem.slug[locale]}-${orderItem.productId}`;
@@ -25,7 +26,7 @@ const OrderItem: ComponentType<IProps> = ({ orderItem }) => {
       slugId += `/${orderItem.variantSlug![locale]}-${orderItem.productVariantId}`;
     }
 
-    return pathcat('/', ROUTES.PRODUCT, { slugId });
+    return routePath(ROUTES.PRODUCT, { slugId });
   }, [orderItem]);
 
   return (

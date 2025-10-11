@@ -6,6 +6,8 @@ import { useForm } from 'react-hook-form';
 import { pathcat } from 'pathcat';
 import { Search } from 'react-bootstrap-icons';
 
+import { useRoutePath } from '@/hooks/routing/use-route-path';
+
 import { ROUTES } from '@/router/routes';
 
 import styles from './styles.module.scss';
@@ -18,6 +20,7 @@ const ProductSearch: ComponentType = () => {
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
+  const routePath = useRoutePath();
   const searchParams = useSearchParams();
   const search = useMemo(() => {
     return searchParams.get('search') as string;
@@ -32,7 +35,7 @@ const ProductSearch: ComponentType = () => {
       slugId: params.slug?.[0] ?? '',
     } as Record<string, string>;
 
-    let comparePath = pathcat('/', ROUTES.CATALOG, pathParams);
+    let comparePath = routePath(ROUTES.CATALOG, pathParams);
 
     if (comparePath.slice(-1) === '/') {
       comparePath = comparePath.slice(0, -1);
@@ -52,7 +55,7 @@ const ProductSearch: ComponentType = () => {
       pathParams.search = undefined;
     }
 
-    const newPath = pathcat('/', ROUTES.CATALOG, pathParams);
+    const newPath = routePath('/', ROUTES.CATALOG, pathParams);
 
     router.push(newPath);
   }

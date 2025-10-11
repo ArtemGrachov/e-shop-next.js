@@ -5,6 +5,8 @@ import { pathcat } from 'pathcat';
 
 import { ROUTES } from '@/router/routes';
 
+import { useRoutePath } from '@/hooks/routing/use-route-path';
+
 import type { ICategory } from '@/types/models/category';
 import type { IPropsWithClassName } from '@/types/other/component-props';
 
@@ -17,6 +19,7 @@ interface IProps {
 const CategoryNav: ComponentType<IProps & IPropsWithClassName> = ({ categories, className }) => {
   categories = categories ?? [];
 
+  const routePath = useRoutePath();
   const locale = useLocale();
 
   return (
@@ -25,7 +28,7 @@ const CategoryNav: ComponentType<IProps & IPropsWithClassName> = ({ categories, 
         {categories.map(category => {
           const slugId = `${category.slug[locale]}-${category.id}`;
           const name = category.name[locale];
-          const href = pathcat('/', ROUTES.CATALOG, { slugId })
+          const href = routePath(ROUTES.CATALOG, { slugId })
 
           return (
             <li key={category.id} className={styles.item}>
