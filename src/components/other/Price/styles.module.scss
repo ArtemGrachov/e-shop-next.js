@@ -1,6 +1,7 @@
 .value {
   color: var(--price-active);
   font-size: 20px;
+  font-weight: 600;
 
   &._active {
     color: var(--price-accent);

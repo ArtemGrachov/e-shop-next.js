@@ -26,11 +26,9 @@ const ProductCard: ComponentType<IProps> = ({ product }) => {
   return (
     <article className={styles.productCard}>
       <div className={styles.image}></div>
-      <h3>
-        <Link href={href} className={styles.link}>
-          {product.name[locale]}
-        </Link>
-      </h3>
+      <Link href={href} className={styles.link}>
+        {product.name[locale]}
+      </Link>
       <ProductPrice product={product} productVariant={product.variants?.[0]} />
     </article>
   )

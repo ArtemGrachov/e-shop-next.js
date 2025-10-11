@@ -124,9 +124,7 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
           <h1>
             {title}
           </h1>
-          {description && <p>
-            {description}
-          </p>}
+          {description && <div className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />}
           <div className={styles.mobileFilters}>
             <MobileFilters data={data} />
           </div>
