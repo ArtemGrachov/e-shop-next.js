@@ -12,8 +12,7 @@ import DeliveryMethod from '@/components/delivery/DeliveryMethod';
 import FormDeliveryAddress from '@/components/checkout/FormDeliveryAddress';
 import DeliveryAddress from '@/components/delivery/DeliveryAddress';
 import PickUpPoint from '@/components/delivery/PickUpPoint';
-
-import styles from './styles.module.scss';
+import Button from '@/components/buttons/Button';
 
 const CheckoutDelivery: ComponentType = () => {
   const t = useTranslations();
@@ -53,9 +52,9 @@ const CheckoutDelivery: ComponentType = () => {
     <>
       <DeliveryMethod deliveryMethod={selectedDeliveryMethod} />
       {(isPickUpPoint && selectedPickUpPoint) ? <PickUpPoint pickUpPoint={selectedPickUpPoint} /> : null}
-      <button type="button" className={styles.button} onClick={() => setMethodSelectionActive(true)}>
+      <Button type="button" onClick={() => setMethodSelectionActive(true)}>
         {t('checkout_delivery.edit')}
-      </button>
+      </Button>
     </>
   ) : null;
 
@@ -69,9 +68,9 @@ const CheckoutDelivery: ComponentType = () => {
       ) : deliveryAddress ? (
         <>
           <DeliveryAddress deliveryMethod={selectedDeliveryMethod} deliveryAddress={deliveryAddress} />
-          <button type="button" className={styles.button} onClick={() => setAddressEditingActive(true)}>
+          <Button type="button" onClick={() => setAddressEditingActive(true)}>
             {t('checkout_delivery.edit')}
-          </button>
+          </Button>
         </>
       ) : null}
     </>

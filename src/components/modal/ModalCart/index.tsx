@@ -15,6 +15,7 @@ import Modal from '@/components/modal/Modal';
 import ModalWindow from '@/components/modal/ModalWindow';
 import CartList from '@/components/cart/CartList';
 import OrderSummary from '@/components/order/OrderSummary';
+import Button from '@/components/buttons/Button';
 
 import styles from './styles.module.scss';
 
@@ -30,9 +31,9 @@ const ModalCart: ComponentType<IModalProps> = (props) => {
       <ModalWindow backdrop={true} {...props}>
         <CartList orderItems={cartItems} />
         {order && <OrderSummary order={order} className={styles.orderSummary} />}
-        <Link href={routePath(ROUTES.CHECKOUT)} className={styles.link}>
+        <Button href={routePath(ROUTES.CHECKOUT)} className={styles.link} tag={'Link'} variant={'primary'}>
           {t('view_cart.checkout')}
-        </Link>
+        </Button>
       </ModalWindow>
     </Modal>
   )

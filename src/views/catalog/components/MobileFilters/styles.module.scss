@@ -1,5 +1,11 @@
 @use '/src/styles/mixins/buttons.scss' as buttons;
+@use '/src/styles/mixins/breakpoints.scss' as breakpoints;
 
 .filtersButton {
-  @include buttons.button(100%);
+  --button-max-width: 100%;
+
+  @include breakpoints.sm {
+    --button-max-width: none;
+    width: auto;
+  }
 }

@@ -7,6 +7,7 @@ import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-ch
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
 import FormField from '@/components/forms/FormField';
+import Button from '@/components/buttons/Button';
 
 import styles from './styles.module.scss';
 
@@ -58,9 +59,9 @@ const FormPaymentMethod: ComponentType<IProps> = ({ onSubmitSuccess }) => {
         </select>
         <FieldClientErrors error={errors.paymentMethodId} />
       </FormField>
-      <button type="submit" className={styles.submit}>
+      <Button type="submit" variant={'primary'}>
         {t('form_payment_method.submit')}
-      </button>
+      </Button>
     </form>
   )
 }

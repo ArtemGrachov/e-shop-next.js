@@ -5,5 +5,5 @@
 }
 
 .link {
-  @include buttons.button(100%);
+  @include buttons.button('default', 100%);
 }

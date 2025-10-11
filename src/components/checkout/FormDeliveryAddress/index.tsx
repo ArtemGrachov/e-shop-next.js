@@ -5,6 +5,7 @@ import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-ch
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
 import FormField from '@/components/forms/FormField';
+import Button from '@/components/buttons/Button';
 
 import styles from './styles.module.scss';
 
@@ -145,9 +146,9 @@ const FormDeliveryAddress: ComponentType<IProps> = ({ onSubmitSuccess }) => {
         />
         <FieldClientErrors error={errors.comment} />
       </FormField>
-      <button type="submit" className={styles.submit}>
+      <Button type="submit" variant={'primary'} className={styles.submit}>
         {t('form_delivery_address.submit')}
-      </button>
+      </Button>
     </form>
   )
 }

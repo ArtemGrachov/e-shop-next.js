@@ -1,5 +1,5 @@
 @use '/src/styles/mixins/buttons.scss' as buttons;
 
 .submit {
-  @include buttons.button(100%);
+  @include buttons.button('default', 100%);
 }
