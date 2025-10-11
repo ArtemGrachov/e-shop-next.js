@@ -1,6 +1,7 @@
 import { ComponentType } from 'react';
 import { getLocale, getTranslations } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
+import { pathcat } from 'pathcat';
 
 import { ROUTES } from '@/router/routes';
 
@@ -39,7 +40,7 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
   const categories = data.categoriesResponse;
   const productsData = data.productsResponse;
 
-  const getCategorySlug = () => {
+  const getCategorySlugId = () => {
     const slug = params.slug;
 
     if (!slug) {
@@ -49,19 +50,18 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
     return slug[0];
   };
 
-  const categorySlug = getCategorySlug();
-
-  const getCategoryId = () => {
-    if (categorySlug == null) {
-      return null;
+  const splitCategorySlugId = () => {
+    if (categorySlugId == null) {
+      return [null, null];
     }
 
-    const categoryId = categorySlug.split('-').slice(-1)[0];
+    const arr = categorySlugId.split('-');
 
-    return categoryId;
-  };
-
-  const categoryId = getCategoryId();
+    return [
+      arr.slice(0, -1).join('-'),
+      arr.slice(-1)[0],
+    ];
+  }
 
   const getCategory = () => {
     if (!categoryId) {
@@ -71,10 +71,17 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
     return categories.find(c => c.id === categoryId);
   };
 
+  const categorySlugId = getCategorySlugId();
+  const [categorySlug, categoryId] = splitCategorySlugId();
   const category = getCategory();
 
-  if (categorySlug && !category) {
+  if (categorySlugId && !category) {
     return notFound();
+  }
+
+  if (category!.slug[locale] !== categorySlug) {
+    const correctSlugId = `${category!.slug[locale]}-${categoryId}`;
+    return redirect(pathcat(ROUTES.CATALOG, '/', { ...searchParams, slugId: correctSlugId }));
   }
 
   const getTitle = () => {
@@ -132,7 +139,7 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
             linkParams={{
               path: ROUTES.CATALOG,
               params: {
-                slugId: categorySlug ? categorySlug : '',
+                slugId: categorySlugId ? categorySlugId : '',
                 ...searchParams,
               },
               pageKey: 'page',
