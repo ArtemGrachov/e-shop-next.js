@@ -11,6 +11,7 @@ import { useRoutePath } from '@/hooks/routing/use-route-path';
 
 import Price from '@/components/other/Price';
 import CartItemCounter from '@/components/cart/CartItemCounter';
+import IconButton from '@/components/buttons/IconButton';
 
 import type { IOrderItem } from '@/types/models/order-item';
 
@@ -52,9 +53,9 @@ const CartItem: ComponentType<IProps> = ({ orderItem }) => {
       </div>
       <Price price={orderItem.price} />
       <CartItemCounter orderItem={orderItem} />
-      <button type="button" className={styles.remove} onClick={removeHandler}>
-        <Trash size={24} />
-      </button>
+      <IconButton type="button" onClick={removeHandler}>
+        <Trash size={'100%'} />
+      </IconButton>
     </div>
   )
 }

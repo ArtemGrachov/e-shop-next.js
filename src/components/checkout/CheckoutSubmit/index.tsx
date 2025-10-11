@@ -3,6 +3,8 @@ import { useTranslations } from 'next-intl';
 
 import { EStatus } from '@/constants/status';
 
+import Button from '@/components/buttons/Button';
+
 import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-checkout-ctx';
 import { useCheckoutValid } from '@/views/checkout/providers/checkout/hooks/use-checkout-valid';
 import { useCheckoutStore } from '@/views/checkout/providers/checkout/hooks/use-checkout-store';
@@ -34,14 +36,14 @@ const CheckoutSubmit: ComponentType = () => {
       <h2>
         {t('checkout_submit.title')}
       </h2>
-      <button
+      <Button
         type="button"
         className={styles.submit}
         disabled={!isValid}
         onClick={submitHandler}
       >
         {t('checkout_submit.submit')}
-      </button>
+      </Button>
       {isError && <p>
         {t('common_error.any')}
       </p>}

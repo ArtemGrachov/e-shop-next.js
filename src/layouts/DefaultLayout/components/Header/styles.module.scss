@@ -33,12 +33,10 @@
 }
 
 .mobileNav {
-  @include buttons.input-button();
-
   flex: 0 0 auto;
 
   @include breakpoints.sm() {
-    display: none;
+    --button-display: none;
   }
 }
 

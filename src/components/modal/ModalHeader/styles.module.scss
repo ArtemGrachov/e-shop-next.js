@@ -9,7 +9,3 @@
 .container {
   @include header.header-container();
 }
-
-.close {
-  @include buttons.input-button();
-}

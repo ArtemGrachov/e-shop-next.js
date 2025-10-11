@@ -33,7 +33,3 @@
 .name {
   flex: 1 1 auto;
 }
-
-.remove {
-  @include buttons.input-button();
-}

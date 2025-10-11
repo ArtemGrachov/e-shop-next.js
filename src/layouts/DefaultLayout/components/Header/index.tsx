@@ -11,6 +11,7 @@ import ProductSearch from '@/components/products/ProductSearch';
 import ThemeSwitch from '@/components/other/ThemeSwitch';
 import CartToggle from '@/components/cart/CartToggle';
 import ModalNav from '@/components/modal/ModalNav';
+import IconButton from '@/components/buttons/IconButton';
 
 import styles from './styles.module.scss';
 
@@ -26,9 +27,9 @@ const Header: ComponentType = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <button className={styles.mobileNav} type="button" onClick={mobileNavHandler}>
+        <IconButton className={styles.mobileNav} type="button" onClick={mobileNavHandler}>
           <List size={42} />
-        </button>
+        </IconButton>
         <div className={styles.cell}>
           <Link href="/" className={styles.home}>
             E-Shop

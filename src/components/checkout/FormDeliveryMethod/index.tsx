@@ -11,6 +11,7 @@ import { usePickUpPointsCtx } from '@/views/checkout/providers/pick-up-points/ho
 
 import FieldClientErrors from '@/components/forms/FieldClientErrors';
 import FormField from '@/components/forms/FormField';
+import Button from '@/components/buttons/Button';
 
 import styles from './styles.module.scss';
 
@@ -121,9 +122,9 @@ const FormDeliveryMethod: ComponentType<IProps> = ({ onSubmitSuccess }) => {
           <FieldClientErrors error={errors.pickUpPointId} />
         </FormField>
       )}
-      <button type="submit" className={styles.submit}>
+      <Button type="submit" className={styles.submit}>
         {t('form_delivery_method.submit')}
-      </button>
+      </Button>
     </form>
   )
 }

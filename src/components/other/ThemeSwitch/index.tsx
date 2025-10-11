@@ -10,7 +10,7 @@ import { useThemeCtx } from '@/providers/theme/hooks/use-theme-ctx';
 
 import { useMounted } from '@/hooks/other/use-mounted';
 
-import styles from './styles.module.scss';
+import IconButton from '@/components/buttons/IconButton';
 
 const ThemeSwitch: ComponentType = () => {
   const currentTheme = useThemeStore(s => s.theme);
@@ -44,13 +44,13 @@ const ThemeSwitch: ComponentType = () => {
   }
 
   return (
-    <button
+    <IconButton
       type="button"
-      className={styles.themeSwitch}
+      tag={'button'}
       onClick={toggleHandler}
     >
       {iconEl}
-    </button>
+    </IconButton>
   )
 }
 

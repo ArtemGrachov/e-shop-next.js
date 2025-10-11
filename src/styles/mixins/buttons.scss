@@ -7,29 +7,6 @@
   }
 }
 
-@mixin input-button {
-  @include button-base;
-
-  width: 42px;
-  height: 42px;
-  background: none;
-  border: none;
-  transition: ease-in-out 200ms;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--secondary-link);
-  padding: 0;
-
-  &:hover {
-    opacity: 0.85;
-  }
-
-  &:active {
-    opacity: 0.75;
-  }
-}
-
 @mixin button($style: 'default', $max-width: 200px) {
   height: 42px;
   width: 100%;
@@ -37,7 +14,7 @@
   border: none;
   transition: ease-in-out 200ms;
   cursor: pointer;
-  display: inline-flex;
+  display: var(--button-display, inline-flex);
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -80,21 +57,29 @@
   }
 }
 
-@mixin icon-button {
+@mixin icon-button($size: 'default') {
   @include button-base;
 
-  width: 42px;
-  height: 42px;
-  display: inline-flex;
+  display: var(--button-display, inline-flex);
   align-items: center;
   justify-content: center;
   background: none;
   border: none;
   padding: 0;
   line-height: 1;
-  font-size: 16px;
-  padding: 8px;
   color: #0d381d;
+
+  @if ($size == 'default') {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+    padding: 8px;
+  } @else if ($size == 'small') {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    padding: 4px;
+  }
 
   &:hover {
     color: #0c682e;

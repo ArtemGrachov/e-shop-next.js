@@ -1,15 +1,17 @@
-import { ComponentType, HTMLAttributes } from 'react';
+import { ComponentType } from 'react';
 import clsx from 'clsx';
+
+import BaseButton, { BaseButtonProps } from '@/components/buttons/BaseButton';
 
 import styles from './styles.module.scss';
 
-const InputPrimaryButton: ComponentType<HTMLAttributes<HTMLButtonElement>> = (props) => {
+const InputPrimaryButton: ComponentType<BaseButtonProps> = (props) => {
   return (
-    <button {...props} className={clsx(styles.inputPrimaryButton, props.className)}>
+    <BaseButton {...props} className={clsx(styles.inputPrimaryButton, props.className)}>
       <span className={styles.iconWrap}>
         {props.children}
       </span>
-    </button>
+    </BaseButton>
   )
 }
 

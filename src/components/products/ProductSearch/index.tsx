@@ -6,12 +6,12 @@ import { useForm } from 'react-hook-form';
 import { Search } from 'react-bootstrap-icons';
 
 import { useRoutePath } from '@/hooks/routing/use-route-path';
+import InputPrimary from '@/components/inputs/InputPrimary';
+import InputPrimaryButton from '@/components/inputs/InputPrimaryButton';
 
 import { ROUTES } from '@/router/routes';
 
 import styles from './styles.module.scss';
-import InputPrimary from '@/components/inputs/InputPrimary';
-import InputPrimaryButton from '@/components/inputs/InputPrimaryButton';
 
 interface IFormSearch {
   search: string;
