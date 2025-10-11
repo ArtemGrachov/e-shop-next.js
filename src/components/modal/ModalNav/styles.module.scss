@@ -3,6 +3,8 @@
 .content {
   @include layout.container();
 
+  padding-top: 24px;
+  padding-bottom: 24px;
   flex: 1 1 auto;
   overflow-y: auto;
 }

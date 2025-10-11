@@ -3,6 +3,7 @@
 
 .header {
   @include header.header-section();
+  @include header.header-wrap();
   justify-content: flex-end;
 }
 
