@@ -27,16 +27,18 @@ const Header: ComponentType = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <IconButton className={styles.mobileNav} type="button" onClick={mobileNavHandler}>
-          <List size={42} />
-        </IconButton>
-        <div className={styles.cell}>
+        <div className={clsx(styles.cell, styles._mobileNav)}>
+          <IconButton className={styles.mobileNav} type="button" onClick={mobileNavHandler}>
+            <List size={42} />
+          </IconButton>
+        </div>
+        <div className={clsx(styles.cell, styles._home)}>
           <Link href="/" className={styles.home}>
             E-Shop
           </Link>
         </div>
         <div className={clsx(styles.cell, styles._center)}>
-          <ProductSearch />
+          <ProductSearch className={styles.productSearch} />
         </div>
         <div className={clsx(styles.cell, styles._right)}>
           <ThemeSwitch />
