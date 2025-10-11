@@ -1,0 +1,57 @@
+@mixin h-base {
+  color: #2d2d2d;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+@mixin h1 {
+  @include h-base();
+
+  margin: 24px 0;
+  font-size: 36px;
+}
+
+@mixin h2 {
+  @include h-base();
+
+  margin: 20px 0;
+  font-size: 32px;
+}
+
+@mixin h3 {
+  @include h-base();
+
+  margin: 20px 0;
+  font-size: 28px;
+}
+
+@mixin h4 {
+  @include h-base();
+
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+@mixin h5 {
+  @include h-base();
+
+  margin: 16px 0;
+  font-size: 20px;
+}
+
+@mixin h6 {
+  @include h-base();
+
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+@mixin p {
+  margin: 16px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
