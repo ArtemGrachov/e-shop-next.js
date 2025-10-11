@@ -1,0 +1,34 @@
+@use '/src/styles/mixins/header.scss' as header;
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.modalNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%; // fallback
+  height: 100svh;
+  display: block;
+  background: var(--primary-background);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.header {
+  @include header.header-root();
+  justify-content: flex-end;
+}
+
+.container {
+  @include header.header-container();
+}
+
+.close {
+  @include buttons.input-button();
+}
+
+.content {
+  padding: 24px;
+  flex: 1 1 auto;
+}

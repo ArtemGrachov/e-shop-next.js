@@ -1,17 +1,44 @@
-@use '/src/styles/mixins/layout.scss' as layout;
+@use '/src/styles/mixins/header.scss' as header;
+@use '/src/styles/mixins/breakpoints.scss' as breakpoints;
+@use '/src/styles/mixins/buttons.scss' as buttons;
 
 .header {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--border-primary);
+  @include header.header-root();
 }
 
 .container {
-  @include layout.container();
+  @include header.header-container();
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+.cell {
+  flex: 1 1 0;
+
+  &._center,
+  &._right {
+    display: flex;
+  }
+
+  &._center {
+    display: none;
+
+    @include breakpoints.sm() {
+      display: flex;
+    }
+  }
+
+  &._right {
+    justify-content: flex-end;
+  }
+}
+
+.mobileNav {
+  @include buttons.input-button();
+
+  flex: 0 0 auto;
+
+  @include breakpoints.sm() {
+    display: none;
+  }
 }
 
 .home {

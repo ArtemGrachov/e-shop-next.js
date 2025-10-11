@@ -1,4 +1,8 @@
 {
+  "nav": {
+    "home": "Home page",
+    "catalog": "Catalog"
+  },
   "form_buy_product": {
     "variant": "Variant",
     "submit": "Buy"

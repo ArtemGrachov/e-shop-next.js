@@ -1,0 +1,15 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+
+@mixin header-root {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+@mixin header-container {
+  @include layout.container();
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
