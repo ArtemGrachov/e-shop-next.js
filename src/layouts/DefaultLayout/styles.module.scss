@@ -1,7 +1,15 @@
+@use '/src/styles/mixins/header.scss' as header;
+
 .layout {
   min-height: 100%;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+}
+
+.header {
+  @include header.header-wrap();
+
+  flex: 0 0 auto;
 }

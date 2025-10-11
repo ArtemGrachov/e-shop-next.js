@@ -1,0 +1,15 @@
+@mixin link {
+  display: block;
+  text-decoration: none;
+  color: #1c1b1b;
+  font-size: 18px;
+  transition: 200ms;
+
+  &:hover {
+    color: #0c682e;
+  }
+
+  &:active {
+    color: orange;
+  }
+}

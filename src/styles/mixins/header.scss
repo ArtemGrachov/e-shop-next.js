@@ -1,8 +1,11 @@
 @use '/src/styles/mixins/layout.scss' as layout;
 
-@mixin header-root {
+@mixin header-wrap {
+  box-shadow: 0 -10px 55px 0 rgba(black, .2);
+}
+
+@mixin header-section() {
   padding: 24px 0;
-  border-bottom: 1px solid var(--border-primary);
 }
 
 @mixin header-container {

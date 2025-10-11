@@ -82,7 +82,7 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
     return notFound();
   }
 
-  if (category!.slug[locale] !== categorySlug) {
+  if (category && category.slug[locale] !== categorySlug) {
     const correctSlugId = `${category!.slug[locale]}-${categoryId}`;
     return redirect(routePath(ROUTES.CATALOG, { ...searchParams, slugId: correctSlugId }));
   }

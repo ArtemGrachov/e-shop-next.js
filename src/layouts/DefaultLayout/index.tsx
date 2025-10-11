@@ -9,8 +9,10 @@ import styles from './styles.module.scss';
 const DefaultLayout = ({ children }: PropsWithChildren) => {
   return (
     <div className={styles.layout}>
-      <Header />
-      <DesktopNav />
+      <div className={styles.header}>
+        <Header />
+        <DesktopNav />
+      </div>
       {children}
       <Footer />
     </div>

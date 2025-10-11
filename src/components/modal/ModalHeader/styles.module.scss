@@ -2,7 +2,7 @@
 @use '/src/styles/mixins/buttons.scss' as buttons;
 
 .header {
-  @include header.header-root();
+  @include header.header-section();
   justify-content: flex-end;
 }
 
