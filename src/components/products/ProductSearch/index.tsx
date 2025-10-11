@@ -55,7 +55,7 @@ const ProductSearch: ComponentType = () => {
       pathParams.search = undefined;
     }
 
-    const newPath = routePath('/', ROUTES.CATALOG, pathParams);
+    const newPath = routePath(ROUTES.CATALOG, pathParams);
 
     router.push(newPath);
   }

@@ -38,9 +38,9 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
 
     if (variant) {
       const variantSlugId = `${variant.slug[locale]}-${variant.id}`;
-      newPath = routePath('/', ROUTES.PRODUCT_VARIANT, { slugId, variantSlugId });
+      newPath = routePath(ROUTES.PRODUCT_VARIANT, { slugId, variantSlugId });
     } else {
-      newPath = routePath('/', ROUTES.PRODUCT, { slugId });
+      newPath = routePath(ROUTES.PRODUCT, { slugId });
     }
 
     if (location.search) {
