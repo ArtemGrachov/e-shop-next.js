@@ -73,7 +73,7 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
 
   const category = getCategory();
 
-  if (!category) {
+  if (categorySlug && !category) {
     return notFound();
   }
 
