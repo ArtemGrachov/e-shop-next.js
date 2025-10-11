@@ -6,12 +6,6 @@
   align-items: center;
 }
 
-.input {
-  @include input.input-default();
-
-  flex: 1 1 auto;
-}
-
 .submit {
   @include buttons.input-button();
 

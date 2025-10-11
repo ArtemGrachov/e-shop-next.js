@@ -1,5 +1,5 @@
 @mixin theme-dark() {
-  --primary-background: black;
+  --primary-background: #1c1b1b;
   --text-color: white;
   --text-secondary-color: grey;
   --primary-link: orange;
@@ -15,7 +15,7 @@
 }
 
 @mixin theme-light() {
-  --primary-background: white;
+  --primary-background: #fbfbfb;
   --text-color: black;
   --text-secondary-color: grey;
   --primary-link: orange;

@@ -3,7 +3,6 @@
 import { ComponentType, useMemo } from 'react';
 import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
-import { pathcat } from 'pathcat';
 import { Search } from 'react-bootstrap-icons';
 
 import { useRoutePath } from '@/hooks/routing/use-route-path';
@@ -11,6 +10,8 @@ import { useRoutePath } from '@/hooks/routing/use-route-path';
 import { ROUTES } from '@/router/routes';
 
 import styles from './styles.module.scss';
+import InputPrimary from '@/components/inputs/InputPrimary';
+import InputPrimaryButton from '@/components/inputs/InputPrimaryButton';
 
 interface IFormSearch {
   search: string;
@@ -62,15 +63,18 @@ const ProductSearch: ComponentType = () => {
 
   return (
     <form className={styles.productSearch} onSubmit={handleSubmit(submitHandler)}>
-      <input
-        type="text"
-        className={styles.input}
-        {...searchInput}
-        defaultValue={search}
+      <InputPrimary
+        formControl={searchInput}
+        inputAttrs={{
+          type: 'text',
+          defaultValue: search,
+        }}
+        icon={
+          <InputPrimaryButton>
+            <Search size={'100%'} />
+          </InputPrimaryButton>
+        }
       />
-      <button type="submit" className={styles.submit}>
-        <Search size={'100%'} />
-      </button>
     </form>
   )
 }
