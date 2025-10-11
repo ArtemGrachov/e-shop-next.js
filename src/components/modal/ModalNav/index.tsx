@@ -4,17 +4,18 @@ import { ComponentType } from 'react';
 import { X } from 'react-bootstrap-icons';
 
 import Nav from '@/components/nav/Nav';
+import ModalFullscreen from '@/components/modal/ModalFullscreen';
 
 import type { IModalProps } from '@/providers/modals/types';
 
 import styles from './styles.module.scss';
 
-const ModalNav: ComponentType<IModalProps> = ({ close }) => {
+const ModalNav: ComponentType<IModalProps> = (props) => {
   return (
-    <div className={styles.modalNav}>
+    <ModalFullscreen {...props}>
       <header className={styles.header}>
         <div className={styles.container}>
-          <button type="button" className={styles.close} onClick={close}>
+          <button type="button" className={styles.close} onClick={props.close}>
             <X size={42} />
           </button>
         </div>
@@ -22,7 +23,7 @@ const ModalNav: ComponentType<IModalProps> = ({ close }) => {
       <div className={styles.content}>
         <Nav />
       </div>
-    </div>
+    </ModalFullscreen>
   )
 }
 
