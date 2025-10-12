@@ -1,0 +1,7 @@
+@use '/src/styles/mixins/skeleton.scss' as skeleton;
+
+.skeleton {
+  @include skeleton.skeleton();
+
+  margin-bottom: 24px;
+}

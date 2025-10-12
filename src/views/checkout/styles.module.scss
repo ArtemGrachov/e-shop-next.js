@@ -14,7 +14,7 @@
 }
 
 .row {
-  @include breakpoints.sm {
+  @include breakpoints.md {
     display: flex;
     gap: 24px;
   }
@@ -23,17 +23,46 @@
 .col {
   margin-bottom: 24px;
 
-  @include breakpoints.sm {
+  @include breakpoints.md {
     flex: 1 1 auto;
     margin-bottom: 0;
+  }
 
-    &._sm {
-      width: 500px;
+  &._sm {
+    @include breakpoints.md {
+      width: 350px;
       flex: 0 0 auto;
+    }
+
+    @include breakpoints.lg {
+      width: 450px;
     }
   }
 }
 
-.orderSummary {
+.orderSummary,
+.viewCart {
   margin-bottom: 24px;
+}
+
+.viewCart {
+  --button-width: 100%;
+
+  &._desktop {
+    --button-display: none;
+
+    @include breakpoints.md {
+      --button-display: flex;
+    }
+  }
+
+  &._mobile {
+    @include breakpoints.sm {
+      --button-width: auto;
+    }
+
+    @include breakpoints.md {
+      --button-display: none;
+    }
+  }
 }

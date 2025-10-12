@@ -97,7 +97,8 @@
     "checkout": "Checkout"
   },
   "view_checkout": {
-    "title": "Checkout"
+    "title": "Checkout",
+    "open_cart": "View cart"
   },
   "footer": {
     "developed_by": "Designed and developed by <name></name>, <year></year>"
@@ -116,6 +117,7 @@
   },
   "modal_cart": {
     "checkout": "Checkout",
-    "continue": "Continue shopping"
+    "continue": "Continue shopping",
+    "return": "Return"
   }
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { ComponentType } from 'react';
+import { ComponentType, lazy } from 'react';
 import { useTranslations } from 'next-intl';
 import clsx from 'clsx';
 
@@ -10,6 +10,7 @@ import { PaymentMethodsProvider } from '@/views/checkout/providers/payment-metho
 import { CheckoutProvider } from '@/views/checkout/providers/checkout';
 import { useCheckoutReady } from '@/views/checkout/providers/checkout/hooks/use-checkout-ready';
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
+import { useModalsCtx } from '@/providers/modals/hooks/use-modals-ctx';
 
 import { useCartItems } from '@/hooks/cart/cart-items';
 
@@ -18,13 +19,18 @@ import CheckoutPayment from '@/components/checkout/CheckoutPayment';
 import CheckoutSubmit from '@/components/checkout/CheckoutSubmit';
 import OrderSummary from '@/components/order/OrderSummary';
 import CartPlaceholder from '@/components/cart/CartPlaceholder';
+import Button from '@/components/buttons/Button';
+import CheckoutSkeleton from '@/components/checkout/CheckoutSkeleton';
+import SkeletonRows from '@/components/other/SkeletonRows';
 
 import styles from './styles.module.scss';
-import CheckoutSkeleton from '@/components/checkout/CheckoutSkeleton';
+
+const ModalCart = lazy(() => import('@/components/modal/ModalCart'));
 
 const CheckoutPageClient: ComponentType = () => {
   const t = useTranslations();
 
+  const { openModal } = useModalsCtx();
   const cartItems = useCartItems();
   const isReady = useCheckoutReady();
   const cartOrder = useCartStore(s => s.order)
@@ -39,6 +45,10 @@ const CheckoutPageClient: ComponentType = () => {
     )
   }
 
+  const openCartHandler = () => {
+    openModal({ id: 'MODAL_CART', component: ModalCart, props: { checkout: true } });
+  }
+
   return (
     <main className={styles.page}>
       <div className={styles.container}>
@@ -46,20 +56,39 @@ const CheckoutPageClient: ComponentType = () => {
         {isReady ? cartOrder ? (
           <div className={styles.row}>
             <div className={styles.col}>
+              <Button
+                type="button"
+                className={clsx(styles.viewCart, styles._mobile)}
+                onClick={openCartHandler}
+              >
+                {t('view_checkout.open_cart')}
+              </Button>
               <CheckoutDelivery />
               <CheckoutPayment />
             </div>
             <div className={clsx(styles.col, styles._sm)}>
+              <Button
+                type="button"
+                className={clsx(styles.viewCart, styles._desktop)}
+                onClick={openCartHandler}
+              >
+                {t('view_checkout.open_cart')}
+              </Button>
               <OrderSummary order={cartOrder} className={styles.orderSummary} />
               <CheckoutSubmit />
             </div>
           </div>
         ) : null : (
-          <>
-            <CheckoutSkeleton />
-            <CheckoutSkeleton />
-            <CheckoutSkeleton />
-          </>
+          <div className={styles.row}>
+            <div className={styles.col}>
+              <CheckoutSkeleton />
+              <CheckoutSkeleton />
+              <CheckoutSkeleton />
+            </div>
+            <div className={clsx(styles.col, styles._sm)}>
+              <SkeletonRows />
+            </div>
+          </div>
         )}
       </div>
     </main>

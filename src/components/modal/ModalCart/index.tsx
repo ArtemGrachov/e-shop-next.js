@@ -19,7 +19,11 @@ import Button from '@/components/buttons/Button';
 
 import styles from './styles.module.scss';
 
-const ModalCart: ComponentType<IModalProps> = (props) => {
+export interface IProps {
+  checkout?: boolean;
+}
+
+const ModalCart: ComponentType<IProps & IModalProps> = (props) => {
   const t = useTranslations();
   const routePath = useRoutePath();
 
@@ -34,18 +38,26 @@ const ModalCart: ComponentType<IModalProps> = (props) => {
         </div>
         <div className={styles.footer}>
           {order && <OrderSummary order={order} className={styles.orderSummary} />}
-          <Button
-            href={routePath(ROUTES.CHECKOUT)}
-            className={styles.link}
-            tag={'Link'}
-            variant={'primary'}
-            onClick={props.close}
-          >
-            {t('modal_cart.checkout')}
-          </Button>
-          <Button tag={'button'} onClick={props.close}>
-            {t('modal_cart.continue')}
-          </Button>
+          {props.checkout ? (
+              <Button tag={'button'} onClick={props.close}>
+                {t('modal_cart.return')}
+              </Button>
+          ) : (
+            <>
+              <Button
+                href={routePath(ROUTES.CHECKOUT)}
+                className={styles.link}
+                tag={'Link'}
+                variant={'primary'}
+                onClick={props.close}
+              >
+                {t('modal_cart.checkout')}
+              </Button>
+              <Button tag={'button'} onClick={props.close}>
+                {t('modal_cart.continue')}
+              </Button>
+            </>
+          )}
         </div>
       </ModalWindow>
     </Modal>

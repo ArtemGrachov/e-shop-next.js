@@ -1,7 +1,7 @@
 import { ComponentType } from 'react';
+import clsx from 'clsx';
 
 import styles from './styles.module.scss';
-import clsx from 'clsx';
 
 const CheckoutSkeleton: ComponentType = () => {
   return (
