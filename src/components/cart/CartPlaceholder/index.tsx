@@ -22,7 +22,7 @@ const CartPlaceholder: ComponentType = () => {
       <Button
         className={styles.link}
         tag={'Link'}
-        href={routePath(ROUTES.CATALOG)}
+        href={routePath(ROUTES.CATALOG, { slugId: '' })}
         variant={'primary'}
       >
         {t('cart_placeholder.link')}

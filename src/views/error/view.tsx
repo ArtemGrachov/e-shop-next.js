@@ -1,10 +1,11 @@
 'use client';
 
 import { ComponentType } from 'react';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import { EErrorView } from '@/views/error/constants';
+
+import Button from '@/components/buttons/Button';
 
 import styles from './styles.module.scss';
 
@@ -30,12 +31,14 @@ const ErrorView: ComponentType<IProps> = ({ pageType }) => {
 
   return (
     <main className={styles.page}>
-      <h1 className={styles.title}>
-        {title}
-      </h1>
-      <Link href="/" className={styles.button}>
-        {t('view_error.return')}
-      </Link>
+      <div className={styles.error}>
+        <h1 className={styles.title}>
+          {title}
+        </h1>
+        <Button href="/" className={styles.button} tag={'Link'} variant={'primary'}>
+          {t('view_error.return')}
+        </Button>
+      </div>
     </main>
   )
 }
