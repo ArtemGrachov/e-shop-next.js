@@ -118,5 +118,9 @@
     "checkout": "Checkout",
     "continue": "Continue shopping",
     "return": "Return"
+  },
+  "product_card": {
+    "add_to_cart": "Add to cart",
+    "product_in_cart": "Added!"
   }
 }
