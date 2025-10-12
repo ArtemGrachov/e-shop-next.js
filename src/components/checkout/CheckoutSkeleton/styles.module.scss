@@ -1,0 +1,28 @@
+@use '/src/styles/mixins/skeleton.scss' as skeleton;
+
+.checkoutSkeleton {
+  margin-bottom: 48px;
+}
+
+.skeleton {
+  @include skeleton.skeleton();
+
+  margin-bottom: 24px;
+
+  &:first-child {
+    width: 40%;
+  }
+
+  &:nth-child(2) {
+    width: 50%;
+  }
+
+  &:nth-child(3) {
+    width: 30%;
+  }
+
+  &._title {
+    height: 2em;
+    width: 45%;
+  }
+}

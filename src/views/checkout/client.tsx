@@ -20,6 +20,7 @@ import OrderSummary from '@/components/order/OrderSummary';
 import CartPlaceholder from '@/components/cart/CartPlaceholder';
 
 import styles from './styles.module.scss';
+import CheckoutSkeleton from '@/components/checkout/CheckoutSkeleton';
 
 const CheckoutPageClient: ComponentType = () => {
   const t = useTranslations();
@@ -53,7 +54,13 @@ const CheckoutPageClient: ComponentType = () => {
               <CheckoutSubmit />
             </div>
           </div>
-        ) : null : '...'}
+        ) : null : (
+          <>
+            <CheckoutSkeleton />
+            <CheckoutSkeleton />
+            <CheckoutSkeleton />
+          </>
+        )}
       </div>
     </main>
   )
