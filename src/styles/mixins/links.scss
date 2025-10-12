@@ -1,14 +1,14 @@
 @mixin link {
   text-decoration: none;
-  color: #1c1b1b;
+  color: var(--link-color);
   transition: 200ms;
 
   &:hover {
-    color: #0c682e;
+    color: var(--link-hover-color);
   }
 
   &:active {
-    color: orange;
+    color: var(--link-active-color);
   }
 
   &:focus {

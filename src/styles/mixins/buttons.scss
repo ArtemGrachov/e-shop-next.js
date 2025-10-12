@@ -28,26 +28,26 @@
   padding: 0 24px;
 
   @if ($style =='default') {
-    background: #eaeaea;
-    color: #2d2d2d;
+    background: var(--button-default-background);
+    color: var(--button-default-color);
 
     &:hover {
-      background: #d7d7d7;
+      background: var(--button-default-hover-background);
     }
 
     &:active {
-      background: #b5b5b5;
+      background: var(--button-default-active-background);
     }
   } @else if ($style == 'primary') {
-    background: #0c682e;
-    color: white;
+    background: orange;
+    color: #1c1b1b;
 
     &:hover {
-      background: #13843d;
+      background: #ffb325;
     }
 
     &:active {
-      background: orange;
+      background: orangered;
       color: #2d2d2d;
     }
   }
@@ -67,7 +67,7 @@
   border: none;
   padding: 0;
   line-height: 1;
-  color: #0d381d;
+  color: var(--icon-button-color);
 
   @if ($size == 'default') {
     width: 42px;
@@ -82,11 +82,11 @@
   }
 
   &:hover {
-    color: #0c682e;
+    color: var(--icon-button-hover-color);
   }
 
   &:active {
-    color: orange;
+    color: var(--icon-button-active-color);
   }
 
   &:disabled {

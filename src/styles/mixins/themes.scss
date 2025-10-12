@@ -1,0 +1,47 @@
+@mixin component-theme-dark() {
+  :global([data-theme="dark"]) {
+    @content;
+  }
+
+  :global(:root) {
+    @media (prefers-color-scheme: dark) {
+      @content;
+    }
+  }
+}
+
+@mixin component-theme-light() {
+  :global([data-theme="light"]) {
+    @content;
+  }
+
+  :global(:root) {
+    @media (prefers-color-scheme: light) {
+      @content;
+    }
+  }
+}
+
+@mixin global-theme-dark() {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      @content;
+    }
+  }
+
+  [data-theme="dark"] {
+    @content;
+  }
+}
+
+@mixin global-theme-light {
+  @media (prefers-color-scheme: light) {
+    :root {
+      @content;
+    }
+  }
+
+  [data-theme="light"] {
+    @content;
+  }
+}

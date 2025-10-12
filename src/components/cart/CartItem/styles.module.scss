@@ -1,5 +1,6 @@
 @use '/src/styles/mixins/buttons.scss' as buttons;
 @use '/src/styles//mixins/breakpoints.scss' as breakpoints;
+@use '/src/styles/mixins/themes.scss' as themes;
 
 .cartItem {
   display: flex;
@@ -18,7 +19,7 @@
   display: flex;
   gap: 24px;
   align-items: center;
-  color: var(--secondary-link);
+  color: var(--cart-item-description-color);
   text-decoration: none;
   width: 100%;
   flex: 0 0 auto;
@@ -29,7 +30,7 @@
   }
 
   &:hover {
-    color: var(--primary-link);
+    color: orange;
   }
 
   &:active {
@@ -48,3 +49,16 @@
 .name {
   flex: 1 1 auto;
 }
+
+@include themes.component-theme-dark() {
+  .description {
+    --cart-item-description-color: orange;
+  }
+}
+
+@include themes.component-theme-light() {
+  .description {
+    --cart-item-description-color: #474747;
+  }
+}
+

@@ -1,3 +1,5 @@
+@use '/src/styles/mixins/themes.scss' as themes;
+
 .value {
   color: var(--price-active);
   font-size: 20px;
@@ -20,4 +22,20 @@
   color: var(--price-accent);
   font-size: 14px;
   white-space: nowrap;
+}
+
+@include themes.component-theme-dark() {
+  .price {
+    --price-active: white;
+    --price-accent: red;
+    --price-inactive: grey;
+  }
+}
+
+@include themes.component-theme-light() {
+  .price {
+    --price-active: white;
+    --price-accent: red;
+    --price-inactive: grey;
+  }
 }

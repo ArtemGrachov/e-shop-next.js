@@ -1,10 +1,12 @@
+@use '/src/styles/mixins/themes.scss' as themes;
+
 .productCard {
   position: relative;
 }
 
 .link {
   text-decoration: none;
-  color: #393939;
+  color: var(--product-card-link-color);
   font-size: 18px;
   margin-bottom: 12px;
   display: block;
@@ -20,7 +22,7 @@
   }
 
   &:hover {
-    color: #13843d;
+    color: var(product-card-link-hover-color);
   }
 
   &:active {
@@ -33,4 +35,18 @@
   background: var(--image-placeholder-background);
   border-radius: 4px;
   margin-bottom: 18px;
+}
+
+@include themes.component-theme-dark() {
+  .link {
+    --product-card-link-color: orange;
+    --product-card-link-hover-color: #ffb325;
+  }
+}
+
+@include themes.component-theme-light() {
+  .link {
+    --product-card-link-color: #393939;
+    --product-card-link-hover-color: orange;
+  }
 }

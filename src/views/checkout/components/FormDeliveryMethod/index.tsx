@@ -122,7 +122,7 @@ const FormDeliveryMethod: ComponentType<IProps> = ({ onSubmitSuccess }) => {
           <FieldClientErrors error={errors.pickUpPointId} />
         </FormField>
       )}
-      <Button type="submit" className={styles.submit}>
+      <Button type="submit" variant={'primary'} className={styles.submit}>
         {t('form_delivery_method.submit')}
       </Button>
     </form>

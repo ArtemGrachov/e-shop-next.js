@@ -1,5 +1,6 @@
 @use '/src/styles/mixins/links.scss' as links;
 @use '/src/styles/mixins/breakpoints.scss' as breakpoints;
+@use '/src/styles/mixins/themes.scss' as themes;
 
 .list {
   list-style: none;
@@ -30,7 +31,7 @@
 
   &._active {
     font-weight: bold;
-    color: green;
+    color: var(--pagination-page-active-color);
     font-size: 14px;
 
     @include breakpoints.sm {
@@ -43,5 +44,17 @@
     min-width: 44px;
     height: 44px;
     font-size: 14px;
+  }
+}
+
+@include themes.component-theme-dark() {
+  .page {
+    --pagination-page-active-color: orange;
+  }
+}
+
+@include themes.component-theme-light() {
+  .page {
+    --pagination-page-active-color: #474747;
   }
 }

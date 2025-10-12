@@ -25,6 +25,7 @@
   z-index: 1;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 
   @include animations.fade-in;
   @include animations.slide-up;
