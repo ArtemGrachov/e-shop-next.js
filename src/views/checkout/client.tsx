@@ -24,6 +24,7 @@ import CheckoutSubmit from './components/CheckoutSubmit';
 import CheckoutSkeleton from './components/CheckoutSkeleton';
 
 import styles from './styles.module.scss';
+import CheckoutSection from '@/views/checkout/components/CheckoutSection';
 
 const ModalCart = lazy(() => import('@/components/modal/ModalCart'));
 
@@ -52,17 +53,19 @@ const CheckoutPageClient: ComponentType = () => {
   return (
     <main className={styles.page}>
       <div className={styles.container}>
-        <h1>{t('view_checkout.title')}</h1>
+        <h1 className={styles.title}>{t('view_checkout.title')}</h1>
         {isReady ? cartOrder ? (
           <div className={styles.row}>
             <div className={styles.col}>
-              <Button
-                type="button"
-                className={clsx(styles.viewCart, styles._mobile)}
-                onClick={openCartHandler}
-              >
-                {t('view_checkout.open_cart')}
-              </Button>
+              <div className={styles.subcontainer}>
+                <Button
+                  type="button"
+                  className={clsx(styles.viewCart, styles._mobile)}
+                  onClick={openCartHandler}
+                >
+                  {t('view_checkout.open_cart')}
+                </Button>
+              </div>
               <CheckoutDelivery />
               <CheckoutPayment />
             </div>
@@ -75,7 +78,9 @@ const CheckoutPageClient: ComponentType = () => {
                 {t('view_checkout.open_cart')}
               </Button>
               <OrderSummary order={cartOrder} className={styles.orderSummary} />
-              <CheckoutSubmit />
+              <div className={styles.subcontainer}>
+                <CheckoutSubmit />
+              </div>
             </div>
           </div>
         ) : null : (
@@ -86,7 +91,9 @@ const CheckoutPageClient: ComponentType = () => {
               <CheckoutSkeleton />
             </div>
             <div className={clsx(styles.col, styles._sm)}>
-              <SkeletonRows />
+              <div className={styles.subcontainer}>
+                <SkeletonRows />
+              </div>
             </div>
           </div>
         )}

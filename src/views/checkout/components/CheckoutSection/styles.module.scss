@@ -1,7 +1,15 @@
 @use '/src/styles/mixins/typography.scss' as typography;
+@use '/src/styles/mixins/breakpoints.scss' as breakpoints;
 
 .checkoutSection {
-  margin-bottom: 48px;
+  padding: 24px;
+  box-shadow: 0 5px 16px 0 rgba(black, 0.1);
+  margin-bottom: 24px;
+  background: white;
+
+  @include breakpoints.md {
+    border-radius: 16px;
+  }
 }
 
 .title {

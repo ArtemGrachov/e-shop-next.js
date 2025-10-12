@@ -1,9 +1,5 @@
 @use '/src/styles/mixins/skeleton.scss' as skeleton;
 
-.checkoutSkeleton {
-  margin-bottom: 48px;
-}
-
 .skeleton {
   @include skeleton.skeleton();
 
