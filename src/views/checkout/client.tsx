@@ -12,7 +12,7 @@ import { PaymentMethodsProvider } from './providers/payment-methods';
 import { CheckoutProvider } from './providers/checkout';
 import { useCheckoutReady } from './providers/checkout/hooks/use-checkout-ready';
 
-import { useCartItems } from '@/hooks/cart/cart-items';
+import { useCartItems } from '@/hooks/cart/use-cart-items';
 
 import OrderSummary from '@/components/order/OrderSummary';
 import CartPlaceholder from '@/components/cart/CartPlaceholder';

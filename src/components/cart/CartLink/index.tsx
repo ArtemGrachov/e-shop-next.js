@@ -6,7 +6,7 @@ import { Cart } from 'react-bootstrap-icons';
 import { ROUTES } from '@/router/routes';
 
 import { useRoutePath } from '@/hooks/routing/use-route-path';
-import { useCartItems } from '@/hooks/cart/cart-items';
+import { useCartItems } from '@/hooks/cart/use-cart-items';
 import IconButton from '@/components/buttons/IconButton';
 
 import styles from './styles.module.scss';

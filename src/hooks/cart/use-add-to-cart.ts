@@ -1,4 +1,4 @@
-import { useProductInCart } from '@/hooks/cart/product-in-cart';
+import { useProductInCart } from '@/hooks/cart/use-product-in-cart';
 import { useCartCtx } from '@/providers/cart/hooks/use-cart-ctx';
 
 import type { IProduct } from '@/types/models/product'

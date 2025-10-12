@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { ROUTES } from '@/router/routes';
 
 import { useRoutePath } from '@/hooks/routing/use-route-path';
-import { useAddToCart } from '@/hooks/cart/add-to-cart';
-import { useProductInCart } from '@/hooks/cart/product-in-cart';
+import { useAddToCart } from '@/hooks/cart/use-add-to-cart';
+import { useProductInCart } from '@/hooks/cart/use-product-in-cart';
 import ProductPrice from '@/components/products/ProductPrice';
 import FavouritesToggle from '@/components/favourites/FavouritesToggle';
 import Button from '@/components/buttons/Button';

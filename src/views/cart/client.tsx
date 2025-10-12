@@ -8,7 +8,7 @@ import { ROUTES } from '@/router/routes';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 
-import { useCartItems } from '@/hooks/cart/cart-items';
+import { useCartItems } from '@/hooks/cart/use-cart-items';
 import { useRoutePath } from '@/hooks/routing/use-route-path';
 
 import CartList from '@/components/cart/CartList';
