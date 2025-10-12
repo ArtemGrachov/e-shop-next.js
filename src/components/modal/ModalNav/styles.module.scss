@@ -1,4 +1,14 @@
-.content {
-  padding: 24px;
+@use '/src/styles/mixins/layout.scss' as layout;
+
+.productSearch {
   flex: 1 1 auto;
+}
+
+.content {
+  @include layout.container();
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+  flex: 1 1 auto;
+  overflow-y: auto;
 }

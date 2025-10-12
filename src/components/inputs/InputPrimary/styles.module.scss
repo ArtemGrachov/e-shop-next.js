@@ -1,0 +1,33 @@
+.inputPrimary {
+  position: relative;
+  width: 100%;
+
+  &._withIcon {
+    .input {
+      padding-right: 64px;
+    }
+  }
+}
+
+.input {
+  width: 100%;
+  background: var(--input-primary-background);
+  padding: 16px 32px;
+  line-height: 1;
+  font-size: 16px;
+  border: 1px solid var(--input-primary-border-color);
+  border-radius: 52px;
+  color: var(--input-primary-color);
+  transition: 200ms;
+
+  &:focus {
+    outline: none;
+    border-color: var(--input-primary-focus-border-color);
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

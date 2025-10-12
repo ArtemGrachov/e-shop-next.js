@@ -18,7 +18,7 @@ const ModalRoot: ComponentType = () => {
 
   return (
     <>
-      {modals.map(({ id, component, props, close }) => {
+      {modals.map(({ id, component, props, closing, close }) => {
         const Component = component;
 
         return (
@@ -26,6 +26,7 @@ const ModalRoot: ComponentType = () => {
             key={id}
             id={id}
             close={close}
+            closing={closing}
             {...(props ?? {})}
           />
         )

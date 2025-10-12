@@ -23,8 +23,10 @@ const ModalFilters: ComponentType<IModalProps & IProps> = (props) => {
   return (
     <ModalFullscreen {...props}>
       <ModalHeader {...props} />
-      <CategoryNav className={styles.categoryNav} categories={categories} />
-      {productsData && <ProductFilters filters={productsData.filters} />}
+      <div className={styles.content}>
+        <CategoryNav className={styles.categoryNav} categories={categories} />
+        {productsData && <ProductFilters filters={productsData.filters} />}
+      </div>
     </ModalFullscreen>
   )
 }

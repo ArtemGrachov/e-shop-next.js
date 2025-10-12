@@ -3,10 +3,16 @@
 import { ComponentType, useMemo } from 'react';
 import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
-import { pathcat } from 'pathcat';
 import { Search } from 'react-bootstrap-icons';
+import clsx from 'clsx';
+
+import { useRoutePath } from '@/hooks/routing/use-route-path';
+import InputPrimary from '@/components/inputs/InputPrimary';
+import InputPrimaryButton from '@/components/inputs/InputPrimaryButton';
 
 import { ROUTES } from '@/router/routes';
+
+import type { IPropsWithClassName } from '@/types/other/component-props';
 
 import styles from './styles.module.scss';
 
@@ -14,10 +20,11 @@ interface IFormSearch {
   search: string;
 }
 
-const ProductSearch: ComponentType = () => {
+const ProductSearch: ComponentType<IPropsWithClassName> = ({ className }) => {
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
+  const routePath = useRoutePath();
   const searchParams = useSearchParams();
   const search = useMemo(() => {
     return searchParams.get('search') as string;
@@ -32,7 +39,7 @@ const ProductSearch: ComponentType = () => {
       slugId: params.slug?.[0] ?? '',
     } as Record<string, string>;
 
-    let comparePath = pathcat('/', ROUTES.CATALOG, pathParams);
+    let comparePath = routePath(ROUTES.CATALOG, pathParams);
 
     if (comparePath.slice(-1) === '/') {
       comparePath = comparePath.slice(0, -1);
@@ -52,22 +59,25 @@ const ProductSearch: ComponentType = () => {
       pathParams.search = undefined;
     }
 
-    const newPath = pathcat('/', ROUTES.CATALOG, pathParams);
+    const newPath = routePath(ROUTES.CATALOG, pathParams);
 
     router.push(newPath);
   }
 
   return (
-    <form className={styles.productSearch} onSubmit={handleSubmit(submitHandler)}>
-      <input
-        type="text"
-        className={styles.input}
-        {...searchInput}
-        defaultValue={search}
+    <form className={clsx(styles.productSearch, className)} onSubmit={handleSubmit(submitHandler)}>
+      <InputPrimary
+        formControl={searchInput}
+        inputAttrs={{
+          type: 'text',
+          defaultValue: search,
+        }}
+        icon={
+          <InputPrimaryButton>
+            <Search size={'100%'} />
+          </InputPrimaryButton>
+        }
       />
-      <button type="submit" className={styles.submit}>
-        <Search size={'100%'} />
-      </button>
     </form>
   )
 }

@@ -1,23 +1,81 @@
 @use '/src/styles/mixins/layout.scss' as layout;
+@use '/src/styles/mixins/breakpoints.scss' as breakpoints;
 
 .page {
   @include layout.page;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .container {
-  @include layout.container();
+  @include breakpoints.md {
+    @include layout.container();
+  }
+}
+
+.subcontainer,
+.title {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include breakpoints.md {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .row {
-  display: flex;
-  gap: 24px;
+  @include breakpoints.md {
+    display: flex;
+    gap: 24px;
+  }
 }
 
 .col {
-  flex: 1 1 auto;
+  margin-bottom: 24px;
+
+  @include breakpoints.md {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+  }
 
   &._sm {
-    width: 500px;
-    flex: 0 0 auto;
+    @include breakpoints.md {
+      width: 350px;
+      flex: 0 0 auto;
+    }
+
+    @include breakpoints.lg {
+      width: 450px;
+    }
+  }
+}
+
+.orderSummary,
+.viewCart {
+  margin-bottom: 24px;
+}
+
+.viewCart {
+  --button-width: 100%;
+
+  &._desktop {
+    --button-display: none;
+
+    @include breakpoints.md {
+      --button-display: flex;
+    }
+  }
+
+  &._mobile {
+    @include breakpoints.sm {
+      --button-width: auto;
+    }
+
+    @include breakpoints.md {
+      --button-display: none;
+    }
   }
 }

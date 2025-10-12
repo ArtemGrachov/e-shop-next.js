@@ -1,5 +1,4 @@
 @use '/src/styles/mixins/input.scss' as input;
-@use '/src/styles/mixins/buttons.scss' as buttons;
 
 .input {
   @include input.input-default();
@@ -13,8 +12,4 @@
 .message {
   resize: vertical;
   min-height: 200px;
-}
-
-.submit {
-  @include buttons.button();
 }

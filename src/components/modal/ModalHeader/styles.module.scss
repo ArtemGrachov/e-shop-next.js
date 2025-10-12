@@ -2,14 +2,13 @@
 @use '/src/styles/mixins/buttons.scss' as buttons;
 
 .header {
-  @include header.header-root();
+  @include header.header-section();
+  @include header.header-wrap();
+
   justify-content: flex-end;
+  gap: 24px;
 }
 
 .container {
   @include header.header-container();
-}
-
-.close {
-  @include buttons.input-button();
 }

@@ -1,51 +1,92 @@
-@mixin input-button {
-  width: 42px;
-  height: 42px;
-  background: none;
-  border: none;
-  transition: ease-in-out 200ms;
+@mixin button-base {
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--secondary-link);
-  padding: 0;
+  transition: 200ms;
 
-  &:hover {
-    opacity: 0.85;
-  }
-
-  &:active {
-    opacity: 0.75;
+  &:disabled {
+    cursor: not-allowed;
   }
 }
 
-@mixin button($max-width: 200px) {
+@mixin button($style: 'default', $max-width: 200px) {
   height: 42px;
-  width: 100%;
+  width: var(--button-width, 100%);
   max-width: $max-width;
   border: none;
-  background: var(--button-background);
-  color: var(--button-label);
   transition: ease-in-out 200ms;
   cursor: pointer;
-  display: flex;
+  display: var(--button-display, inline-flex);
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 0;
-  border-radius: 4px;
-  font-size: 18px;
+  border-radius: 42px;
+  font-size: 16px;
   line-height: 1;
   font-family: 'Ubuntu', 'Ubuntu Fallback';
   text-decoration: none;
+  gap: 8px;
+  padding: 0 24px;
+
+  @if ($style =='default') {
+    background: var(--button-default-background);
+    color: var(--button-default-color);
+
+    &:hover {
+      background: var(--button-default-hover-background);
+    }
+
+    &:active {
+      background: var(--button-default-active-background);
+    }
+  } @else if ($style == 'primary') {
+    background: orange;
+    color: #1c1b1b;
+
+    &:hover {
+      background: #ffb325;
+    }
+
+    &:active {
+      background: orangered;
+      color: #2d2d2d;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@mixin icon-button($size: 'default') {
+  @include button-base;
+
+  display: var(--button-display, inline-flex);
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  color: var(--icon-button-color);
+
+  @if ($size == 'default') {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+    padding: 8px;
+  } @else if ($size == 'small') {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    padding: 4px;
+  }
 
   &:hover {
-    opacity: 0.85;
+    color: var(--icon-button-hover-color);
   }
 
   &:active {
-    opacity: 0.75;
+    color: var(--icon-button-active-color);
   }
 
   &:disabled {

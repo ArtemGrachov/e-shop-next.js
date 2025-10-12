@@ -1,0 +1,17 @@
+@mixin link {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: 200ms;
+
+  &:hover {
+    color: var(--link-hover-color);
+  }
+
+  &:active {
+    color: var(--link-active-color);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

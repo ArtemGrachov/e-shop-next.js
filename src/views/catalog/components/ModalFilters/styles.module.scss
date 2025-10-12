@@ -1,3 +1,14 @@
+@use '/src/styles/mixins/layout.scss' as layout;
+
 .categoryNav {
   margin-bottom: 24px;
+}
+
+.content {
+  @include layout.container();
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+  flex: 1 1 auto;
+  overflow-y: auto;
 }

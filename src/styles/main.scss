@@ -1,1 +1,70 @@
 @use './global.scss';
+@use './mixins/themes.scss' as themes;
+
+@include themes.global-theme-dark() {
+  --primary-background: #1c1b1b;
+  --text-color: white;
+  --image-placeholder-background: #3b3b3b;
+
+  --icon-button-color: orange;
+  --icon-button-hover-color: #ffb325;
+  --icon-button-active-color: orangered;
+
+  --link-color: orange;
+  --link-hover-color: #ffb325;
+  --link-active-color: orange;
+
+  --input-primary-background: #1c1b1b;
+  --input-primary-border-color: #3b3b3b;
+  --input-primary-color: white;
+  --input-primary-focus-border-color: orange;
+
+  --heading-color: #f0f0f0;
+
+  --button-default-background: #3b3b3b;
+  --button-default-color: #f0f0f0;
+  --button-default-hover-background: #474747;
+  --button-default-active-background: #2d2d2d;
+
+  --input-default-border: #474747;
+  --input-default-color: #f0f0f0;
+  --input-default-background: #212121;
+  --input-default-focus-border-color: orange;
+
+  --skeleton-color: #3b3b3b;
+  --skeleton-animation-color: rgba(255, 166, 0, 0.074);
+}
+
+@include themes.global-theme-light() {
+  --primary-background: #fbfbfb;
+  --text-color: black;
+  --image-placeholder-background: #858585;
+
+  --icon-button-color: #474747;
+  --icon-button-hover-color: #ff9100;
+  --icon-button-active-color: orange;
+
+  --link-color: #474747;
+  --link-hover-color: #ffb325;
+  --link-active-color: orange;
+
+  --input-primary-background: white;
+  --input-primary-border-color: #d3d3d3;
+  --input-primary-color: #2d2d2d;
+  --input-primary-focus-border-color: orange;
+
+  --heading-color: #2d2d2d;
+
+  --button-default-background: #eaeaea;
+  --button-default-color: #2d2d2d;
+  --button-default-hover-background: #d7d7d7;
+  --button-default-active-background: #b5b5b5;
+
+  --input-default-border: #b5b5b5;
+  --input-default-color: #1c1b1b;
+  --input-default-background: white;
+  --input-default-focus-border-color: orange;
+
+  --skeleton-color: #d3d3d3;
+  --skeleton-animation-color: white;
+}

@@ -1,0 +1,11 @@
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.iconButton {
+  &._small {
+    @include buttons.icon-button('small');
+  }
+
+  &:not(&._small) {
+    @include buttons.icon-button();
+  }
+}

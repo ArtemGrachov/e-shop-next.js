@@ -1,7 +1,8 @@
 import { ComponentType } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { pathcat } from 'pathcat';
+
+import { useRoutePath } from '@/hooks/routing/use-route-path';
 
 import { ROUTES } from '@/router/routes';
 
@@ -13,16 +14,17 @@ interface IProps {
 
 const Nav: ComponentType<IProps> = ({ onClick }) => {
   const t = useTranslations();
+  const routePath = useRoutePath();
 
   const links = [
     {
       key: 'home',
-      path: pathcat(ROUTES.HOME, '/'),
+      path: routePath(ROUTES.HOME),
       label: t('nav.home'),
     },
     {
       key: 'catalog',
-      path: pathcat(ROUTES.CATALOG, '/', { slugId: '' }),
+      path: routePath(ROUTES.CATALOG, { slugId: '' }),
       label: t('nav.catalog'),
     },
   ];

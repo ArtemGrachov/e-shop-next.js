@@ -1,13 +1,14 @@
 'use client';
 
-import { ComponentType, useMemo } from 'react';
-import { pathcat } from 'pathcat';
+import { ComponentType, ReactNode, useMemo } from 'react';
 import { UrlObject } from 'url';
 import { getPaginationModel, PaginationModelItem, PaginationModelOptions } from 'ultimate-pagination';
+import { ChevronDoubleLeft, ChevronDoubleRight, ChevronLeft, ChevronRight } from 'react-bootstrap-icons';
 
 import PageItem, { ILinkParams } from '@/components/other/PageItem';
 
 import styles from './styles.module.scss';
+import clsx from 'clsx';
 
 interface IProps {
   options: PaginationModelOptions;
@@ -21,17 +22,11 @@ const Pagination: ComponentType<IProps> = ({ options, linkParams, linkPath, onCh
     return getPaginationModel(options);
   }, [options]);
 
-  if (!linkPath && linkParams) {
-    linkPath = (page) => {
-      return pathcat('/', linkParams.path, { ...linkParams.params, [linkParams.pageKey ?? 'page']: page.value });
-    }
-  }
-
   return (
     <div>
       <ul className={styles.list}>
         {pagination.map((page, index) => {
-          let label: number | string = page.value;
+          let label: ReactNode = page.value;
 
           switch (page.type) {
             case 'ELLIPSIS': {
@@ -39,28 +34,31 @@ const Pagination: ComponentType<IProps> = ({ options, linkParams, linkPath, onCh
               break;
             }
             case 'FIRST_PAGE_LINK': {
-              label = '<<';
+              label = <ChevronDoubleLeft />;
               break;
             }
             case 'PREVIOUS_PAGE_LINK': {
-              label = '<';
+              label = <ChevronLeft />;
               break;
             }
             case 'NEXT_PAGE_LINK': {
-              label = '>';
+              label = <ChevronRight />;
               break;
             }
             case 'LAST_PAGE_LINK': {
-              label = '>>';
+              label = <ChevronDoubleRight />;
               break;
             }
           }
 
+          const isActive = options.currentPage === page.value;
+
           return (
             <li key={index} className={styles.item}>
               <PageItem
-                className={styles.page}
+                className={clsx(styles.page, isActive && styles._active)}
                 page={page}
+                isActive={isActive}
                 linkPath={linkPath}
                 linkParams={linkParams}
                 onChange={onChange}

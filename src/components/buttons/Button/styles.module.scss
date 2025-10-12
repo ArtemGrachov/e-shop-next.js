@@ -1,0 +1,13 @@
+@use '/src/styles/mixins/buttons.scss' as buttons;
+
+.button {
+  $max-width: var(--button-max-width);
+
+  &._primary {
+    @include buttons.button('primary', $max-width);
+  }
+
+  &:not(&._primary) {
+    @include buttons.button('default', $max-width);
+  }
+}

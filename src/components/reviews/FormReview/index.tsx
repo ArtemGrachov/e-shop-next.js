@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import { EStatus } from '@/constants/status';
 
 import FormField from '@/components/forms/FormField';
+import Button from '@/components/buttons/Button';
 
 import styles from './styles.module.scss';
 
@@ -61,9 +62,9 @@ const FormReview: ComponentType<IProps> = ({ submitStatus, onSubmit }) => {
           readOnly={submitProcessing}
         ></textarea>
       </FormField>
-      <button type="submit" className={styles.submit} disabled={submitProcessing}>
+      <Button type="submit" disabled={submitProcessing} variant={'primary'}>
         {t('form_review.submit')}
-      </button>
+      </Button>
       {submitError &&(
         <p>
           {t('common_error.any')}

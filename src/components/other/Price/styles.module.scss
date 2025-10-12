@@ -1,6 +1,10 @@
+@use '/src/styles/mixins/themes.scss' as themes;
+
 .value {
   color: var(--price-active);
   font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
 
   &._active {
     color: var(--price-accent);
@@ -11,9 +15,27 @@
   color: var(--price-inactive);
   font-size: 14px;
   text-decoration: line-through;
+  white-space: nowrap;
 }
 
 .discount {
   color: var(--price-accent);
   font-size: 14px;
+  white-space: nowrap;
+}
+
+@include themes.component-theme-dark() {
+  .price {
+    --price-active: white;
+    --price-accent: red;
+    --price-inactive: grey;
+  }
+}
+
+@include themes.component-theme-light() {
+  .price {
+    --price-active: white;
+    --price-accent: red;
+    --price-inactive: grey;
+  }
 }

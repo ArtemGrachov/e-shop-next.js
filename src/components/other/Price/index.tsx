@@ -19,7 +19,7 @@ const Price: ComponentType<IProps> = ({ price }) => {
   const { CURRENCY } = useShopCtx();
 
   return (
-    <div>
+    <div className={styles.price}>
       <span className={clsx(styles.value, price.discount && styles._active)}>
         {price.value} {CURRENCY}
       </span>

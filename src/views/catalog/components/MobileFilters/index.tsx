@@ -2,12 +2,14 @@
 
 import { ComponentType, lazy } from 'react';
 import { useTranslations } from 'next-intl';
+import { Filter } from 'react-bootstrap-icons';
 
 import { useModalsCtx } from '@/providers/modals/hooks/use-modals-ctx';
 
 import { getPageData } from '../../server';
 
 import styles from './styles.module.scss';
+import Button from '@/components/buttons/Button';
 
 const ModalFilters = lazy(() => import('@/views/catalog/components/ModalFilters'));
 
@@ -29,9 +31,10 @@ const MobileFilters: ComponentType<IProps> = ({ data }) => {
   }
 
   return (
-    <button type="button" className={styles.filtersButton} onClick={mobileFiltersHadler}>
+    <Button type="button" className={styles.filtersButton} onClick={mobileFiltersHadler}>
+      <Filter size={24} />
       {t('view_catalog.mobile_filters.filters')}
-    </button>
+    </Button>
   )
 }
 
