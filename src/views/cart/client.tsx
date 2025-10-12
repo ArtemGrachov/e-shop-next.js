@@ -45,7 +45,7 @@ const CartPageClient: ComponentType = () => {
           </div>
           <div className={clsx(styles.col, styles._sm)}>
             {order && <OrderSummary order={order} className={styles.orderSummary} />}
-            <Button href={routePath(ROUTES.CHECKOUT)} tag={'Link'} variant={'primary'}>
+            <Button href={routePath(ROUTES.FAVOURITES)} tag={'Link'} variant={'primary'}>
               {t('view_cart.checkout')}
             </Button>
           </div>

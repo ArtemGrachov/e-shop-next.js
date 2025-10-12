@@ -6,4 +6,5 @@ export const ROUTES = {
   CATALOG: '/catalog/:slugId',
   CART: '/cart',
   CHECKOUT: '/checkout',
+  FAVOURITES: '/favourites',
 }

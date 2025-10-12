@@ -45,7 +45,7 @@ const ModalCart: ComponentType<IProps & IModalProps> = (props) => {
           ) : (
             <>
               <Button
-                href={routePath(ROUTES.CHECKOUT)}
+                href={routePath(ROUTES.FAVOURITES)}
                 className={styles.link}
                 tag={'Link'}
                 variant={'primary'}

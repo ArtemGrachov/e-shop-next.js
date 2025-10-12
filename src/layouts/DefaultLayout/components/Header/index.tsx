@@ -12,6 +12,7 @@ import ThemeSwitch from '@/components/other/ThemeSwitch';
 import CartLink from '@/components/cart/CartLink';
 import ModalNav from '@/components/modal/ModalNav';
 import IconButton from '@/components/buttons/IconButton';
+import FavouritesLink from '@/components/favourites/FavouritesLink';
 
 import styles from './styles.module.scss';
 
@@ -42,6 +43,7 @@ const Header: ComponentType = () => {
         </div>
         <div className={clsx(styles.cell, styles._right)}>
           <ThemeSwitch />
+          <FavouritesLink className={styles.favouritesLink} />
           <CartLink />
         </div>
       </div>
