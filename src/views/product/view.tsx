@@ -1,7 +1,7 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
-import FavouritesToggle from '@/components/products/FavouritesToggle';
+import FavouritesToggle from '@/components/favourites/FavouritesToggle';
 import ProductDescription from './components/ProductDescription';
 import ProductReviews from './components/ProductReviews';
 import BuyProduct from './components/BuyProduct';

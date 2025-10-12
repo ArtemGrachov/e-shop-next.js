@@ -1,23 +1,22 @@
 import { ComponentType } from 'react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { notFound, redirect } from 'next/navigation';
-import { pathcat } from 'pathcat';
 
 import { ROUTES } from '@/router/routes';
 
 import { getRoutePath } from '@/hooks/routing/use-route-path';
-import CategoryNav from '@/views/catalog/components/CategoryNav';
 import ProductList from '@/components/products/ProductList';
 import Pagination from '@/components/other/Pagination';
-import ProductFilters from '@/views/catalog/components/ProductFilters';
-import MobileFilters from '@/views/catalog/components/MobileFilters';
+import CategoryNav from './components/CategoryNav';
+import ProductFilters from './components/ProductFilters';
+import MobileFilters from './components/MobileFilters';
 
 import { getPageData } from './server';
-import type { IViewCategoryProps } from './types';
+import type { IViewCatalogProps } from './types';
 
 import styles from './styles.module.scss';
 
-const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
+const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
   const [
     t,
     locale,
@@ -92,9 +91,9 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
 
     if (searchParams.search) {
       if (categoryName) {
-        return t('page_catalog.title_category_search', { categoryName, query: searchParams.search })
+        return t('view_catalog.title_category_search', { categoryName, query: searchParams.search })
       } else {
-        return t('page_catalog.title_search', { query: searchParams.search })
+        return t('view_catalog.title_search', { query: searchParams.search })
       }
     }
 
@@ -102,7 +101,7 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
       return categoryName;
     }
 
-    return t('page_catalog.title_catalog');
+    return t('view_catalog.title_catalog');
   };
 
   const title = getTitle();

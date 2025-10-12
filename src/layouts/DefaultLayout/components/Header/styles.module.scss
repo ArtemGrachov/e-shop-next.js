@@ -57,3 +57,11 @@
   margin: 0 auto;
   max-width: 500px;
 }
+
+.favouritesLink {
+  --button-display: none;
+
+  @include breakpoints.sm() {
+    --button-display: flex;
+  }
+}

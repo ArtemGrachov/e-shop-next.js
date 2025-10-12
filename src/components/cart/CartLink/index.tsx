@@ -11,17 +11,17 @@ import IconButton from '@/components/buttons/IconButton';
 
 import styles from './styles.module.scss';
 
-const CartToggle: ComponentType = () => {
+const CartLink: ComponentType = () => {
   const routePath = useRoutePath();
   const cartItems = useCartItems();
   const cartItemsCount = cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
 
   return (
-    <IconButton href={routePath(ROUTES.CART)} tag={'Link'} className={styles.cartToggle}>
+    <IconButton href={routePath(ROUTES.CART)} tag={'Link'} className={styles.cartLink}>
       <Cart size={42} />
       {cartItemsCount ? <span className={styles.counter}>{cartItemsCount}</span> : null}
     </IconButton>
   )
 }
 
-export default CartToggle;
+export default CartLink;

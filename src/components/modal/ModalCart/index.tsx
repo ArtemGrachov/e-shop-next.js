@@ -34,7 +34,7 @@ const ModalCart: ComponentType<IProps & IModalProps> = (props) => {
     <Modal>
       <ModalWindow backdrop={true} {...props} className={styles.modalCart}>
         <div className={styles.content}>
-          <CartList orderItems={cartItems} />
+          <CartList orderItems={cartItems} onNavigate={props.close} />
         </div>
         <div className={styles.footer}>
           {order && <OrderSummary order={order} className={styles.orderSummary} />}
@@ -45,7 +45,7 @@ const ModalCart: ComponentType<IProps & IModalProps> = (props) => {
           ) : (
             <>
               <Button
-                href={routePath(ROUTES.CHECKOUT)}
+                href={routePath(ROUTES.FAVOURITES)}
                 className={styles.link}
                 tag={'Link'}
                 variant={'primary'}
