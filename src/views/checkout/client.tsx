@@ -4,24 +4,24 @@ import { ComponentType, lazy } from 'react';
 import { useTranslations } from 'next-intl';
 import clsx from 'clsx';
 
-import { PickUpPointsProvider } from '@/views/checkout/providers/pick-up-points';
-import { DeliveryMethodsProvider } from '@/views/checkout/providers/delivery-methods';
-import { PaymentMethodsProvider } from '@/views/checkout/providers/payment-methods';
-import { CheckoutProvider } from '@/views/checkout/providers/checkout';
-import { useCheckoutReady } from '@/views/checkout/providers/checkout/hooks/use-checkout-ready';
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 import { useModalsCtx } from '@/providers/modals/hooks/use-modals-ctx';
+import { PickUpPointsProvider } from './providers/pick-up-points';
+import { DeliveryMethodsProvider } from './providers/delivery-methods';
+import { PaymentMethodsProvider } from './providers/payment-methods';
+import { CheckoutProvider } from './providers/checkout';
+import { useCheckoutReady } from './providers/checkout/hooks/use-checkout-ready';
 
 import { useCartItems } from '@/hooks/cart/cart-items';
 
-import CheckoutDelivery from '@/components/checkout/CheckoutDelivery';
-import CheckoutPayment from '@/components/checkout/CheckoutPayment';
-import CheckoutSubmit from '@/components/checkout/CheckoutSubmit';
 import OrderSummary from '@/components/order/OrderSummary';
 import CartPlaceholder from '@/components/cart/CartPlaceholder';
 import Button from '@/components/buttons/Button';
-import CheckoutSkeleton from '@/components/checkout/CheckoutSkeleton';
 import SkeletonRows from '@/components/other/SkeletonRows';
+import CheckoutDelivery from './components/CheckoutDelivery';
+import CheckoutPayment from './components/CheckoutPayment';
+import CheckoutSubmit from './components/CheckoutSubmit';
+import CheckoutSkeleton from './components/CheckoutSkeleton';
 
 import styles from './styles.module.scss';
 

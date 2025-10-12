@@ -7,13 +7,13 @@ import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 import { useSelectedDeliveryMethod } from '@/views/checkout/providers/checkout/hooks/use-selected-delivery-method';
 import { useSelectedPickUpPoint } from '@/views/checkout/providers/checkout/hooks/use-selected-pick-up-point';
 
-import FormDeliveryMethod from '@/components/checkout/FormDeliveryMethod';
+import FormDeliveryMethod from '@/views/checkout/components/FormDeliveryMethod';
 import DeliveryMethod from '@/components/delivery/DeliveryMethod';
-import FormDeliveryAddress from '@/components/checkout/FormDeliveryAddress';
+import FormDeliveryAddress from '@/views/checkout/components/FormDeliveryAddress';
 import DeliveryAddress from '@/components/delivery/DeliveryAddress';
 import PickUpPoint from '@/components/delivery/PickUpPoint';
 import Button from '@/components/buttons/Button';
-import CheckoutSection from '@/components/checkout/CheckoutSection';
+import CheckoutSection from '@/views/checkout/components/CheckoutSection';
 
 import styles from './styles.module.scss';
 

@@ -3,10 +3,10 @@ import { ComponentType, useState } from 'react';
 
 import { useSelectedPaymentMethod } from '@/views/checkout/providers/checkout/hooks/use-selected-payment-method';
 
-import FormPaymentMethod from '@/components/checkout/FormPaymentMethod';
+import FormPaymentMethod from '@/views/checkout/components/FormPaymentMethod';
 import PaymentMethod from '@/components/payment/PaymentMethod';
 import Button from '@/components/buttons/Button';
-import CheckoutSection from '@/components/checkout/CheckoutSection';
+import CheckoutSection from '@/views/checkout/components/CheckoutSection';
 
 import styles from './styles.module.scss';
 
