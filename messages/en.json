@@ -38,7 +38,7 @@
     "submit": "Save"
   },
   "form_payment_method": {
-    "payment_method": "Payment method",
+    "payment_method": "Payment",
     "submit": "Save"
   },
   "common_validation": {

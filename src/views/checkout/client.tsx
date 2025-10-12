@@ -13,7 +13,6 @@ import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 
 import { useCartItems } from '@/hooks/cart/cart-items';
 
-import CartList from '@/components/cart/CartList';
 import CheckoutDelivery from '@/components/checkout/CheckoutDelivery';
 import CheckoutPayment from '@/components/checkout/CheckoutPayment';
 import CheckoutSubmit from '@/components/checkout/CheckoutSubmit';
@@ -46,7 +45,6 @@ const CheckoutPageClient: ComponentType = () => {
         {isReady ? cartOrder ? (
           <div className={styles.row}>
             <div className={styles.col}>
-              <CartList orderItems={cartItems} />
               <CheckoutDelivery />
               <CheckoutPayment />
             </div>

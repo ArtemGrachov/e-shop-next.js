@@ -6,6 +6,7 @@ import { useSelectedPaymentMethod } from '@/views/checkout/providers/checkout/ho
 import FormPaymentMethod from '@/components/checkout/FormPaymentMethod';
 import PaymentMethod from '@/components/payment/PaymentMethod';
 import Button from '@/components/buttons/Button';
+import CheckoutSection from '@/components/checkout/CheckoutSection';
 
 import styles from './styles.module.scss';
 
@@ -19,19 +20,16 @@ const CheckoutPayment: ComponentType = () => {
   ) : selectedPaymentMethod ? (
     <>
       <PaymentMethod paymentMethod={selectedPaymentMethod} />
-      <Button type="button" onClick={() => setMethodSelectionActive(true)}>
+      <Button type="button" className={styles.edit} onClick={() => setMethodSelectionActive(true)}>
         {t('checkout_payment.edit')}
       </Button>
     </>
   ) : null;
 
   return (
-    <div>
-      <h2>
-        {t('checkout_payment.title_method')}
-      </h2>
+    <CheckoutSection title={t('checkout_payment.title_method')}>
       {methodEl}
-    </div>
+    </CheckoutSection>
   )
 }
 

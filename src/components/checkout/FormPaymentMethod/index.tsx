@@ -59,7 +59,7 @@ const FormPaymentMethod: ComponentType<IProps> = ({ onSubmitSuccess }) => {
         </select>
         <FieldClientErrors error={errors.paymentMethodId} />
       </FormField>
-      <Button type="submit" variant={'primary'}>
+      <Button type="submit" className={styles.submit} variant={'primary'}>
         {t('form_payment_method.submit')}
       </Button>
     </form>

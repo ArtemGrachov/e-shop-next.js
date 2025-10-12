@@ -9,7 +9,7 @@
 
 @mixin button($style: 'default', $max-width: 200px) {
   height: 42px;
-  width: 100%;
+  width: var(--button-width, 100%);
   max-width: $max-width;
   border: none;
   transition: ease-in-out 200ms;

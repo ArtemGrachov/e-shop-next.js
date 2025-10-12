@@ -1,0 +1,10 @@
+@use '/src/styles/mixins/typography.scss' as typography;
+
+.checkoutSection {
+  margin-bottom: 48px;
+}
+
+.title {
+  @include typography.h4();
+  margin-bottom: 24px;
+}

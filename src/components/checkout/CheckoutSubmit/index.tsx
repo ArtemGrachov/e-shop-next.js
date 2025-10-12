@@ -9,8 +9,6 @@ import { useCheckoutCtx } from '@/views/checkout/providers/checkout/hooks/use-ch
 import { useCheckoutValid } from '@/views/checkout/providers/checkout/hooks/use-checkout-valid';
 import { useCheckoutStore } from '@/views/checkout/providers/checkout/hooks/use-checkout-store';
 
-import styles from './styles.module.scss';
-
 const CheckoutSubmit: ComponentType = () => {
   const t = useTranslations();
   const isValid = useCheckoutValid();
@@ -33,12 +31,9 @@ const CheckoutSubmit: ComponentType = () => {
 
   return (
     <div>
-      <h2>
-        {t('checkout_submit.title')}
-      </h2>
       <Button
         type="button"
-        className={styles.submit}
+        variant={'primary'}
         disabled={!isValid}
         onClick={submitHandler}
       >

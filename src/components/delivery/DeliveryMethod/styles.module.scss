@@ -1,0 +1,5 @@
+@use '/src/styles/mixins/typography.scss' as typography;
+
+.title {
+  font-weight: 600;
+}

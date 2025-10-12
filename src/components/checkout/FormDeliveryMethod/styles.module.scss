@@ -6,5 +6,5 @@
 }
 
 .submit {
-  @include buttons.button();
+  --button-width: auto;
 }

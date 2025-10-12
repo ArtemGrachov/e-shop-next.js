@@ -13,6 +13,9 @@ import FormDeliveryAddress from '@/components/checkout/FormDeliveryAddress';
 import DeliveryAddress from '@/components/delivery/DeliveryAddress';
 import PickUpPoint from '@/components/delivery/PickUpPoint';
 import Button from '@/components/buttons/Button';
+import CheckoutSection from '@/components/checkout/CheckoutSection';
+
+import styles from './styles.module.scss';
 
 const CheckoutDelivery: ComponentType = () => {
   const t = useTranslations();
@@ -52,36 +55,32 @@ const CheckoutDelivery: ComponentType = () => {
     <>
       <DeliveryMethod deliveryMethod={selectedDeliveryMethod} />
       {(isPickUpPoint && selectedPickUpPoint) ? <PickUpPoint pickUpPoint={selectedPickUpPoint} /> : null}
-      <Button type="button" onClick={() => setMethodSelectionActive(true)}>
+      <Button type="button" className={styles.edit} onClick={() => setMethodSelectionActive(true)}>
         {t('checkout_delivery.edit')}
       </Button>
     </>
   ) : null;
 
   const addressEl = selectedDeliveryMethod && !methodSelectionActive ? (
-    <>
-      <h2>
-        {addressTitle}
-      </h2>
+    <CheckoutSection title={addressTitle}>
       {addressEditingActive ? (
         <FormDeliveryAddress onSubmitSuccess={() => setAddressEditingActive(false)} />
       ) : deliveryAddress ? (
         <>
           <DeliveryAddress deliveryMethod={selectedDeliveryMethod} deliveryAddress={deliveryAddress} />
-          <Button type="button" onClick={() => setAddressEditingActive(true)}>
+          <Button type="button" className={styles.edit} onClick={() => setAddressEditingActive(true)}>
             {t('checkout_delivery.edit')}
           </Button>
         </>
       ) : null}
-    </>
+    </CheckoutSection>
   ) : null;
 
   return (
     <div>
-      <h2>
-        {t('checkout_delivery.title_method')}
-      </h2>
-      {methodEl}
+      <CheckoutSection title={t('checkout_delivery.title_method')}>
+        {methodEl}
+      </CheckoutSection>
       {addressEl}
     </div>
   )
