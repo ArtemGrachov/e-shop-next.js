@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import clsx from 'clsx';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
-import { useModalsCtx } from '@/providers/modals/hooks/use-modals-ctx';
 import { PickUpPointsProvider } from './providers/pick-up-points';
 import { DeliveryMethodsProvider } from './providers/delivery-methods';
 import { PaymentMethodsProvider } from './providers/payment-methods';
@@ -13,6 +12,7 @@ import { CheckoutProvider } from './providers/checkout';
 import { useCheckoutReady } from './providers/checkout/hooks/use-checkout-ready';
 
 import { useCartItems } from '@/hooks/cart/use-cart-items';
+import { useCartModal } from '@/hooks/cart/use-cart-modal';
 
 import OrderSummary from '@/components/order/OrderSummary';
 import CartPlaceholder from '@/components/cart/CartPlaceholder';
@@ -24,17 +24,14 @@ import CheckoutSubmit from './components/CheckoutSubmit';
 import CheckoutSkeleton from './components/CheckoutSkeleton';
 
 import styles from './styles.module.scss';
-import CheckoutSection from '@/views/checkout/components/CheckoutSection';
-
-const ModalCart = lazy(() => import('@/components/modal/ModalCart'));
 
 const CheckoutPageClient: ComponentType = () => {
   const t = useTranslations();
 
-  const { openModal } = useModalsCtx();
   const cartItems = useCartItems();
   const isReady = useCheckoutReady();
-  const cartOrder = useCartStore(s => s.order)
+  const cartOrder = useCartStore(s => s.order);
+  const openCartModal = useCartModal();
 
   const isEmpty = isReady && cartItems.length === 0;
 
@@ -44,10 +41,6 @@ const CheckoutPageClient: ComponentType = () => {
         <CartPlaceholder />
       </main>
     )
-  }
-
-  const openCartHandler = () => {
-    openModal({ id: 'MODAL_CART', component: ModalCart, props: { checkout: true } });
   }
 
   return (
@@ -61,7 +54,7 @@ const CheckoutPageClient: ComponentType = () => {
                 <Button
                   type="button"
                   className={clsx(styles.viewCart, styles._mobile)}
-                  onClick={openCartHandler}
+                  onClick={openCartModal}
                 >
                   {t('view_checkout.open_cart')}
                 </Button>
@@ -73,7 +66,7 @@ const CheckoutPageClient: ComponentType = () => {
               <Button
                 type="button"
                 className={clsx(styles.viewCart, styles._desktop)}
-                onClick={openCartHandler}
+                onClick={openCartModal}
               >
                 {t('view_checkout.open_cart')}
               </Button>
