@@ -1,3 +1,5 @@
+@use '/src/styles/mixins/animations.scss' as animations;
+
 .backdrop {
   background: rgba(black, 0.75);
   position: fixed;
@@ -7,6 +9,13 @@
   bottom: 0;
   z-index: 0;
   backdrop-filter: blur(5px);
+  transition: 200ms;
+
+  @include animations.fade-in;
+
+  &._closing {
+    @include animations.fade-out;
+  }
 }
 
 .modalWindow {
@@ -16,4 +25,17 @@
   z-index: 1;
   margin-left: auto;
   margin-right: auto;
+
+  @include animations.fade-in;
+  @include animations.slide-up;
+
+  animation-name: fade-in, slide-up;
+
+  &._closing {
+    @include animations.fade-out;
+    @include animations.slide-down;
+
+    animation-name: fade-out, slide-down;
+  }
 }
+

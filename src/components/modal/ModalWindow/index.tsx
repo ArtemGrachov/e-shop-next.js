@@ -11,13 +11,20 @@ interface IProps {
   backdropClose?: boolean;
 }
 
-const ModalWindow: ComponentType<PropsWithChildren & IProps & IModalProps & IPropsWithClassName> = ({ children, backdrop, backdropClose, className, close }) => {
+const ModalWindow: ComponentType<PropsWithChildren & IProps & IModalProps & IPropsWithClassName> = ({
+  children,
+  backdrop,
+  backdropClose,
+  className,
+  closing,
+  close,
+}) => {
   backdropClose = backdropClose ?? true;
 
   return (
     <>
-      {backdrop ? <div className={styles.backdrop} onClick={backdropClose ? () => close() : undefined} /> : null}
-      <div className={clsx(styles.modalWindow, className)}>
+      {backdrop ? <div className={clsx(styles.backdrop, closing && styles._closing)} onClick={backdropClose ? () => close() : undefined} /> : null}
+      <div className={clsx(styles.modalWindow, className, closing && styles._closing)}>
         {children}
       </div>
     </>
