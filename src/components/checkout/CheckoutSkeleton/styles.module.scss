@@ -21,6 +21,10 @@
     width: 30%;
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &._title {
     height: 2em;
     width: 45%;
