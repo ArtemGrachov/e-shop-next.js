@@ -15,10 +15,6 @@
   flex-direction: column;
 }
 
-.title {
-  margin-bottom: 64px;
-}
-
 .button {
   @include buttons.button();
 }
