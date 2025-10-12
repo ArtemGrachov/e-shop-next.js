@@ -14,7 +14,7 @@ import Button from '@/components/buttons/Button';
 const ModalFilters = lazy(() => import('@/views/catalog/components/ModalFilters'));
 
 interface IProps {
-  data: Awaited<ReturnType<typeof getPageData>>;
+  data?: Awaited<ReturnType<typeof getPageData>>;
 }
 
 const MobileFilters: ComponentType<IProps> = ({ data }) => {

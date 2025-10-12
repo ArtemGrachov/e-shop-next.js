@@ -11,3 +11,13 @@ export interface IProductsResponse {
   items: IProduct[];
   filters: IProductFilters;
 }
+
+export interface IProductsQuery {
+  page?: number | string | null;
+  itemsPerPage?: number | string | null;
+  'price[min]'?: number | string | null;
+  'price[max]'?: number | string | null;
+  categoryId?: number | string | null;
+  search?: number | string | null;
+  productIds?: Array<string | number>;
+}

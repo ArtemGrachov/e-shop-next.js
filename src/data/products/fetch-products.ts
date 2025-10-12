@@ -11,6 +11,7 @@ export interface IFetchProductsParams {
       max?: string | number | null;
     };
   };
+  productIds?: string[];
 }
 
 export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProductsParams) => {
@@ -22,6 +23,7 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       'price[max]': params?.filters?.price.max,
       categoryId: params?.categoryId,
       search: params?.search,
+      productIds: params?.productIds,
     };
 
     const { data } = await httpClient('/products', { params: query });
