@@ -37,17 +37,25 @@ const OrderPageClient: ComponentType = () => {
   return (
     <main className={styles.page}>
       <div className={styles.container}>
-        <h1>
+        <h1 className={styles.title}>
           {t('order_page.title')}
         </h1>
         {isProcessing ? '...' : (isSuccess && order) ? (
           <>
-            <OrderItemList orderItems={order.items} />
-            <DeliveryMethod deliveryMethod={order.deliveryMethod!} />
-            {order.pickUpPoint && <PickUpPoint pickUpPoint={order.pickUpPoint} />}
-            <DeliveryAddress deliveryMethod={order.deliveryMethod!} deliveryAddress={order.deliveryAddress!} />
-            <PaymentMethod paymentMethod={order.paymentMethod!} />
-            <OrderSummary order={order} />
+            <div className={styles.section}>
+              <OrderItemList orderItems={order.items} />
+            </div>
+            <div className={styles.section}>
+              <DeliveryMethod deliveryMethod={order.deliveryMethod!} />
+              {order.pickUpPoint && <PickUpPoint pickUpPoint={order.pickUpPoint} />}
+              <DeliveryAddress deliveryMethod={order.deliveryMethod!} deliveryAddress={order.deliveryAddress!} />
+            </div>
+            <div className={styles.section}>
+              <PaymentMethod paymentMethod={order.paymentMethod!} />
+            </div>
+            <div className={styles.section}>
+              <OrderSummary order={order} />
+            </div>
           </>
         ) : null}
       </div>
