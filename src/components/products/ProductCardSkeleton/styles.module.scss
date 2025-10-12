@@ -1,0 +1,43 @@
+@use '/src/styles/mixins/themes.scss' as themes;
+@use '/src/styles/mixins/skeleton.scss' as skeleton;
+
+.productCard {
+  position: relative;
+}
+
+.image {
+  padding-top: 100%;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.imageSkeleton {
+  @include skeleton.skeleton();
+
+  --skeleton-position: absolute;
+  --skeleton-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.nameSkeleton {
+  @include skeleton.skeleton();
+
+  margin-bottom: 12px;
+}
+
+.priceSkeleton {
+  @include skeleton.skeleton();
+
+  max-width: 150px;
+}
+
+.cartSkeleton {
+  @include skeleton.skeleton();
+
+  --skeleton-height: 42px;
+  --skeleton-border-radius: 42px;
+  margin-top: 13px;
+}

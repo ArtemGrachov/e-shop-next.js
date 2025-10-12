@@ -3,9 +3,11 @@
 import { ComponentType, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
+import { EStatus } from '@/constants/status';
+
 import { useProductsCtx } from '@/providers/products/hooks/use-products-ctx';
-import { useFavouritesStore } from '@/providers/favourites/hooks/use-favourites-store';
 import { ProductsProvider } from '@/providers/products';
+import { useFavouritesCtx } from '@/providers/favourites/hooks/use-favourites-ctx';
 import { useProductsStore } from '@/providers/products/hooks/use-products-store';
 
 import ProductList from '@/components/products/ProductList';
@@ -14,7 +16,6 @@ import { IViewFavouritesProps } from '@/views/favourites/types';
 
 import styles from './styles.module.scss';
 import { useAppCtx } from '@/providers/app/hooks/use-app-ctx';
-import { useFavouritesCtx } from '@/providers/favourites/hooks/use-favourites-ctx';
 
 const FavouritesClientView: ComponentType<IViewFavouritesProps> = () => {
   const t = useTranslations();
@@ -23,6 +24,8 @@ const FavouritesClientView: ComponentType<IViewFavouritesProps> = () => {
 
   const { getProducts } = useProductsCtx();
   const productsData = useProductsStore(s => s.data);
+  const getProductsStatus = useProductsStore(s => s.getStatus);
+  const isProcessing = getProductsStatus === EStatus.PROCESSING || getProductsStatus === EStatus.INIT;
   const { store } = useFavouritesCtx();
   const { subscribe } = useAppCtx();
 
@@ -42,6 +45,7 @@ const FavouritesClientView: ComponentType<IViewFavouritesProps> = () => {
         <ProductList
           className={styles.list}
           products={productsData?.items}
+          isProcessing={isProcessing}
         />
       </div>
     </main>
