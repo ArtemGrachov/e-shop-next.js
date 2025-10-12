@@ -3,8 +3,6 @@
 @use '/src/styles/mixins/buttons.scss' as buttons;
 
 .nav {
-  @include header.header-root();
-
   display: none;
 
   @include breakpoints.sm {
@@ -14,4 +12,4 @@
 
 .container {
   @include header.header-container();
-}
+} 

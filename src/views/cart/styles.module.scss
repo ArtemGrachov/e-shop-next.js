@@ -1,32 +1,76 @@
 @use '/src/styles/mixins/layout.scss' as layout;
+@use '/src/styles/mixins/breakpoints.scss' as breakpoints;
 @use '/src/styles/mixins/buttons.scss' as buttons;
 
 .page {
   @include layout.page;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .container {
-  @include layout.container;
+  @include breakpoints.md {
+    @include layout.container;
+  }
+}
+
+.title {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include breakpoints.md {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .row {
-  display: flex;
-  gap: 24px;
+  @include breakpoints.md {
+    display: flex;
+    gap: 24px;
+  }
 }
 
 .col {
-  flex: 1 1 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-bottom: 24px;
+
+  @include breakpoints.md {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   &._sm {
-    flex: 0 0 auto;
-    width: 300px;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-background);
+    box-shadow: 0 -10px 10px 0 rgba(black, 0.1);
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include breakpoints.md {
+      position: static;
+      width: 350px;
+      flex: 0 0 auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      background: none;
+      box-shadow: none;
+    }
+
+    @include breakpoints.lg {
+      width: 450px;
+    }
   }
 }
 
 .orderSummary {
   margin-bottom: 24px;
-}
-
-.link {
-  @include buttons.button(100%);
 }

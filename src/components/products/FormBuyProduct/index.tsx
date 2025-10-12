@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import clsx from 'clsx';
 
 import FormField from '@/components/forms/FormField';
+import Button from '@/components/buttons/Button';
 
 import type { IProduct } from '@/types/models/product';
 import type { IProductVariant } from '@/types/models/product-variant';
@@ -76,9 +77,9 @@ const FormBuyProduct: ComponentType<IProps & IPropsWithClassName> = ({ className
           className={clsx(styles.input, styles.quantity)}
           {...quantityInput}
         />
-        <button type="submit" className={styles.button}>
+        <Button type="submit" variant={'primary'}>
           {t('form_buy_product.submit')}
-        </button>
+        </Button>
       </div>
     </form>
   )

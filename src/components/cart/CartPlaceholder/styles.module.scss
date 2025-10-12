@@ -1,0 +1,15 @@
+@use '/src/styles/mixins/typography.scss' as typography;
+
+.cartPlaceholder {
+  margin: auto;
+  text-align: center;
+  padding: 24px;
+}
+
+.icon {
+  color: #d7d7d7;
+}
+
+.title {
+  @include typography.h1;
+}

@@ -1,10 +1,24 @@
+@use '/src/styles/mixins/themes.scss' as themes;
+
 .formField {
   margin-bottom: 24px;
 }
 
 .label {
   margin-bottom: 16px;
-  color: var(--text-secondary-color);
+  color: var(--form-field-label-color);
   font-size: 16px;
   display: block;
+}
+
+@include themes.component-theme-dark() {
+  .label {
+    --form-field-label-color: #a2a2a2;
+  }
+}
+
+@include themes.component-theme-light() {
+  .label {
+    --form-field-label-color: #3b3b3b;
+  }
 }

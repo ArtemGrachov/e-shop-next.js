@@ -3,6 +3,8 @@ import { useLocale } from 'next-intl';
 
 import type { IPaymentMethod } from '@/types/models/payment-method';
 
+import styles from './styles.module.scss';
+
 interface IProps {
   paymentMethod: IPaymentMethod;
 }
@@ -14,9 +16,9 @@ const PaymentMethod: ComponentType<IProps> = ({ paymentMethod: paymentMethod }) 
 
   return (
     <div>
-      <h3>
+      <div className={styles.title}>
         {paymentMethod.name[locale]}
-      </h3>
+      </div>
       {description && <p>
         {description}
       </p>}

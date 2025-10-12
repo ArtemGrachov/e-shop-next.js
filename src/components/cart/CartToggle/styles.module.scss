@@ -1,5 +1,0 @@
-@use '/src/styles/mixins/buttons.scss' as buttons;
-
-.cartToggle {
-  @include buttons.input-button();
-}

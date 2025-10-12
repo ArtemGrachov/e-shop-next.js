@@ -1,3 +1,5 @@
+@use '/src/styles/mixins/links.scss' as links;
+
 .list {
   list-style: none;
   padding: 0;
@@ -5,17 +7,9 @@
 }
 
 .link {
+  @include links.link();
+
+  font-size: 16px;
   display: block;
-  text-decoration: none;
-  color: var(--secondary-link);
-  text-decoration: none;
   padding: 12px 0;
-
-  &:hover {
-    color: var(--primary-link);
-  }
-
-  &:active {
-    text-decoration: underline;
-  }
 }

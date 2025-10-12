@@ -1,7 +1,17 @@
+@use '/src/styles//mixins/breakpoints.scss' as breakpoints;
+@use '/src/styles/mixins/themes.scss' as themes;
+
 .orderItem {
   display: flex;
   gap: 24px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  @include breakpoints.sm {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 }
 
 .description {
@@ -9,11 +19,18 @@
   gap: 24px;
   align-items: center;
   flex: 1 1 auto;
-  color: var(--secondary-link);
+  color: var(--order-item-description-color);
   text-decoration: none;
+  width: 100%;
+  flex: 0 0 auto;
+
+  @include breakpoints.sm {
+    flex: 1 1 auto;
+    width: auto;
+  }
 
   &:hover {
-    color: var(--primary-link);
+    color: orange;
   }
 
   &:active {
@@ -26,8 +43,22 @@
   height: 100px;
   background: var(--image-placeholder-background);
   border-radius: 4px;
+  flex: 0 0 auto;
 }
 
 .name {
   flex: 1 1 auto;
 }
+
+@include themes.component-theme-dark() {
+  .description {
+    --order-item-description-color: orange;
+  }
+}
+
+@include themes.component-theme-light() {
+  .description {
+    --order-item-description-color: #474747;
+  }
+}
+

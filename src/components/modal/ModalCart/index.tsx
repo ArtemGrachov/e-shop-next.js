@@ -15,10 +15,15 @@ import Modal from '@/components/modal/Modal';
 import ModalWindow from '@/components/modal/ModalWindow';
 import CartList from '@/components/cart/CartList';
 import OrderSummary from '@/components/order/OrderSummary';
+import Button from '@/components/buttons/Button';
 
 import styles from './styles.module.scss';
 
-const ModalCart: ComponentType<IModalProps> = (props) => {
+export interface IProps {
+  checkout?: boolean;
+}
+
+const ModalCart: ComponentType<IProps & IModalProps> = (props) => {
   const t = useTranslations();
   const routePath = useRoutePath();
 
@@ -27,12 +32,33 @@ const ModalCart: ComponentType<IModalProps> = (props) => {
 
   return (
     <Modal>
-      <ModalWindow backdrop={true} {...props}>
-        <CartList orderItems={cartItems} />
-        {order && <OrderSummary order={order} className={styles.orderSummary} />}
-        <Link href={routePath(ROUTES.CHECKOUT)} className={styles.link}>
-          {t('view_cart.checkout')}
-        </Link>
+      <ModalWindow backdrop={true} {...props} className={styles.modalCart}>
+        <div className={styles.content}>
+          <CartList orderItems={cartItems} />
+        </div>
+        <div className={styles.footer}>
+          {order && <OrderSummary order={order} className={styles.orderSummary} />}
+          {props.checkout ? (
+              <Button tag={'button'} onClick={props.close}>
+                {t('modal_cart.return')}
+              </Button>
+          ) : (
+            <>
+              <Button
+                href={routePath(ROUTES.CHECKOUT)}
+                className={styles.link}
+                tag={'Link'}
+                variant={'primary'}
+                onClick={props.close}
+              >
+                {t('modal_cart.checkout')}
+              </Button>
+              <Button tag={'button'} onClick={props.close}>
+                {t('modal_cart.continue')}
+              </Button>
+            </>
+          )}
+        </div>
       </ModalWindow>
     </Modal>
   )

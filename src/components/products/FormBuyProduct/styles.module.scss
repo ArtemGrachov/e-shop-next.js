@@ -1,5 +1,4 @@
 @use '/src/styles/mixins/input.scss' as input;
-@use '/src/styles/mixins/buttons.scss' as buttons;
 
 .buyRow {
   display: flex;
@@ -13,8 +12,4 @@
 .quantity {
   max-width: 80px;
   text-align: center;
-}
-
-.button {
-  @include buttons.button();
 }

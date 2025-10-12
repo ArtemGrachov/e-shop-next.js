@@ -38,7 +38,7 @@
     "submit": "Save"
   },
   "form_payment_method": {
-    "payment_method": "Payment method",
+    "payment_method": "Payment",
     "submit": "Save"
   },
   "common_validation": {
@@ -97,7 +97,8 @@
     "checkout": "Checkout"
   },
   "view_checkout": {
-    "title": "Checkout"
+    "title": "Checkout",
+    "open_cart": "View cart"
   },
   "footer": {
     "developed_by": "Designed and developed by <name></name>, <year></year>"
@@ -109,5 +110,14 @@
     "mobile_filters": {
       "filters": "Filters"
     }
+  },
+  "cart_placeholder": {
+    "title": "The cart is empty yet",
+    "link": "Look for products"
+  },
+  "modal_cart": {
+    "checkout": "Checkout",
+    "continue": "Continue shopping",
+    "return": "Return"
   }
 }

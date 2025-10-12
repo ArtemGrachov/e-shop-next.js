@@ -18,12 +18,15 @@
 .sidebar {
   flex: 0 0 auto;
   width: 300px;
-  padding-top: 24px;
   display: none;
 
   @include breakpoints.md {
     display: block;
   }
+}
+
+.description {
+  margin-bottom: 24px;
 }
 
 .mobileFilters {

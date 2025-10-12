@@ -1,9 +1,46 @@
 @use '/src/styles/mixins/layout.scss' as layout;
+@use '/src/styles/mixins/breakpoints.scss' as breakpoints;
+@use '/src/styles/mixins/themes.scss' as themes;
 
 .page {
   @include layout.page;
 }
 
+.title {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include breakpoints.sm {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .container {
-  @include layout.container(600px);
+  @include breakpoints.sm {
+    @include layout.container(600px);
+  }
+}
+
+.section {
+  padding: 24px;
+  box-shadow: 0 5px 16px 0 rgba(black, 0.1);
+  margin-bottom: 24px;
+  background: var(--order-section-background);
+
+  @include breakpoints.md {
+    border-radius: 16px;
+  }
+}
+
+@include themes.component-theme-dark() {
+  .section {
+    --order-section-background: #212121;
+  }
+}
+
+@include themes.component-theme-light() {
+  .section {
+    --order-section-background: white;
+  }
 }

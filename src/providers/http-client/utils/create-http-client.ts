@@ -4,7 +4,7 @@ import AxiosMockAdapter from 'axios-mock-adapter';
 const data = () => import('../../../../data/index.json');
 const productsBackend = () => import('@/mock-backend/products');
 
-const ORDER_STORAGE_KEY = 'ORDER;'
+const ORDER_STORAGE_KEY = 'ORDER'
 
 export const createHttpClient = () => {
   const mockHttpClient = new AxiosMockAdapter(axios);

@@ -3,6 +3,8 @@ import { useLocale } from 'next-intl';
 
 import type { IDeliveryMethod } from '@/types/models/delivery-method';
 
+import styles from './styles.module.scss';
+
 interface IProps {
   deliveryMethod: IDeliveryMethod;
 }
@@ -14,9 +16,9 @@ const DeliveryMethod: ComponentType<IProps> = ({ deliveryMethod }) => {
 
   return (
     <div>
-      <h3>
+      <div className={styles.title}>
         {deliveryMethod.name[locale]}
-      </h3>
+      </div>
       {description && <p>
         {description}
       </p>}

@@ -3,5 +3,9 @@
 
   td {
     padding: 8px 16px;
+
+    &:last-child {
+      text-align: right;
+    }
   }
 }

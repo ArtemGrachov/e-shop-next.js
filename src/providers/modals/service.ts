@@ -31,9 +31,37 @@ export const useModalService = () => {
     close(item);
   }
 
-  const close = (item: IModalItem) => {
-    modals.current = modals.current.filter(i => i !== item);
+  const close = async (item: IModalItem) => {
+    modals.current = modals.current.map(i => {
+      if (i.id !== item.id) {
+        return i;
+      }
+
+      return {
+        ...i,
+        closing: true,
+      }
+    });
+
     update();
+
+    const closeTimeoutMs = item.closeTimeoutMs ?? 200;
+
+    if (closeTimeoutMs) {
+      await new Promise<void>(resolve => {
+        setTimeout(() => {
+          resolve();
+        }, closeTimeoutMs);
+      })
+    }
+
+    modals.current = modals.current.filter(i => i.id !== item.id);
+
+    update();
+
+    if (item.onClosed) {
+      item.onClosed();
+    }
   }
 
   const update = () => {

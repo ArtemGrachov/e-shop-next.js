@@ -2,10 +2,15 @@
   display: block;
   border-radius: 4px;
   padding: 8px 16px;
-  border: 1px solid var(--border-primary);
+  border: 1px solid var(--input-default-border);
   width: 100%;
-  color: var(--text-color);
-  background: var(--primary-background);
+  color: var(--input-default-color);
+  background: var(--input-default-background);
   font-size: 16px;
   font-family: 'Ubuntu', 'Ubuntu Fallback';
+
+  &:focus {
+    outline: none;
+    border-color: var(--input-default-focus-border-color);
+  }
 }
