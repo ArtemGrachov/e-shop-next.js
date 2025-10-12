@@ -38,7 +38,7 @@ const CartPageClient: ComponentType = () => {
   return (
     <main className={styles.page}>
       <div className={styles.container}>
-        <h1>{t('view_cart.title')}</h1>
+        <h1 className={styles.title}>{t('view_cart.title')}</h1>
         <div className={styles.row}>
           <div className={styles.col}>
             <CartList orderItems={cartItems} />
