@@ -35,7 +35,9 @@ const ProductView = async (props: IViewProductProps) => {
         <div className={styles.container}>
           <div className={styles.row}>
             <div className={styles.col}>
-              <div className={styles.media}></div>
+              <div className={styles.mediaWrap}>
+                <div className={styles.media}></div>
+              </div>
             </div>
             <div className={styles.col}>
               <div className={styles.titleRow}>

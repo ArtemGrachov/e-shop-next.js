@@ -1,5 +1,6 @@
 @use 'sass:math';
 @use '/src/styles/mixins/layout.scss' as layout;
+@use '/src/styles/mixins/breakpoints.scss' as breakpoints;
 
 .page {
   @include layout.page;
@@ -12,18 +13,50 @@
 $gap: 24px;
 
 .row {
-  display: flex;
-  margin: 0 math.div(-$gap, 2) 48px;
+  @include breakpoints.md {
+    display: flex;
+    margin: 0 math.div(-$gap, 2) 48px;
+  }
 }
 
 .col {
-  flex: 0 0 auto;
-  padding: 0 math.div($gap, 2);
-  width: 50%;
+  margin-bottom: 24px;
+
+  @include breakpoints.md {
+    flex: 0 0 auto;
+    padding: 0 math.div($gap, 2);
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.mediaWrap {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+
+  @include breakpoints.sm {
+    width: 50svw;
+    height: 50svw;
+    padding-top: 0;
+  }
+
+  @include breakpoints.md {
+    width: 100%;
+    height: auto;
+    padding-top: 100%;
+  }
 }
 
 .media {
-  padding-top: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   background: var(--image-placeholder-background);
   border-radius: 4px;
 }
