@@ -48,9 +48,6 @@ const CartItem: ComponentType<IProps> = ({ orderItem }) => {
           {orderItem.name[locale]}
         </div>
       </Link>
-      <div className={styles.quantity}>
-        x{orderItem.quantity}
-      </div>
       <Price price={orderItem.price} />
       <CartItemCounter orderItem={orderItem} />
       <IconButton type="button" onClick={removeHandler}>

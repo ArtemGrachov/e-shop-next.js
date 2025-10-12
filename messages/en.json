@@ -113,5 +113,9 @@
   "cart_placeholder": {
     "title": "The cart is empty yet",
     "link": "Look for products"
+  },
+  "modal_cart": {
+    "checkout": "Checkout",
+    "continue": "Continue shopping"
   }
 }

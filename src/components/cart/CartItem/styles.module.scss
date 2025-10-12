@@ -1,18 +1,32 @@
 @use '/src/styles/mixins/buttons.scss' as buttons;
+@use '/src/styles//mixins/breakpoints.scss' as breakpoints;
 
 .cartItem {
   display: flex;
   gap: 24px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  @include breakpoints.sm {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 }
 
 .description {
   display: flex;
   gap: 24px;
   align-items: center;
-  flex: 1 1 auto;
   color: var(--secondary-link);
   text-decoration: none;
+  width: 100%;
+  flex: 0 0 auto;
+
+  @include breakpoints.sm {
+    flex: 1 1 auto;
+    width: auto;
+  }
 
   &:hover {
     color: var(--primary-link);

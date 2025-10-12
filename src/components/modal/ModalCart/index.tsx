@@ -28,12 +28,25 @@ const ModalCart: ComponentType<IModalProps> = (props) => {
 
   return (
     <Modal>
-      <ModalWindow backdrop={true} {...props}>
-        <CartList orderItems={cartItems} />
-        {order && <OrderSummary order={order} className={styles.orderSummary} />}
-        <Button href={routePath(ROUTES.CHECKOUT)} className={styles.link} tag={'Link'} variant={'primary'}>
-          {t('view_cart.checkout')}
-        </Button>
+      <ModalWindow backdrop={true} {...props} className={styles.modalCart}>
+        <div className={styles.content}>
+          <CartList orderItems={cartItems} />
+        </div>
+        <div className={styles.footer}>
+          {order && <OrderSummary order={order} className={styles.orderSummary} />}
+          <Button
+            href={routePath(ROUTES.CHECKOUT)}
+            className={styles.link}
+            tag={'Link'}
+            variant={'primary'}
+            onClick={props.close}
+          >
+            {t('modal_cart.checkout')}
+          </Button>
+          <Button tag={'button'} onClick={props.close}>
+            {t('modal_cart.continue')}
+          </Button>
+        </div>
       </ModalWindow>
     </Modal>
   )
