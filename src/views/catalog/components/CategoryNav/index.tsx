@@ -14,9 +14,10 @@ import styles from './styles.module.scss';
 
 interface IProps {
   categories?: ICategory[];
+  onNavigate?: Function;
 }
 
-const CategoryNav: ComponentType<IProps & IPropsWithClassName> = ({ categories, className }) => {
+const CategoryNav: ComponentType<IProps & IPropsWithClassName> = ({ categories, className, onNavigate }) => {
   categories = categories ?? [];
 
   const routePath = useRoutePath();
@@ -32,7 +33,7 @@ const CategoryNav: ComponentType<IProps & IPropsWithClassName> = ({ categories, 
 
           return (
             <li key={category.id} className={styles.item}>
-              <Link href={href} className={styles.link}>
+              <Link href={href} className={styles.link} onClick={onNavigate ? onNavigate() : undefined}>
                 {name}
               </Link>
             </li>

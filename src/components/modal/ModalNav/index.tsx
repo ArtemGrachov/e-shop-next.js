@@ -16,11 +16,11 @@ const ModalNav: ComponentType<IModalProps> = (props) => {
   return (
     <ModalFullscreen {...props}>
       <ModalHeader {...props}>
-        <ProductSearch className={styles.productSearch} />
-        <FavouritesLink className={styles.favouritesLink} />
+        <ProductSearch className={styles.productSearch} onSubmit={props.close} />
+        <FavouritesLink className={styles.favouritesLink} onClick={props.close} />
       </ModalHeader>
       <div className={styles.content}>
-        <Nav />
+        <Nav onClick={props.close} />
       </div>
     </ModalFullscreen>
   )

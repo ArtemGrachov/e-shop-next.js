@@ -12,9 +12,10 @@ import type { IFilterRange } from '@/types/models/filter';
 
 interface IProps {
   filters: IProductFilters;
+  onUpdate?: Function;
 }
 
-const ProductFilters: ComponentType<IProps> = ({ filters }) => {
+const ProductFilters: ComponentType<IProps> = ({ filters, onUpdate }) => {
   const t = useTranslations();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -35,6 +36,10 @@ const ProductFilters: ComponentType<IProps> = ({ filters }) => {
     const newSearchParams = new URLSearchParams(outputQuery);
 
     router.push(`?${newSearchParams.toString()}`);
+
+    if (onUpdate) {
+      onUpdate();
+    }
   }
 
   const handleRangeFilter = (key: string, value: [number, number], filter: IFilterRange) => {
