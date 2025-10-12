@@ -1,0 +1,40 @@
+@use '/src/styles/mixins/links.scss' as links;
+
+.breadcrumbs {
+  margin-bottom: 24px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  overflow-x: auto;
+}
+
+.item {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  left: calc(100% + 4px);
+  top: 2px;
+  color: grey;
+}
+
+.link,
+.current {
+  font-size: 14px;;
+}
+
+.link {
+  @include links.link();
+}
+
+.current {
+  color: grey;
+}

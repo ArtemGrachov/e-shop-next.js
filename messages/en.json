@@ -122,5 +122,9 @@
   "product_card": {
     "add_to_cart": "Add to cart",
     "product_in_cart": "Added!"
+  },
+  "common_breadcrumbs": {
+    "home":"Home page",
+    "catalog": "Catalog"
   }
 }

@@ -7,7 +7,9 @@
 
 .container {
   @include layout.container();
+}
 
+.row {
   @include breakpoints.sm {
     display: flex;
     align-items: stretch;
