@@ -15,6 +15,9 @@ import CartList from '@/components/cart/CartList';
 import OrderSummary from '@/components/order/OrderSummary';
 import Button from '@/components/buttons/Button';
 import CartPlaceholder from '@/components/cart/CartPlaceholder';
+import Breadcrumbs from '@/components/other/Breadcrumbs';
+
+import type { IBreadcrumb } from '@/types/other/breadcrumbs';
 
 import styles from './styles.module.scss';
 
@@ -35,9 +38,21 @@ const CartPageClient: ComponentType = () => {
     )
   }
 
+  const breadcrumbs: IBreadcrumb[] = [
+    {
+      label: t('common_breadcrumbs.home'),
+      path: routePath(ROUTES.HOME),
+    },
+    {
+      label: t('common_breadcrumbs.cart'),
+      path: routePath(ROUTES.CART),
+    },
+  ];
+
   return (
     <main className={styles.page}>
       <div className={styles.container}>
+        <Breadcrumbs breadcrumbs={breadcrumbs} />
         <h1 className={styles.title}>{t('view_cart.title')}</h1>
         <div className={styles.row}>
           <div className={styles.col}>

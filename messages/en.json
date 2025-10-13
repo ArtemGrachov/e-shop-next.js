@@ -124,7 +124,10 @@
     "product_in_cart": "Added!"
   },
   "common_breadcrumbs": {
-    "home":"Home page",
-    "catalog": "Catalog"
+    "home":"Home",
+    "catalog": "Catalog",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "favourites": "Favourites"
   }
 }
