@@ -2,6 +2,7 @@
 
 import { ComponentType, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
 import InnerImageZoom from 'inner-image-zoom';
 import clsx from 'clsx';
 import { Search } from 'react-bootstrap-icons';
@@ -10,6 +11,8 @@ import type { IPropsWithClassName } from '@/types/other/component-props';
 import type { IMedia } from '@/types/models/media';
 
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import 'inner-image-zoom/lib/styles.min.css';
 import styles from './styles.module.scss';
 
@@ -22,7 +25,6 @@ const Gallery: ComponentType<IPropsWithClassName & IProps> = ({ className }) => 
 
   const initZoom = () => {
     new InnerImageZoom(`.${styles.image}`, {
-      zoomType: 'hover',
       hideCloseButton: true,
       hideHint: true,
     });
@@ -35,8 +37,12 @@ const Gallery: ComponentType<IPropsWithClassName & IProps> = ({ className }) => 
   return (
     <div className={clsx(styles.gallery, className)}>
       <Swiper
+        modules={[Navigation, Pagination]}
         className={styles.swiper}
         spaceBetween={50}
+        navigation
+        loop={true}
+        pagination={{ clickable: true }}
       >
         {media.map((m, i) => {
           return (
