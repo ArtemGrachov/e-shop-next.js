@@ -1,7 +1,7 @@
 @mixin input-default {
   display: block;
   border-radius: 4px;
-  padding: 8px 16px;
+  padding: var(--input-default-padding, 8px 16px);
   border: 1px solid var(--input-default-border);
   width: 100%;
   color: var(--input-default-color);

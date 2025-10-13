@@ -1,0 +1,9 @@
+@use '/src/styles/mixins/input.scss' as input;
+
+.input {
+  @include input.input-default();
+
+  --input-default-padding: 8px 0;
+  text-align: center;
+  width: 80px;
+}
