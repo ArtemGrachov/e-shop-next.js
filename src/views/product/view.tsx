@@ -5,10 +5,11 @@ import { ROUTES } from '@/router/routes';
 
 import { getRoutePath } from '@/hooks/routing/use-route-path';
 import FavouritesToggle from '@/components/favourites/FavouritesToggle';
+import Breadcrumbs from '@/components/other/Breadcrumbs';
+import Gallery from '@/components/media/Gallery';
 import ProductDescription from './components/ProductDescription';
 import ProductReviews from './components/ProductReviews';
 import BuyProduct from './components/BuyProduct';
-import Breadcrumbs from '@/components/other/Breadcrumbs';
 
 import ProductPageWrapper from './client';
 import { getPageData } from './server';
@@ -94,7 +95,7 @@ const ProductView = async (props: IViewProductProps) => {
           <div className={styles.row}>
             <div className={styles.col}>
               <div className={styles.mediaWrap}>
-                <div className={styles.media}></div>
+                <Gallery className={styles.mediaGallery} />
               </div>
             </div>
             <div className={styles.col}>
