@@ -13,6 +13,7 @@
     "axios": "^1.12.2",
     "axios-mock-adapter": "^2.1.0",
     "clsx": "^2.1.1",
+    "inner-image-zoom": "^1.0.1",
     "next": "15.5.3",
     "next-intl": "^4.3.9",
     "pathcat": "^1.4.0",
