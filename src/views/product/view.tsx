@@ -43,37 +43,31 @@ const ProductView = async (props: IViewProductProps) => {
   });
 
   const product = data.product;
-  const correctSlugId = `${product!.slug[locale]}-${product.id}`;
-  const correctPath = routePath(ROUTES.PRODUCT, { ...searchParams, slugId: correctSlugId });
 
-  const getProductSlugId = () => {
-    const slug = params.slug;
+  const [productSlugId, variantSlugId] = params.slug;
+  const productSlugArr = productSlugId.split('-');
+  const variantSlugArr = variantSlugId ? variantSlugId.split('-') : null;
 
-    if (!slug) {
-      return null;
-    }
+  const productSlug = productSlugArr.slice(0, -1).join('-');
+  const productId = productSlugArr.slice(-1)[0];
 
-    return slug[0];
-  };
+  const variantSlug = variantSlugArr?.slice(0, -1).join('-');
+  const variantId = variantSlugArr?.slice(-1)[0];
 
-  const splitProductSlugId = () => {
-    if (productSlugId == null) {
-      return [null, null];
-    }
+  const variant = product.variants?.find(v => v.id == variantId);
 
-    const arr = productSlugId.split('-');
+  const correctProductSlug = product.slug[locale];
+  const correctVariantSlug = variant?.slug[locale];
 
-    return [
-      arr.slice(0, -1).join('-'),
-      arr.slice(-1)[0],
-    ];
+  let correctSlugId = `${correctProductSlug}-${productId}`;
+
+  if (correctVariantSlug) {
+    correctSlugId += `/${correctVariantSlug}-${variantId}`;
   }
 
-  const productSlugId = getProductSlugId();
-  const [productSlug] = splitProductSlugId();
+  const correctPath = routePath(ROUTES.PRODUCT, { ...searchParams, slugId: correctSlugId })
 
-
-  if (product.slug[locale] !== productSlug) {
+  if (productSlug !== correctProductSlug || (variantSlug && correctVariantSlug && variantSlug !== correctVariantSlug)) {
     return redirect(correctPath);
   }
 
@@ -88,7 +82,7 @@ const ProductView = async (props: IViewProductProps) => {
     },
     {
       label: product.name[locale],
-      path: correctPath,
+      path: 'correctPath',
     },
   ];
 
