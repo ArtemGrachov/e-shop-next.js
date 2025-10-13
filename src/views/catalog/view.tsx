@@ -45,57 +45,25 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
   const categories = data.categoriesResponse;
   const productsData = data.productsResponse;
 
-  const getCategorySlugId = () => {
-    const slug = params.slug;
+  const categorySlugId = params.slug ? params.slug[0] : null;
+  const categorySlugArr = categorySlugId?.split('-');
+  const categorySlug = categorySlugArr?.slice(0, -1).join('-');
+  const categoryId = categorySlugArr?.slice(-1)[0];
 
-    if (!slug) {
-      return null;
-    }
+  const category =  categories.find(c => c.id === categoryId);
+  const correctCategorySlug = category?.slug[locale];
 
-    return slug[0];
-  };
+  const isCategory = !!category;
+  const isSearch = !!searchParams.search;
 
-  const splitCategorySlugId = () => {
-    if (categorySlugId == null) {
-      return [null, null];
-    }
-
-    const arr = categorySlugId.split('-');
-
-    return [
-      arr.slice(0, -1).join('-'),
-      arr.slice(-1)[0],
-    ];
-  }
-
-  const getCategory = () => {
-    if (!categoryId) {
-      return null;
-    }
-
-    return categories.find(c => c.id === categoryId);
-  };
-
-  const categorySlugId = getCategorySlugId();
-  const [categorySlug, categoryId] = splitCategorySlugId();
-  const category = getCategory();
+  const correctSlugId = isCategory ? `${correctCategorySlug}-${categoryId}` : null;
+  const correctPath = routePath(ROUTES.CATALOG, { ...searchParams, slugId: correctSlugId || '' })
 
   if (categorySlugId && !category) {
     return notFound();
   }
 
-  let correctSlugId;
-
-  const isCategory = !!category;
-  const isSearch = !!searchParams.search;
-
-  if (isCategory) {
-    correctSlugId = `${category!.slug[locale]}-${categoryId}`;
-  }
-
-  const correctPath = routePath(ROUTES.CATALOG, { ...searchParams, slugId: correctSlugId ?? '' });
-
-  if (isCategory && category.slug[locale] !== categorySlug) {
+  if (isCategory && categorySlug !== correctCategorySlug) {
     return redirect(correctPath);
   }
 
@@ -118,12 +86,7 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
   };
 
   const title = getTitle();
-
-  const getDescription = () => {
-    return category?.description?.[locale];
-  };
-
-  const description = getDescription();
+  const description = category?.description?.[locale];
 
   const breadcrumbs: IBreadcrumb[] = [
     {
