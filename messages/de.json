@@ -1,3 +1,137 @@
 {
-  "test": "Test DE"
+  "nav": {
+    "home": "Startseite",
+    "catalog": "Katalog"
+  },
+  "form_buy_product": {
+    "variant": "Variante",
+    "submit": "Kaufen"
+  },
+  "form_review": {
+    "rate": "Bewerten",
+    "review": "Rezension",
+    "submit": "Senden"
+  },
+  "common_error": {
+    "any": "Ein Fehler ist aufgetreten"
+  },
+  "common_order": {
+    "total": "Gesamtbetrag",
+    "items_price": "Artikelpreis",
+    "delivery_price": "Lieferkosten"
+  },
+  "form_delivery_method": {
+    "delivery_method": "Liefermethode",
+    "pick_up_point": "Abholstelle",
+    "submit": "Speichern"
+  },
+  "form_delivery_address": {
+    "first_name": "Vorname",
+    "last_name": "Nachname",
+    "email": "E-Mail",
+    "phone_number": "Telefonnummer",
+    "city": "Stadt",
+    "street": "Straße",
+    "house_number": "Hausnummer",
+    "apartment_number": "Wohnungsnummer",
+    "comment": "Kommentar",
+    "submit": "Speichern"
+  },
+  "form_payment_method": {
+    "payment_method": "Zahlungsmethode",
+    "submit": "Speichern"
+  },
+  "common_validation": {
+    "required": "Dieses Feld ist erforderlich",
+    "pattern": "Dieses Feld hat ein ungültiges Format",
+    "email": "Dieses Feld muss eine gültige E-Mail-Adresse enthalten"
+  },
+  "checkout_delivery": {
+    "title_method": "Liefermethode",
+    "title_address": "Lieferadresse",
+    "title_contacts": "Lieferkontakte",
+    "edit": "Bearbeiten"
+  },
+  "deliery_address": {
+    "name": "Name",
+    "email": "E-Mail",
+    "phone_number": "Telefonnummer",
+    "city": "Stadt",
+    "street": "Straße",
+    "house_number": "Hausnummer",
+    "apartment_number": "Wohnungsnummer",
+    "comment": "Kommentar"
+  },
+  "checkout_payment": {
+    "edit": "Bearbeiten",
+    "title_method": "Zahlungsmethode"
+  },
+  "checkout_submit": {
+    "title": "Kaufen",
+    "submit": "Bestellung absenden"
+  },
+  "order_page": {
+    "title": "Bestellseite"
+  },
+  "pick_up_point": {
+    "opening_hours": "Öffnungszeiten"
+  },
+  "view_catalog": {
+    "title_catalog": "Katalog",
+    "title_search": "Suche nach „{query}“",
+    "title_category_search": "{categoryName} | Suche nach „{query}“",
+    "title_favourites": "Favoriten",
+    "product_filters": {
+      "price": "Preis"
+    },
+    "mobile_filters": {
+      "filters": "Filter"
+    }
+  },
+  "view_error": {
+    "not_found_title": "Nicht gefunden",
+    "any_title": "Ein Fehler ist aufgetreten",
+    "return": "Zurück zur Startseite"
+  },
+  "view_product": {
+    "reviews": "Bewertungen"
+  },
+  "reviews_item": {
+    "placeholder": "[kein Kommentar]"
+  },
+  "view_cart": {
+    "title": "Warenkorb",
+    "checkout": "Zur Kasse"
+  },
+  "view_checkout": {
+    "title": "Kasse",
+    "open_cart": "Warenkorb anzeigen"
+  },
+  "footer": {
+    "developed_by": "Entworfen und entwickelt von <name></name>, <year></year>"
+  },
+  "cart_placeholder": {
+    "title": "Der Warenkorb ist noch leer",
+    "link": "Produkte ansehen"
+  },
+  "modal_cart": {
+    "checkout": "Zur Kasse",
+    "continue": "Weiter einkaufen",
+    "return": "Zurück"
+  },
+  "product_card": {
+    "add_to_cart": "In den Warenkorb legen",
+    "product_in_cart": "Hinzugefügt!"
+  },
+  "common_breadcrumbs": {
+    "home": "Startseite",
+    "catalog": "Katalog",
+    "cart": "Warenkorb",
+    "checkout": "Kasse",
+    "favourites": "Favoriten"
+  },
+  "prodcuts_placeholder": {
+    "title": "Hier sind derzeit keine Produkte verfügbar",
+    "link": "Alle Produkte anzeigen"
+  }
 }
