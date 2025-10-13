@@ -44,10 +44,10 @@
 
 .imageWrap {
   padding-top: 100%;
-  background: var(--image-placeholder-background);
   border-radius: 4px;
   margin-bottom: 18px;
   position: relative;
+  overflow: hidden;
 }
 
 .image {

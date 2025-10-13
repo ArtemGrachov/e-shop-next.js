@@ -12,11 +12,11 @@ import { useProductInCart } from '@/hooks/cart/use-product-in-cart';
 import ProductPrice from '@/components/products/ProductPrice';
 import FavouritesToggle from '@/components/favourites/FavouritesToggle';
 import Button from '@/components/buttons/Button';
+import DefaultImage from '@/components/media/DefaultImage';
 
 import type { IProduct } from '@/types/models/product';
 
 import styles from './styles.module.scss';
-import DefaultImage from '@/components/media/DefaultImage';
 
 interface IProps {
   product: IProduct;
@@ -51,7 +51,7 @@ const ProductCard: ComponentType<IProps> = ({ product }) => {
       <div className={styles.imageWrap}>
         <DefaultImage
           className={styles.image}
-          src={product.media?.[0]?.src}
+          src={product.media?.[0]?.src ?? ''}
           width={500}
           height={500}
           alt={productName}

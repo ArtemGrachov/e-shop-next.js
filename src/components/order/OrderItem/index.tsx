@@ -6,6 +6,7 @@ import { ROUTES } from '@/router/routes';
 
 import { useRoutePath } from '@/hooks/routing/use-route-path';
 import Price from '@/components/other/Price';
+import DefaultImage from '@/components/media/DefaultImage';
 
 import type { IOrderItem } from '@/types/models/order-item';
 
@@ -29,10 +30,20 @@ const OrderItem: ComponentType<IProps> = ({ orderItem }) => {
     return routePath(ROUTES.PRODUCT, { slugId });
   }, [orderItem]);
 
+  const itemName = orderItem.name[locale];
+
   return (
     <div className={styles.orderItem}>
       <Link href={href} className={styles.description}>
-        <div className={styles.image}></div>
+        <div className={styles.imageWrap}>
+          <DefaultImage
+            className={styles.image}
+            src={orderItem.media?.[0]?.src ?? ''}
+            width={500}
+            height={500}
+            alt={itemName}
+          />
+        </div>
         <div className={styles.name}>
           {orderItem.name[locale]}
         </div>
