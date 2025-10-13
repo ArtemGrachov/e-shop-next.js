@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { useCartItems } from '@/hooks/cart/cart-items';
+import { useCartItems } from '@/hooks/cart/use-cart-items';
 
 import type { IProduct } from '@/types/models/product';
 import type { IProductVariant } from '@/types/models/product-variant';

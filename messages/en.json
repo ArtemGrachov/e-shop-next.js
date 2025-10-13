@@ -118,5 +118,20 @@
     "checkout": "Checkout",
     "continue": "Continue shopping",
     "return": "Return"
+  },
+  "product_card": {
+    "add_to_cart": "Add to cart",
+    "product_in_cart": "Added!"
+  },
+  "common_breadcrumbs": {
+    "home":"Home",
+    "catalog": "Catalog",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "favourites": "Favourites"
+  },
+  "prodcuts_placeholder": {
+    "title": "There are no products here yet",
+    "link": "View all the products"
   }
 }

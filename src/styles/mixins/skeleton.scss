@@ -1,8 +1,8 @@
 @mixin skeleton {
-  border-radius: 4px;
-  height: 1.5em;
+  border-radius: var(--skeleton-border-radius, 4px);
+  height: var(--skeleton-height, 1.5em);
   display: block;
-  position: relative;
+  position: var(--skeleton-position, relative);
   background: var(--skeleton-color);
   overflow: hidden;
 

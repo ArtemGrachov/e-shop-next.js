@@ -9,7 +9,7 @@ import { ROUTES } from '@/router/routes';
 
 import { useCurrentVariantCtx } from '../../providers/current-variant/hooks/use-current-variant-ctx';
 
-import { useAddToCart } from '@/hooks/cart/add-to-cart';
+import { useAddToCart } from '@/hooks/cart/use-add-to-cart';
 import { useRoutePath } from '@/hooks/routing/use-route-path';
 
 import FormBuyProduct, { IFormBuyOutput } from '@/components/products/FormBuyProduct';
