@@ -1,23 +1,39 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
+import { ROUTES } from '@/router/routes';
+
+import { getRoutePath } from '@/hooks/routing/use-route-path';
 import FavouritesToggle from '@/components/favourites/FavouritesToggle';
 import ProductDescription from './components/ProductDescription';
 import ProductReviews from './components/ProductReviews';
 import BuyProduct from './components/BuyProduct';
+import Breadcrumbs from '@/components/other/Breadcrumbs';
 
 import ProductPageWrapper from './client';
 import { getPageData } from './server';
 
 import type { IViewProductProps } from './types';
+import type { IBreadcrumb } from '@/types/other/breadcrumbs';
 
 import styles from './styles.module.scss';
 
 const ProductView = async (props: IViewProductProps) => {
-  const [locale, t, data] = await Promise.all([
-    getLocale(),
+  const [
+    t,
+    locale,
+    params,
+    searchParams,
+    data,
+    routePath,
+  ] = await Promise.all([
     getTranslations(),
-    getPageData(props)],
+    getLocale(),
+    props.params,
+    props.searchParams,
+    getPageData(props),
+    getRoutePath(),
+  ],
   ).catch(err => {
     if (err === 404) {
       return notFound();
@@ -26,13 +42,30 @@ const ProductView = async (props: IViewProductProps) => {
     throw err;
   });
 
-
   const product = data.product;
+  const correctSlugId = `${product!.slug[locale]}-${product.id}`;
+  const correctPath = routePath(ROUTES.PRODUCT, { ...searchParams, slugId: correctSlugId });
+
+  const breadcrumbs: IBreadcrumb[] = [
+    {
+      label: t('common_breadcrumbs.home'),
+      path: routePath(ROUTES.HOME),
+    },
+    {
+      label: t('common_breadcrumbs.catalog'),
+      path: routePath(ROUTES.CATALOG, { slugId: '' }),
+    },
+    {
+      label: product.name[locale],
+      path: correctPath,
+    },
+  ];
 
   return (
     <ProductPageWrapper {...props} {...data}>
       <main className={styles.page}>
         <div className={styles.container}>
+          <Breadcrumbs breadcrumbs={breadcrumbs} />
           <div className={styles.row}>
             <div className={styles.col}>
               <div className={styles.mediaWrap}>
