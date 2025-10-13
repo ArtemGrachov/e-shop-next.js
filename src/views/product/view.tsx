@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 
 import { ROUTES } from '@/router/routes';
 
@@ -45,6 +45,37 @@ const ProductView = async (props: IViewProductProps) => {
   const product = data.product;
   const correctSlugId = `${product!.slug[locale]}-${product.id}`;
   const correctPath = routePath(ROUTES.PRODUCT, { ...searchParams, slugId: correctSlugId });
+
+  const getProductSlugId = () => {
+    const slug = params.slug;
+
+    if (!slug) {
+      return null;
+    }
+
+    return slug[0];
+  };
+
+  const splitProductSlugId = () => {
+    if (productSlugId == null) {
+      return [null, null];
+    }
+
+    const arr = productSlugId.split('-');
+
+    return [
+      arr.slice(0, -1).join('-'),
+      arr.slice(-1)[0],
+    ];
+  }
+
+  const productSlugId = getProductSlugId();
+  const [productSlug] = splitProductSlugId();
+
+
+  if (product.slug[locale] !== productSlug) {
+    return redirect(correctPath);
+  }
 
   const breadcrumbs: IBreadcrumb[] = [
     {
