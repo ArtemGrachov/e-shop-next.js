@@ -20,7 +20,11 @@ interface IFormSearch {
   search: string;
 }
 
-const ProductSearch: ComponentType<IPropsWithClassName> = ({ className }) => {
+interface IProps {
+  onSubmit?: Function;
+}
+
+const ProductSearch: ComponentType<IProps & IPropsWithClassName> = ({ className, onSubmit }) => {
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
@@ -62,6 +66,10 @@ const ProductSearch: ComponentType<IPropsWithClassName> = ({ className }) => {
     const newPath = routePath(ROUTES.CATALOG, pathParams);
 
     router.push(newPath);
+
+    if (onSubmit) {
+      onSubmit();
+    }
   }
 
   return (

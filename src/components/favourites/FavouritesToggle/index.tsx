@@ -11,13 +11,14 @@ import type { IPropsWithClassName } from '@/types/other/component-props';
 
 interface IProps {
   product: IProduct;
+  size?: 'small';
 }
 
-const FavouritesToggle: ComponentType<IProps & IPropsWithClassName> = ({ className, product }) => {
+const FavouritesToggle: ComponentType<IProps & IPropsWithClassName> = ({ className, product, size }) => {
   const { toggleHandler, inFavourites } = useFavouritesToggle({ product });
 
   return (
-    <IconButton type="button" className={className} onClick={toggleHandler}>
+    <IconButton type="button" className={className} size={size} onClick={toggleHandler}>
       {inFavourites ? <HeartFill size={'100%'} /> : <Heart size={'100%'} />}
     </IconButton>
   )

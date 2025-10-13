@@ -76,10 +76,17 @@
   "pick_up_point": {
     "opening_hours": "Opening hours"
   },
-  "page_catalog": {
+  "view_catalog": {
     "title_catalog": "Catalog",
     "title_search": "Search \"{query}\"",
-    "title_category_search": "{categoryName} | search \"{query}\""
+    "title_category_search": "{categoryName} | search \"{query}\"",
+    "title_favourites": "Favourites",
+    "product_filters": {
+      "price": "Price"
+    },
+    "mobile_filters": {
+      "filters": "Filters"
+    }
   },
   "view_error": {
     "not_found_title": "Not found",
@@ -103,14 +110,6 @@
   "footer": {
     "developed_by": "Designed and developed by <name></name>, <year></year>"
   },
-  "view_catalog": {
-    "product_filters": {
-      "price": "Price"
-    },
-    "mobile_filters": {
-      "filters": "Filters"
-    }
-  },
   "cart_placeholder": {
     "title": "The cart is empty yet",
     "link": "Look for products"
@@ -119,5 +118,24 @@
     "checkout": "Checkout",
     "continue": "Continue shopping",
     "return": "Return"
+  },
+  "product_card": {
+    "add_to_cart": "Add to cart",
+    "product_in_cart": "Added!"
+  },
+  "common_breadcrumbs": {
+    "home":"Home",
+    "catalog": "Catalog",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "favourites": "Favourites"
+  },
+  "prodcuts_placeholder": {
+    "title": "There are no products here yet",
+    "link": "View all the products"
+  },
+  "language_switch": {
+    "en": "English",
+    "de": "Deutsch"
   }
 }

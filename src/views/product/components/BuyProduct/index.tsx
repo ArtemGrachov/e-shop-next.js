@@ -9,7 +9,7 @@ import { ROUTES } from '@/router/routes';
 
 import { useCurrentVariantCtx } from '../../providers/current-variant/hooks/use-current-variant-ctx';
 
-import { useAddToCart } from '@/hooks/cart/add-to-cart';
+import { useAddToCart } from '@/hooks/cart/use-add-to-cart';
 import { useRoutePath } from '@/hooks/routing/use-route-path';
 
 import FormBuyProduct, { IFormBuyOutput } from '@/components/products/FormBuyProduct';
@@ -61,15 +61,13 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
 
   return (
     <div>
-      {product?.variants?.length && (
-        <FormBuyProduct
-          className={styles.formBuyProduct}
-          product={product}
-          currentVariant={currentVariant}
-          onVariantSelect={variantChangeHandler}
-          onSubmit={addToCartHandler}
-        />
-      )}
+      <FormBuyProduct
+        className={styles.formBuyProduct}
+        product={product}
+        currentVariant={currentVariant}
+        onVariantSelect={variantChangeHandler}
+        onSubmit={addToCartHandler}
+      />
       {product && currentVariant && <ProductPrice product={product} productVariant={currentVariant} />}
     </div>
   )

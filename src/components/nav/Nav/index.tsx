@@ -38,7 +38,7 @@ const Nav: ComponentType<IProps> = ({ onClick }) => {
               <Link
                 href={link.path}
                 className={styles.link}
-                onClick={onClick ? () => onClick : undefined}
+                onClick={onClick ? () => onClick() : undefined}
               >
                 {link.label}
               </Link>

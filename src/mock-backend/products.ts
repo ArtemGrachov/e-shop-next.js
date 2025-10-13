@@ -11,6 +11,7 @@ interface IParams {
   'price[max]'?: string;
   categoryId?: string;
   search?: string;
+  productIds?: Array<string | number>;
 }
 
 export const getProducts = async (params: IParams) => {
@@ -83,6 +84,11 @@ export const getProducts = async (params: IParams) => {
 
     return true;
   }) as unknown[] as IProduct[];
+
+  if (params.productIds) {
+    const set = new Set(params.productIds);
+    products = products.filter(p => set.has(p.id));
+  }
 
   const allPrices = products.reduce((acc, curr) => {
     if (curr.price?.value != null) {

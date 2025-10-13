@@ -8,9 +8,10 @@ import styles from './styles.module.scss';
 
 interface IProps {
   orderItems?: IOrderItem[];
+  onNavigate?: Function;
 }
 
-const CartList: ComponentType<IProps> = ({ orderItems }) => {
+const CartList: ComponentType<IProps> = ({ orderItems, onNavigate }) => {
   orderItems = orderItems ?? [];
 
   return (
@@ -18,7 +19,7 @@ const CartList: ComponentType<IProps> = ({ orderItems }) => {
       {orderItems.map(orderItem => {
         return (
           <li key={orderItem.id} className={styles.item}>
-            <CartItem orderItem={orderItem} />
+            <CartItem orderItem={orderItem} onNavigate={onNavigate} />
           </li>
         )
       })}

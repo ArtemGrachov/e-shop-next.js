@@ -1,14 +1,13 @@
 import { ComponentType } from 'react';
-import { pathcat } from 'pathcat';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { ROUTES } from '@/router/routes';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 import { IModalProps } from '@/providers/modals/types';
 
-import { useCartItems } from '@/hooks/cart/cart-items';
+import { useCartItems } from '@/hooks/cart/use-cart-items';
 import { useRoutePath } from '@/hooks/routing/use-route-path';
 
 import Modal from '@/components/modal/Modal';
@@ -16,6 +15,7 @@ import ModalWindow from '@/components/modal/ModalWindow';
 import CartList from '@/components/cart/CartList';
 import OrderSummary from '@/components/order/OrderSummary';
 import Button from '@/components/buttons/Button';
+import CartPlaceholder from '@/components/cart/CartPlaceholder';
 
 import styles from './styles.module.scss';
 
@@ -30,35 +30,47 @@ const ModalCart: ComponentType<IProps & IModalProps> = (props) => {
   const order = useCartStore(s => s.order);
   const cartItems = useCartItems();
 
+  const pathname = usePathname();
+  const isCatalogPage = pathname.indexOf('/catalog') !== -1;
+  const isProductPage = pathname.indexOf('/product') !== -1;
+
   return (
     <Modal>
       <ModalWindow backdrop={true} {...props} className={styles.modalCart}>
-        <div className={styles.content}>
-          <CartList orderItems={cartItems} />
-        </div>
-        <div className={styles.footer}>
-          {order && <OrderSummary order={order} className={styles.orderSummary} />}
-          {props.checkout ? (
-              <Button tag={'button'} onClick={props.close}>
-                {t('modal_cart.return')}
-              </Button>
-          ) : (
-            <>
-              <Button
-                href={routePath(ROUTES.CHECKOUT)}
-                className={styles.link}
-                tag={'Link'}
-                variant={'primary'}
-                onClick={props.close}
-              >
-                {t('modal_cart.checkout')}
-              </Button>
-              <Button tag={'button'} onClick={props.close}>
-                {t('modal_cart.continue')}
-              </Button>
-            </>
-          )}
-        </div>
+        {cartItems.length ? (
+          <>
+            <div className={styles.content}>
+              <CartList orderItems={cartItems} onNavigate={props.close} />
+            </div>
+            <div className={styles.footer}>
+              {order && <OrderSummary order={order} className={styles.orderSummary} />}
+              {props.checkout ? (
+                  <Button tag={'button'} onClick={props.close}>
+                    {t('modal_cart.return')}
+                  </Button>
+              ) : (
+                <>
+                  <Button
+                    href={routePath(ROUTES.FAVOURITES)}
+                    className={styles.link}
+                    tag={'Link'}
+                    variant={'primary'}
+                    onClick={props.close}
+                  >
+                    {t('modal_cart.checkout')}
+                  </Button>
+                  <Button tag={'button'} onClick={props.close}>
+                    {t('modal_cart.continue')}
+                  </Button>
+                </>
+              )}
+            </div>
+          </>
+        ): (
+          <div className={styles.cartPlaceholder} >
+            <CartPlaceholder externalNavigate={isCatalogPage || isProductPage} onNavigate={props.close} />
+          </div>
+        )}
       </ModalWindow>
     </Modal>
   )

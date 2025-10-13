@@ -19,9 +19,10 @@ import styles from './styles.module.scss';
 
 interface IProps {
   orderItem: IOrderItem;
+  onNavigate?: Function;
 }
 
-const CartItem: ComponentType<IProps> = ({ orderItem }) => {
+const CartItem: ComponentType<IProps> = ({ orderItem, onNavigate }) => {
   const locale = useLocale();
   const { removeItem } = useCartCtx();
   const routePath = useRoutePath();
@@ -42,7 +43,7 @@ const CartItem: ComponentType<IProps> = ({ orderItem }) => {
 
   return (
     <div className={styles.cartItem}>
-      <Link href={href} className={styles.description}>
+      <Link href={href} className={styles.description} onClick={onNavigate ? () => onNavigate() : undefined}>
         <div className={styles.image}></div>
         <div className={styles.name}>
           {orderItem.name[locale]}

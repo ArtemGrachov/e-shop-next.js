@@ -5,4 +5,5 @@ export interface IViewProductProps extends IPageProps {
     locale: string;
     slug: string[];
   }>;
+  searchParams: {};
 }

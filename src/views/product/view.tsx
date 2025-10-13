@@ -1,7 +1,12 @@
 import { getLocale, getTranslations } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 
-import FavouritesToggle from '@/components/products/FavouritesToggle';
+import { ROUTES } from '@/router/routes';
+
+import { getRoutePath } from '@/hooks/routing/use-route-path';
+import FavouritesToggle from '@/components/favourites/FavouritesToggle';
+import Breadcrumbs from '@/components/other/Breadcrumbs';
+import Gallery from '@/components/media/Gallery';
 import ProductDescription from './components/ProductDescription';
 import ProductReviews from './components/ProductReviews';
 import BuyProduct from './components/BuyProduct';
@@ -10,14 +15,26 @@ import ProductPageWrapper from './client';
 import { getPageData } from './server';
 
 import type { IViewProductProps } from './types';
+import type { IBreadcrumb } from '@/types/other/breadcrumbs';
 
 import styles from './styles.module.scss';
 
 const ProductView = async (props: IViewProductProps) => {
-  const [locale, t, data] = await Promise.all([
-    getLocale(),
+  const [
+    t,
+    locale,
+    params,
+    searchParams,
+    data,
+    routePath,
+  ] = await Promise.all([
     getTranslations(),
-    getPageData(props)],
+    getLocale(),
+    props.params,
+    props.searchParams,
+    getPageData(props),
+    getRoutePath(),
+  ],
   ).catch(err => {
     if (err === 404) {
       return notFound();
@@ -26,17 +43,59 @@ const ProductView = async (props: IViewProductProps) => {
     throw err;
   });
 
-
   const product = data.product;
+
+  const [productSlugId, variantSlugId] = params.slug;
+  const productSlugArr = productSlugId.split('-');
+  const variantSlugArr = variantSlugId ? variantSlugId.split('-') : null;
+
+  const productSlug = productSlugArr.slice(0, -1).join('-');
+  const productId = productSlugArr.slice(-1)[0];
+
+  const variantSlug = variantSlugArr?.slice(0, -1).join('-');
+  const variantId = variantSlugArr?.slice(-1)[0];
+
+  const variant = product.variants?.find(v => v.id == variantId);
+
+  const correctProductSlug = product.slug[locale];
+  const correctVariantSlug = variant?.slug[locale];
+
+  let correctSlugId = `${correctProductSlug}-${productId}`;
+
+  if (correctVariantSlug) {
+    correctSlugId += `/${correctVariantSlug}-${variantId}`;
+  }
+
+  const correctPath = routePath(ROUTES.PRODUCT, { ...searchParams, slugId: correctSlugId })
+
+  if (productSlug !== correctProductSlug || (variantSlug && correctVariantSlug && variantSlug !== correctVariantSlug)) {
+    return redirect(correctPath);
+  }
+
+  const breadcrumbs: IBreadcrumb[] = [
+    {
+      label: t('common_breadcrumbs.home'),
+      path: routePath(ROUTES.HOME),
+    },
+    {
+      label: t('common_breadcrumbs.catalog'),
+      path: routePath(ROUTES.CATALOG, { slugId: '' }),
+    },
+    {
+      label: product.name[locale],
+      path: 'correctPath',
+    },
+  ];
 
   return (
     <ProductPageWrapper {...props} {...data}>
       <main className={styles.page}>
         <div className={styles.container}>
+          <Breadcrumbs breadcrumbs={breadcrumbs} />
           <div className={styles.row}>
             <div className={styles.col}>
               <div className={styles.mediaWrap}>
-                <div className={styles.media}></div>
+                <Gallery className={styles.mediaGallery} />
               </div>
             </div>
             <div className={styles.col}>

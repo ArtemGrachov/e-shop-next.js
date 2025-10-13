@@ -1,3 +1,3 @@
 export const PRODUCTS_PAGINATION = {
-  ITEMS_PER_PAGE: 8,
+  ITEMS_PER_PAGE: 9,
 };

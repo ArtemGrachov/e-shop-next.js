@@ -1,0 +1,53 @@
+@use '/src/styles/mixins/themes.scss' as themes;
+
+.gallery {
+  position: relative;
+
+  --swiper-navigation-size: 16px;
+  --swiper-navigation-color: orange;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+  --swiper-pagination-bullet-inactive-color: grey;
+  --swiper-pagination-color: orange;
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-bottom: 16px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  background: var(--gallery-slide-background);
+  position: relative;
+}
+
+.image, .slide :global(.iiz) {
+  width: 100%;
+  height: 100%;
+}
+
+.zoomIcon {
+  position: absolute;
+  z-index: 1;
+  right: 16px;
+  bottom: 16px;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border-radius: 50%;
+  background: var(--gallery-slide-background);
+}
+
+@include themes.component-theme-dark() {
+  .gallery {
+    --gallery-slide-background: #212121;
+  }
+}
+
+@include themes.component-theme-light() {
+  .gallery {
+    --gallery-slide-background: #d3d3d3;
+  }
+}

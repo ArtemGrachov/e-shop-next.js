@@ -8,13 +8,16 @@ import { ROUTES } from '@/router/routes';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
 
-import { useCartItems } from '@/hooks/cart/cart-items';
+import { useCartItems } from '@/hooks/cart/use-cart-items';
 import { useRoutePath } from '@/hooks/routing/use-route-path';
 
 import CartList from '@/components/cart/CartList';
 import OrderSummary from '@/components/order/OrderSummary';
 import Button from '@/components/buttons/Button';
 import CartPlaceholder from '@/components/cart/CartPlaceholder';
+import Breadcrumbs from '@/components/other/Breadcrumbs';
+
+import type { IBreadcrumb } from '@/types/other/breadcrumbs';
 
 import styles from './styles.module.scss';
 
@@ -35,9 +38,21 @@ const CartPageClient: ComponentType = () => {
     )
   }
 
+  const breadcrumbs: IBreadcrumb[] = [
+    {
+      label: t('common_breadcrumbs.home'),
+      path: routePath(ROUTES.HOME),
+    },
+    {
+      label: t('common_breadcrumbs.cart'),
+      path: routePath(ROUTES.CART),
+    },
+  ];
+
   return (
     <main className={styles.page}>
       <div className={styles.container}>
+        <Breadcrumbs breadcrumbs={breadcrumbs} />
         <h1 className={styles.title}>{t('view_cart.title')}</h1>
         <div className={styles.row}>
           <div className={styles.col}>
@@ -45,7 +60,7 @@ const CartPageClient: ComponentType = () => {
           </div>
           <div className={clsx(styles.col, styles._sm)}>
             {order && <OrderSummary order={order} className={styles.orderSummary} />}
-            <Button href={routePath(ROUTES.CHECKOUT)} tag={'Link'} variant={'primary'}>
+            <Button href={routePath(ROUTES.FAVOURITES)} tag={'Link'} variant={'primary'}>
               {t('view_cart.checkout')}
             </Button>
           </div>

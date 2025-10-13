@@ -4,11 +4,13 @@ import { ComponentType, ReactNode, useMemo } from 'react';
 import { UrlObject } from 'url';
 import { getPaginationModel, PaginationModelItem, PaginationModelOptions } from 'ultimate-pagination';
 import { ChevronDoubleLeft, ChevronDoubleRight, ChevronLeft, ChevronRight } from 'react-bootstrap-icons';
+import clsx from 'clsx';
 
 import PageItem, { ILinkParams } from '@/components/other/PageItem';
 
+import type { IPropsWithClassName } from '@/types/other/component-props';
+
 import styles from './styles.module.scss';
-import clsx from 'clsx';
 
 interface IProps {
   options: PaginationModelOptions;
@@ -17,13 +19,13 @@ interface IProps {
   onChange?: (page: PaginationModelItem) => any;
 }
 
-const Pagination: ComponentType<IProps> = ({ options, linkParams, linkPath, onChange }) => {
+const Pagination: ComponentType<IProps & IPropsWithClassName> = ({ options, linkParams, className, linkPath, onChange }) => {
   const pagination = useMemo(() => {
     return getPaginationModel(options);
   }, [options]);
 
   return (
-    <div>
+    <div className={className}>
       <ul className={styles.list}>
         {pagination.map((page, index) => {
           let label: ReactNode = page.value;

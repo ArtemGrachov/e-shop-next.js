@@ -62,7 +62,7 @@ const FormReview: ComponentType<IProps> = ({ submitStatus, onSubmit }) => {
           readOnly={submitProcessing}
         ></textarea>
       </FormField>
-      <Button type="submit" disabled={submitProcessing} variant={'primary'}>
+      <Button type="submit" disabled={submitProcessing} variant={'primary'} className={styles.submit}>
         {t('form_review.submit')}
       </Button>
       {submitError &&(

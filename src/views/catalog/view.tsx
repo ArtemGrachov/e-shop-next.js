@@ -1,23 +1,25 @@
 import { ComponentType } from 'react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { notFound, redirect } from 'next/navigation';
-import { pathcat } from 'pathcat';
 
 import { ROUTES } from '@/router/routes';
 
 import { getRoutePath } from '@/hooks/routing/use-route-path';
-import CategoryNav from '@/views/catalog/components/CategoryNav';
 import ProductList from '@/components/products/ProductList';
 import Pagination from '@/components/other/Pagination';
-import ProductFilters from '@/views/catalog/components/ProductFilters';
-import MobileFilters from '@/views/catalog/components/MobileFilters';
+import CategoryNav from './components/CategoryNav';
+import ProductFilters from './components/ProductFilters';
+import MobileFilters from './components/MobileFilters';
+import Breadcrumbs from '@/components/other/Breadcrumbs';
+import ProductsPlaceholder from '@/components/products/ProductsPlaceholder';
 
 import { getPageData } from './server';
-import type { IViewCategoryProps } from './types';
+import type { IViewCatalogProps } from './types';
+import type { IBreadcrumb } from '@/types/other/breadcrumbs';
 
 import styles from './styles.module.scss';
 
-const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
+const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
   const [
     t,
     locale,
@@ -43,112 +45,113 @@ const CatalogView: ComponentType<IViewCategoryProps> = async (props) => {
   const categories = data.categoriesResponse;
   const productsData = data.productsResponse;
 
-  const getCategorySlugId = () => {
-    const slug = params.slug;
+  const categorySlugId = params.slug ? params.slug[0] : null;
+  const categorySlugArr = categorySlugId?.split('-');
+  const categorySlug = categorySlugArr?.slice(0, -1).join('-');
+  const categoryId = categorySlugArr?.slice(-1)[0];
 
-    if (!slug) {
-      return null;
-    }
+  const category =  categories.find(c => c.id === categoryId);
+  const correctCategorySlug = category?.slug[locale];
 
-    return slug[0];
-  };
+  const isCategory = !!category;
+  const isSearch = !!searchParams.search;
 
-  const splitCategorySlugId = () => {
-    if (categorySlugId == null) {
-      return [null, null];
-    }
-
-    const arr = categorySlugId.split('-');
-
-    return [
-      arr.slice(0, -1).join('-'),
-      arr.slice(-1)[0],
-    ];
-  }
-
-  const getCategory = () => {
-    if (!categoryId) {
-      return null;
-    }
-
-    return categories.find(c => c.id === categoryId);
-  };
-
-  const categorySlugId = getCategorySlugId();
-  const [categorySlug, categoryId] = splitCategorySlugId();
-  const category = getCategory();
+  const correctSlugId = isCategory ? `${correctCategorySlug}-${categoryId}` : null;
+  const correctPath = routePath(ROUTES.CATALOG, { ...searchParams, slugId: correctSlugId || '' })
 
   if (categorySlugId && !category) {
     return notFound();
   }
 
-  if (category && category.slug[locale] !== categorySlug) {
-    const correctSlugId = `${category!.slug[locale]}-${categoryId}`;
-    return redirect(routePath(ROUTES.CATALOG, { ...searchParams, slugId: correctSlugId }));
+  if (isCategory && categorySlug !== correctCategorySlug) {
+    return redirect(correctPath);
   }
 
   const getTitle = () => {
     const categoryName = category?.name[locale];
 
-    if (searchParams.search) {
+    if (isSearch) {
       if (categoryName) {
-        return t('page_catalog.title_category_search', { categoryName, query: searchParams.search })
+        return t('view_catalog.title_category_search', { categoryName, query: searchParams.search! })
       } else {
-        return t('page_catalog.title_search', { query: searchParams.search })
+        return t('view_catalog.title_search', { query: searchParams.search! })
       }
     }
 
-    if (categoryName) {
+    if (isCategory) {
       return categoryName;
     }
 
-    return t('page_catalog.title_catalog');
+    return t('view_catalog.title_catalog');
   };
 
   const title = getTitle();
+  const description = category?.description?.[locale];
 
-  const getDescription = () => {
-    return category?.description?.[locale];
-  };
+  const breadcrumbs: IBreadcrumb[] = [
+    {
+      label: t('common_breadcrumbs.home'),
+      path: routePath(ROUTES.HOME),
+    },
+    {
+      label: t('common_breadcrumbs.catalog'),
+      path: routePath(ROUTES.CATALOG, { slugId: '' }),
+    },
+  ];
 
-  const description = getDescription();
+  if (isCategory || isSearch) {
+    breadcrumbs.push({
+      label: title,
+      path: correctPath,
+    });
+  }
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <div className={styles.container}>
-        <aside className={styles.sidebar}>
-          <CategoryNav className={styles.categoryNav} categories={categories} />
-          {productsData && <ProductFilters filters={productsData.filters} />}
-        </aside>
-        <main className={styles.content}>
-          <h1>
-            {title}
-          </h1>
-          {description && <div className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />}
-          <div className={styles.mobileFilters}>
-            <MobileFilters data={data} />
-          </div>
-          <ProductList
-            className={styles.list}
-            products={productsData?.items}
-          />
-          <Pagination
-            options={{
-              currentPage: productsData?.pagination.currentPage ?? 1,
-              totalPages: productsData?.pagination.totalPages ?? 1,
-            }}
-            linkParams={{
-              path: ROUTES.CATALOG,
-              params: {
-                slugId: categorySlugId ? categorySlugId : '',
-                ...searchParams,
-              },
-              pageKey: 'page',
-            }}
-          />
-        </main>
+        <Breadcrumbs breadcrumbs={breadcrumbs} />
+        <div className={styles.row}>
+          <aside className={styles.sidebar}>
+            <CategoryNav className={styles.categoryNav} categories={categories} />
+            {productsData && <ProductFilters filters={productsData.filters} />}
+          </aside>
+          <main className={styles.content}>
+            <h1>
+              {title}
+            </h1>
+            {description && <div className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />}
+            <div className={styles.mobileFilters}>
+              <MobileFilters data={data} />
+            </div>
+            {productsData?.items?.length ? (
+              <ProductList
+                className={styles.list}
+                products={productsData.items}
+              />
+            ) : <ProductsPlaceholder />}
+            {
+              ((productsData?.pagination.totalPages ?? 0) > 1) ? (
+                <Pagination
+                  className={styles.pagination}
+                  options={{
+                    currentPage: productsData?.pagination.currentPage ?? 1,
+                    totalPages: productsData?.pagination.totalPages ?? 1,
+                  }}
+                  linkParams={{
+                    path: ROUTES.CATALOG,
+                    params: {
+                      slugId: categorySlugId ? categorySlugId : '',
+                      ...searchParams,
+                    },
+                    pageKey: 'page',
+                  }}
+                />
+              ) : null
+            }
+          </main>
+        </div>
       </div>
-    </main>
+    </div>
   )
 }
 

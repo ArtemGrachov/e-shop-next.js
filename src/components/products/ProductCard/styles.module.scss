@@ -4,7 +4,19 @@
   position: relative;
 }
 
+.nameRow {
+  display: flex;
+  gap: 16px;
+}
+
+.favouritesToggle {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+}
+
 .link {
+  flex: 1 1 auto;
   text-decoration: none;
   color: var(--product-card-link-color);
   font-size: 18px;
@@ -35,6 +47,28 @@
   background: var(--image-placeholder-background);
   border-radius: 4px;
   margin-bottom: 18px;
+}
+
+.addToCart,
+.productInCart {
+  margin-top: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.productInCart {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 42px;
+  font-size: 16px;
+  line-height: 1;
+  gap: 8px;
+  padding: 0 24px;
+  background: var(--button-default-background);
+  color: var(--button-default-color);
 }
 
 @include themes.component-theme-dark() {

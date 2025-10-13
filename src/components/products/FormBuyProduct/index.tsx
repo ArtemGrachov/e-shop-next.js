@@ -65,11 +65,13 @@ const FormBuyProduct: ComponentType<IProps & IPropsWithClassName> = ({ className
 
   return (
     <form className={className} onSubmit={formSubmitCallback}>
-      <FormField label={t('form_buy_product.variant')}>
-        <select {...variantIdInput} className={styles.input}>
-          {variantIdOptions.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
-        </select>
-      </FormField>
+      {variantIdOptions.length ? (
+        <FormField label={t('form_buy_product.variant')}>
+          <select {...variantIdInput} className={styles.input}>
+            {variantIdOptions.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+          </select>
+        </FormField>
+      ) : null}
       <div className={styles.buyRow}>
         <input
           type="number"
@@ -77,7 +79,7 @@ const FormBuyProduct: ComponentType<IProps & IPropsWithClassName> = ({ className
           className={clsx(styles.input, styles.quantity)}
           {...quantityInput}
         />
-        <Button type="submit" variant={'primary'}>
+        <Button type="submit" variant={'primary'} className={styles.submit}>
           {t('form_buy_product.submit')}
         </Button>
       </div>
