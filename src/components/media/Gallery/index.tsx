@@ -7,6 +7,8 @@ import InnerImageZoom from 'inner-image-zoom';
 import clsx from 'clsx';
 import { Search } from 'react-bootstrap-icons';
 
+import DefaultImage from '@/components/media/DefaultImage';
+
 import type { IPropsWithClassName } from '@/types/other/component-props';
 import type { IMedia } from '@/types/models/media';
 
@@ -20,8 +22,8 @@ interface IProps {
   media?: IMedia[]
 }
 
-const Gallery: ComponentType<IPropsWithClassName & IProps> = ({ className }) => {
-  const media = [1, 2, 3, 4, 5];
+const Gallery: ComponentType<IPropsWithClassName & IProps> = ({ className, media }) => {
+  media = media ?? [];
 
   const initZoom = () => {
     new InnerImageZoom(`.${styles.image}`, {
@@ -44,10 +46,16 @@ const Gallery: ComponentType<IPropsWithClassName & IProps> = ({ className }) => 
         loop={true}
         pagination={{ clickable: true }}
       >
-        {media.map((m, i) => {
+        {media.map((mediaItem, i) => {
           return (
             <SwiperSlide key={i} className={styles.slide}>
-              <img src="https://placehold.co/1600x800" alt={m.toString()} className={styles.image} />
+              <DefaultImage
+                className={styles.image}
+                src={mediaItem.src}
+                width={500}
+                height={500}
+                alt={''}
+              />
             </SwiperSlide>
           )
         })}
