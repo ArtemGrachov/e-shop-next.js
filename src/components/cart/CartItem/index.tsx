@@ -12,6 +12,7 @@ import { useRoutePath } from '@/hooks/routing/use-route-path';
 import Price from '@/components/other/Price';
 import CartItemCounter from '@/components/cart/CartItemCounter';
 import IconButton from '@/components/buttons/IconButton';
+import DefaultImage from '@/components/media/DefaultImage';
 
 import type { IOrderItem } from '@/types/models/order-item';
 
@@ -41,10 +42,20 @@ const CartItem: ComponentType<IProps> = ({ orderItem, onNavigate }) => {
     return routePath(ROUTES.PRODUCT, { slugId });
   }, [orderItem]);
 
+  const itemName = orderItem.name[locale];
+
   return (
     <div className={styles.cartItem}>
       <Link href={href} className={styles.description} onClick={onNavigate ? () => onNavigate() : undefined}>
-        <div className={styles.image}></div>
+        <div className={styles.imageWrap}>
+          <DefaultImage
+            className={styles.image}
+            src={orderItem.media?.[0]?.src ?? ''}
+            width={500}
+            height={500}
+            alt={itemName}
+          />
+        </div>
         <div className={styles.name}>
           {orderItem.name[locale]}
         </div>

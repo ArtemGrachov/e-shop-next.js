@@ -52,7 +52,7 @@ $gap: 24px;
 }
 
 .mediaGallery {
-  position: absolute;
+  --gallery-position: absolute;
   top: 0;
   left: 0;
   right: 0;
