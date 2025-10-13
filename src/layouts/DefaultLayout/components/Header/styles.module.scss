@@ -65,3 +65,11 @@
     --button-display: flex;
   }
 }
+
+.languageSwitch {
+  display: none;
+
+  @include breakpoints.sm() {
+    display: block;
+  }
+}

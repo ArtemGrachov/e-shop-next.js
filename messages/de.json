@@ -133,5 +133,9 @@
   "prodcuts_placeholder": {
     "title": "Hier sind derzeit keine Produkte verfügbar",
     "link": "Alle Produkte anzeigen"
+  },
+  "language_switch": {
+    "en": "English",
+    "de": "Deutsch"
   }
 }

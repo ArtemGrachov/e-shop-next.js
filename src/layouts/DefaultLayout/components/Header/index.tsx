@@ -13,6 +13,7 @@ import CartLink from '@/components/cart/CartLink';
 import ModalNav from '@/components/modal/ModalNav';
 import IconButton from '@/components/buttons/IconButton';
 import FavouritesLink from '@/components/favourites/FavouritesLink';
+import LanguageSwitch from '@/components/language/LanguageSwitch';
 
 import styles from './styles.module.scss';
 
@@ -45,6 +46,7 @@ const Header: ComponentType = () => {
           <ThemeSwitch />
           <FavouritesLink className={styles.favouritesLink} />
           <CartLink />
+          <LanguageSwitch className={styles.languageSwitch} />
         </div>
       </div>
     </header>
