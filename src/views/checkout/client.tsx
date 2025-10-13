@@ -69,15 +69,13 @@ const CheckoutPageClient: ComponentType = () => {
         {isReady ? cartOrder ? (
           <div className={styles.row}>
             <div className={styles.col}>
-              <div className={styles.subcontainer}>
-                <Button
-                  type="button"
-                  className={clsx(styles.viewCart, styles._mobile)}
-                  onClick={openCartModal}
-                >
-                  {t('view_checkout.open_cart')}
-                </Button>
-              </div>
+              <Button
+                type="button"
+                className={clsx(styles.viewCart, styles._mobile)}
+                onClick={openCartModal}
+              >
+                {t('view_checkout.open_cart')}
+              </Button>
               <CheckoutDelivery />
               <CheckoutPayment />
             </div>

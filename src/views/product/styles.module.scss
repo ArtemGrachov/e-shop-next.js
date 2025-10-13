@@ -33,8 +33,8 @@ $gap: 24px;
 .mediaWrap {
   position: relative;
   padding-top: 100%;
-  margin-left: -24px;
-  margin-right: -24px;
+  margin-left: -layout.$layout-container-padding;
+  margin-right: -layout.$layout-container-padding;
 
   @include breakpoints.sm {
     width: 100%;
