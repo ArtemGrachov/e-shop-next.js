@@ -27,3 +27,10 @@
 .link {
   margin-bottom: 16px;
 }
+
+.cartPlaceholder {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
