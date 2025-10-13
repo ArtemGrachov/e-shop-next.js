@@ -11,6 +11,7 @@ import CategoryNav from './components/CategoryNav';
 import ProductFilters from './components/ProductFilters';
 import MobileFilters from './components/MobileFilters';
 import Breadcrumbs from '@/components/other/Breadcrumbs';
+import ProductsPlaceholder from '@/components/products/ProductsPlaceholder';
 
 import { getPageData } from './server';
 import type { IViewCatalogProps } from './types';
@@ -158,10 +159,12 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
             <div className={styles.mobileFilters}>
               <MobileFilters data={data} />
             </div>
-            <ProductList
-              className={styles.list}
-              products={productsData?.items}
-            />
+            {productsData?.items?.length ? (
+              <ProductList
+                className={styles.list}
+                products={productsData.items}
+              />
+            ) : <ProductsPlaceholder />}
             {
               ((productsData?.pagination.totalPages ?? 0) > 1) ? (
                 <Pagination

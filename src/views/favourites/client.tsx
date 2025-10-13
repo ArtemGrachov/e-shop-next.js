@@ -15,6 +15,7 @@ import { useAppCtx } from '@/providers/app/hooks/use-app-ctx';
 import { useRoutePath } from '@/hooks/routing/use-route-path';
 import Breadcrumbs from '@/components/other/Breadcrumbs';
 import ProductList from '@/components/products/ProductList';
+import ProductsPlaceholder from '@/components/products/ProductsPlaceholder';
 
 import type { IViewFavouritesProps } from '@/views/favourites/types';
 import type { IBreadcrumb } from '@/types/other/breadcrumbs';
@@ -59,11 +60,13 @@ const FavouritesClientView: ComponentType<IViewFavouritesProps> = () => {
         <h1>
           {title}
         </h1>
-        <ProductList
-          className={styles.list}
-          products={productsData?.items}
-          isProcessing={isProcessing}
-        />
+        {(productsData?.items?.length || isProcessing) ? (
+          <ProductList
+            className={styles.list}
+            products={productsData?.items}
+            isProcessing={isProcessing}
+          />
+        ) : <ProductsPlaceholder />}
       </div>
     </main>
   )

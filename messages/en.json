@@ -129,5 +129,9 @@
     "cart": "Cart",
     "checkout": "Checkout",
     "favourites": "Favourites"
+  },
+  "prodcuts_placeholder": {
+    "title": "There are no products here yet",
+    "link": "View all the products"
   }
 }
