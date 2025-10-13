@@ -162,20 +162,25 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
               className={styles.list}
               products={productsData?.items}
             />
-            <Pagination
-              options={{
-                currentPage: productsData?.pagination.currentPage ?? 1,
-                totalPages: productsData?.pagination.totalPages ?? 1,
-              }}
-              linkParams={{
-                path: ROUTES.CATALOG,
-                params: {
-                  slugId: categorySlugId ? categorySlugId : '',
-                  ...searchParams,
-                },
-                pageKey: 'page',
-              }}
-            />
+            {
+              ((productsData?.pagination.totalPages ?? 0) > 1) ? (
+                <Pagination
+                  className={styles.pagination}
+                  options={{
+                    currentPage: productsData?.pagination.currentPage ?? 1,
+                    totalPages: productsData?.pagination.totalPages ?? 1,
+                  }}
+                  linkParams={{
+                    path: ROUTES.CATALOG,
+                    params: {
+                      slugId: categorySlugId ? categorySlugId : '',
+                      ...searchParams,
+                    },
+                    pageKey: 'page',
+                  }}
+                />
+              ) : null
+            }
           </main>
         </div>
       </div>
