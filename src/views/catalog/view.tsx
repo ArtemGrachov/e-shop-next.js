@@ -132,11 +132,14 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
       label: t('common_breadcrumbs.catalog'),
       path: routePath(ROUTES.CATALOG, { slugId: '' }),
     },
-    {
+  ];
+
+  if (isCategory || isSearch) {
+    breadcrumbs.push({
       label: title,
       path: correctPath,
-    },
-  ];
+    });
+  }
 
   return (
     <div className={styles.page}>
