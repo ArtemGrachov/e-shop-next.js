@@ -12,6 +12,7 @@ import { useProductInCart } from '@/hooks/cart/use-product-in-cart';
 import ProductPrice from '@/components/products/ProductPrice';
 import FavouritesToggle from '@/components/favourites/FavouritesToggle';
 import Button from '@/components/buttons/Button';
+import DefaultImage from '@/components/media/DefaultImage';
 
 import type { IProduct } from '@/types/models/product';
 
@@ -43,13 +44,23 @@ const ProductCard: ComponentType<IProps> = ({ product }) => {
 
   const productInCart = useProductInCart(product, variantWithPrice);
 
+  const productName = product.name[locale];
+
   return (
     <article className={styles.productCard}>
-      <div className={styles.image}></div>
+      <div className={styles.imageWrap}>
+        <DefaultImage
+          className={styles.image}
+          src={product.media?.[0]?.src ?? ''}
+          width={500}
+          height={500}
+          alt={productName}
+        />
+      </div>
       <div className={styles.nameRow}>
         <FavouritesToggle className={styles.favouritesToggle} product={product} size={'small'} />
         <Link href={href} className={styles.link}>
-          {product.name[locale]}
+          {productName}
         </Link>
       </div>
       <ProductPrice product={product} productVariant={product.variants?.[0]} />

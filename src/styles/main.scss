@@ -4,7 +4,7 @@
 @include themes.global-theme-dark() {
   --primary-background: #1c1b1b;
   --text-color: white;
-  --image-placeholder-background: #3b3b3b;
+  --image-placeholder-background: #212121;
 
   --icon-button-color: orange;
   --icon-button-hover-color: red;
@@ -38,7 +38,7 @@
 @include themes.global-theme-light() {
   --primary-background: #fbfbfb;
   --text-color: black;
-  --image-placeholder-background: #858585;
+  --image-placeholder-background: #d3d3d3;
 
   --icon-button-color: #474747;
   --icon-button-hover-color: #ff9100;

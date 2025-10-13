@@ -1,9 +1,7 @@
 'use client';
 
 import { ComponentType } from 'react';
-import { useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
-import { pathcat } from 'pathcat';
 
 import { ROUTES } from '@/router/routes';
 
@@ -11,8 +9,9 @@ import { useCurrentVariantCtx } from '../../providers/current-variant/hooks/use-
 
 import { useAddToCart } from '@/hooks/cart/use-add-to-cart';
 import { useRoutePath } from '@/hooks/routing/use-route-path';
+import { useProductInCart } from '@/hooks/cart/use-product-in-cart';
 
-import FormBuyProduct, { IFormBuyOutput } from '@/components/products/FormBuyProduct';
+import FormBuyProduct, { IFormBuyOutput } from '@/views/product/components/FormBuyProduct';
 import ProductPrice from '@/components/products/ProductPrice';
 
 import type { IProduct } from '@/types/models/product';
@@ -28,6 +27,8 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
   const locale = useLocale();
   const { currentVariant, setVariant } = useCurrentVariantCtx();
   const routePath = useRoutePath();
+
+  const { orderItem } = useProductInCart(product, currentVariant);
 
   const { addToCart } = useAddToCart(product, currentVariant);
 
@@ -64,6 +65,7 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
       <FormBuyProduct
         className={styles.formBuyProduct}
         product={product}
+        orderItem={orderItem}
         currentVariant={currentVariant}
         onVariantSelect={variantChangeHandler}
         onSubmit={addToCartHandler}

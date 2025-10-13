@@ -1,4 +1,4 @@
-import { ChangeEvent, ComponentType, useMemo } from 'react';
+import { ChangeEvent, ComponentType, useEffect, useMemo } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useLocale, useTranslations } from 'next-intl';
 import clsx from 'clsx';
@@ -9,12 +9,14 @@ import Button from '@/components/buttons/Button';
 import type { IProduct } from '@/types/models/product';
 import type { IProductVariant } from '@/types/models/product-variant';
 import type { IPropsWithClassName } from '@/types/other/component-props';
+import type { IOrderItem } from '@/types/models/order-item';
 
 import styles from './styles.module.scss';
 
 interface IProps {
   product: IProduct;
   currentVariant?: IProductVariant;
+  orderItem?: IOrderItem;
   onSubmit?: (formValue: IFormBuyOutput) => any;
   onVariantSelect?: (variant?: IProductVariant | null) => any;
 }
@@ -29,10 +31,30 @@ export interface IFormBuyOutput {
   variant?: IProductVariant | null;
 }
 
-const FormBuyProduct: ComponentType<IProps & IPropsWithClassName> = ({ className, product, currentVariant, onSubmit, onVariantSelect }) => {
+const FormBuyProduct: ComponentType<IProps & IPropsWithClassName> = ({
+  className,
+  product,
+  currentVariant,
+  orderItem,
+  onSubmit,
+  onVariantSelect,
+}) => {
   const t = useTranslations();
   const locale = useLocale();
-  const { register, handleSubmit } = useForm<IFormBuyProduct>({ defaultValues: { variantId: currentVariant?.id, quantity: '1' } });
+  const { register, handleSubmit, setValue } = useForm<IFormBuyProduct>({
+    defaultValues: {
+      variantId: currentVariant?.id,
+      quantity: orderItem?.quantity.toString() ?? '1',
+    },
+  });
+
+  useEffect(() => {
+    if (!orderItem) {
+      return;
+    }
+
+    setValue('quantity', orderItem.quantity.toString());
+  }, [orderItem]);
 
   const getVariant = (variantId?: string | number) => {
     if (variantId == null) {

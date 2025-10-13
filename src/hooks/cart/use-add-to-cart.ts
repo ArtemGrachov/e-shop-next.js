@@ -17,12 +17,13 @@ export const useAddToCart = (product: IProduct, productVariant?: IProductVariant
     } else {
       handleAdd(quantity);
     }
+
+    openCartModal();
   }
 
   const handleAdd = (quantity: number) => {
     const price = productVariant?.price ?? product?.price!;
     addProduct(quantity, price, product, productVariant);
-    openCartModal();
   }
 
   const handleUpdate = (quantity: number) => {
