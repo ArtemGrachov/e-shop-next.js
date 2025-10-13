@@ -10,6 +10,16 @@
   align-items: stretch;
 }
 
+.breadcrumbs {
+  padding-left: layout.$layout-container-padding;
+  padding-right: layout.$layout-container-padding;
+
+  @include breakpoints.md {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .container {
   @include breakpoints.md {
     @include layout.container;
@@ -17,8 +27,8 @@
 }
 
 .title {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: layout.$layout-container-padding;
+  padding-right: layout.$layout-container-padding;
 
   @include breakpoints.md {
     padding-left: 0;
@@ -34,8 +44,8 @@
 }
 
 .col {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: layout.$layout-container-padding;
+  padding-right: layout.$layout-container-padding;
   margin-bottom: 24px;
 
   @include breakpoints.md {
