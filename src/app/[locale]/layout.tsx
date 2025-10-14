@@ -71,5 +71,17 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('common_meta.title'),
     description: t('common_meta.description'),
+    icons: {
+      icon: [
+        { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
+        { url: '/favicon.svg', type: 'image/svg+xml' },
+        { url: '/favicon.ico', rel: 'shortcut icon' },
+      ],
+      apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
+    },
+    manifest: '/site.webmanifest',
+    appleWebApp: {
+      title: t('common_meta.title'),
+    },
   };
 }
