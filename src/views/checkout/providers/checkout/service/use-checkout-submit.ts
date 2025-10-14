@@ -25,7 +25,7 @@ export const useCheckoutSubmit = (
   const httpClient = useHttpClientCtx();
   const dispatch = useStore(store, s => s.dispatch);
   const order = useCartStore(s => s.order);
-  const { setOrder } = useCartCtx();
+  const { forgetOrder } = useCartCtx();
   const deliveryMethods = useDeliveryMethodsStore(s => s.deliveryMethods);
   const paymentMethods = usePaymentMethodsStore(s => s.paymentMethods);
   const locale = useLocale();
@@ -52,7 +52,7 @@ export const useCheckoutSubmit = (
       await httpClient.post('/orders', JSON.stringify(order));
       dispatch({ type: EActions.SUBMIT_SUCCESS });
 
-      setOrder(null);
+      forgetOrder();
 
       /**
        * On real projects redirect is performed according to backend response

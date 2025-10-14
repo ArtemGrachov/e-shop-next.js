@@ -36,6 +36,10 @@ export const useCartService = (initialState?: State) => {
     setItemJSON(CART_STORAGE_KEY, order);
   }
 
+  const forgetOrder = () => {
+    removeItem(CART_STORAGE_KEY);
+  }
+
   const addProduct = (quantity: number, price: IPrice, product: IProduct, productVariant?: IProductVariant) => {
     let order = storeRef.current.getState().order;
     const orderItem = productToOrderItem(product, quantity, price, productVariant);
@@ -89,5 +93,6 @@ export const useCartService = (initialState?: State) => {
     removeItem,
     updateQuantity,
     setOrder,
+    forgetOrder,
   };
 }
