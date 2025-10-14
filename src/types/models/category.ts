@@ -1,4 +1,3 @@
-import { IMedia } from '@/types/models/media';
 import { TextTranslation } from '@/types/models/translation';
 
 export interface ICategory {
@@ -6,6 +5,5 @@ export interface ICategory {
   name: TextTranslation;
   description: TextTranslation;
   slug: TextTranslation;
-  media: IMedia[];
   primaryMedia: number;
 }

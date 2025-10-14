@@ -23,6 +23,10 @@
   position: relative;
 }
 
+.image {
+  object-fit: contain;
+}
+
 .image, .slide :global(.iiz) {
   width: 100%;
   height: 100%;
