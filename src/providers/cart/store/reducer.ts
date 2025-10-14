@@ -9,6 +9,12 @@ export const reducer: Reducer<State, Action> = (state, action): State => {
         order: action.order,
       };
     }
+    case EActions.SET_INITIALIZED: {
+      return {
+        ...state,
+        isInitialized: true,
+      };
+    }
     default: {
       return state;
     }
