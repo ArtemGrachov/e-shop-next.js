@@ -1013,7 +1013,7 @@
       "media": [
         {
           "id": 2,
-          "src": "/images/mock_image_2.webp",
+          "src": "/images/this_image_does_not_exist_intentionally.webp",
           "type": "image"
         }
       ],
@@ -1112,7 +1112,7 @@
       "media": [
         {
           "id": 5,
-          "src": "/images/mock_image_5.webp",
+          "src": "/images/this_image_does_not_exist_intentionally.webp",
           "type": "image"
         }
       ],
@@ -1388,7 +1388,7 @@
       "media": [
         {
           "id": 2,
-          "src": "/images/mock_image_2.webp",
+          "src": "/images/this_image_does_not_exist_intentionally.webp",
           "type": "image"
         }
       ],
