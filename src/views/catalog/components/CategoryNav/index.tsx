@@ -33,7 +33,7 @@ const CategoryNav: ComponentType<IProps & IPropsWithClassName> = ({ categories, 
 
           return (
             <li key={category.id} className={styles.item}>
-              <Link href={href} className={styles.link} onClick={onNavigate ? onNavigate() : undefined}>
+              <Link href={href} className={styles.link} onClick={onNavigate ? () => onNavigate() : undefined}>
                 {name}
               </Link>
             </li>
