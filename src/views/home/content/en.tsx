@@ -31,6 +31,9 @@ const ContentEN: ComponentType = () => {
             <li>
               Filtering by price
             </li>
+            <li>
+              Sales page
+            </li>
           </ul>
         </li>
         <li>
