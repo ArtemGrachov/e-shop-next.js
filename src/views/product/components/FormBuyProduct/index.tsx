@@ -102,7 +102,7 @@ const FormBuyProduct: ComponentType<IProps & IPropsWithClassName> = ({
           {...quantityInput}
         />
         <Button type="submit" variant={'primary'} className={styles.submit}>
-          {t('form_buy_product.submit')}
+          {t(orderItem ? 'form_buy_product.update' : 'form_buy_product.submit')}
         </Button>
       </div>
     </form>
