@@ -119,7 +119,7 @@ const baseData = async (props: IViewCatalogProps, options?: IViewCatalogOptions)
   };
 }
 
-const CatalogView = (options: IViewCatalogOptions): ComponentType<IViewCatalogProps> => async (props) => {
+const CatalogView = (options?: IViewCatalogOptions): ComponentType<IViewCatalogProps> => async (props) => {
   const {
     categorySlugId,
     category,
