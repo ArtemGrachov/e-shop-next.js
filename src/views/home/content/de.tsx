@@ -66,6 +66,9 @@ const ContentDE: ComponentType = () => {
       <p>
         Dieses Projekt ist Open Source; Sie können es frei und ohne Genehmigung verwenden.
       </p>
+      <a href="https://github.com/ArtemGrachov/e-shop-next.js" target="_blank">
+        💾 Quellcode – GitHub
+      </a>
       <h2>
         📸 Medien
       </h2>

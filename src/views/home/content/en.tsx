@@ -66,6 +66,9 @@ const ContentEN: ComponentType = () => {
       <p>
         This project is open-source; you are free to use it without any permission.
       </p>
+      <a href="https://github.com/ArtemGrachov/e-shop-next.js" target="_blank">
+        💾 Source code - GitHub
+      </a>
       <h2>
         📸 Media
       </h2>
