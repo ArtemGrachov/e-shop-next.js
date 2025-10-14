@@ -18,8 +18,9 @@ import type { IViewProductProps } from './types';
 import type { IBreadcrumb } from '@/types/other/breadcrumbs';
 
 import styles from './styles.module.scss';
+import { Metadata } from 'next';
 
-const ProductView = async (props: IViewProductProps) => {
+const baseData = async (props: IViewProductProps) => {
   const [
     t,
     locale,
@@ -68,6 +69,50 @@ const ProductView = async (props: IViewProductProps) => {
 
   const correctPath = routePath(ROUTES.PRODUCT, { ...searchParams, slugId: correctSlugId })
 
+  const productName = product.name[locale];
+  const description = product.description[locale];
+
+  return {
+    t,
+    locale,
+    params,
+    searchParams,
+    data,
+    routePath,
+    product,
+    productSlugId,
+    variantSlugId,
+    productSlugArr,
+    variantSlugArr,
+    productSlug,
+    productId,
+    variantSlug,
+    variantId,
+    variant,
+    correctSlugId,
+    correctProductSlug,
+    correctVariantSlug,
+    correctPath,
+    productName,
+    description,
+  };
+}
+
+const ProductView = async (props: IViewProductProps) => {
+  const {
+    t,
+    locale,
+    data,
+    routePath,
+    product,
+    productSlug,
+    variantSlug,
+    correctProductSlug,
+    correctVariantSlug,
+    correctPath,
+    productName,
+  } = await baseData(props);
+
   if (productSlug !== correctProductSlug || (variantSlug && correctVariantSlug && variantSlug !== correctVariantSlug)) {
     return redirect(correctPath);
   }
@@ -102,7 +147,7 @@ const ProductView = async (props: IViewProductProps) => {
               <div className={styles.titleRow}>
                 <FavouritesToggle className={styles.favouritesToggle} product={product} />
                 <h1 className={styles.title}>
-                  {product.name[locale]}
+                  {productName}
                 </h1>
               </div>
               {product && <ProductDescription className={styles.description} product={product} />}
@@ -122,3 +167,16 @@ const ProductView = async (props: IViewProductProps) => {
 }
 
 export default ProductView;
+
+export async function generateMetadata(props: IViewProductProps): Promise<Metadata> {
+  const {
+    t,
+    productName,
+    description,
+  } = await baseData(props);
+
+  return {
+    title: t('common_meta.title_template', { title: productName ?? '-' }),
+    description,
+  };
+}

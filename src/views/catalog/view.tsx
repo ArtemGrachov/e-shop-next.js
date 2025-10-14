@@ -1,4 +1,5 @@
 import { ComponentType } from 'react';
+import { Metadata } from 'next';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { notFound, redirect } from 'next/navigation';
 
@@ -19,7 +20,7 @@ import type { IBreadcrumb } from '@/types/other/breadcrumbs';
 
 import styles from './styles.module.scss';
 
-const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
+const baseData = async (props: IViewCatalogProps) => {
   const [
     t,
     locale,
@@ -59,14 +60,6 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
   const correctSlugId = isCategory ? `${correctCategorySlug}-${categoryId}` : null;
   const correctPath = routePath(ROUTES.CATALOG, { ...searchParams, slugId: correctSlugId || '' })
 
-  if (categorySlugId && !category) {
-    return notFound();
-  }
-
-  if (isCategory && categorySlug !== correctCategorySlug) {
-    return redirect(correctPath);
-  }
-
   const getTitle = () => {
     const categoryName = category?.name[locale];
 
@@ -87,6 +80,52 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
 
   const title = getTitle();
   const description = category?.description?.[locale];
+
+  return {
+    categorySlugId,
+    category,
+    isCategory,
+    isSearch,
+    categorySlug,
+    correctCategorySlug,
+    correctPath,
+    t,
+    routePath,
+    title,
+    description,
+    productsData,
+    categories,
+    searchParams,
+    data,
+  };
+}
+
+const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
+  const {
+    categorySlugId,
+    category,
+    isCategory,
+    isSearch,
+    categorySlug,
+    correctCategorySlug,
+    correctPath,
+    t,
+    routePath,
+    title,
+    description,
+    productsData,
+    categories,
+    searchParams,
+    data,
+  } = await baseData(props);
+
+  if (categorySlugId && !category) {
+    return notFound();
+  }
+
+  if (isCategory && categorySlug !== correctCategorySlug) {
+    return redirect(correctPath);
+  }
 
   const breadcrumbs: IBreadcrumb[] = [
     {
@@ -156,3 +195,16 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
 }
 
 export default CatalogView;
+
+export async function generateMetadata(props: IViewCatalogProps): Promise<Metadata> {
+  const {
+    t,
+    title,
+    description,
+  } = await baseData(props);
+
+  return {
+    title: t('common_meta.title_template', { title: title ?? '-' }),
+    description,
+  };
+}

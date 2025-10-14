@@ -10,15 +10,17 @@
 }
 
 .container {
+  padding-left: layout.$layout-container-padding;
+  padding-right: layout.$layout-container-padding;
+
   @include breakpoints.md {
     @include layout.container();
   }
 }
 
-.subcontainer,
-.title {
-  padding-left: 24px;
-  padding-right: 24px;
+.subcontainer {
+  padding-left: layout.$layout-container-padding;
+  padding-right: layout.$layout-container-padding;
 
   @include breakpoints.md {
     padding-left: 0;

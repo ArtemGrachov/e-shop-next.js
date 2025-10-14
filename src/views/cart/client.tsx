@@ -52,7 +52,7 @@ const CartPageClient: ComponentType = () => {
   return (
     <main className={styles.page}>
       <div className={styles.container}>
-        <Breadcrumbs breadcrumbs={breadcrumbs} />
+        <Breadcrumbs breadcrumbs={breadcrumbs} className={styles.breadcrumbs} />
         <h1 className={styles.title}>{t('view_cart.title')}</h1>
         <div className={styles.row}>
           <div className={styles.col}>
@@ -60,7 +60,7 @@ const CartPageClient: ComponentType = () => {
           </div>
           <div className={clsx(styles.col, styles._sm)}>
             {order && <OrderSummary order={order} className={styles.orderSummary} />}
-            <Button href={routePath(ROUTES.FAVOURITES)} tag={'Link'} variant={'primary'}>
+            <Button href={routePath(ROUTES.CHECKOUT)} tag={'Link'} variant={'primary'}>
               {t('view_cart.checkout')}
             </Button>
           </div>

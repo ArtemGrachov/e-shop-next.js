@@ -3,16 +3,16 @@ import { getTranslations } from 'next-intl/server';
 
 import CheckoutPageClient from './client';
 
-const OrderView = () => {
+const CheckoutView = () => {
   return <CheckoutPageClient />;
 }
 
-export default OrderView;
+export default CheckoutView;
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations();
 
   return {
-    title: t('common_meta.title_template', { title: t('view_order.meta_title' )}),
+    title: t('common_meta.title_template', { title: t('view_checkout.meta_title' )}),
   };
 }

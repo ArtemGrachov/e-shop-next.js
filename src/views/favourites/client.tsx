@@ -26,7 +26,7 @@ const FavouritesClientView: ComponentType<IViewFavouritesProps> = () => {
   const t = useTranslations();
   const routePath = useRoutePath();
 
-  const title = t('view_catalog.title_favourites');
+  const title = t('view_favourites.title');
 
   const { getProducts } = useProductsCtx();
   const productsData = useProductsStore(s => s.data);

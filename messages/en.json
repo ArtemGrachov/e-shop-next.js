@@ -80,13 +80,17 @@
     "title_catalog": "Catalog",
     "title_search": "Search \"{query}\"",
     "title_category_search": "{categoryName} | search \"{query}\"",
-    "title_favourites": "Favourites",
     "product_filters": {
       "price": "Price"
     },
     "mobile_filters": {
       "filters": "Filters"
-    }
+    },
+    "meta_title": "Product catalog"
+  },
+  "view_favourites": {
+    "title": "Favourites",
+    "meta_title": "Favourites"
   },
   "view_error": {
     "not_found_title": "Not found",
@@ -101,11 +105,13 @@
   },
   "view_cart": {
     "title": "Cart",
-    "checkout": "Checkout"
+    "checkout": "Checkout",
+    "meta_title": "Cart"
   },
   "view_checkout": {
     "title": "Checkout",
-    "open_cart": "View cart"
+    "open_cart": "View cart",
+    "meta_title": "Checkout"
   },
   "footer": {
     "developed_by": "Designed and developed by <name></name>, <year></year>"
@@ -137,5 +143,13 @@
   "language_switch": {
     "en": "English",
     "de": "Deutsch"
+  },
+  "common_meta": {
+    "title": "E-Shop Demo",
+    "title_template": "{title} | E-Shop Demo",
+    "description": "Next.js demo E-Commerce project made for educational purposes and portfolio."
+  },
+  "view_order": {
+    "meta_title": "Order"
   }
 }

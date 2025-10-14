@@ -1,4 +1,6 @@
-@mixin container($width: 1200px, $padding: 24px) {
+$layout-container-padding: 24px;
+
+@mixin container($width: 1200px, $padding: $layout-container-padding) {
   max-width: $width + $padding * 2;
   width: 100%;
   padding: 0 $padding;
