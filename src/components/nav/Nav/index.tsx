@@ -1,47 +1,24 @@
 import { ComponentType } from 'react';
-import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 
-import { useRoutePath } from '@/hooks/routing/use-route-path';
+import NavItem from '@/components/nav/NavItem';
 
-import { ROUTES } from '@/router/routes';
+import type { INavItem } from '@/types/models/nav-item';
 
 import styles from './styles.module.scss';
 
 interface IProps {
+  menu?: INavItem[];
   onClick?: Function;
 }
 
-const Nav: ComponentType<IProps> = ({ onClick }) => {
-  const t = useTranslations();
-  const routePath = useRoutePath();
-
-  const links = [
-    {
-      key: 'home',
-      path: routePath(ROUTES.HOME),
-      label: t('nav.home'),
-    },
-    {
-      key: 'catalog',
-      path: routePath(ROUTES.CATALOG, { slugId: '' }),
-      label: t('nav.catalog'),
-    },
-  ];
-
+const Nav: ComponentType<IProps> = ({ menu, onClick }) => {
   return (
     <nav>
       <ul className={styles.list}>
-        {links.map(link => {
+        {menu?.map(navItem => {
           return (
-            <li key={link.key} className={styles.item}>
-              <Link
-                href={link.path}
-                className={styles.link}
-                onClick={onClick ? () => onClick() : undefined}
-              >
-                {link.label}
-              </Link>
+            <li key={navItem.id} className={styles.item}>
+              <NavItem navItem={navItem} onClick={onClick} />
             </li>
           )
         })}

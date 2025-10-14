@@ -58,7 +58,24 @@ export const useCheckoutService = () => {
       await getPickUpPoints(order.deliveryMethodId);
     }
 
+
+    if (formDeliveryMethod.hasInitialData.current) {
+      formDeliveryMethod.form.trigger();
+    }
+
+    if (formDeliveryAddress.hasInitialData.current) {
+      formDeliveryAddress.form.trigger();
+    }
+
+    if (formPaymentMethod.hasInitialData.current) {
+      formPaymentMethod.form.trigger();
+    }
+
     dispatch({ type: EActions.INIT_SUCCESS });
+  }
+
+  const edit = (edit: boolean, token: string) => {
+    dispatch({ type: EActions.EDIT, edit, token });
   }
 
   useEffect(() => {
@@ -70,7 +87,8 @@ export const useCheckoutService = () => {
     formDeliveryMethod,
     formDeliveryAddress,
     formPaymentMethod,
-    init,
     checkoutSubmit,
+    init,
+    edit,
   };
 }

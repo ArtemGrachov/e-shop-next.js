@@ -28,6 +28,7 @@ export const useCartService = (initialState?: State) => {
   const init = () => {
     const order = getItemJSON(CART_STORAGE_KEY) ?? null;
     dispatch({ type: EActions.SET, order });
+    dispatch({ type: EActions.SET_INITIALIZED });
   }
 
   const setOrder = (order: IOrder | null) => {

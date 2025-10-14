@@ -31,6 +31,9 @@
   --input-default-background: #212121;
   --input-default-focus-border-color: orange;
 
+  --button-disabled-background: #3b3b3b;
+  --button-disabled-color: #535353;
+
   --skeleton-color: #3b3b3b;
   --skeleton-animation-color: rgba(255, 166, 0, 0.074);
 }
@@ -60,11 +63,14 @@
   --button-default-hover-background: #d7d7d7;
   --button-default-active-background: #b5b5b5;
 
+  --button-disabled-background: #d7d7d7;
+  --button-disabled-color: #ababab;
+
   --input-default-border: #b5b5b5;
   --input-default-color: #1c1b1b;
   --input-default-background: white;
   --input-default-focus-border-color: orange;
 
   --skeleton-color: #d3d3d3;
-  --skeleton-animation-color: white;
+  --skeleton-animation-color: rgba(255, 255, 255, 0.3);
 }

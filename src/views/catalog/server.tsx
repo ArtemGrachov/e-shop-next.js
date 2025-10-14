@@ -2,9 +2,9 @@ import { createHttpClient } from '@/providers/http-client/utils/create-http-clie
 import { fetchCategories } from '@/data/categories/fetch-categories';
 import { fetchProducts } from '@/data/products/fetch-products';
 
-import type { IViewCatalogProps } from './types';
+import type { IViewCatalogOptions, IViewCatalogProps } from './types';
 
-export const getPageData = async ({ params ,searchParams }: IViewCatalogProps) => {
+export const getPageData = async ({ params, searchParams }: IViewCatalogProps, options?: IViewCatalogOptions) => {
   const [{ slug }, { page, search, ['price[min]']: priceMin, ['price[max]']: priceMax }] = await Promise.all([params, searchParams]);
 
   let categoryId;
@@ -30,6 +30,7 @@ export const getPageData = async ({ params ,searchParams }: IViewCatalogProps) =
             max: priceMax,
           },
         },
+        sale: options?.sale,
       }),
   ]);
 

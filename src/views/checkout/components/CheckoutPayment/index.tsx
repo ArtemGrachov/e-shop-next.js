@@ -1,19 +1,27 @@
 import { useTranslations } from 'next-intl';
-import { ComponentType, useState } from 'react';
+import { ComponentType, useEffect, useState } from 'react';
 
-import { useSelectedPaymentMethod } from '@/views/checkout/providers/checkout/hooks/use-selected-payment-method';
+import { useCheckoutCtx } from '../../providers/checkout/hooks/use-checkout-ctx';
+import { useSelectedPaymentMethod } from '../../providers/checkout/hooks/use-selected-payment-method';
 
-import FormPaymentMethod from '@/views/checkout/components/FormPaymentMethod';
 import PaymentMethod from '@/components/payment/PaymentMethod';
 import Button from '@/components/buttons/Button';
-import CheckoutSection from '@/views/checkout/components/CheckoutSection';
+import FormPaymentMethod from '../FormPaymentMethod';
+import CheckoutSection from '../CheckoutSection';
 
 import styles from './styles.module.scss';
+
+const EDIT_METHOD_TOKEN = 'PAYMENT_METHOD';
 
 const CheckoutPayment: ComponentType = () => {
   const t = useTranslations();
   const selectedPaymentMethod = useSelectedPaymentMethod();
   const [methodSelectionActive, setMethodSelectionActive] = useState(!selectedPaymentMethod);
+  const { edit } = useCheckoutCtx();
+
+  useEffect(() => {
+    edit(methodSelectionActive, EDIT_METHOD_TOKEN);
+  }, [methodSelectionActive]);
 
   const methodEl = methodSelectionActive ? (
     <FormPaymentMethod onSubmitSuccess={() => setMethodSelectionActive(false)} />

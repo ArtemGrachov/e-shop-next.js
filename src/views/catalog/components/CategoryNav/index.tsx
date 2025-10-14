@@ -1,7 +1,6 @@
 import { ComponentType } from 'react';
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
-import { pathcat } from 'pathcat';
 
 import { ROUTES } from '@/router/routes';
 
@@ -14,10 +13,11 @@ import styles from './styles.module.scss';
 
 interface IProps {
   categories?: ICategory[];
+  isSale?: boolean;
   onNavigate?: Function;
 }
 
-const CategoryNav: ComponentType<IProps & IPropsWithClassName> = ({ categories, className, onNavigate }) => {
+const CategoryNav: ComponentType<IProps & IPropsWithClassName> = ({ categories, className, isSale, onNavigate }) => {
   categories = categories ?? [];
 
   const routePath = useRoutePath();
@@ -29,11 +29,11 @@ const CategoryNav: ComponentType<IProps & IPropsWithClassName> = ({ categories, 
         {categories.map(category => {
           const slugId = `${category.slug[locale]}-${category.id}`;
           const name = category.name[locale];
-          const href = routePath(ROUTES.CATALOG, { slugId })
+          const href = routePath(isSale ? ROUTES.SALE : ROUTES.CATALOG, { slugId })
 
           return (
             <li key={category.id} className={styles.item}>
-              <Link href={href} className={styles.link} onClick={onNavigate ? onNavigate() : undefined}>
+              <Link href={href} className={styles.link} onClick={onNavigate ? () => onNavigate() : undefined}>
                 {name}
               </Link>
             </li>

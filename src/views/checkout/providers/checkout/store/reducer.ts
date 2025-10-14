@@ -28,6 +28,20 @@ export const reducer: Reducer<State, Action> = (state, action) => {
         submitStatus: EStatus.ERROR,
       };
     }
+    case EActions.EDIT: {
+      const editTokens = new Set(state.editTokens);
+
+      if (action.edit) {
+        editTokens.add(action.token);
+      } else {
+        editTokens.delete(action.token);
+      }
+
+      return {
+        ...state,
+        editTokens: Array.from(editTokens),
+      };
+    }
     default: {
       return state;
     }

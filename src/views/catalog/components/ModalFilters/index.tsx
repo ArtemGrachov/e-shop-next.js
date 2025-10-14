@@ -13,6 +13,7 @@ import styles from './styles.module.scss';
 
 interface IProps {
   data: Awaited<ReturnType<typeof getPageData>>;
+  isSale?: boolean;
 }
 
 const ModalFilters: ComponentType<IModalProps & IProps> = (props) => {
@@ -24,7 +25,12 @@ const ModalFilters: ComponentType<IModalProps & IProps> = (props) => {
     <ModalFullscreen {...props}>
       <ModalHeader {...props} />
       <div className={styles.content}>
-        <CategoryNav className={styles.categoryNav} categories={categories} onNavigate={props.close} />
+        <CategoryNav
+          className={styles.categoryNav}
+          categories={categories}
+          isSale={props.isSale}
+          onNavigate={props.close}
+        />
         {productsData && <ProductFilters filters={productsData.filters} onUpdate={props.close} />}
       </div>
     </ModalFullscreen>

@@ -20,17 +20,19 @@ import Breadcrumbs from '@/components/other/Breadcrumbs';
 import type { IBreadcrumb } from '@/types/other/breadcrumbs';
 
 import styles from './styles.module.scss';
+import SkeletonRows from '@/components/other/SkeletonRows';
 
 const CartPageClient: ComponentType = () => {
   const t = useTranslations();
   const routePath = useRoutePath();
 
   const order = useCartStore(s => s.order);
+  const isInitialized = useCartStore(s => s.isInitialized);
   const cartItems = useCartItems();
 
   const isEmpty = cartItems.length === 0;
 
-  if (isEmpty) {
+  if (isEmpty && isInitialized) {
     return (
       <main className={styles.page}>
         <CartPlaceholder />
@@ -56,13 +58,19 @@ const CartPageClient: ComponentType = () => {
         <h1 className={styles.title}>{t('view_cart.title')}</h1>
         <div className={styles.row}>
           <div className={styles.col}>
-            <CartList orderItems={cartItems} />
+            <CartList orderItems={cartItems} isProcessing={!isInitialized} />
           </div>
           <div className={clsx(styles.col, styles._sm)}>
-            {order && <OrderSummary order={order} className={styles.orderSummary} />}
-            <Button href={routePath(ROUTES.CHECKOUT)} tag={'Link'} variant={'primary'}>
-              {t('view_cart.checkout')}
-            </Button>
+            {(order && isInitialized) ? (
+              <>
+                <OrderSummary order={order} className={styles.orderSummary} />
+                <Button href={routePath(ROUTES.CHECKOUT)} tag={'Link'} variant={'primary'}>
+                  {t('view_cart.checkout')}
+                </Button>
+              </>
+            ) : (
+              <SkeletonRows />
+            )}
           </div>
         </div>
       </div>

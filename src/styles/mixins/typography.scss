@@ -1,3 +1,5 @@
+@use './breakpoints.scss' as breakpoints;
+
 @mixin h-base {
   color: var(--heading-color);
 
@@ -8,45 +10,119 @@
 
 @mixin h1 {
   @include h-base();
+  @include h1-mobile();
 
-  margin: 24px 0;
-  font-size: 36px;
+  @include breakpoints.sm {
+    @include h1-desktop();
+  }
 }
 
 @mixin h2 {
   @include h-base();
+  @include h2-mobile();
 
-  margin: 20px 0;
-  font-size: 32px;
+  @include breakpoints.sm {
+    @include h2-desktop();
+  }
 }
 
 @mixin h3 {
   @include h-base();
+  @include h3-mobile();
 
-  margin: 20px 0;
-  font-size: 28px;
+  @include breakpoints.sm {
+    @include h3-desktop();
+  }
 }
 
 @mixin h4 {
   @include h-base();
+  @include h4-mobile();
 
-  margin: 20px 0;
-  font-size: 24px;
+  @include breakpoints.sm {
+    @include h4-desktop();
+  }
 }
 
 @mixin h5 {
   @include h-base();
+  @include h5-mobile();
 
-  margin: 16px 0;
-  font-size: 20px;
+  @include breakpoints.sm {
+    @include h5-desktop();
+  }
 }
 
 @mixin h6 {
   @include h-base();
+  @include h6-mobile();
 
+  @include breakpoints.sm {
+    @include h6-desktop();
+  }
+}
+
+@mixin h1-desktop {
+  margin: 24px 0;
+  font-size: 36px;
+}
+
+@mixin h2-desktop {
+  margin: 20px 0;
+  font-size: 32px;
+}
+
+@mixin h3-desktop {
+  margin: 20px 0;
+  font-size: 28px;
+}
+
+@mixin h4-desktop {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+@mixin h5-desktop {
+  margin: 16px 0;
+  font-size: 20px;
+}
+
+@mixin h6-desktop {
   margin: 16px 0;
   font-size: 16px;
 }
+
+@mixin h1-mobile {
+  margin: 18px 0;
+  font-size: 24px;
+}
+
+@mixin h2-mobile {
+  margin: 16px 0;
+  font-size: 22px;
+}
+
+@mixin h3-mobile {
+  margin: 16px 0;
+  font-size: 20px;
+}
+
+@mixin h4-mobile {
+  margin: 16px 0;
+  font-size: 18px;
+}
+
+@mixin h5-mobile {
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+@mixin h6-mobile {
+  margin: 14px 0;
+  font-size: 14px;
+}
+
+
 
 @mixin p {
   margin: 16px 0;

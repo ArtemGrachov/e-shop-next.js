@@ -12,3 +12,7 @@ export interface IViewCatalogProps extends IPageProps {
     ['price[max]']?: string;
   }>
 }
+
+export interface IViewCatalogOptions {
+  sale?: boolean;
+}

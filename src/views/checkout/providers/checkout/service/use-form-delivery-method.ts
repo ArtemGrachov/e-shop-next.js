@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { EDeliveryMethodTypes } from '@/constants/delivery-methods';
@@ -15,7 +15,8 @@ export const useFormDeliveryMethod = () => {
   const { store, setOrder } = useCartCtx();
   const { store: pickUpPointsStore } = usePickUpPointsCtx();
   const deliveryMethods = useDeliveryMethodsStore(s => s.deliveryMethods);
-  const form = useForm<IFormDeliveryMethod>({ mode: 'onTouched' });
+  const form = useForm<IFormDeliveryMethod>({ mode: 'onBlur' });
+  const hasInitialData = useRef(false);
 
   const deliveryMethodInput = form.register('deliveryMethodId', { required: true });
 
@@ -47,6 +48,7 @@ export const useFormDeliveryMethod = () => {
 
     form.reset({ deliveryMethodId, pickUpPointId });
     form.trigger();
+    hasInitialData.current = true;
   };
 
   const submit = () => {
@@ -83,6 +85,7 @@ export const useFormDeliveryMethod = () => {
     form,
     deliveryMethodInput,
     pickUpPointInput,
+    hasInitialData,
     submit,
     init,
   };

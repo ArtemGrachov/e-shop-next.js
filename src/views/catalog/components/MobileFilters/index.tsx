@@ -15,9 +15,10 @@ const ModalFilters = lazy(() => import('@/views/catalog/components/ModalFilters'
 
 interface IProps {
   data?: Awaited<ReturnType<typeof getPageData>>;
+  isSale?: boolean;
 }
 
-const MobileFilters: ComponentType<IProps> = ({ data }) => {
+const MobileFilters: ComponentType<IProps> = ({ data, isSale }) => {
   const t = useTranslations();
   const { openModal } = useModalsCtx();
 
@@ -26,6 +27,7 @@ const MobileFilters: ComponentType<IProps> = ({ data }) => {
       component: ModalFilters,
       props: {
         data,
+        isSale,
       },
     });
   }

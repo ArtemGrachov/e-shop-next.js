@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { EDeliveryMethodTypes } from '@/constants/delivery-methods';
@@ -10,7 +10,8 @@ import type { IFormDeliveryAddress } from '@/types/forms/form-delivery-address';
 
 export const useFormDeliveryAddress = () => {
   const { store, setOrder } = useCartCtx();
-  const form = useForm<IFormDeliveryAddress>({ mode: 'onChange' });
+  const form = useForm<IFormDeliveryAddress>({ mode: 'onBlur' });
+  const hasInitialData = useRef(false);
 
   const selectedDeliveryMethod = useSelectedDeliveryMethod();
 
@@ -22,8 +23,6 @@ export const useFormDeliveryAddress = () => {
     if (!form.formState.isDirty) {
       return;
     }
-
-    form.trigger();
   }, [addressIsRequired]);
 
   const conditionalRequired = (v?: string | null) => {
@@ -56,6 +55,7 @@ export const useFormDeliveryAddress = () => {
 
     form.reset(deliveryAddress);
     form.trigger();
+    hasInitialData.current = true;
   };
 
   const submit = () => {
@@ -81,6 +81,7 @@ export const useFormDeliveryAddress = () => {
     houseNumberInput,
     apartmentNumberInput,
     commentInput,
+    hasInitialData,
     init,
     submit,
   };
