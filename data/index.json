@@ -3,278 +3,242 @@
     {
       "id": "1",
       "name": {
-        "en": "Electronics",
-        "de": "Elektronik"
-      },
-      "slug": {
-        "en": "electronics",
-        "de": "elektronik"
+        "en": "Smartphones",
+        "de": "Smartphones"
       },
       "description": {
-        "en": "Smartphones, tablets, TVs, and other electronic devices.",
-        "de": "Smartphones, Tablets, Fernseher und andere elektronische Geräte."
+        "en": "Latest smartphones from top brands with cutting-edge technology.",
+        "de": "Die neuesten Smartphones führender Marken mit modernster Technologie."
       },
-      "media": [
-        {
-          "id": 8001,
-          "src": "/media/categories/electronics.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8001
+      "slug": {
+        "en": "smartphones",
+        "de": "smartphones"
+      },
+      "primaryMedia": 1
     },
     {
       "id": "2",
       "name": {
-        "en": "Computers & Laptops",
-        "de": "Computer & Laptops"
-      },
-      "slug": {
-        "en": "computers-laptops",
-        "de": "computer-laptops"
+        "en": "Laptops",
+        "de": "Laptops"
       },
       "description": {
-        "en": "Laptops, desktops, and accessories for work and play.",
-        "de": "Laptops, Desktops und Zubehör für Arbeit und Freizeit."
+        "en": "Powerful laptops for work, gaming, and everyday use.",
+        "de": "Leistungsstarke Laptops für Arbeit, Gaming und den täglichen Gebrauch."
       },
-      "media": [
-        {
-          "id": 8002,
-          "src": "/media/categories/computers.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8002
+      "slug": {
+        "en": "laptops",
+        "de": "laptops"
+      },
+      "primaryMedia": 2
     },
     {
       "id": "3",
       "name": {
-        "en": "Smart Home",
-        "de": "Smart Home"
-      },
-      "slug": {
-        "en": "smart-home",
-        "de": "smart-home"
+        "en": "Tablets",
+        "de": "Tablets"
       },
       "description": {
-        "en": "Connected devices for a smarter lifestyle.",
-        "de": "Vernetzte Geräte für ein smarteres Zuhause."
+        "en": "Portable tablets with high-resolution displays and long battery life.",
+        "de": "Tragbare Tablets mit hochauflösenden Displays und langer Akkulaufzeit."
       },
-      "media": [
-        {
-          "id": 8003,
-          "src": "/media/categories/smarthome.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8003
+      "slug": {
+        "en": "tablets",
+        "de": "tablets"
+      },
+      "primaryMedia": 3
     },
     {
       "id": "4",
       "name": {
-        "en": "Fashion",
-        "de": "Mode"
-      },
-      "slug": {
-        "en": "fashion",
-        "de": "mode"
+        "en": "Smartwatches",
+        "de": "Smartwatches"
       },
       "description": {
-        "en": "Clothing, shoes, and accessories for men and women.",
-        "de": "Kleidung, Schuhe und Accessoires für Damen und Herren."
+        "en": "Stay connected and track your health with stylish smartwatches.",
+        "de": "Bleiben Sie verbunden und verfolgen Sie Ihre Gesundheit mit stilvollen Smartwatches."
       },
-      "media": [
-        {
-          "id": 8004,
-          "src": "/media/categories/fashion.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8004
+      "slug": {
+        "en": "smartwatches",
+        "de": "smartwatches"
+      },
+      "primaryMedia": 4
     },
     {
       "id": "5",
       "name": {
-        "en": "Sports & Outdoors",
-        "de": "Sport & Outdoor"
-      },
-      "slug": {
-        "en": "sports-outdoors",
-        "de": "sport-outdoor"
+        "en": "Headphones",
+        "de": "Kopfhörer"
       },
       "description": {
-        "en": "Equipment and apparel for indoor and outdoor activities.",
-        "de": "Ausrüstung und Bekleidung für Indoor- und Outdoor-Aktivitäten."
+        "en": "Noise-cancelling headphones for immersive sound experience.",
+        "de": "Geräuschunterdrückende Kopfhörer für ein intensives Klangerlebnis."
       },
-      "media": [
-        {
-          "id": 8005,
-          "src": "/media/categories/sports.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8005
+      "slug": {
+        "en": "headphones",
+        "de": "kopfhoerer"
+      },
+      "primaryMedia": 5
     },
     {
       "id": "6",
       "name": {
-        "en": "Home & Kitchen",
-        "de": "Haushalt & Küche"
-      },
-      "slug": {
-        "en": "home-kitchen",
-        "de": "haushalt-kuche"
+        "en": "Speakers",
+        "de": "Lautsprecher"
       },
       "description": {
-        "en": "Appliances, cookware, and home essentials.",
-        "de": "Geräte, Kochgeschirr und Haushaltsartikel."
+        "en": "Wireless and portable speakers with superior audio quality.",
+        "de": "Kabellose und tragbare Lautsprecher mit überlegener Audioqualität."
       },
-      "media": [
-        {
-          "id": 8006,
-          "src": "/media/categories/home.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8006
+      "slug": {
+        "en": "speakers",
+        "de": "lautsprecher"
+      },
+      "primaryMedia": 6
     },
     {
       "id": "7",
       "name": {
-        "en": "Beauty & Health",
-        "de": "Schönheit & Gesundheit"
-      },
-      "slug": {
-        "en": "beauty-health",
-        "de": "schoenheit-gesundheit"
+        "en": "Gaming Consoles",
+        "de": "Spielkonsolen"
       },
       "description": {
-        "en": "Cosmetics, skincare, and wellness products.",
-        "de": "Kosmetik, Hautpflege und Wellness-Produkte."
+        "en": "Next-gen gaming consoles and accessories for every gamer.",
+        "de": "Next-Gen-Spielkonsolen und Zubehör für jeden Gamer."
       },
-      "media": [
-        {
-          "id": 8007,
-          "src": "/media/categories/beauty.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8007
+      "slug": {
+        "en": "gaming-consoles",
+        "de": "spielkonsolen"
+      },
+      "primaryMedia": 7
     },
     {
       "id": "8",
       "name": {
-        "en": "Toys & Games",
-        "de": "Spielzeug & Spiele"
-      },
-      "slug": {
-        "en": "toys-games",
-        "de": "spielzeug-spiele"
+        "en": "Monitors",
+        "de": "Monitore"
       },
       "description": {
-        "en": "Toys for kids and games for all ages.",
-        "de": "Spielzeug für Kinder und Spiele für alle Altersgruppen."
+        "en": "High-refresh-rate and 4K monitors for work and entertainment.",
+        "de": "Monitore mit hoher Bildwiederholrate und 4K-Auflösung für Arbeit und Unterhaltung."
       },
-      "media": [
-        {
-          "id": 8008,
-          "src": "/media/categories/toys.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8008
+      "slug": {
+        "en": "monitors",
+        "de": "monitore"
+      },
+      "primaryMedia": 8
     },
     {
       "id": "9",
       "name": {
-        "en": "Books & Media",
-        "de": "Bücher & Medien"
-      },
-      "slug": {
-        "en": "books-media",
-        "de": "buecher-medien"
+        "en": "Cameras",
+        "de": "Kameras"
       },
       "description": {
-        "en": "Books, audiobooks, and digital media.",
-        "de": "Bücher, Hörbücher und digitale Medien."
+        "en": "Digital cameras and lenses for professionals and enthusiasts.",
+        "de": "Digitalkameras und Objektive für Profis und Enthusiasten."
       },
-      "media": [
-        {
-          "id": 8009,
-          "src": "/media/categories/books.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8009
+      "slug": {
+        "en": "cameras",
+        "de": "kameras"
+      },
+      "primaryMedia": 9
     },
     {
       "id": "10",
       "name": {
-        "en": "Automotive",
-        "de": "Auto & Motorrad"
-      },
-      "slug": {
-        "en": "automotive",
-        "de": "auto-motorrad"
+        "en": "Drones",
+        "de": "Drohnen"
       },
       "description": {
-        "en": "Car accessories, tools, and maintenance products.",
-        "de": "Autozubehör, Werkzeuge und Pflegeprodukte."
+        "en": "Capture stunning aerial shots with high-performance drones.",
+        "de": "Machen Sie atemberaubende Luftaufnahmen mit leistungsstarken Drohnen."
       },
-      "media": [
-        {
-          "id": 8010,
-          "src": "/media/categories/automotive.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8010
+      "slug": {
+        "en": "drones",
+        "de": "drohnen"
+      },
+      "primaryMedia": 10
     },
     {
       "id": "11",
       "name": {
-        "en": "Pet Supplies",
-        "de": "Haustierbedarf"
-      },
-      "slug": {
-        "en": "pet-supplies",
-        "de": "haustierbedarf"
+        "en": "Printers & Scanners",
+        "de": "Drucker & Scanner"
       },
       "description": {
-        "en": "Food, toys, and care items for pets.",
-        "de": "Futter, Spielzeug und Pflegeartikel für Haustiere."
+        "en": "Reliable printers and scanners for home and office use.",
+        "de": "Zuverlässige Drucker und Scanner für Zuhause und Büro."
       },
-      "media": [
-        {
-          "id": 8011,
-          "src": "/media/categories/pets.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8011
+      "slug": {
+        "en": "printers-scanners",
+        "de": "drucker-scanner"
+      },
+      "primaryMedia": 11
     },
     {
       "id": "12",
       "name": {
-        "en": "Garden & DIY",
-        "de": "Garten & Heimwerken"
-      },
-      "slug": {
-        "en": "garden-diy",
-        "de": "garten-heimwerken"
+        "en": "Computer Components",
+        "de": "Computerkomponenten"
       },
       "description": {
-        "en": "Gardening tools and DIY supplies.",
-        "de": "Gartenwerkzeuge und Heimwerkerbedarf."
+        "en": "CPUs, GPUs, and other hardware to build your perfect PC.",
+        "de": "CPUs, GPUs und andere Hardware für den Bau Ihres perfekten PCs."
       },
-      "media": [
-        {
-          "id": 8012,
-          "src": "/media/categories/garden.jpg",
-          "type": "image"
-        }
-      ],
-      "primaryMedia": 8012
+      "slug": {
+        "en": "computer-components",
+        "de": "computerkomponenten"
+      },
+      "primaryMedia": 12
+    },
+    {
+      "id": "13",
+      "name": {
+        "en": "Accessories",
+        "de": "Zubehör"
+      },
+      "description": {
+        "en": "Chargers, cables, cases, and more for your electronic devices.",
+        "de": "Ladegeräte, Kabel, Hüllen und mehr für Ihre elektronischen Geräte."
+      },
+      "slug": {
+        "en": "accessories",
+        "de": "zubehoer"
+      },
+      "primaryMedia": 13
+    },
+    {
+      "id": "14",
+      "name": {
+        "en": "Smart Home Devices",
+        "de": "Smart-Home-Geräte"
+      },
+      "description": {
+        "en": "Control lights, security, and appliances with smart home tech.",
+        "de": "Steuern Sie Licht, Sicherheit und Geräte mit Smart-Home-Technologie."
+      },
+      "slug": {
+        "en": "smart-home-devices",
+        "de": "smart-home-geraete"
+      },
+      "primaryMedia": 14
+    },
+    {
+      "id": "15",
+      "name": {
+        "en": "Wearables",
+        "de": "Wearables"
+      },
+      "description": {
+        "en": "Fitness trackers and wearable devices for a healthy lifestyle.",
+        "de": "Fitness-Tracker und tragbare Geräte für einen gesunden Lebensstil."
+      },
+      "slug": {
+        "en": "wearables",
+        "de": "wearables"
+      },
+      "primaryMedia": 15
     }
   ],
   "delivery-methods": [
@@ -492,336 +456,155 @@
     {
       "id": "1",
       "name": {
-        "en": "iPhone 14 Pro",
-        "de": "iPhone 14 Pro"
+        "en": "iPhone 15 Pro",
+        "de": "iPhone 15 Pro"
       },
       "slug": {
-        "en": "iphone-14-pro",
-        "de": "iphone-14-pro"
+        "en": "iphone-15-pro",
+        "de": "iphone-15-pro"
       },
       "description": {
-        "en": "Latest Apple flagship smartphone with ProMotion display.",
-        "de": "Neuestes Apple-Flaggschiff-Smartphone mit ProMotion-Display."
+        "en": "The latest iPhone 15 Pro with A17 chip and advanced camera system.",
+        "de": "Das neueste iPhone 15 Pro mit A17-Chip und fortschrittlichem Kamerasystem."
       },
       "media": [
         {
           "id": 1,
-          "src": "/images/iphone14pro.jpg",
+          "src": "/images/mock_image_1.webp",
+          "type": "image"
+        },
+        {
+          "id": 2,
+          "src": "/images/mock_image_2.webp",
           "type": "image"
         }
       ],
       "mainCategoryId": 1,
       "categoryIds": [
-        1,
-        2
+        1
       ],
       "variants": [
         {
-          "id": 101,
+          "id": "1v1",
           "name": {
-            "en": "iPhone 14 Pro 128GB - Silver",
-            "de": "iPhone 14 Pro 128GB - Silber"
+            "en": "128GB",
+            "de": "128GB"
           },
           "description": {
-            "en": "Base model with 128GB storage in Silver.",
-            "de": "Basismodell mit 128GB Speicher in Silber."
+            "en": "Base model",
+            "de": "Basismodell"
           },
           "slug": {
-            "en": "iphone-14-pro-128-silver",
-            "de": "iphone-14-pro-128-silber"
-          },
-          "price": {
-            "value": 999,
-            "discount": 0,
-            "discountType": "absolute",
-            "originalValue": 999
-          },
-          "media": [
-            {
-              "id": 2,
-              "src": "/images/iphone14pro_silver.jpg",
-              "type": "image"
-            }
-          ]
-        },
-        {
-          "id": 102,
-          "name": {
-            "en": "iPhone 14 Pro 256GB - Space Black",
-            "de": "iPhone 14 Pro 256GB - Space Schwarz"
-          },
-          "description": {
-            "en": "256GB storage in Space Black.",
-            "de": "256GB Speicher in Space Schwarz."
-          },
-          "slug": {
-            "en": "iphone-14-pro-256-black",
-            "de": "iphone-14-pro-256-schwarz"
+            "en": "iphone-15-pro-128gb",
+            "de": "iphone-15-pro-128gb"
           },
           "price": {
             "value": 1099,
-            "discount": 50,
-            "discountType": "absolute",
-            "originalValue": 1149
-          },
-          "media": [
-            {
-              "id": 3,
-              "src": "/images/iphone14pro_black.jpg",
-              "type": "image"
-            }
-          ]
-        },
-        {
-          "id": 103,
-          "name": {
-            "en": "iPhone 14 Pro 512GB - Gold",
-            "de": "iPhone 14 Pro 512GB - Gold"
-          },
-          "description": {
-            "en": "512GB storage in Gold.",
-            "de": "512GB Speicher in Gold."
-          },
-          "slug": {
-            "en": "iphone-14-pro-512-gold",
-            "de": "iphone-14-pro-512-gold"
-          },
-          "price": {
-            "value": 1299,
             "discount": 0,
             "discountType": "absolute",
-            "originalValue": 1299
+            "originalValue": 1099
           },
           "media": [
             {
-              "id": 4,
-              "src": "/images/iphone14pro_gold.jpg",
-              "type": "image"
-            }
-          ]
-        },
-        {
-          "id": 104,
-          "name": {
-            "en": "iPhone 14 Pro 1TB - Deep Purple",
-            "de": "iPhone 14 Pro 1TB - Dunkellila"
-          },
-          "description": {
-            "en": "1TB storage in Deep Purple.",
-            "de": "1TB Speicher in Dunkellila."
-          },
-          "slug": {
-            "en": "iphone-14-pro-1tb-purple",
-            "de": "iphone-14-pro-1tb-lila"
-          },
-          "price": {
-            "value": 1499,
-            "discount": 100,
-            "discountType": "absolute",
-            "originalValue": 1599
-          },
-          "media": [
-            {
-              "id": 5,
-              "src": "/images/iphone14pro_purple.jpg",
-              "type": "image"
-            }
-          ]
-        },
-        {
-          "id": 105,
-          "name": {
-            "en": "iPhone 14 Pro 256GB - Alpine Green",
-            "de": "iPhone 14 Pro 256GB - Alpingrün"
-          },
-          "description": {
-            "en": "256GB storage in Alpine Green.",
-            "de": "256GB Speicher in Alpingrün."
-          },
-          "slug": {
-            "en": "iphone-14-pro-256-green",
-            "de": "iphone-14-pro-256-gruen"
-          },
-          "price": {
-            "value": 1149,
-            "discount": 0,
-            "discountType": "absolute",
-            "originalValue": 1149
-          },
-          "media": [
-            {
-              "id": 6,
-              "src": "/images/iphone14pro_green.jpg",
+              "id": 1,
+              "src": "/images/mock_image_1.webp",
               "type": "image"
             }
           ]
         }
       ],
+      "price": {
+        "value": 1099,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1099
+      },
       "reviews": [
         {
+          "id": "r1",
+          "rate": 5,
+          "message": "Amazing phone!"
+        },
+        {
+          "id": "r2",
           "rate": 4,
-          "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-          "id": "0440c6ee-75c7-453a-82b2-20885e544349"
-        },
-        {
-          "rate": 2,
-          "message": "Voluptate facilis dolorem quam quaerat quo veniam cumque, repellat aliquid sequi, nulla sapiente!",
-          "id": "1da120bc-9a62-4cc8-947a-599248afc095"
-        },
-        {
-          "rate": 5,
-          "message": "Hello, world!",
-          "id": "Fuga, inventore quo perferendis voluptatum voluptas nam esse doloremque."
-        },
-        {
-          "rate": 5,
-          "message": null,
-          "id": "e216e45f-76a3-4418-a17e-f6301af2b0cf"
-        },
-        {
-          "rate": 5,
-          "message": "Test form",
-          "id": "baad4072-ecda-4554-b945-b920ad219ef7"
-        },
-        {
-          "rate": "4",
-          "message": "Test form 2",
-          "id": "53ab2ab0-5a28-4b65-a4c2-840d6c08d4f6"
-        },
-        {
-          "rate": 5,
-          "message": "",
-          "id": "d04dd638-bcce-4ae8-b9bc-0112aacec1a1"
+          "message": "Great camera and display."
         }
       ]
     },
     {
       "id": "2",
       "name": {
-        "en": "Samsung Galaxy S23",
-        "de": "Samsung Galaxy S23"
+        "en": "Samsung Galaxy S24 Ultra",
+        "de": "Samsung Galaxy S24 Ultra"
       },
       "slug": {
-        "en": "samsung-galaxy-s23",
-        "de": "samsung-galaxy-s23"
+        "en": "samsung-galaxy-s24-ultra",
+        "de": "samsung-galaxy-s24-ultra"
       },
       "description": {
-        "en": "Latest Samsung flagship with dynamic AMOLED.",
-        "de": "Neuestes Samsung-Flaggschiff mit dynamischem AMOLED."
+        "en": "High-end Android smartphone with exceptional performance.",
+        "de": "High-End-Android-Smartphone mit außergewöhnlicher Leistung."
       },
       "media": [
         {
           "id": 3,
-          "src": "/images/galaxyS23.jpg",
+          "src": "/images/mock_image_3.webp",
+          "type": "image"
+        },
+        {
+          "id": 4,
+          "src": "/images/mock_image_4.webp",
           "type": "image"
         }
       ],
       "mainCategoryId": 1,
       "categoryIds": [
-        1,
-        2
+        1
       ],
-      "variants": [
-        {
-          "id": 201,
-          "name": {
-            "en": "Samsung Galaxy S23 256GB",
-            "de": "Samsung Galaxy S23 256GB"
-          },
-          "description": {
-            "en": "Extra storage model",
-            "de": "Modell mit extra Speicher"
-          },
-          "slug": {
-            "en": "galaxy-s23-256",
-            "de": "galaxy-s23-256"
-          },
-          "price": {
-            "value": 999,
-            "discount": 10,
-            "discountType": "percentage",
-            "originalValue": 1110
-          },
-          "media": [
-            {
-              "id": 4,
-              "src": "/images/galaxyS23_256.jpg",
-              "type": "image"
-            }
-          ]
-        }
-      ]
+      "variants": [],
+      "price": {
+        "value": 1299,
+        "discount": 10,
+        "discountType": "percentage",
+        "originalValue": 1449
+      }
     },
     {
       "id": "3",
       "name": {
-        "en": "Sony WH-1000XM5",
-        "de": "Sony WH-1000XM5"
-      },
-      "slug": {
-        "en": "sony-wh-1000xm5",
-        "de": "sony-wh-1000xm5"
-      },
-      "description": {
-        "en": "Noise-canceling wireless headphones.",
-        "de": "Geräuschunterdrückende kabellose Kopfhörer."
-      },
-      "media": [
-        {
-          "id": 5,
-          "src": "/images/sony_wh1000xm5.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 2,
-      "categoryIds": [
-        2,
-        3
-      ],
-      "variants": [],
-      "price": {
-        "value": 372,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 372
-      }
-    },
-    {
-      "id": "4",
-      "name": {
-        "en": "MacBook Pro 16",
-        "de": "MacBook Pro 16"
+        "en": "MacBook Pro 16\"",
+        "de": "MacBook Pro 16\""
       },
       "slug": {
         "en": "macbook-pro-16",
         "de": "macbook-pro-16"
       },
       "description": {
-        "en": "Apple laptop with M2 Max chip.",
-        "de": "Apple-Laptop mit M2 Max Chip."
+        "en": "MacBook Pro 16-inch with M3 Max chip for ultimate performance.",
+        "de": "MacBook Pro 16 Zoll mit M3 Max Chip für ultimative Leistung."
       },
       "media": [
         {
-          "id": 6,
-          "src": "/images/macbookpro16.jpg",
+          "id": 5,
+          "src": "/images/mock_image_5.webp",
           "type": "image"
         }
       ],
-      "mainCategoryId": 1,
+      "mainCategoryId": 2,
       "categoryIds": [
-        1,
-        4
+        2
       ],
       "variants": [],
       "price": {
-        "value": 1388,
-        "discount": 0,
+        "value": 2999,
+        "discount": 200,
         "discountType": "absolute",
-        "originalValue": 1388
+        "originalValue": 3199
       }
     },
     {
-      "id": "5",
+      "id": "4",
       "name": {
         "en": "Dell XPS 13",
         "de": "Dell XPS 13"
@@ -831,323 +614,130 @@
         "de": "dell-xps-13"
       },
       "description": {
-        "en": "Premium ultrabook with InfinityEdge display.",
-        "de": "Premium-Ultrabook mit InfinityEdge-Display."
+        "en": "Compact and powerful ultrabook for professionals.",
+        "de": "Kompaktes und leistungsstarkes Ultrabook für Profis."
+      },
+      "media": [
+        {
+          "id": 6,
+          "src": "/images/mock_image_6.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 2,
+      "categoryIds": [
+        2
+      ],
+      "variants": [],
+      "price": {
+        "value": 1399,
+        "discount": 10,
+        "discountType": "percentage",
+        "originalValue": 1549
+      }
+    },
+    {
+      "id": "5",
+      "name": {
+        "en": "iPad Air",
+        "de": "iPad Air"
+      },
+      "slug": {
+        "en": "ipad-air",
+        "de": "ipad-air"
+      },
+      "description": {
+        "en": "Lightweight tablet with Retina display and M2 chip.",
+        "de": "Leichtes Tablet mit Retina-Display und M2-Chip."
       },
       "media": [
         {
           "id": 7,
-          "src": "/images/dellxps13.jpg",
+          "src": "/images/mock_image_7.webp",
           "type": "image"
         }
       ],
-      "mainCategoryId": 1,
+      "mainCategoryId": 3,
       "categoryIds": [
-        1,
-        4
+        3
       ],
       "variants": [],
       "price": {
-        "value": 1208,
+        "value": 699,
         "discount": 0,
         "discountType": "absolute",
-        "originalValue": 1208
+        "originalValue": 699
       }
     },
     {
       "id": "6",
       "name": {
-        "en": "Nike Air Max 270",
-        "de": "Nike Air Max 270"
+        "en": "Samsung Galaxy Tab S9",
+        "de": "Samsung Galaxy Tab S9"
       },
       "slug": {
-        "en": "nike-air-max-270",
-        "de": "nike-air-max-270"
+        "en": "samsung-galaxy-tab-s9",
+        "de": "samsung-galaxy-tab-s9"
       },
       "description": {
-        "en": "Comfortable lifestyle sneakers.",
-        "de": "Bequeme Lifestyle-Sneaker."
+        "en": "High-resolution tablet with AMOLED screen and S-Pen support.",
+        "de": "Tablet mit hochauflösendem AMOLED-Bildschirm und S-Pen-Unterstützung."
       },
       "media": [
         {
           "id": 8,
-          "src": "/images/airmax270.jpg",
+          "src": "/images/mock_image_8.webp",
           "type": "image"
         }
       ],
-      "mainCategoryId": 5,
+      "mainCategoryId": 3,
       "categoryIds": [
-        5,
-        6
+        3
       ],
       "variants": [],
       "price": {
-        "value": 268,
-        "discount": 0,
+        "value": 899,
+        "discount": 50,
         "discountType": "absolute",
-        "originalValue": 268
+        "originalValue": 949
       }
     },
     {
       "id": "7",
       "name": {
-        "en": "Adidas Ultraboost 22",
-        "de": "Adidas Ultraboost 22"
+        "en": "Apple Watch Ultra 2",
+        "de": "Apple Watch Ultra 2"
       },
       "slug": {
-        "en": "adidas-ultraboost-22",
-        "de": "adidas-ultraboost-22"
+        "en": "apple-watch-ultra-2",
+        "de": "apple-watch-ultra-2"
       },
       "description": {
-        "en": "High-performance running shoes.",
-        "de": "Hochleistungs-Laufschuhe."
+        "en": "Premium smartwatch with rugged design and extended battery life.",
+        "de": "Premium-Smartwatch mit robustem Design und langer Akkulaufzeit."
       },
       "media": [
         {
           "id": 9,
-          "src": "/images/ultraboost22.jpg",
+          "src": "/images/mock_image_9.webp",
           "type": "image"
         }
       ],
-      "mainCategoryId": 5,
+      "mainCategoryId": 4,
       "categoryIds": [
-        5,
-        6
+        4,
+        15
       ],
       "variants": [],
       "price": {
-        "value": 135,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 135
+        "value": 899,
+        "discount": 5,
+        "discountType": "percentage",
+        "originalValue": 949
       }
     },
     {
       "id": "8",
-      "name": {
-        "en": "KitchenAid Mixer",
-        "de": "KitchenAid Mixer"
-      },
-      "slug": {
-        "en": "kitchenaid-mixer",
-        "de": "kitchenaid-mixer"
-      },
-      "description": {
-        "en": "Classic stand mixer for every kitchen.",
-        "de": "Klassische Küchenmaschine für jede Küche."
-      },
-      "media": [
-        {
-          "id": 10,
-          "src": "/images/kitchenaid.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 7,
-      "categoryIds": [
-        7,
-        8
-      ],
-      "variants": [],
-      "price": {
-        "value": 285,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 285
-      }
-    },
-    {
-      "id": "9",
-      "name": {
-        "en": "Apple Watch Series 9",
-        "de": "Apple Watch Series 9"
-      },
-      "slug": {
-        "en": "apple-watch-series-9",
-        "de": "apple-watch-series-9"
-      },
-      "description": {
-        "en": "Smartwatch with health tracking and notifications.",
-        "de": "Smartwatch mit Gesundheitsüberwachung und Benachrichtigungen."
-      },
-      "media": [
-        {
-          "id": 11,
-          "src": "/images/applewatch9.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 1,
-      "categoryIds": [
-        1,
-        3
-      ],
-      "variants": [
-        {
-          "id": 301,
-          "name": {
-            "en": "Apple Watch Series 9 - 44mm",
-            "de": "Apple Watch Series 9 - 44mm"
-          },
-          "description": {
-            "en": "44mm model with GPS",
-            "de": "44mm Modell mit GPS"
-          },
-          "slug": {
-            "en": "apple-watch-9-44",
-            "de": "apple-watch-9-44"
-          },
-          "price": {
-            "value": 499,
-            "discount": 20,
-            "discountType": "absolute",
-            "originalValue": 519
-          },
-          "media": [
-            {
-              "id": 12,
-              "src": "/images/applewatch9_44.jpg",
-              "type": "image"
-            }
-          ]
-        }
-      ],
-      "reviews": [
-        {
-          "rate": 5,
-          "message": "Test",
-          "id": "d964dbe3-6e96-44da-9446-93918a652ea7"
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "name": {
-        "en": "GoPro Hero 12",
-        "de": "GoPro Hero 12"
-      },
-      "slug": {
-        "en": "gopro-hero-12",
-        "de": "gopro-hero-12"
-      },
-      "description": {
-        "en": "Action camera with 5K video recording.",
-        "de": "Action-Kamera mit 5K Videoaufnahme."
-      },
-      "media": [
-        {
-          "id": 13,
-          "src": "/images/gopro12.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 1,
-      "categoryIds": [
-        1,
-        3
-      ],
-      "variants": [],
-      "price": {
-        "value": 1627,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 1627
-      }
-    },
-    {
-      "id": "11",
-      "name": {
-        "en": "Sony PlayStation 5",
-        "de": "Sony PlayStation 5"
-      },
-      "slug": {
-        "en": "sony-ps5",
-        "de": "sony-ps5"
-      },
-      "description": {
-        "en": "Next-gen gaming console with ultra-fast SSD.",
-        "de": "Next-Gen Spielkonsole mit ultraschneller SSD."
-      },
-      "media": [
-        {
-          "id": 14,
-          "src": "/images/ps5.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 1,
-      "categoryIds": [
-        1,
-        2,
-        5
-      ],
-      "variants": [
-        {
-          "id": 302,
-          "name": {
-            "en": "PS5 Standard",
-            "de": "PS5 Standard"
-          },
-          "description": {
-            "en": "Disc edition with 825GB SSD",
-            "de": "Disc Edition mit 825GB SSD"
-          },
-          "slug": {
-            "en": "ps5-standard",
-            "de": "ps5-standard"
-          },
-          "price": {
-            "value": 499,
-            "discount": 0,
-            "discountType": "absolute",
-            "originalValue": 499
-          },
-          "media": [
-            {
-              "id": 15,
-              "src": "/images/ps5_standard.jpg",
-              "type": "image"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "name": {
-        "en": "Canon EOS R6",
-        "de": "Canon EOS R6"
-      },
-      "slug": {
-        "en": "canon-eos-r6",
-        "de": "canon-eos-r6"
-      },
-      "description": {
-        "en": "Full-frame mirrorless camera with 20MP sensor.",
-        "de": "Vollformat-Spiegellose Kamera mit 20MP Sensor."
-      },
-      "media": [
-        {
-          "id": 16,
-          "src": "/images/canon_eos_r6.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 1,
-      "categoryIds": [
-        1,
-        3
-      ],
-      "variants": [],
-      "price": {
-        "value": 1748,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 1748
-      }
-    },
-    {
-      "id": "13",
       "name": {
         "en": "Fitbit Charge 6",
         "de": "Fitbit Charge 6"
@@ -1157,282 +747,19 @@
         "de": "fitbit-charge-6"
       },
       "description": {
-        "en": "Activity tracker with heart rate monitoring.",
-        "de": "Aktivitätstracker mit Herzfrequenzüberwachung."
+        "en": "Fitness tracker with GPS and health monitoring features.",
+        "de": "Fitness-Tracker mit GPS und Gesundheitsüberwachung."
       },
       "media": [
         {
-          "id": 17,
-          "src": "/images/fitbit_charge6.jpg",
+          "id": 10,
+          "src": "/images/mock_image_10.webp",
           "type": "image"
         }
       ],
-      "mainCategoryId": 3,
+      "mainCategoryId": 15,
       "categoryIds": [
-        1,
-        3,
-        5
-      ],
-      "variants": [],
-      "price": {
-        "value": 454,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 454
-      }
-    },
-    {
-      "id": "14",
-      "name": {
-        "en": "Bose QuietComfort 45",
-        "de": "Bose QuietComfort 45"
-      },
-      "slug": {
-        "en": "bose-qc45",
-        "de": "bose-qc45"
-      },
-      "description": {
-        "en": "Wireless noise-canceling headphones.",
-        "de": "Kabellose geräuschunterdrückende Kopfhörer."
-      },
-      "media": [
-        {
-          "id": 18,
-          "src": "/images/bose_qc45.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 2,
-      "categoryIds": [
-        2,
-        3
-      ],
-      "variants": [],
-      "price": {
-        "value": 322,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 322
-      }
-    },
-    {
-      "id": "15",
-      "name": {
-        "en": "Instant Pot Duo 7-in-1",
-        "de": "Instant Pot Duo 7-in-1"
-      },
-      "slug": {
-        "en": "instant-pot-duo",
-        "de": "instant-pot-duo"
-      },
-      "description": {
-        "en": "Multi-cooker with pressure, slow cooking, and more.",
-        "de": "Multikocher mit Druck-, Slow-Cooking und mehr."
-      },
-      "media": [
-        {
-          "id": 19,
-          "src": "/images/instantpot.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 6,
-      "categoryIds": [
-        6,
-        7
-      ],
-      "variants": [],
-      "price": {
-        "value": 320,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 320
-      }
-    },
-    {
-      "id": "16",
-      "name": {
-        "en": "Lenovo ThinkPad X1 Carbon",
-        "de": "Lenovo ThinkPad X1 Carbon"
-      },
-      "slug": {
-        "en": "lenovo-thinkpad-x1-carbon",
-        "de": "lenovo-thinkpad-x1-carbon"
-      },
-      "description": {
-        "en": "Business ultrabook with lightweight carbon body.",
-        "de": "Business-Ultrabook mit leichtem Carbon-Gehäuse."
-      },
-      "media": [
-        {
-          "id": 20,
-          "src": "/images/thinkpad_x1.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 1,
-      "categoryIds": [
-        1,
-        4
-      ],
-      "variants": [],
-      "price": {
-        "value": 1306,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 1306
-      }
-    },
-    {
-      "id": "17",
-      "name": {
-        "en": "HP Spectre x360",
-        "de": "HP Spectre x360"
-      },
-      "slug": {
-        "en": "hp-spectre-x360",
-        "de": "hp-spectre-x360"
-      },
-      "description": {
-        "en": "Convertible laptop with touch screen.",
-        "de": "Convertible-Laptop mit Touchscreen."
-      },
-      "media": [
-        {
-          "id": 21,
-          "src": "/images/hp_spectre.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 1,
-      "categoryIds": [
-        1,
-        4
-      ],
-      "variants": [],
-      "price": {
-        "value": 1821,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 1821
-      }
-    },
-    {
-      "id": "18",
-      "name": {
-        "en": "Samsung Galaxy Watch 6",
-        "de": "Samsung Galaxy Watch 6"
-      },
-      "slug": {
-        "en": "samsung-galaxy-watch-6",
-        "de": "samsung-galaxy-watch-6"
-      },
-      "description": {
-        "en": "Smartwatch with fitness tracking and AMOLED display.",
-        "de": "Smartwatch mit Fitness-Tracking und AMOLED-Display."
-      },
-      "media": [
-        {
-          "id": 22,
-          "src": "/images/galaxywatch6.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 3,
-      "categoryIds": [
-        1,
-        3
-      ],
-      "variants": [
-        {
-          "id": 303,
-          "name": {
-            "en": "Galaxy Watch 6 - 42mm",
-            "de": "Galaxy Watch 6 - 42mm"
-          },
-          "description": {
-            "en": "42mm size with GPS and heart monitoring.",
-            "de": "42mm Größe mit GPS und Herzüberwachung."
-          },
-          "slug": {
-            "en": "galaxy-watch-6-42",
-            "de": "galaxy-watch-6-42"
-          },
-          "price": {
-            "value": 399,
-            "discount": 15,
-            "discountType": "percentage",
-            "originalValue": 469
-          },
-          "media": [
-            {
-              "id": 23,
-              "src": "/images/galaxywatch6_42.jpg",
-              "type": "image"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "name": {
-        "en": "Garmin Fenix 7",
-        "de": "Garmin Fenix 7"
-      },
-      "slug": {
-        "en": "garmin-fenix-7",
-        "de": "garmin-fenix-7"
-      },
-      "description": {
-        "en": "Rugged smartwatch for outdoor sports.",
-        "de": "Robuste Smartwatch für Outdoor-Sportarten."
-      },
-      "media": [
-        {
-          "id": 24,
-          "src": "/images/garmin_fenix7.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 3,
-      "categoryIds": [
-        3,
-        5
-      ],
-      "variants": [],
-      "price": {
-        "value": 465,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 465
-      }
-    },
-    {
-      "id": "20",
-      "name": {
-        "en": "JBL Flip 6",
-        "de": "JBL Flip 6"
-      },
-      "slug": {
-        "en": "jbl-flip-6",
-        "de": "jbl-flip-6"
-      },
-      "description": {
-        "en": "Portable Bluetooth speaker with waterproof design.",
-        "de": "Tragbarer Bluetooth-Lautsprecher mit wasserdichtem Design."
-      },
-      "media": [
-        {
-          "id": 25,
-          "src": "/images/jbl_flip6.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 2,
-      "categoryIds": [
-        2,
-        3
+        15
       ],
       "variants": [],
       "price": {
@@ -1443,133 +770,293 @@
       }
     },
     {
-      "id": "21",
+      "id": "9",
       "name": {
-        "en": "Adidas Predator 22",
-        "de": "Adidas Predator 22"
+        "en": "Sony WH-1000XM5",
+        "de": "Sony WH-1000XM5"
       },
       "slug": {
-        "en": "adidas-predator-22",
-        "de": "adidas-predator-22"
+        "en": "sony-wh-1000xm5",
+        "de": "sony-wh-1000xm5"
       },
       "description": {
-        "en": "Soccer cleats with primeknit upper.",
-        "de": "Fußballschuhe mit Primeknit-Obermaterial."
+        "en": "Industry-leading noise-cancelling headphones.",
+        "de": "Branchenführende geräuschunterdrückende Kopfhörer."
       },
       "media": [
         {
-          "id": 26,
-          "src": "/images/adidas_predator22.jpg",
+          "id": 1,
+          "src": "/images/mock_image_1.webp",
           "type": "image"
         }
       ],
       "mainCategoryId": 5,
       "categoryIds": [
-        5,
-        6
+        5
       ],
       "variants": [],
       "price": {
-        "value": 300,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 300
+        "value": 399,
+        "discount": 10,
+        "discountType": "percentage",
+        "originalValue": 449
       }
     },
     {
-      "id": "22",
+      "id": "10",
       "name": {
-        "en": "Instant Pot Duo Nova",
-        "de": "Instant Pot Duo Nova"
+        "en": "JBL Flip 6",
+        "de": "JBL Flip 6"
       },
       "slug": {
-        "en": "instant-pot-duo-nova",
-        "de": "instant-pot-duo-nova"
+        "en": "jbl-flip-6",
+        "de": "jbl-flip-6"
       },
       "description": {
-        "en": "Updated multi-cooker with 7-in-1 functions.",
-        "de": "Aktualisierter Multikocher mit 7-in-1 Funktionen."
+        "en": "Portable Bluetooth speaker with deep bass.",
+        "de": "Tragbarer Bluetooth-Lautsprecher mit kräftigem Bass."
       },
       "media": [
         {
-          "id": 27,
-          "src": "/images/instantpot_nova.jpg",
+          "id": 2,
+          "src": "/images/mock_image_2.webp",
           "type": "image"
         }
       ],
       "mainCategoryId": 6,
       "categoryIds": [
-        6,
+        6
+      ],
+      "variants": [],
+      "price": {
+        "value": 129,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 129
+      }
+    },
+    {
+      "id": "11",
+      "name": {
+        "en": "PlayStation 5",
+        "de": "PlayStation 5"
+      },
+      "slug": {
+        "en": "playstation-5",
+        "de": "playstation-5"
+      },
+      "description": {
+        "en": "Next-generation console with ultra-fast SSD and 4K gaming.",
+        "de": "Next-Gen-Konsole mit ultraschneller SSD und 4K-Gaming."
+      },
+      "media": [
+        {
+          "id": 3,
+          "src": "/images/mock_image_3.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 7,
+      "categoryIds": [
         7
       ],
       "variants": [],
       "price": {
-        "value": 457,
-        "discount": 0,
+        "value": 499,
+        "discount": 50,
         "discountType": "absolute",
-        "originalValue": 457
+        "originalValue": 549
       }
     },
     {
-      "id": "23",
+      "id": "12",
       "name": {
-        "en": "Microsoft Surface Laptop 5",
-        "de": "Microsoft Surface Laptop 5"
+        "en": "Xbox Series X",
+        "de": "Xbox Series X"
       },
       "slug": {
-        "en": "surface-laptop-5",
-        "de": "surface-laptop-5"
+        "en": "xbox-series-x",
+        "de": "xbox-series-x"
       },
       "description": {
-        "en": "Portable laptop with touchscreen and Windows 11.",
-        "de": "Tragbares Laptop mit Touchscreen und Windows 11."
+        "en": "Powerful gaming console with 1TB SSD and 4K HDR support.",
+        "de": "Leistungsstarke Spielkonsole mit 1TB SSD und 4K HDR-Unterstützung."
       },
       "media": [
         {
-          "id": 28,
-          "src": "/images/surface_laptop5.jpg",
+          "id": 4,
+          "src": "/images/mock_image_4.webp",
           "type": "image"
         }
       ],
-      "mainCategoryId": 1,
+      "mainCategoryId": 7,
       "categoryIds": [
-        1,
-        4
+        7
       ],
       "variants": [],
       "price": {
-        "value": 1108,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 1108
+        "value": 499,
+        "discount": 10,
+        "discountType": "percentage",
+        "originalValue": 549
       }
     },
     {
-      "id": "24",
+      "id": "13",
       "name": {
-        "en": "Oculus Quest 3",
-        "de": "Oculus Quest 3"
+        "en": "LG UltraFine 5K Monitor",
+        "de": "LG UltraFine 5K Monitor"
       },
       "slug": {
-        "en": "oculus-quest-3",
-        "de": "oculus-quest-3"
+        "en": "lg-ultrafine-5k",
+        "de": "lg-ultrafine-5k"
       },
       "description": {
-        "en": "Standalone VR headset with high-resolution display.",
-        "de": "Autonomes VR-Headset mit hochauflösendem Display."
+        "en": "High-resolution 5K display ideal for creative professionals.",
+        "de": "Hochauflösender 5K-Monitor, ideal für kreative Profis."
       },
       "media": [
         {
-          "id": 29,
-          "src": "/images/oculus_quest3.jpg",
+          "id": 5,
+          "src": "/images/mock_image_5.webp",
           "type": "image"
         }
       ],
-      "mainCategoryId": 1,
+      "mainCategoryId": 8,
       "categoryIds": [
-        1,
-        3,
-        5
+        8
+      ],
+      "variants": [],
+      "price": {
+        "value": 1199,
+        "discount": 100,
+        "discountType": "absolute",
+        "originalValue": 1299
+      }
+    },
+    {
+      "id": "14",
+      "name": {
+        "en": "BenQ Gaming Monitor 27\"",
+        "de": "BenQ Gaming Monitor 27\""
+      },
+      "slug": {
+        "en": "benq-gaming-monitor-27",
+        "de": "benq-gaming-monitor-27"
+      },
+      "description": {
+        "en": "144Hz gaming monitor with low latency and vivid colors.",
+        "de": "144Hz-Gaming-Monitor mit niedriger Latenz und lebendigen Farben."
+      },
+      "media": [
+        {
+          "id": 6,
+          "src": "/images/mock_image_6.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 8,
+      "categoryIds": [
+        8
+      ],
+      "variants": [],
+      "price": {
+        "value": 349,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 349
+      }
+    },
+    {
+      "id": "15",
+      "name": {
+        "en": "Canon EOS R6 Mark II",
+        "de": "Canon EOS R6 Mark II"
+      },
+      "slug": {
+        "en": "canon-eos-r6-mark-ii",
+        "de": "canon-eos-r6-mark-ii"
+      },
+      "description": {
+        "en": "Mirrorless camera with full-frame sensor and fast autofocus.",
+        "de": "Spiegellose Kamera mit Vollformatsensor und schnellem Autofokus."
+      },
+      "media": [
+        {
+          "id": 7,
+          "src": "/images/mock_image_7.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 9,
+      "categoryIds": [
+        9
+      ],
+      "variants": [],
+      "price": {
+        "value": 2499,
+        "discount": 200,
+        "discountType": "absolute",
+        "originalValue": 2699
+      }
+    },
+    {
+      "id": "16",
+      "name": {
+        "en": "DJI Mini 4 Pro",
+        "de": "DJI Mini 4 Pro"
+      },
+      "slug": {
+        "en": "dji-mini-4-pro",
+        "de": "dji-mini-4-pro"
+      },
+      "description": {
+        "en": "Compact drone with 4K HDR camera and 45-minute flight time.",
+        "de": "Kompakte Drohne mit 4K-HDR-Kamera und 45 Minuten Flugzeit."
+      },
+      "media": [
+        {
+          "id": 8,
+          "src": "/images/mock_image_8.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 10,
+      "categoryIds": [
+        10
+      ],
+      "variants": [],
+      "price": {
+        "value": 899,
+        "discount": 10,
+        "discountType": "percentage",
+        "originalValue": 999
+      }
+    },
+    {
+      "id": "17",
+      "name": {
+        "en": "DJI Air 3",
+        "de": "DJI Air 3"
+      },
+      "slug": {
+        "en": "dji-air-3",
+        "de": "dji-air-3"
+      },
+      "description": {
+        "en": "Dual-camera drone with advanced obstacle sensing.",
+        "de": "Drohne mit zwei Kameras und fortschrittlicher Hinderniserkennung."
+      },
+      "media": [
+        {
+          "id": 9,
+          "src": "/images/mock_image_9.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 10,
+      "categoryIds": [
+        10
       ],
       "variants": [],
       "price": {
@@ -1580,381 +1067,437 @@
       }
     },
     {
-      "id": "25",
+      "id": "18",
       "name": {
-        "en": "Apple iPad Pro 12.9",
-        "de": "Apple iPad Pro 12.9"
+        "en": "HP LaserJet Pro MFP",
+        "de": "HP LaserJet Pro MFP"
       },
       "slug": {
-        "en": "ipad-pro-12-9",
-        "de": "ipad-pro-12-9"
+        "en": "hp-laserjet-pro-mfp",
+        "de": "hp-laserjet-pro-mfp"
       },
       "description": {
-        "en": "High-end tablet with M2 chip and Liquid Retina XDR display.",
-        "de": "High-End-Tablet mit M2 Chip und Liquid Retina XDR Display."
+        "en": "All-in-one printer and scanner for home and office use.",
+        "de": "All-in-One-Drucker und Scanner für Zuhause und Büro."
       },
       "media": [
         {
-          "id": 30,
-          "src": "/images/ipad_pro12.jpg",
+          "id": 10,
+          "src": "/images/mock_image_10.webp",
           "type": "image"
         }
       ],
-      "mainCategoryId": 1,
+      "mainCategoryId": 11,
       "categoryIds": [
-        1,
-        2,
-        4
+        11
       ],
       "variants": [],
       "price": {
-        "value": 1293,
+        "value": 249,
         "discount": 0,
         "discountType": "absolute",
-        "originalValue": 1293
+        "originalValue": 249
+      }
+    },
+    {
+      "id": "19",
+      "name": {
+        "en": "Epson EcoTank ET-2850",
+        "de": "Epson EcoTank ET-2850"
+      },
+      "slug": {
+        "en": "epson-ecotank-et-2850",
+        "de": "epson-ecotank-et-2850"
+      },
+      "description": {
+        "en": "Eco-friendly printer with refillable ink tanks.",
+        "de": "Umweltfreundlicher Drucker mit nachfüllbaren Tintentanks."
+      },
+      "media": [
+        {
+          "id": 1,
+          "src": "/images/mock_image_1.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 11,
+      "categoryIds": [
+        11
+      ],
+      "variants": [],
+      "price": {
+        "value": 299,
+        "discount": 20,
+        "discountType": "absolute",
+        "originalValue": 319
+      }
+    },
+    {
+      "id": "20",
+      "name": {
+        "en": "NVIDIA RTX 4090",
+        "de": "NVIDIA RTX 4090"
+      },
+      "slug": {
+        "en": "nvidia-rtx-4090",
+        "de": "nvidia-rtx-4090"
+      },
+      "description": {
+        "en": "Flagship GPU for extreme gaming and AI workloads.",
+        "de": "Flaggschiff-GPU für extremes Gaming und KI-Workloads."
+      },
+      "media": [
+        {
+          "id": 2,
+          "src": "/images/mock_image_2.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 12,
+      "categoryIds": [
+        12
+      ],
+      "variants": [],
+      "price": {
+        "value": 1599,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 1599
+      }
+    },
+    {
+      "id": "21",
+      "name": {
+        "en": "AMD Ryzen 9 7950X",
+        "de": "AMD Ryzen 9 7950X"
+      },
+      "slug": {
+        "en": "amd-ryzen-9-7950x",
+        "de": "amd-ryzen-9-7950x"
+      },
+      "description": {
+        "en": "16-core processor with top-tier performance for creators.",
+        "de": "16-Kern-Prozessor mit Spitzenleistung für Kreative."
+      },
+      "media": [
+        {
+          "id": 3,
+          "src": "/images/mock_image_3.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 12,
+      "categoryIds": [
+        12
+      ],
+      "variants": [],
+      "price": {
+        "value": 699,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 699
+      }
+    },
+    {
+      "id": "22",
+      "name": {
+        "en": "Logitech MX Master 3S",
+        "de": "Logitech MX Master 3S"
+      },
+      "slug": {
+        "en": "logitech-mx-master-3s",
+        "de": "logitech-mx-master-3s"
+      },
+      "description": {
+        "en": "Ergonomic wireless mouse with precision sensor.",
+        "de": "Ergonomische kabellose Maus mit Präzisionssensor."
+      },
+      "media": [
+        {
+          "id": 4,
+          "src": "/images/mock_image_4.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 13,
+      "categoryIds": [
+        13
+      ],
+      "variants": [],
+      "price": {
+        "value": 99,
+        "discount": 10,
+        "discountType": "percentage",
+        "originalValue": 109
+      }
+    },
+    {
+      "id": "23",
+      "name": {
+        "en": "Keychron K6 Wireless Keyboard",
+        "de": "Keychron K6 Wireless Keyboard"
+      },
+      "slug": {
+        "en": "keychron-k6-wireless-keyboard",
+        "de": "keychron-k6-wireless-keyboard"
+      },
+      "description": {
+        "en": "Compact mechanical keyboard with RGB lighting.",
+        "de": "Kompakte mechanische Tastatur mit RGB-Beleuchtung."
+      },
+      "media": [
+        {
+          "id": 5,
+          "src": "/images/mock_image_5.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 13,
+      "categoryIds": [
+        13
+      ],
+      "variants": [],
+      "price": {
+        "value": 89,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 89
+      }
+    },
+    {
+      "id": "24",
+      "name": {
+        "en": "Anker PowerCore 20000",
+        "de": "Anker PowerCore 20000"
+      },
+      "slug": {
+        "en": "anker-powercore-20000",
+        "de": "anker-powercore-20000"
+      },
+      "description": {
+        "en": "High-capacity power bank for fast mobile charging.",
+        "de": "Hochkapazitäts-Powerbank für schnelles mobiles Laden."
+      },
+      "media": [
+        {
+          "id": 6,
+          "src": "/images/mock_image_6.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 14,
+      "categoryIds": [
+        14
+      ],
+      "variants": [],
+      "price": {
+        "value": 59,
+        "discount": 0,
+        "discountType": "absolute",
+        "originalValue": 59
+      }
+    },
+    {
+      "id": "25",
+      "name": {
+        "en": "Belkin 3-in-1 MagSafe Charger",
+        "de": "Belkin 3-in-1 MagSafe Charger"
+      },
+      "slug": {
+        "en": "belkin-3-in-1-magsafe-charger",
+        "de": "belkin-3-in-1-magsafe-charger"
+      },
+      "description": {
+        "en": "Wireless charging dock for iPhone, Apple Watch, and AirPods.",
+        "de": "Kabellose Ladestation für iPhone, Apple Watch und AirPods."
+      },
+      "media": [
+        {
+          "id": 7,
+          "src": "/images/mock_image_7.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 14,
+      "categoryIds": [
+        14
+      ],
+      "variants": [],
+      "price": {
+        "value": 149,
+        "discount": 10,
+        "discountType": "percentage",
+        "originalValue": 165
       }
     },
     {
       "id": "26",
       "name": {
-        "en": "Samsung Galaxy Tab S9",
-        "de": "Samsung Galaxy Tab S9"
+        "en": "Google Pixel 8",
+        "de": "Google Pixel 8"
       },
       "slug": {
-        "en": "galaxy-tab-s9",
-        "de": "galaxy-tab-s9"
+        "en": "google-pixel-8",
+        "de": "google-pixel-8"
       },
       "description": {
-        "en": "Android tablet with AMOLED display and stylus support.",
-        "de": "Android-Tablet mit AMOLED-Display und Stiftunterstützung."
+        "en": "Flagship Android phone with AI-powered features.",
+        "de": "Flaggschiff-Android-Smartphone mit KI-gestützten Funktionen."
       },
       "media": [
         {
-          "id": 31,
-          "src": "/images/galaxy_tab_s9.jpg",
+          "id": 8,
+          "src": "/images/mock_image_8.webp",
           "type": "image"
         }
       ],
       "mainCategoryId": 1,
       "categoryIds": [
-        1,
-        2,
-        4
+        1
       ],
       "variants": [],
       "price": {
-        "value": 953,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 953
+        "value": 899,
+        "discount": 5,
+        "discountType": "percentage",
+        "originalValue": 949
       }
     },
     {
       "id": "27",
       "name": {
-        "en": "Sony WF-1000XM5",
-        "de": "Sony WF-1000XM5"
+        "en": "Lenovo Legion 7 Gaming Laptop",
+        "de": "Lenovo Legion 7 Gaming Laptop"
       },
       "slug": {
-        "en": "sony-wf-1000xm5",
-        "de": "sony-wf-1000xm5"
+        "en": "lenovo-legion-7",
+        "de": "lenovo-legion-7"
       },
       "description": {
-        "en": "Wireless noise-canceling earbuds.",
-        "de": "Kabellose geräuschunterdrückende Ohrhörer."
+        "en": "High-performance gaming laptop with RTX 4080 GPU.",
+        "de": "Hochleistungs-Gaming-Laptop mit RTX 4080 GPU."
       },
       "media": [
         {
-          "id": 32,
-          "src": "/images/sony_wf1000xm5.jpg",
+          "id": 9,
+          "src": "/images/mock_image_9.webp",
           "type": "image"
         }
       ],
       "mainCategoryId": 2,
       "categoryIds": [
         2,
-        3
+        7
       ],
       "variants": [],
       "price": {
-        "value": 322,
-        "discount": 0,
+        "value": 2499,
+        "discount": 200,
         "discountType": "absolute",
-        "originalValue": 322
+        "originalValue": 2699
       }
     },
     {
       "id": "28",
       "name": {
-        "en": "Fitbit Versa 4",
-        "de": "Fitbit Versa 4"
+        "en": "Oculus Quest 3",
+        "de": "Oculus Quest 3"
       },
       "slug": {
-        "en": "fitbit-versa-4",
-        "de": "fitbit-versa-4"
+        "en": "oculus-quest-3",
+        "de": "oculus-quest-3"
       },
       "description": {
-        "en": "Smartwatch with activity tracking and sleep monitoring.",
-        "de": "Smartwatch mit Aktivitäts- und Schlaftracking."
+        "en": "Standalone VR headset with immersive experience.",
+        "de": "Eigenständiges VR-Headset mit immersivem Erlebnis."
       },
       "media": [
         {
-          "id": 33,
-          "src": "/images/fitbit_versa4.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 3,
-      "categoryIds": [
-        3,
-        5
-      ],
-      "variants": [],
-      "price": {
-        "value": 467,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 467
-      }
-    },
-    {
-      "id": "29",
-      "name": {
-        "en": "KitchenAid Artisan Mini",
-        "de": "KitchenAid Artisan Mini"
-      },
-      "slug": {
-        "en": "kitchenaid-artisan-mini",
-        "de": "kitchenaid-artisan-mini"
-      },
-      "description": {
-        "en": "Compact stand mixer for small kitchens.",
-        "de": "Kompakte Küchenmaschine für kleine Küchen."
-      },
-      "media": [
-        {
-          "id": 34,
-          "src": "/images/kitchenaid_mini.jpg",
+          "id": 10,
+          "src": "/images/mock_image_10.webp",
           "type": "image"
         }
       ],
       "mainCategoryId": 7,
       "categoryIds": [
-        7,
-        8
+        7
       ],
       "variants": [],
       "price": {
-        "value": 623,
+        "value": 499,
         "discount": 0,
         "discountType": "absolute",
-        "originalValue": 623
+        "originalValue": 499
+      }
+    },
+    {
+      "id": "29",
+      "name": {
+        "en": "Apple AirPods Pro 2",
+        "de": "Apple AirPods Pro 2"
+      },
+      "slug": {
+        "en": "apple-airpods-pro-2",
+        "de": "apple-airpods-pro-2"
+      },
+      "description": {
+        "en": "Wireless earbuds with active noise cancellation.",
+        "de": "Kabellose Ohrhörer mit aktiver Geräuschunterdrückung."
+      },
+      "media": [
+        {
+          "id": 1,
+          "src": "/images/mock_image_1.webp",
+          "type": "image"
+        }
+      ],
+      "mainCategoryId": 5,
+      "categoryIds": [
+        5
+      ],
+      "variants": [],
+      "price": {
+        "value": 249,
+        "discount": 20,
+        "discountType": "absolute",
+        "originalValue": 269
       }
     },
     {
       "id": "30",
       "name": {
-        "en": "Nike ZoomX Vaporfly",
-        "de": "Nike ZoomX Vaporfly"
+        "en": "GoPro HERO12 Black",
+        "de": "GoPro HERO12 Black"
       },
       "slug": {
-        "en": "nike-zoomx-vaporfly",
-        "de": "nike-zoomx-vaporfly"
+        "en": "gopro-hero12-black",
+        "de": "gopro-hero12-black"
       },
       "description": {
-        "en": "High-performance running shoes for competitions.",
-        "de": "Hochleistungs-Laufschuhe für Wettkämpfe."
+        "en": "Action camera with 5.3K recording and waterproof design.",
+        "de": "Action-Kamera mit 5.3K-Aufnahme und wasserdichtem Design."
       },
       "media": [
         {
-          "id": 35,
-          "src": "/images/nike_zoomx.jpg",
+          "id": 2,
+          "src": "/images/mock_image_2.webp",
           "type": "image"
         }
       ],
-      "mainCategoryId": 5,
+      "mainCategoryId": 9,
       "categoryIds": [
-        5,
-        6
+        9
       ],
       "variants": [],
       "price": {
-        "value": 181,
-        "discount": 0,
+        "value": 499,
+        "discount": 50,
         "discountType": "absolute",
-        "originalValue": 181
-      }
-    },
-    {
-      "id": "31",
-      "name": {
-        "en": "Adidas NMD R1",
-        "de": "Adidas NMD R1"
-      },
-      "slug": {
-        "en": "adidas-nmd-r1",
-        "de": "adidas-nmd-r1"
-      },
-      "description": {
-        "en": "Casual sneakers with Boost cushioning.",
-        "de": "Freizeit-Sneaker mit Boost-Dämpfung."
-      },
-      "media": [
-        {
-          "id": 36,
-          "src": "/images/adidas_nmd_r1.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 5,
-      "categoryIds": [
-        5,
-        6
-      ],
-      "variants": [],
-      "price": {
-        "value": 288,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 288
-      }
-    },
-    {
-      "id": "32",
-      "name": {
-        "en": "DeLonghi Magnifica S",
-        "de": "DeLonghi Magnifica S"
-      },
-      "slug": {
-        "en": "delonghi-magnifica-s",
-        "de": "delonghi-magnifica-s"
-      },
-      "description": {
-        "en": "Automatic coffee machine with grinder.",
-        "de": "Vollautomatische Kaffeemaschine mit Mahlwerk."
-      },
-      "media": [
-        {
-          "id": 37,
-          "src": "/images/delonghi_magnifica.jpg",
-          "type": "image"
-        }
-      ],
-      "mainCategoryId": 6,
-      "categoryIds": [
-        6,
-        7
-      ],
-      "variants": [],
-      "price": {
-        "value": 559,
-        "discount": 0,
-        "discountType": "absolute",
-        "originalValue": 559
+        "originalValue": 549
       }
     }
   ],
-  "orders": [
-    {
-      "id": "b165bbb6-ef16-4f4b-8bf4-8f2b77ad6acd",
-      "code": "65bbb6ef-169f-4b0b-b48f-2b77ad6acda3",
-      "items": [
-        {
-          "id": "32b165bb-b6ef-469f-8b0b-f48f2b77ad6a",
-          "name": {
-            "en": "iPhone 14 Pro 128GB - Silver",
-            "de": "iPhone 14 Pro 128GB - Silber"
-          },
-          "description": {
-            "en": "Base model with 128GB storage in Silver.",
-            "de": "Basismodell mit 128GB Speicher in Silber."
-          },
-          "slug": {
-            "en": "iphone-14-pro",
-            "de": "iphone-14-pro"
-          },
-          "variantSlug": {
-            "en": "iphone-14-pro-128-silver",
-            "de": "iphone-14-pro-128-silber"
-          },
-          "productId": "1",
-          "productVariantId": 101,
-          "media": [
-            {
-              "id": 2,
-              "src": "/images/iphone14pro_silver.jpg",
-              "type": "image"
-            }
-          ],
-          "price": {
-            "value": 999,
-            "discount": 0,
-            "discountType": "absolute",
-            "originalValue": 999,
-            "total": 999
-          },
-          "quantity": 1
-        }
-      ],
-      "price": {
-        "itemsPrice": 999,
-        "deliveryPrice": 0,
-        "totalPrice": 999
-      },
-      "deliveryMethodId": "3",
-      "deliveryAddress": {
-        "firstName": "Test",
-        "lastName": "Test",
-        "email": "test@test.com",
-        "phoneNumber": "Test",
-        "city": "Test",
-        "street": "Test",
-        "houseNumber": "11",
-        "apartmentNumber": "Test",
-        "comment": "Test"
-      },
-      "paymentMethodId": "3",
-      "status": "fulfilled",
-      "paymentMethod": {
-        "id": "3",
-        "name": {
-          "en": "Bank Transfer",
-          "de": "Banküberweisung"
-        },
-        "description": {
-          "en": "Transfer the payment directly from your bank account.",
-          "de": "Überweisen Sie den Betrag direkt von Ihrem Bankkonto."
-        },
-        "icon": {
-          "id": 7003,
-          "src": "/icons/payment/bank.png",
-          "type": "image"
-        }
-      },
-      "deliveryMethod": {
-        "id": "3",
-        "name": {
-          "en": "Overnight Shipping",
-          "de": "Übernachtversand"
-        },
-        "description": {
-          "en": "Next-day delivery by morning.",
-          "de": "Lieferung am nächsten Morgen."
-        },
-        "icon": {
-          "id": 3,
-          "src": "/icons/overnight_shipping.png",
-          "type": "image"
-        },
-        "deliveryPrice": {
-          "value": 24.99,
-          "discount": 0,
-          "discountType": "absolute"
-        },
-        "type": "courier"
-      }
-    }
-  ],
+  "orders": [],
   "pick-up-points": [
     {
       "id": "1",
