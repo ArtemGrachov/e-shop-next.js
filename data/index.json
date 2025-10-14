@@ -252,11 +252,6 @@
         "en": "Delivery within 5-7 business days.",
         "de": "Lieferung innerhalb von 5-7 Werktagen."
       },
-      "icon": {
-        "id": 1,
-        "src": "/icons/standard_shipping.png",
-        "type": "image"
-      },
       "deliveryPrice": {
         "value": 5.99,
         "discount": 0,
@@ -273,11 +268,6 @@
       "description": {
         "en": "Delivery within 1-2 business days.",
         "de": "Lieferung innerhalb von 1-2 Werktagen."
-      },
-      "icon": {
-        "id": 2,
-        "src": "/icons/express_shipping.png",
-        "type": "image"
       },
       "deliveryPrice": {
         "value": 14.99,
@@ -296,11 +286,6 @@
         "en": "Next-day delivery by morning.",
         "de": "Lieferung am nächsten Morgen."
       },
-      "icon": {
-        "id": 3,
-        "src": "/icons/overnight_shipping.png",
-        "type": "image"
-      },
       "deliveryPrice": {
         "value": 24.99,
         "discount": 0,
@@ -318,11 +303,6 @@
         "en": "Pick up your order at a nearby location.",
         "de": "Abholung Ihrer Bestellung an einem nahegelegenen Standort."
       },
-      "icon": {
-        "id": 4,
-        "src": "/icons/pickup_point.png",
-        "type": "image"
-      },
       "deliveryPrice": {
         "value": 0,
         "discount": 0,
@@ -339,11 +319,6 @@
       "description": {
         "en": "Delivery outside the country within 7-14 business days.",
         "de": "Lieferung außerhalb des Landes innerhalb von 7-14 Werktagen."
-      },
-      "icon": {
-        "id": 5,
-        "src": "/icons/international_shipping.png",
-        "type": "image"
       },
       "deliveryPrice": {
         "value": 29.99,
@@ -363,11 +338,6 @@
       "description": {
         "en": "Pay securely using Visa, MasterCard, or American Express.",
         "de": "Sichere Zahlung mit Visa, MasterCard oder American Express."
-      },
-      "icon": {
-        "id": 7001,
-        "src": "/icons/payment/creditcard.png",
-        "type": "image"
       }
     },
     {
@@ -379,11 +349,6 @@
       "description": {
         "en": "Fast checkout with your PayPal account or linked cards.",
         "de": "Schneller Checkout mit Ihrem PayPal-Konto oder verknüpften Karten."
-      },
-      "icon": {
-        "id": 7002,
-        "src": "/icons/payment/paypal.png",
-        "type": "image"
       }
     },
     {
@@ -395,11 +360,6 @@
       "description": {
         "en": "Transfer the payment directly from your bank account.",
         "de": "Überweisen Sie den Betrag direkt von Ihrem Bankkonto."
-      },
-      "icon": {
-        "id": 7003,
-        "src": "/icons/payment/bank.png",
-        "type": "image"
       }
     },
     {
@@ -412,11 +372,6 @@
         "en": "Pay with cash when your order is delivered.",
         "de": "Bezahlen Sie in bar bei Lieferung Ihrer Bestellung."
       },
-      "icon": {
-        "id": 7004,
-        "src": "/icons/payment/cash.png",
-        "type": "image"
-      },
       "hasRedirect": false
     },
     {
@@ -428,11 +383,6 @@
       "description": {
         "en": "Quick payment using Apple Pay on supported devices.",
         "de": "Schnelle Zahlung mit Apple Pay auf unterstützten Geräten."
-      },
-      "icon": {
-        "id": 7005,
-        "src": "/icons/payment/applepay.png",
-        "type": "image"
       }
     },
     {
@@ -444,11 +394,6 @@
       "description": {
         "en": "Secure checkout using Google Pay on Android devices.",
         "de": "Sicherer Checkout mit Google Pay auf Android-Geräten."
-      },
-      "icon": {
-        "id": 7006,
-        "src": "/icons/payment/googlepay.png",
-        "type": "image"
       }
     }
   ],
@@ -476,6 +421,21 @@
         {
           "id": 2,
           "src": "/images/mock_image_2.webp",
+          "type": "image"
+        },
+        {
+          "id": 3,
+          "src": "/images/mock_image_3.webp",
+          "type": "image"
+        },
+        {
+          "id": 4,
+          "src": "/images/mock_image_4.webp",
+          "type": "image"
+        },
+        {
+          "id": 5,
+          "src": "/images/mock_image_5.webp",
           "type": "image"
         }
       ],
@@ -615,6 +575,31 @@
         {
           "id": 4,
           "src": "/images/mock_image_4.webp",
+          "type": "image"
+        },
+        {
+          "id": 1,
+          "src": "/images/mock_image_1.webp",
+          "type": "image"
+        },
+        {
+          "id": 2,
+          "src": "/images/mock_image_2.webp",
+          "type": "image"
+        },
+        {
+          "id": 6,
+          "src": "/images/mock_image_6.webp",
+          "type": "image"
+        },
+        {
+          "id": 7,
+          "src": "/images/mock_image_7.webp",
+          "type": "image"
+        },
+        {
+          "id": 5,
+          "src": "/images/mock_image_5.webp",
           "type": "image"
         }
       ],
@@ -1357,6 +1342,21 @@
           "id": 1,
           "src": "/images/mock_image_1.webp",
           "type": "image"
+        },
+        {
+          "id": 2,
+          "src": "/images/mock_image_2.webp",
+          "type": "image"
+        },
+        {
+          "id": 3,
+          "src": "/images/mock_image_5.webp",
+          "type": "image"
+        },
+        {
+          "id": 4,
+          "src": "/images/mock_image_7.webp",
+          "type": "image"
         }
       ],
       "mainCategoryId": 11,
@@ -1489,6 +1489,21 @@
         {
           "id": 3,
           "src": "/images/mock_image_3.webp",
+          "type": "image"
+        },
+        {
+          "id": 4,
+          "src": "/images/mock_image_2.webp",
+          "type": "image"
+        },
+        {
+          "id": 5,
+          "src": "/images/mock_image_1.webp",
+          "type": "image"
+        },
+        {
+          "id": 2,
+          "src": "/images/this_image_does_not_exist_intentionally.webp",
           "type": "image"
         }
       ],

@@ -7,7 +7,6 @@ export interface IDeliveryMethod {
   id: string;
   name: TextTranslation;
   description: TextTranslation;
-  icon: IMedia;
   deliveryPrice: IPrice;
   type: EDeliveryMethodTypes;
 }
