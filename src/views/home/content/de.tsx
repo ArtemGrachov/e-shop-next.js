@@ -4,7 +4,7 @@ const ContentDE: ComponentType = () => {
   return (
     <>
       <h1>
-        🛒 Demo E-Commerce-Website mit Next.js
+        🛒 Demo Next.js E-Commerce-Website
       </h1>
       <p>
         Diese Website wurde zu Demonstrationszwecken entwickelt und dient als Beispiel für eine auf Next.js basierende E-Commerce-Website.
@@ -14,13 +14,13 @@ const ContentDE: ComponentType = () => {
       </h2>
       <ul>
         <li>
-          📦 Produktkatalog:
+          🏪 Produktkatalog:
           <ul>
             <li>
               Allgemeiner Produktkatalog
             </li>
             <li>
-              Produktkatalog nach Kategorien
+              Produktkatalog nach Kategorie
             </li>
             <li>
               Suche unter allen Produkten
@@ -32,15 +32,15 @@ const ContentDE: ComponentType = () => {
               Filterung nach Preis
             </li>
             <li>
-              Angebotsseite
+              Aktionsseite
             </li>
           </ul>
         </li>
         <li>
-          Produktseite
+          📦 Produktseite
           <ul>
             <li>
-              Mediengalerie mit Zoom-Funktion
+              Mediengalerie mit Zoom
             </li>
             <li>
               Bewertungen
@@ -48,29 +48,29 @@ const ContentDE: ComponentType = () => {
           </ul>
         </li>
         <li>
-          Bestellvorgang einschließlich einer Umleitung auf eine pseudo-externe Website
+          💳 Bestellvorgang, einschließlich Weiterleitung zu einer pseudoexternen Website
         </li>
         <li>
-          Helles und dunkles Design
+          🌙 Helles und dunkles Design
         </li>
         <li>
-          Internationalisierung
+          🌐 Internationalisierung
         </li>
         <li>
-          Mobile-First-Markup
+          📱 Mobile-First-Markup
         </li>
       </ul>
       <h2>
-        💻 Verwendung
+        💻 Nutzung
       </h2>
       <p>
-        Dieses Projekt ist Open Source. Sie können es frei und ohne Genehmigung verwenden.
+        Dieses Projekt ist Open Source; Sie können es frei und ohne Genehmigung verwenden.
       </p>
       <h2>
         📸 Medien
       </h2>
       <p>
-        Sämtliche Medieninhalte sind kostenlos und stammen von <a href="https://unsplash.com/" target="_blank">Unsplash</a>.
+        Alle Medieninhalte sind frei verfügbar und stammen von <a href="https://unsplash.com/" target="_blank">Unsplash</a>.
       </p>
       <ul>
         <li>
@@ -128,7 +128,7 @@ const ContentDE: ComponentType = () => {
         🤖 KI
       </h2>
       <p>
-        Dieses Projekt verwendet KI-generierte Beispielinhalte (Katalog, Produkte, Liefer- und Zahlungsmethoden usw.) sowie deutsche Übersetzungen. Der Projektcode wurde manuell geschrieben.
+        Dieses Projekt verwendet KI-generierte Beispielinhalte (Katalog, Produkte, Liefer- und Zahlungsmethoden usw.) sowie englische und deutsche Übersetzungen. Der Code des Projekts wurde manuell geschrieben.
       </p>
       <h2>
         📋 Projektmanagement

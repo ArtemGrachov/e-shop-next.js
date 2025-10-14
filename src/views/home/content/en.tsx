@@ -4,29 +4,29 @@ const ContentEN: ComponentType = () => {
   return (
     <>
       <h1>
-        🛒 Demo Next.js E-Commerce website
+        🛒 Demo Next.js E-Commerce Website
       </h1>
       <p>
-        This website is developed for demo purposes as an example of Next.js-based E-Commerce website
+        This website was developed for demonstration purposes as an example of a Next.js-based E-Commerce website.
       </p>
       <h2>
         🛠️ Features
       </h2>
       <ul>
         <li>
-          Product catalog:
+          🏪 Product catalog:
           <ul>
             <li>
               General product catalog
             </li>
             <li>
-              Product catalog by categories
+              Product catalog by category
             </li>
             <li>
               Search among all products
             </li>
             <li>
-              Search among category products
+              Search within a category
             </li>
             <li>
               Filtering by price
@@ -48,29 +48,29 @@ const ContentEN: ComponentType = () => {
           </ul>
         </li>
         <li>
-          Checkout process, including pseudo-external website redirect
+          💳 Checkout process, including a pseudo-external website redirect
         </li>
         <li>
-          Light and dark themes
+          🌙 Light and dark themes
         </li>
         <li>
-          Internationalization
+          🌐 Internationalization
         </li>
         <li>
-          Mobile-first markup
+          📱 Mobile-first markup
         </li>
       </ul>
       <h2>
         💻 Usage
       </h2>
       <p>
-        This project is open-source, you are free to use it without any permission.
+        This project is open-source; you are free to use it without any permission.
       </p>
       <h2>
         📸 Media
       </h2>
       <p>
-        All the media content is free and taken from the <a href="https://unsplash.com/" target="_blank">Unsplash</a>.
+        All media content is free and taken from <a href="https://unsplash.com/" target="_blank">Unsplash</a>.
       </p>
       <ul>
         <li>
@@ -128,10 +128,10 @@ const ContentEN: ComponentType = () => {
         🤖 AI
       </h2>
       <p>
-        This project use AI-generated mock content (catalog, products, delivery and payment methods etc.) and German translations. Project code is written manually.
+        This project uses AI-generated mock content (catalog, products, delivery and payment methods, etc.), as well as English and German translations. The project code is written manually.
       </p>
       <h2>
-        📋 Project management
+        📋 Project Management
       </h2>
       <ul>
         <li>
