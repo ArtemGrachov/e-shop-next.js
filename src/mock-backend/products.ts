@@ -12,6 +12,7 @@ interface IParams {
   categoryId?: string;
   search?: string;
   productIds?: Array<string | number>;
+  sale?: boolean;
 }
 
 export const getProducts = async (params: IParams) => {
@@ -88,6 +89,10 @@ export const getProducts = async (params: IParams) => {
   if (params.productIds) {
     const set = new Set(params.productIds);
     products = products.filter(p => set.has(p.id));
+  }
+
+  if (params.sale) {
+    products = products.filter(p => p.price?.discount || p.variants?.some(v => v.price?.discount));
   }
 
   const allPrices = products.reduce((acc, curr) => {

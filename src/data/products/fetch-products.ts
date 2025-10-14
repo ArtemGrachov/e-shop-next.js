@@ -12,6 +12,7 @@ export interface IFetchProductsParams {
     };
   };
   productIds?: string[];
+  sale?: boolean;
 }
 
 export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProductsParams) => {
@@ -24,6 +25,7 @@ export const fetchProducts = async (httpClient: HttpClient, params?: IFetchProdu
       categoryId: params?.categoryId,
       search: params?.search,
       productIds: params?.productIds,
+      sale: params?.sale,
     };
 
     const { data } = await httpClient('/products', { params: query });

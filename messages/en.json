@@ -80,6 +80,10 @@
     "title_catalog": "Catalog",
     "title_search": "Search \"{query}\"",
     "title_category_search": "{categoryName} | search \"{query}\"",
+    "title_sales_category_search": "Sales | {categoryName} | search \"{query}\"",
+    "title_sales_search": "Sales | Search \"{query}\"",
+    "title_sales": "Sales",
+    "title_sales_category": "Sales | {categoryName}",
     "product_filters": {
       "price": "Price"
     },

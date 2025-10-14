@@ -14,13 +14,14 @@ import MobileFilters from './components/MobileFilters';
 import Breadcrumbs from '@/components/other/Breadcrumbs';
 import ProductsPlaceholder from '@/components/products/ProductsPlaceholder';
 
-import { getPageData } from './server';
-import type { IViewCatalogProps } from './types';
 import type { IBreadcrumb } from '@/types/other/breadcrumbs';
+
+import { getPageData } from './server';
+import type { IViewCatalogOptions, IViewCatalogProps } from './types';
 
 import styles from './styles.module.scss';
 
-const baseData = async (props: IViewCatalogProps) => {
+const baseData = async (props: IViewCatalogProps, options?: IViewCatalogOptions) => {
   const [
     t,
     locale,
@@ -33,7 +34,7 @@ const baseData = async (props: IViewCatalogProps) => {
     getLocale(),
     props.params,
     props.searchParams,
-    getPageData(props),
+    getPageData(props, options),
     getRoutePath(),
   ]).catch(err => {
     if (err === 404) {
@@ -56,6 +57,7 @@ const baseData = async (props: IViewCatalogProps) => {
 
   const isCategory = !!category;
   const isSearch = !!searchParams.search;
+  const isSales = !!options?.sale;
 
   const correctSlugId = isCategory ? `${correctCategorySlug}-${categoryId}` : null;
   const correctPath = routePath(ROUTES.CATALOG, { ...searchParams, slugId: correctSlugId || '' })
@@ -65,10 +67,26 @@ const baseData = async (props: IViewCatalogProps) => {
 
     if (isSearch) {
       if (categoryName) {
+        if (isSales) {
+          return t('view_catalog.title_sales_category_search', { categoryName, query: searchParams.search! })
+        }
+
         return t('view_catalog.title_category_search', { categoryName, query: searchParams.search! })
       } else {
+        if (isSales) {
+          return t('view_catalog.title_sales_search', { query: searchParams.search! })
+        }
+
         return t('view_catalog.title_search', { query: searchParams.search! })
       }
+    }
+
+    if (isSales) {
+      if (isCategory) {
+        return t('view_catalog.title_sales_category', { categoryName: categoryName ?? '-' });
+      }
+
+      return t('view_catalog.title_sales');
     }
 
     if (isCategory) {
@@ -86,6 +104,7 @@ const baseData = async (props: IViewCatalogProps) => {
     category,
     isCategory,
     isSearch,
+    isSales,
     categorySlug,
     correctCategorySlug,
     correctPath,
@@ -100,7 +119,7 @@ const baseData = async (props: IViewCatalogProps) => {
   };
 }
 
-const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
+const CatalogView = (options: IViewCatalogOptions): ComponentType<IViewCatalogProps> => async (props) => {
   const {
     categorySlugId,
     category,
@@ -117,7 +136,7 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
     categories,
     searchParams,
     data,
-  } = await baseData(props);
+  } = await baseData(props, options);
 
   if (categorySlugId && !category) {
     return notFound();
@@ -151,7 +170,7 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
         <Breadcrumbs breadcrumbs={breadcrumbs} />
         <div className={styles.row}>
           <aside className={styles.sidebar}>
-            <CategoryNav className={styles.categoryNav} categories={categories} />
+            <CategoryNav className={styles.categoryNav} categories={categories} isSale={options?.sale} />
             {productsData && <ProductFilters filters={productsData.filters} />}
           </aside>
           <main className={styles.content}>
@@ -160,7 +179,7 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
             </h1>
             {description && <div className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />}
             <div className={styles.mobileFilters}>
-              <MobileFilters data={data} />
+              <MobileFilters data={data} isSale={options?.sale} />
             </div>
             {productsData?.items?.length ? (
               <ProductList
@@ -196,15 +215,20 @@ const CatalogView: ComponentType<IViewCatalogProps> = async (props) => {
 
 export default CatalogView;
 
-export async function generateMetadata(props: IViewCatalogProps): Promise<Metadata> {
-  const {
-    t,
-    title,
-    description,
-  } = await baseData(props);
+export function generateMetadataWrap(options?: IViewCatalogOptions) {
+  async function generateMetadata(props: IViewCatalogProps): Promise<Metadata> {
+    const {
+      t,
+      title,
+      description,
+    } = await baseData(props, options);
+  
+    return {
+      title: t('common_meta.title_template', { title: title ?? '-' }),
+      description,
+    };
+  }
 
-  return {
-    title: t('common_meta.title_template', { title: title ?? '-' }),
-    description,
-  };
+  return generateMetadata;
 }
+
