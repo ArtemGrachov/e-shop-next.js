@@ -8,6 +8,7 @@ import { EDiscountType } from '@/constants/prices';
 import { useShopCtx } from '@/providers/shop/hooks/use-shop-ctx';
 
 import type { IPrice } from '@/types/models/price';
+import type { IPropsWithClassName } from '@/types/other/component-props';
 
 import styles from './styles.module.scss';
 
@@ -15,11 +16,11 @@ interface IProps {
   price: IPrice;
 }
 
-const Price: ComponentType<IProps> = ({ price }) => {
+const Price: ComponentType<IProps & IPropsWithClassName> = ({ className, price }) => {
   const { CURRENCY } = useShopCtx();
 
   return (
-    <div className={styles.price}>
+    <div className={clsx(styles.price, className)}>
       <span className={clsx(styles.value, price.discount && styles._active)}>
         {price.value} {CURRENCY}
       </span>

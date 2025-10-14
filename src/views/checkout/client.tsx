@@ -72,7 +72,7 @@ const CheckoutPageClient: ComponentType = () => {
               <Button
                 type="button"
                 className={clsx(styles.viewCart, styles._mobile)}
-                onClick={openCartModal}
+                onClick={() => openCartModal(true)}
               >
                 {t('view_checkout.open_cart')}
               </Button>
@@ -83,7 +83,7 @@ const CheckoutPageClient: ComponentType = () => {
               <Button
                 type="button"
                 className={clsx(styles.viewCart, styles._desktop)}
-                onClick={openCartModal}
+                onClick={() => openCartModal(true)}
               >
                 {t('view_checkout.open_cart')}
               </Button>

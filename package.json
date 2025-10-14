@@ -25,6 +25,7 @@
     "react-range": "^1.10.0",
     "react-screen-size-helper": "^1.0.3",
     "swiper": "^12.0.2",
+    "tua-body-scroll-lock": "^1.5.3",
     "ultimate-pagination": "^1.0.0",
     "zustand": "^5.0.8"
   },

@@ -111,6 +111,7 @@ const ProductView = async (props: IViewProductProps) => {
     correctVariantSlug,
     correctPath,
     productName,
+    variant,
   } = await baseData(props);
 
   if (productSlug !== correctProductSlug || (variantSlug && correctVariantSlug && variantSlug !== correctVariantSlug)) {
