@@ -485,7 +485,7 @@
       ],
       "variants": [
         {
-          "id": "1v1",
+          "id": "1",
           "name": {
             "en": "128GB",
             "de": "128GB"
@@ -504,13 +504,73 @@
             "discountType": "absolute",
             "originalValue": 1099
           },
-          "media": [
-            {
-              "id": 1,
-              "src": "/images/mock_image_1.webp",
-              "type": "image"
-            }
-          ]
+          "media": []
+        },
+        {
+          "id": "2",
+          "name": {
+            "en": "256GB",
+            "de": "256GB"
+          },
+          "description": {
+            "en": "More storage for apps and media",
+            "de": "Mehr Speicher für Apps und Medien"
+          },
+          "slug": {
+            "en": "iphone-15-pro-256gb",
+            "de": "iphone-15-pro-256gb"
+          },
+          "price": {
+            "value": 1249,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1249
+          },
+          "media": []
+        },
+        {
+          "id": "3",
+          "name": {
+            "en": "512GB",
+            "de": "512GB"
+          },
+          "description": {
+            "en": "High storage for power users",
+            "de": "Großer Speicher für Power-User"
+          },
+          "slug": {
+            "en": "iphone-15-pro-512gb",
+            "de": "iphone-15-pro-512gb"
+          },
+          "price": {
+            "value": 1449,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1449
+          },
+          "media": []
+        },
+        {
+          "id": "4",
+          "name": {
+            "en": "1TB",
+            "de": "1TB"
+          },
+          "description": {
+            "en": "Maximum storage for all your content",
+            "de": "Maximaler Speicher für alle Inhalte"
+          },
+          "slug": {
+            "en": "iphone-15-pro-1tb",
+            "de": "iphone-15-pro-1tb"
+          },
+          "price": {
+            "value": 1749,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1749
+          },
+          "media": []
         }
       ],
       "price": {
@@ -562,7 +622,74 @@
       "categoryIds": [
         1
       ],
-      "variants": [],
+      "variants": [
+        {
+          "id": "901",
+          "name": {
+            "en": "256GB",
+            "de": "256GB"
+          },
+          "description": {
+            "en": "Base storage model",
+            "de": "Basisspeichermodell"
+          },
+          "slug": {
+            "en": "samsung-galaxy-s24-ultra-256gb",
+            "de": "samsung-galaxy-s24-ultra-256gb"
+          },
+          "price": {
+            "value": 1299,
+            "discount": 10,
+            "discountType": "percentage",
+            "originalValue": 1449
+          },
+          "media": []
+        },
+        {
+          "id": "902",
+          "name": {
+            "en": "512GB",
+            "de": "512GB"
+          },
+          "description": {
+            "en": "More storage for apps and media",
+            "de": "Mehr Speicher für Apps und Medien"
+          },
+          "slug": {
+            "en": "samsung-galaxy-s24-ultra-512gb",
+            "de": "samsung-galaxy-s24-ultra-512gb"
+          },
+          "price": {
+            "value": 1449,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1449
+          },
+          "media": []
+        },
+        {
+          "id": "903",
+          "name": {
+            "en": "1TB",
+            "de": "1TB"
+          },
+          "description": {
+            "en": "Maximum storage for power users",
+            "de": "Maximaler Speicher für Power-User"
+          },
+          "slug": {
+            "en": "samsung-galaxy-s24-ultra-1tb",
+            "de": "samsung-galaxy-s24-ultra-1tb"
+          },
+          "price": {
+            "value": 1749,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1749
+          },
+          "media": []
+        }
+      ],
       "price": {
         "value": 1299,
         "discount": 10,
@@ -728,7 +855,74 @@
         4,
         15
       ],
-      "variants": [],
+      "variants": [
+        {
+          "id": "8",
+          "name": {
+            "en": "Alpine Loop - 49mm",
+            "de": "Alpine Loop - 49mm"
+          },
+          "description": {
+            "en": "Durable Alpine Loop strap with 49mm case size",
+            "de": "Robustes Alpine Loop-Armband mit 49mm Gehäusegröße"
+          },
+          "slug": {
+            "en": "apple-watch-ultra-2-alpine-loop-49mm",
+            "de": "apple-watch-ultra-2-alpine-loop-49mm"
+          },
+          "price": {
+            "value": 899,
+            "discount": 5,
+            "discountType": "percentage",
+            "originalValue": 949
+          },
+          "media": []
+        },
+        {
+          "id": "9",
+          "name": {
+            "en": "Trail Loop - 49mm",
+            "de": "Trail Loop - 49mm"
+          },
+          "description": {
+            "en": "Lightweight Trail Loop strap with 49mm case size",
+            "de": "Leichtes Trail Loop-Armband mit 49mm Gehäusegröße"
+          },
+          "slug": {
+            "en": "apple-watch-ultra-2-trail-loop-49mm",
+            "de": "apple-watch-ultra-2-trail-loop-49mm"
+          },
+          "price": {
+            "value": 899,
+            "discount": 5,
+            "discountType": "percentage",
+            "originalValue": 949
+          },
+          "media": []
+        },
+        {
+          "id": "10",
+          "name": {
+            "en": "Ocean Band - 49mm",
+            "de": "Ocean Band - 49mm"
+          },
+          "description": {
+            "en": "Water-resistant Ocean Band with 49mm case size",
+            "de": "Wasserfestes Ocean Band mit 49mm Gehäusegröße"
+          },
+          "slug": {
+            "en": "apple-watch-ultra-2-ocean-band-49mm",
+            "de": "apple-watch-ultra-2-ocean-band-49mm"
+          },
+          "price": {
+            "value": 899,
+            "discount": 5,
+            "discountType": "percentage",
+            "originalValue": 949
+          },
+          "media": []
+        }
+      ],
       "price": {
         "value": 899,
         "discount": 5,
@@ -926,7 +1120,52 @@
       "categoryIds": [
         8
       ],
-      "variants": [],
+      "variants": [
+        {
+          "id": "11",
+          "name": {
+            "en": "Standard 27-inch",
+            "de": "Standard 27 Zoll"
+          },
+          "description": {
+            "en": "Standard 27-inch 5K monitor",
+            "de": "Standard 27-Zoll-5K-Monitor"
+          },
+          "slug": {
+            "en": "lg-ultrafine-5k-27-inch",
+            "de": "lg-ultrafine-5k-27-zoll"
+          },
+          "price": {
+            "value": 1199,
+            "discount": 100,
+            "discountType": "absolute",
+            "originalValue": 1299
+          },
+          "media": []
+        },
+        {
+          "id": "12",
+          "name": {
+            "en": "Standard 32-inch",
+            "de": "Standard 32 Zoll"
+          },
+          "description": {
+            "en": "Larger 32-inch 5K monitor for extra screen space",
+            "de": "Größerer 32-Zoll-5K-Monitor für mehr Arbeitsfläche"
+          },
+          "slug": {
+            "en": "lg-ultrafine-5k-32-inch",
+            "de": "lg-ultrafine-5k-32-zoll"
+          },
+          "price": {
+            "value": 1399,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1399
+          },
+          "media": []
+        }
+      ],
       "price": {
         "value": 1199,
         "discount": 100,
@@ -1157,7 +1396,74 @@
       "categoryIds": [
         12
       ],
-      "variants": [],
+      "variants": [
+        {
+          "id": "13",
+          "name": {
+            "en": "Founders Edition",
+            "de": "Founders Edition"
+          },
+          "description": {
+            "en": "Official NVIDIA Founders Edition card",
+            "de": "Offizielle NVIDIA Founders Edition Karte"
+          },
+          "slug": {
+            "en": "nvidia-rtx-4090-founders-edition",
+            "de": "nvidia-rtx-4090-founders-edition"
+          },
+          "price": {
+            "value": 1599,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1599
+          },
+          "media": []
+        },
+        {
+          "id": "14",
+          "name": {
+            "en": "Custom OC Edition",
+            "de": "Custom OC Edition"
+          },
+          "description": {
+            "en": "Factory overclocked card with enhanced cooling",
+            "de": "Werksseitig übertaktete Karte mit verbesserter Kühlung"
+          },
+          "slug": {
+            "en": "nvidia-rtx-4090-custom-oc",
+            "de": "nvidia-rtx-4090-custom-oc"
+          },
+          "price": {
+            "value": 1699,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1699
+          },
+          "media": []
+        },
+        {
+          "id": "15",
+          "name": {
+            "en": "Watercooled Edition",
+            "de": "Watercooled Edition"
+          },
+          "description": {
+            "en": "Comes with integrated water cooling solution",
+            "de": "Mit integrierter Wasserkühlungslösung"
+          },
+          "slug": {
+            "en": "nvidia-rtx-4090-watercooled",
+            "de": "nvidia-rtx-4090-watercooled"
+          },
+          "price": {
+            "value": 1799,
+            "discount": 0,
+            "discountType": "absolute",
+            "originalValue": 1799
+          },
+          "media": []
+        }
+      ],
       "price": {
         "value": 1599,
         "discount": 0,
