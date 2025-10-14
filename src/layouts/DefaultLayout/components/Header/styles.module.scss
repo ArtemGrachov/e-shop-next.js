@@ -47,9 +47,13 @@
   color: orange;
   font-weight: 500;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 24px;
   display: block;
   text-align: center;
+
+  @include breakpoints.sm() {
+    font-size: 32px;
+  }
 }
 
 .productSearch {
