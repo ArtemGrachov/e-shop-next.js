@@ -1,3 +1,4 @@
+import { IOrder } from '@/types/models/order';
 import axios from 'axios';
 import AxiosMockAdapter from 'axios-mock-adapter';
 
@@ -73,9 +74,9 @@ export const createHttpClient = () => {
   mockHttpClient.onGet(/\/orders\/[\w-]+/).reply(async (config) => {
     const { url } = config;
     const id = url?.split('/').slice(-1)[0];
-    const { orders } = await data();
+    const orders = (await data()).orders as IOrder[];
 
-    let order = orders.find(p => p.id == id);
+    let order = orders.find(o => o.id == id);
 
     if (!order) {
       if (typeof sessionStorage !== 'undefined') {
