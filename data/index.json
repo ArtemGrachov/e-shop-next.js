@@ -477,6 +477,21 @@
           "id": 2,
           "src": "/images/mock_image_2.webp",
           "type": "image"
+        },
+        {
+          "id": 3,
+          "src": "/images/mock_image_3.webp",
+          "type": "image"
+        },
+        {
+          "id": 4,
+          "src": "/images/mock_image_4.webp",
+          "type": "image"
+        },
+        {
+          "id": 5,
+          "src": "/images/mock_image_5.webp",
+          "type": "image"
         }
       ],
       "mainCategoryId": 1,
@@ -615,6 +630,31 @@
         {
           "id": 4,
           "src": "/images/mock_image_4.webp",
+          "type": "image"
+        },
+        {
+          "id": 1,
+          "src": "/images/mock_image_1.webp",
+          "type": "image"
+        },
+        {
+          "id": 2,
+          "src": "/images/mock_image_2.webp",
+          "type": "image"
+        },
+        {
+          "id": 6,
+          "src": "/images/mock_image_6.webp",
+          "type": "image"
+        },
+        {
+          "id": 7,
+          "src": "/images/mock_image_7.webp",
+          "type": "image"
+        },
+        {
+          "id": 5,
+          "src": "/images/mock_image_5.webp",
           "type": "image"
         }
       ],
@@ -1357,6 +1397,21 @@
           "id": 1,
           "src": "/images/mock_image_1.webp",
           "type": "image"
+        },
+        {
+          "id": 2,
+          "src": "/images/mock_image_2.webp",
+          "type": "image"
+        },
+        {
+          "id": 3,
+          "src": "/images/mock_image_5.webp",
+          "type": "image"
+        },
+        {
+          "id": 4,
+          "src": "/images/mock_image_7.webp",
+          "type": "image"
         }
       ],
       "mainCategoryId": 11,
@@ -1489,6 +1544,21 @@
         {
           "id": 3,
           "src": "/images/mock_image_3.webp",
+          "type": "image"
+        },
+        {
+          "id": 4,
+          "src": "/images/mock_image_2.webp",
+          "type": "image"
+        },
+        {
+          "id": 5,
+          "src": "/images/mock_image_1.webp",
+          "type": "image"
+        },
+        {
+          "id": 2,
+          "src": "/images/this_image_does_not_exist_intentionally.webp",
           "type": "image"
         }
       ],
