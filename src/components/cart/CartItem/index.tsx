@@ -42,7 +42,13 @@ const CartItem: ComponentType<IProps> = ({ orderItem, onNavigate }) => {
     return routePath(ROUTES.PRODUCT, { slugId });
   }, [orderItem]);
 
-  const itemName = orderItem.name[locale];
+  const itemName = orderItem.name?.[locale];
+  const variantNameName = orderItem.variantName?.[locale];
+
+  const displayName = useMemo(
+    () => [itemName, variantNameName].filter(s => !!s).join(' - '),
+    [itemName, variantNameName],
+  );
 
   return (
     <div className={styles.cartItem}>
@@ -53,11 +59,11 @@ const CartItem: ComponentType<IProps> = ({ orderItem, onNavigate }) => {
             src={orderItem.media?.[0]?.src ?? ''}
             width={500}
             height={500}
-            alt={itemName}
+            alt={displayName}
           />
         </div>
         <div className={styles.name}>
-          {orderItem.name[locale]}
+          {displayName}
         </div>
       </Link>
       <Price price={orderItem.price} />

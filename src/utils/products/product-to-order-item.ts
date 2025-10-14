@@ -10,13 +10,14 @@ import { updateOrderItem } from '@/utils/orders/update-order-item';
 export const productToOrderItem = (product: IProduct, quantity: number, price: IPrice, productVariant?: IProductVariant): IOrderItem => {
   return updateOrderItem({
     id: uuid(),
-    name: productVariant?.name ?? product.name,
+    name: product.name,
+    variantName: productVariant?.name,
     description: productVariant?.description ?? product.description,
     slug: product.slug,
     variantSlug: productVariant?.slug,
     productId: product.id,
     productVariantId: productVariant?.id,
-    media: productVariant?.media ?? product.media,
+    media: product.media,
     price: {
       ...price,
       total: 0,
