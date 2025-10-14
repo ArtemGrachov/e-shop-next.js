@@ -4,13 +4,13 @@ const ContentEN: ComponentType = () => {
   return (
     <>
       <h1>
-        Demo Next.js E-Commerce website
+        🛒 Demo Next.js E-Commerce website
       </h1>
       <p>
         This website is developed for demo purposes as an example of Next.js-based E-Commerce website
       </p>
       <h2>
-        Features
+        🛠️ Features
       </h2>
       <ul>
         <li>
@@ -37,7 +37,7 @@ const ContentEN: ComponentType = () => {
           </ul>
         </li>
         <li>
-          Product page
+          📦 Product page
           <ul>
             <li>
               Media gallery with zoom
@@ -61,66 +61,87 @@ const ContentEN: ComponentType = () => {
         </li>
       </ul>
       <h2>
-        Usage
+        💻 Usage
       </h2>
       <p>
         This project is open-source, you are free to use it without any permission.
       </p>
       <h2>
-        Media used
+        📸 Media
       </h2>
       <p>
-        All the media content is free and taken from the <a href="https://unsplash.com/">Unsplash</a>.
+        All the media content is free and taken from the <a href="https://unsplash.com/" target="_blank">Unsplash</a>.
       </p>
       <ul>
         <li>
-          <a href="https://unsplash.com/photos/a-white-cell-phone-sitting-on-top-of-a-pink-and-blue-background-0ej0jMwPFhQ">
+          <a href="https://unsplash.com/photos/a-white-cell-phone-sitting-on-top-of-a-pink-and-blue-background-0ej0jMwPFhQ" target="_blank">
             https://unsplash.com/photos/a-white-cell-phone-sitting-on-top-of-a-pink-and-blue-background-0ej0jMwPFhQ
           </a>
         </li>
         <li>
-          <a href="https://unsplash.com/photos/white-smartphone-near-laptop-xsGxhtAsfSA">
+          <a href="https://unsplash.com/photos/white-smartphone-near-laptop-xsGxhtAsfSA" target="_blank">
             https://unsplash.com/photos/white-smartphone-near-laptop-xsGxhtAsfSA
           </a>
         </li>
         <li>
-          <a href="https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-wooden-table-6RqSDGaNJ5c">
+          <a href="https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-wooden-table-6RqSDGaNJ5c" target="_blank">
             https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-wooden-table-6RqSDGaNJ5c
           </a>
         </li>
         <li>
-          <a href="https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-desk-fc1dt-T0JMI">
+          <a href="https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-desk-fc1dt-T0JMI" target="_blank">
             https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-desk-fc1dt-T0JMI
           </a>
         </li>
         <li>
-          <a href="https://unsplash.com/photos/gold-beats-wireless-headphones-bWZAPKm0zZE">
+          <a href="https://unsplash.com/photos/gold-beats-wireless-headphones-bWZAPKm0zZE" target="_blank">
             https://unsplash.com/photos/gold-beats-wireless-headphones-bWZAPKm0zZE
           </a>
         </li>
         <li>
-          <a href="https://unsplash.com/photos/white-sony-corded-headphones-RZmiDOpv1lM">
+          <a href="https://unsplash.com/photos/white-sony-corded-headphones-RZmiDOpv1lM" target="_blank">
             https://unsplash.com/photos/white-sony-corded-headphones-RZmiDOpv1lM
           </a>
         </li>
         <li>
-          <a href="https://unsplash.com/photos/a-tablet-computer-sitting-on-top-of-a-table-0cG_yQAdYIM">
+          <a href="https://unsplash.com/photos/a-tablet-computer-sitting-on-top-of-a-table-0cG_yQAdYIM" target="_blank">
             https://unsplash.com/photos/a-tablet-computer-sitting-on-top-of-a-table-0cG_yQAdYIM
           </a>
         </li>
         <li>
-          <a href="https://unsplash.com/photos/black-g208-smart-watch-QhF3YGsDrYk">
+          <a href="https://unsplash.com/photos/black-g208-smart-watch-QhF3YGsDrYk" target="_blank">
             https://unsplash.com/photos/black-g208-smart-watch-QhF3YGsDrYk
           </a>
         </li>
         <li>
-          <a href="https://unsplash.com/photos/red-xbox-one-game-controller-hUD0PUczwJQ">
+          <a href="https://unsplash.com/photos/red-xbox-one-game-controller-hUD0PUczwJQ" target="_blank">
             https://unsplash.com/photos/red-xbox-one-game-controller-hUD0PUczwJQ
           </a>
         </li>
         <li>
-          <a href="https://unsplash.com/photos/a-room-with-a-plant-and-a-thermostaer-on-the-wall-LUFaSAGhk1c">
+          <a href="https://unsplash.com/photos/a-room-with-a-plant-and-a-thermostaer-on-the-wall-LUFaSAGhk1c" target="_blank">
             https://unsplash.com/photos/a-room-with-a-plant-and-a-thermostaer-on-the-wall-LUFaSAGhk1c
+          </a>
+        </li>
+      </ul>
+      <h2>
+        🤖 AI
+      </h2>
+      <p>
+        This project use AI-generated mock content (catalog, products, delivery and payment methods etc.) and German translations. Project code is written manually.
+      </p>
+      <h2>
+        📋 Project management
+      </h2>
+      <ul>
+        <li>
+          <a href="https://tree.taiga.io/project/artemgrachov-e-commerce-demo-for-ortfolio/kanban" target="_blank">
+            Taiga board
+          </a>
+        </li>
+        <li>
+          <a href="https://docs.google.com/document/d/1nIjAQziHzrZ9hnT6_4G8RD0FNctPxrHHnMCsdWXHVoc/edit?usp=sharing" target="_blank">
+            Specification (Google Docs)
           </a>
         </li>
       </ul>
