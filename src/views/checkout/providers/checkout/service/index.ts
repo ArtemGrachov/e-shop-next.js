@@ -74,6 +74,10 @@ export const useCheckoutService = () => {
     dispatch({ type: EActions.INIT_SUCCESS });
   }
 
+  const edit = (edit: boolean, token: string) => {
+    dispatch({ type: EActions.EDIT, edit, token });
+  }
+
   useEffect(() => {
     subscribe(() => init());
   }, []);
@@ -83,7 +87,8 @@ export const useCheckoutService = () => {
     formDeliveryMethod,
     formDeliveryAddress,
     formPaymentMethod,
-    init,
     checkoutSubmit,
+    init,
+    edit,
   };
 }

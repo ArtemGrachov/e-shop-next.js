@@ -15,7 +15,9 @@ const CheckoutSubmit: ComponentType = () => {
   const { checkoutSubmit } = useCheckoutCtx();
 
   const submitStatus = useCheckoutStore(s => s.submitStatus);
+  const editTokens = useCheckoutStore(s => s.editTokens);
   const isError = submitStatus === EStatus.ERROR;
+  const isEditing = editTokens?.length > 0;
 
   const submitHandler = async () => {
     if (!isValid) {
@@ -34,7 +36,7 @@ const CheckoutSubmit: ComponentType = () => {
       <Button
         type="button"
         variant={'primary'}
-        disabled={!isValid}
+        disabled={!isValid || isEditing}
         onClick={submitHandler}
       >
         {t('checkout_submit.submit')}

@@ -1,21 +1,25 @@
 import { useTranslations } from 'next-intl';
-import { ComponentType, useMemo, useState } from 'react';
+import { ComponentType, useEffect, useMemo, useState } from 'react';
 
 import { EDeliveryMethodTypes } from '@/constants/delivery-methods';
 
 import { useCartStore } from '@/providers/cart/hooks/use-cart-store';
-import { useSelectedDeliveryMethod } from '@/views/checkout/providers/checkout/hooks/use-selected-delivery-method';
-import { useSelectedPickUpPoint } from '@/views/checkout/providers/checkout/hooks/use-selected-pick-up-point';
+import { useSelectedDeliveryMethod } from '../../providers/checkout/hooks/use-selected-delivery-method';
+import { useSelectedPickUpPoint } from '../../providers/checkout/hooks/use-selected-pick-up-point';
+import { useCheckoutCtx } from '../../providers/checkout/hooks/use-checkout-ctx';
 
-import FormDeliveryMethod from '@/views/checkout/components/FormDeliveryMethod';
 import DeliveryMethod from '@/components/delivery/DeliveryMethod';
-import FormDeliveryAddress from '@/views/checkout/components/FormDeliveryAddress';
 import DeliveryAddress from '@/components/delivery/DeliveryAddress';
 import PickUpPoint from '@/components/delivery/PickUpPoint';
 import Button from '@/components/buttons/Button';
-import CheckoutSection from '@/views/checkout/components/CheckoutSection';
+import FormDeliveryMethod from '../FormDeliveryMethod';
+import FormDeliveryAddress from '../FormDeliveryAddress';
+import CheckoutSection from '../CheckoutSection';
 
 import styles from './styles.module.scss';
+
+const EDIT_METHOD_TOKEN = 'DELIVERY_METHOD';
+const EDIT_ADDRESS_TOKEN = 'EDIT_ADDRESS_TOKEN';
 
 const CheckoutDelivery: ComponentType = () => {
   const t = useTranslations();
@@ -25,6 +29,15 @@ const CheckoutDelivery: ComponentType = () => {
   const deliveryAddress = order?.deliveryAddress;
   const [methodSelectionActive, setMethodSelectionActive] = useState(!selectedDeliveryMethod);
   const [addressEditingActive, setAddressEditingActive] = useState(!methodSelectionActive && !deliveryAddress);
+  const { edit } = useCheckoutCtx();
+
+  useEffect(() => {
+    edit(methodSelectionActive, EDIT_METHOD_TOKEN);
+  }, [methodSelectionActive]);
+
+  useEffect(() => {
+    edit(addressEditingActive, EDIT_ADDRESS_TOKEN);
+  }, [addressEditingActive]);
 
   const onMethodChange = () => {
     setMethodSelectionActive(false);
