@@ -1,7 +1,5 @@
-import CheckoutPageClient from '@/views/checkout/client';
+import CheckoutView from '@/views/checkout/view';
 
-const CheckoutPage = () => {
-  return <CheckoutPageClient />;
-}
+export default CheckoutView;
 
-export default CheckoutPage;
+export { generateMetadata } from '@/views/checkout/view';

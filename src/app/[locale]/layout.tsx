@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getLocale, getMessages } from 'next-intl/server';
+import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { Ubuntu } from 'next/font/google'
 
 import ThemeScript from '@/scripts/ThemeScript';
@@ -16,6 +16,7 @@ import { ModalsProvider } from '@/providers/modals';
 import ModalRoot from '@/components/modal/ModalRoot';
 
 import '@/styles/main.scss';
+import { Metadata } from 'next';
 
 const fontUbuntu = Ubuntu({
   subsets: ['latin', 'cyrillic'],
@@ -55,4 +56,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </body>
     </html>
   )
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations();
+
+  return {
+    title: t('common_meta.title'),
+    description: t('common_meta.description'),
+  };
 }

@@ -1,7 +1,5 @@
-import CartPageClient from '@/views/cart/client';
+import CartView from '@/views/cart/view';
 
-const CartPage = () => {
-  return <CartPageClient />;
-}
+export default CartView;
 
-export default CartPage;
+export { generateMetadata } from '@/views/cart/view';
