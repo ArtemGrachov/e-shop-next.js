@@ -1655,16 +1655,24 @@
       {
         "id": "2",
         "name": {
-          "en": "Catalog",
-          "de": "Katalog"
+          "en": "🛒 Catalog",
+          "de": "🛒 Katalog"
         },
         "type": "route_catalog"
       },
       {
+        "id": "6",
+        "name": {
+          "en": "🔥 Sales",
+          "de": "🔥 Ausverkauf"
+        },
+        "type": "route_sale"
+      },
+      {
         "id": "3",
         "name": {
-          "en": "Smartphones",
-          "de": "Smartphones"
+          "en": "📱 Smartphones",
+          "de": "📱 Smartphones"
         },
         "slug": {
           "en": "smartphones",
@@ -1676,8 +1684,8 @@
       {
         "id": "4",
         "name": {
-          "en": "Laptops",
-          "de": "Laptops"
+          "en": "💻 Laptops",
+          "de": "💻 Laptops"
         },
         "slug": {
           "en": "laptops",
@@ -1689,8 +1697,8 @@
       {
         "id": "5",
         "name": {
-          "en": "Accessories",
-          "de": "Zubehör"
+          "en": "🔌 Accessories",
+          "de": "🔌 Zubehör"
         },
         "slug": {
           "en": "accessories",

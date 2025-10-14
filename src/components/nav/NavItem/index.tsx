@@ -29,6 +29,9 @@ const NavItem: ComponentType<IProps> = ({ navItem, onClick }) => {
       case ENavItemType.ROUTE_CATALOG: {
         return routePath(ROUTES.CATALOG, { slugId: '' });
       }
+      case ENavItemType.SALE: {
+        return routePath(ROUTES.SALE, { slugId: '' });
+      }
       case ENavItemType.ROUTE_HOME_PAGE: {
         return routePath(ROUTES.HOME);
       }
