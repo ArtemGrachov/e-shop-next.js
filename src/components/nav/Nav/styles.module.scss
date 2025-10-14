@@ -1,5 +1,4 @@
 @use '/src/styles/mixins/breakpoints.scss' as breakpoints;
-@use '/src/styles/mixins/links.scss' as links;
 
 .list {
   list-style: none;
@@ -10,17 +9,5 @@
     display: flex;
     align-items: stretch;
     gap: 24px;
-  }
-}
-
-.link {
-  @include links.link();
-
-  padding: 8px 24px;
-  display: block;
-  font-size: 18px;
-
-  @include breakpoints.sm {
-    padding: 24px 0;
   }
 }

@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { Ubuntu } from 'next/font/google'
 import { GoogleTagManager } from '@next/third-parties/google'
+import { Metadata } from 'next';
 
 import ThemeScript from '@/scripts/ThemeScript';
 
@@ -13,11 +14,13 @@ import { ShopProvider } from '@/providers/shop';
 import { AppProvider } from '@/providers/app';
 import { ThemeProvider } from '@/providers/theme';
 import { ModalsProvider } from '@/providers/modals';
+import { MenuProvider } from '@/providers/menu';
 
 import ModalRoot from '@/components/modal/ModalRoot';
 
+import { getLayoutData } from './server';
+
 import '@/styles/main.scss';
-import { Metadata } from 'next';
 
 const fontUbuntu = Ubuntu({
   subsets: ['latin', 'cyrillic'],
@@ -25,7 +28,7 @@ const fontUbuntu = Ubuntu({
 });
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const [locale, messages] = await Promise.all([getLocale(), getMessages()]);
+  const [locale, messages, { menuResponse }] = await Promise.all([getLocale(), getMessages(), getLayoutData()]);
 
   return (
     <html lang={locale} className={fontUbuntu.className} suppressHydrationWarning={true}>
@@ -42,12 +45,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <CartProvider>
                   <FavouritesProvider>
                     <ThemeProvider>
-                      <AppProvider>
-                        <ModalsProvider>
-                          {children}
-                          <ModalRoot />
-                        </ModalsProvider>
-                      </AppProvider>
+                      <MenuProvider menu={menuResponse}>
+                        <AppProvider>
+                          <ModalsProvider>
+                            {children}
+                            <ModalRoot />
+                          </ModalsProvider>
+                        </AppProvider>
+                      </MenuProvider>
                     </ThemeProvider>
                   </FavouritesProvider>
                 </CartProvider>

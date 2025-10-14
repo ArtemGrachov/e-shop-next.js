@@ -1649,5 +1649,56 @@
       },
       "openingHours": "Daily: 09:00–19:00"
     }
-  ]
+  ],
+  "menu": {
+    "main": [
+      {
+        "id": "2",
+        "name": {
+          "en": "Catalog",
+          "de": "Katalog"
+        },
+        "type": "route_catalog"
+      },
+      {
+        "id": "3",
+        "name": {
+          "en": "Smartphones",
+          "de": "Smartphones"
+        },
+        "slug": {
+          "en": "smartphones",
+          "de": "smartphones"
+        },
+        "targetId": "1",
+        "type": "catalog_category"
+      },
+      {
+        "id": "4",
+        "name": {
+          "en": "Laptops",
+          "de": "Laptops"
+        },
+        "slug": {
+          "en": "laptops",
+          "de": "laptops"
+        },
+        "targetId": "2",
+        "type": "catalog_category"
+      },
+      {
+        "id": "5",
+        "name": {
+          "en": "Accessories",
+          "de": "Zubehör"
+        },
+        "slug": {
+          "en": "accessories",
+          "de": "zubehoer"
+        },
+        "targetId": "13",
+        "type": "catalog_category"
+      }
+    ]
+  }
 }

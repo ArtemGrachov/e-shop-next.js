@@ -71,6 +71,12 @@ export const createHttpClient = () => {
     return [200, pickUpPoints];
   });
 
+  mockHttpClient.onGet('/menu/main').reply(async () => {
+    const { menu } = await data();
+
+    return [200, menu.main];
+  })
+
   mockHttpClient.onGet(/\/orders\/[\w-]+/).reply(async (config) => {
     const { url } = config;
     const id = url?.split('/').slice(-1)[0];
