@@ -62,6 +62,11 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
 
   return (
     <div>
+      <ProductPrice
+        className={styles.price}
+        product={product}
+        productVariant={currentVariant}
+      />
       <FormBuyProduct
         className={styles.formBuyProduct}
         product={product}
@@ -70,7 +75,6 @@ const BuyProduct: ComponentType<IProps> = ({ product }) => {
         onVariantSelect={variantChangeHandler}
         onSubmit={addToCartHandler}
       />
-      {product && currentVariant && <ProductPrice product={product} productVariant={currentVariant} />}
     </div>
   )
 }

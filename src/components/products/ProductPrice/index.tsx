@@ -3,16 +3,17 @@ import { ComponentType } from 'react';
 import Price from '@/components/other/Price';
 
 import type { IProductVariant } from '@/types/models/product-variant';
-import { IProduct } from '@/types/models/product';
+import type { IProduct } from '@/types/models/product';
+import type { IPropsWithClassName } from '@/types/other/component-props';
 
 interface IProps {
   product: IProduct;
   productVariant?: IProductVariant;
 }
 
-const ProductPrice: ComponentType<IProps> = ({ product, productVariant }) => {
+const ProductPrice: ComponentType<IProps & IPropsWithClassName> = ({ product, productVariant, className }) => {
   return (
-    <Price price={productVariant?.price ?? product.price} />
+    <Price className={className} price={productVariant?.price ?? product.price} />
   )
 }
 
