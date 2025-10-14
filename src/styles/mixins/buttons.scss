@@ -53,6 +53,17 @@
 
   &:disabled {
     cursor: not-allowed;
+
+    background: var(--button-disabled-background);
+    color: var(--button-disabled-color);
+
+    &:hover {
+      background: var(--button-disabled-background);
+    }
+
+    &:active {
+      background: var(--button-disabled-background);
+    }
   }
 }
 
