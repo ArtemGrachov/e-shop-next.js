@@ -12,6 +12,8 @@
 
 .cell {
   flex: 1 1 0;
+  display: flex;
+  align-items: center;
 
   @include breakpoints.sm() {
     flex: 0 0 auto;
@@ -21,11 +23,6 @@
     @include breakpoints.sm() {
       display: none;
     }
-  }
-
-  &._center,
-  &._right {
-    display: flex;
   }
 
   &._center {
@@ -50,6 +47,7 @@
   font-size: 24px;
   display: block;
   text-align: center;
+  width: 100%;
 
   @include breakpoints.sm() {
     font-size: 32px;
