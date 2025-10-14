@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { Ubuntu } from 'next/font/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import ThemeScript from '@/scripts/ThemeScript';
 
@@ -28,6 +29,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang={locale} className={fontUbuntu.className} suppressHydrationWarning={true}>
+      {process.env.NEXT_PUBLIC_GTM_ID && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />}
       <body>
         <ThemeScript />
         <NextIntlClientProvider
