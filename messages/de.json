@@ -80,13 +80,17 @@
     "title_catalog": "Katalog",
     "title_search": "Suche nach „{query}“",
     "title_category_search": "{categoryName} | Suche nach „{query}“",
-    "title_favourites": "Favoriten",
     "product_filters": {
       "price": "Preis"
     },
     "mobile_filters": {
       "filters": "Filter"
-    }
+    },
+    "meta_title": "Produktkatalog"
+  },
+  "view_favourites": {
+    "title": "Favoriten",
+    "meta_title": "Favoriten"
   },
   "view_error": {
     "not_found_title": "Nicht gefunden",
@@ -101,11 +105,13 @@
   },
   "view_cart": {
     "title": "Warenkorb",
-    "checkout": "Zur Kasse"
+    "checkout": "Zur Kasse",
+    "meta_title": "Warenkorb"
   },
   "view_checkout": {
     "title": "Kasse",
-    "open_cart": "Warenkorb anzeigen"
+    "open_cart": "Warenkorb anzeigen",
+    "meta_title": "Kasse"
   },
   "footer": {
     "developed_by": "Entworfen und entwickelt von <name></name>, <year></year>"
@@ -135,7 +141,15 @@
     "link": "Alle Produkte anzeigen"
   },
   "language_switch": {
-    "en": "English",
+    "en": "Englisch",
     "de": "Deutsch"
+  },
+  "common_meta": {
+    "title": "E-Shop-Demo",
+    "title_template": "{title} | E-Shop-Demo",
+    "description": "Next.js Demo-E-Commerce-Projekt für Lern- und Portfoliozwecke."
+  },
+  "view_order": {
+    "meta_title": "Bestellung"
   }
 }
