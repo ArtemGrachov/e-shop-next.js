@@ -71,6 +71,7 @@
 .counterSkeleton {
   @include skeleton.skeleton();
 
+  flex: 0 0 auto;
   width: 80px;
 }
 
@@ -78,5 +79,6 @@
   @include skeleton.skeleton();
 
   --skeleton-height: 42px;
+  flex: 0 0 auto;
   width: 24px;
 }

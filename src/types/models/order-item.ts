@@ -4,7 +4,8 @@ import type { TextTranslation } from '@/types/models/translation'
 
 export interface IOrderItem {
   id: string;
-  name: TextTranslation;
+  name?: TextTranslation;
+  variantName?: TextTranslation;
   description: TextTranslation;
   slug: TextTranslation;
   variantSlug?: TextTranslation;

@@ -5,7 +5,8 @@
   },
   "form_buy_product": {
     "variant": "Variante",
-    "submit": "Kaufen"
+    "submit": "Kaufen",
+    "update": "Ändern"
   },
   "form_review": {
     "rate": "Bewerten",

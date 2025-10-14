@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 import srcCamera2 from '@/assets/images/camera2.svg';
 
 const DefaultImage: ComponentType<ImageProps> = (props) => {
-  const [src, setSrc] = useState(props.src);
+  const [src, setSrc] = useState(props.src || srcCamera2);
   const [isError, setIsError] = useState(false);
 
   const classNames = useMemo(() => {

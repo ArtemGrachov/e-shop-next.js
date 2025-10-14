@@ -27,6 +27,7 @@ export const CartItemCounter: ComponentType<IProps> = ({ orderItem }) => {
       type="number"
       className={styles.input}
       value={value}
+      min={1}
       onChange={e => setValue(+e.target.value)}
     />
   )
